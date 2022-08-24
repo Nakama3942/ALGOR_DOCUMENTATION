@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Клас ALGOR::Comparative_Sorts&lt; type_array &gt;::BogoSort</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_a_l_g_o_r_1_1_comparative___sorts_1_1_bogo_sort.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="class_a_l_g_o_r_1_1_comparative___sorts_1_1_bogo_sort-members.html">Список всіх елементів</a>  </div>
+  <div class="headertitle"><div class="title">Клас ALGOR::Comparative_Sorts&lt; type_array &gt;::BogoSort</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Алгоритм сортування Bogo Sort.  
+ <a href="class_a_l_g_o_r_1_1_comparative___sorts_1_1_bogo_sort.html#details">Детальніше...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename type_array&gt;<br />
+class ALGOR::Comparative_Sorts&lt; type_array &gt;::BogoSort</div><p >Алгоритм сортування Bogo Sort. </p>
+<p ><b>Випадкове сортування</b> (англ. Bogosort) - неефективний на практиці гумористичний алгоритм сортування. Наочно використовується для впорядкування колоди карт таким чином: колода підкидається у повітря, карти збираються у довільному порядку і перевіряється, чи є колода впорядкованою. Якщо колода невпорядкована, то операцію повторюють.</p>
+<p >Алгоритм має й інші назви: сортування бозо (англ. <em>bozo sort</em>), дурне сортування (англ. <em>stupid sort</em>), мавпяче сортування (англ. <em>monkey sort</em>), випадкове сортування (англ. <em>random sort</em>), сортування п'яниці (англ. <em>drunk man sort</em>).</p>
+<p >Випадкове сортування не є стабільним.</p>
+<p >Середній час роботи алгоритму: \({\displaystyle O\left(n\cdot \sum _{i=1}^{\infty }{\frac {i}{n!}}\cdot \left(1-{\frac {1}{n!}}\right)^{i-1}\right)=O(n\cdot n!)}\)</p>
+<p >При проходженні циклу один раз на секунду сортування наступної кількості елементів у середньому може зайняти: </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Кількість елементів   </th><th class="markdownTableHeadNone">1   </th><th class="markdownTableHeadNone">2   </th><th class="markdownTableHeadNone">3   </th><th class="markdownTableHeadNone">4   </th><th class="markdownTableHeadNone">5   </th><th class="markdownTableHeadNone">6   </th><th class="markdownTableHeadNone">7   </th><th class="markdownTableHeadNone">8   </th><th class="markdownTableHeadNone">9   </th><th class="markdownTableHeadNone">10   </th><th class="markdownTableHeadNone">11   </th><th class="markdownTableHeadNone">12    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Середній час   </td><td class="markdownTableBodyNone">1 с   </td><td class="markdownTableBodyNone">4 с   </td><td class="markdownTableBodyNone">18 с   </td><td class="markdownTableBodyNone">96 с   </td><td class="markdownTableBodyNone">10 хв   </td><td class="markdownTableBodyNone">1,2 год   </td><td class="markdownTableBodyNone">9,8 год   </td><td class="markdownTableBodyNone">3,7 дні   </td><td class="markdownTableBodyNone">37,8 дні   </td><td class="markdownTableBodyNone">1,15 роки   </td><td class="markdownTableBodyNone">13,9 років   </td><td class="markdownTableBodyNone">182 роки   </td></tr>
+</table>
+<p >При роботі 4-ядерного процесора на частоті 2,4 ГГц (9,6 млрд операцій на секунду): </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Кількість елементів   </th><th class="markdownTableHeadNone">10   </th><th class="markdownTableHeadNone">11   </th><th class="markdownTableHeadNone">12   </th><th class="markdownTableHeadNone">13   </th><th class="markdownTableHeadNone">14   </th><th class="markdownTableHeadNone">15   </th><th class="markdownTableHeadNone">16   </th><th class="markdownTableHeadNone">17   </th><th class="markdownTableHeadNone">18   </th><th class="markdownTableHeadNone">19   </th><th class="markdownTableHeadNone">20    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Середній час   </td><td class="markdownTableBodyNone">0,0037 с   </td><td class="markdownTableBodyNone">0,045 с   </td><td class="markdownTableBodyNone">0,59 с   </td><td class="markdownTableBodyNone">8,4 с   </td><td class="markdownTableBodyNone">2,1 хв   </td><td class="markdownTableBodyNone">33,6 хв   </td><td class="markdownTableBodyNone">9,7 год   </td><td class="markdownTableBodyNone">7,29 днів   </td><td class="markdownTableBodyNone">139 днів   </td><td class="markdownTableBodyNone">7,6 років   </td><td class="markdownTableBodyNone">160 років   </td></tr>
+</table>
+<dl class="section user"><dt>Категорія</dt><dd><b>Exchange Sorts</b> </dd></dl>
+<dl class="section user"><dt>Ресурси</dt><dd><em>Source: <a href="https://en.wikipedia.org/wiki/Bogosort">https://en.wikipedia.org/wiki/Bogosort</a></em> </dd></dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.1 commit f338fc </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000118">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    Comparative_Sorts&lt;long&gt;::BogoSort *bogo_sort;</div>
+<div class="line">    bogo_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::BogoSort(arr-&gt;array, arr-&gt;array_size);</div>
+<div class="line">    <span class="comment">//bogo_sort-&gt;bogo_sort();  //Краще його не використовувати</span></div>
+<div class="line">    <span class="keyword">delete</span> (bogo_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {34 33 21}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {21 33 34}</span></div>
+</div><!-- fragment --> 
+<p class="definition">Див. визначення в файлі <a class="el" href="_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="_a_l_g_o_r_8hpp_source.html#l00470">470</a></p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_a_l_g_o_r.html">ALGOR</a></li><li class="navelem"><a class="el" href="class_a_l_g_o_r_1_1_comparative___sorts.html">Comparative_Sorts</a></li><li class="navelem"><a class="el" href="class_a_l_g_o_r_1_1_comparative___sorts_1_1_bogo_sort.html">BogoSort</a></li>
+    <li class="footer">Документація до ALGOR створена Середа, 24 серпня 2022 21:28:25 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

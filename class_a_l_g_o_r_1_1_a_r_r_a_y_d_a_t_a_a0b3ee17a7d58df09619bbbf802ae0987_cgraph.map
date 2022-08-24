@@ -1,0 +1,5 @@
+<map id="ALGOR::ARRAYDATA::getMax" name="ALGOR::ARRAYDATA::getMax">
+<area shape="rect" id="node1" title="Оптимізований метод пошуку максимального елемента" alt="" coords="5,46,211,73"/>
+<area shape="rect" id="node2" href="$class_a_l_g_o_r_1_1_array_processing.html#af59a2d517621dca8adb44749d797132d" title="Функція, що перевіряє, чи впорядковано масив" alt="" coords="259,5,429,47"/>
+<area shape="rect" id="node3" href="$class_a_l_g_o_r_1_1_array_processing.html#a2555da08fcfc245a818ec7e60062a577" title="Шукає максимальний елемент у масиві методом перебору" alt="" coords="259,71,429,112"/>
+</map>
