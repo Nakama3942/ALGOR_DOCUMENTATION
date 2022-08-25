@@ -1,0 +1,1298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Шаблон класу ALGOR::ArrayProcessing&lt; type_array &gt;</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d5/d60/class_a_l_g_o_r_1_1_array_processing.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Загальнодоступні статичні елементи</a> &#124;
+<a href="../../d6/d72/class_a_l_g_o_r_1_1_array_processing-members.html">Список всіх елементів</a>  </div>
+  <div class="headertitle"><div class="title">Шаблон класу ALGOR::ArrayProcessing&lt; type_array &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс базових функцій для роботи з масивами  
+ <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#details">Детальніше...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Загальнодоступні статичні елементи</h2></td></tr>
+<tr class="memitem:a18f53030cbed4fd5e9ea05d13e801d7d"><td class="memItemLeft" align="right" valign="top">static type_array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a18f53030cbed4fd5e9ea05d13e801d7d">minimum</a> (const type_array *<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>, const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;array_size)</td></tr>
+<tr class="memdesc:a18f53030cbed4fd5e9ea05d13e801d7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шукає мінімальний елемент у масиві методом перебору  <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a18f53030cbed4fd5e9ea05d13e801d7d">Детальніше...</a><br /></td></tr>
+<tr class="separator:a18f53030cbed4fd5e9ea05d13e801d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2555da08fcfc245a818ec7e60062a577"><td class="memItemLeft" align="right" valign="top">static type_array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a2555da08fcfc245a818ec7e60062a577">maximum</a> (const type_array *<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>, const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;array_size)</td></tr>
+<tr class="memdesc:a2555da08fcfc245a818ec7e60062a577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шукає максимальний елемент у масиві методом перебору  <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a2555da08fcfc245a818ec7e60062a577">Детальніше...</a><br /></td></tr>
+<tr class="separator:a2555da08fcfc245a818ec7e60062a577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59a2d517621dca8adb44749d797132d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af59a2d517621dca8adb44749d797132d">isOrderliness</a> (const type_array *<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>, const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;array_size)</td></tr>
+<tr class="memdesc:af59a2d517621dca8adb44749d797132d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функція, що перевіряє, чи впорядковано масив  <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af59a2d517621dca8adb44749d797132d">Детальніше...</a><br /></td></tr>
+<tr class="separator:af59a2d517621dca8adb44749d797132d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9603ed38a453dc802f931d5ff008aa1b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b">distance</a> (type_array *first, type_array *last)</td></tr>
+<tr class="memdesc:a9603ed38a453dc802f931d5ff008aa1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повертає відстань між вказівниками на два елементи масиву  <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b">Детальніше...</a><br /></td></tr>
+<tr class="separator:a9603ed38a453dc802f931d5ff008aa1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f952cfff058aacf17d27d130f0c4693"><td class="memItemLeft" align="right" valign="top">static type_array *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6f952cfff058aacf17d27d130f0c4693">lower_bound</a> (type_array *first, type_array *last, const type_array &amp;value)</td></tr>
+<tr class="memdesc:a6f952cfff058aacf17d27d130f0c4693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Знаходить перше входження у заданому діапаоні заданого елемента  <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6f952cfff058aacf17d27d130f0c4693">Детальніше...</a><br /></td></tr>
+<tr class="separator:a6f952cfff058aacf17d27d130f0c4693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6997444d5c64e78421b6061b1b67b80d"><td class="memItemLeft" align="right" valign="top">static type_array *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6997444d5c64e78421b6061b1b67b80d">upper_bound</a> (type_array *first, type_array *last, const type_array &amp;value)</td></tr>
+<tr class="memdesc:a6997444d5c64e78421b6061b1b67b80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Знаходить перше входження у заданому діапазоні елемента, що є наступним після заданого  <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6997444d5c64e78421b6061b1b67b80d">Детальніше...</a><br /></td></tr>
+<tr class="separator:a6997444d5c64e78421b6061b1b67b80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ced996de301e9efa82256b2e9c34d5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a64ced996de301e9efa82256b2e9c34d5">addElement</a> (type_array *&amp;<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>, <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;array_size, const type_array &amp;value, const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> position=0)</td></tr>
+<tr class="memdesc:a64ced996de301e9efa82256b2e9c34d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Додає певне значення до масиву у вказаній позиції  <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a64ced996de301e9efa82256b2e9c34d5">Детальніше...</a><br /></td></tr>
+<tr class="separator:a64ced996de301e9efa82256b2e9c34d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93fc67f0aa847bcf9c772e89f35adab"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af93fc67f0aa847bcf9c772e89f35adab">subtractElement</a> (type_array *&amp;<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>, <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;array_size, const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> position)</td></tr>
+<tr class="memdesc:af93fc67f0aa847bcf9c772e89f35adab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Видаляє елемент по вказаній позиції у масиві  <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af93fc67f0aa847bcf9c772e89f35adab">Детальніше...</a><br /></td></tr>
+<tr class="separator:af93fc67f0aa847bcf9c772e89f35adab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77185864a8af71edb567c90810748d7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af77185864a8af71edb567c90810748d7">subtractValue</a> (type_array *&amp;<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>, <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;array_size, const type_array &amp;value)</td></tr>
+<tr class="memdesc:af77185864a8af71edb567c90810748d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Видаляє зазначений елемент з усіх позицій у масиві  <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af77185864a8af71edb567c90810748d7">Детальніше...</a><br /></td></tr>
+<tr class="separator:af77185864a8af71edb567c90810748d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a79dd3c36c5166b200f83cb4b0d15a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a06a79dd3c36c5166b200f83cb4b0d15a">copy</a> (type_array *new_array, const type_array *old_array, const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;size_of_copied, <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> position_in_new_array=0, <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> position_in_old_array=0)</td></tr>
+<tr class="memdesc:a06a79dd3c36c5166b200f83cb4b0d15a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Копіює масив  <a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a06a79dd3c36c5166b200f83cb4b0d15a">Детальніше...</a><br /></td></tr>
+<tr class="separator:a06a79dd3c36c5166b200f83cb4b0d15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename type_array&gt;<br />
+class ALGOR::ArrayProcessing&lt; type_array &gt;</div><p >Класс базових функцій для роботи з масивами </p>
+<p >Клас із базовими функціями обробки масивів. Вони призначені, як для зміни масиву, так і для визначення його певних характеристик. Функції розраховані під використання стандартних С++ масивів, без поглиблення в абстракції, типу використання структур чи класів <del>(на те вони і є базовими)</del>. </p><dl class="tparams"><dt>Параметри шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">type_array</td><td>Тип елементів, які зберігає масив, який потрібно обробити </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.2.0 commit 1981d6 </dd></dl>
+<dl class="section remark"><dt>Прим.</dt><dd>У вас можуть виникнути питання щодо версіонування. Тема роз'яснена на наступній сторінці <a class="el" href="../../d6/dd6/md__array_base_history.html">Історія Базового класу масиву (class ArrayBase) чи Сірий кардинал у ALGOR</a> </dd></dl>
+<dl class="section note"><dt>Нотатки</dt><dd>Не обов'язково створювати структуру і з неї передавати данні до функцій. Вони навмисно були розроблені, щоб вони приймали не структуру, а саме сам масив. </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00277">277</a></p>
+</div><h2 class="groupheader">Опис методів компонент</h2>
+<a id="a18f53030cbed4fd5e9ea05d13e801d7d" name="a18f53030cbed4fd5e9ea05d13e801d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f53030cbed4fd5e9ea05d13e801d7d">&#9670;&nbsp;</a></span>minimum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ALGOR::ArrayProcessing</a>&lt; type_array &gt;::minimum </td>
+          <td>(</td>
+          <td class="paramtype">const type_array *&#160;</td>
+          <td class="paramname"><em>Array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>array_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Шукає мінімальний елемент у масиві методом перебору </p>
+<p >Методом перебору по всьому масиву функція шукає та повертає найменше значення у масиві. </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html" title="Структура, що імітує масив">Array</a></td><td>Масив, у якому потрібно знайти мінімальний елемент </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_size</td><td>Розмір цього масиву </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.0.0.1 </dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#aad26e9101370c16d3f0615bab4f9f296" title="Шукає найменше значення з двух наданих">ALGOR::minimum(type_value, type_value)</a> </dd>
+<dd>
+<a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a2555da08fcfc245a818ec7e60062a577" title="Шукає максимальний елемент у масиві методом перебору">ALGOR::ArrayProcessing::maximum(const type_array *, const asize_t &amp;)</a> </dd>
+<dd>
+<a class="el" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a60f0716a13a430dc20da87a1f3fa7fef" title="Оптимізований метод пошуку мінімального елемента">ALGOR::ARRAYDATA::getMin()</a> </dd></dl>
+<dl class="section warning"><dt>Застереження</dt><dd>Ця функція не робить перевірку, чи є масив відсортованим, а тому не є ефективною. Краще перед виконанням цієї функції перевірити, чи є масив відсортованим за допомогою функції <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af59a2d517621dca8adb44749d797132d" title="Функція, що перевіряє, чи впорядковано масив">ALGOR::ArrayProcessing::isOrderliness</a>. </dd></dl>
+<dl class="section return"><dt>Повертає</dt><dd>значення найменшого елемента масиву </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000047">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Minimum is &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a18f53030cbed4fd5e9ea05d13e801d7d">ALGOR::ArrayProcessing&lt;long&gt;::minimum</a>(arr, size) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// With array: 37; 23; 13; 48; 20</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Minimum is 13</span></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_processing_html_a18f53030cbed4fd5e9ea05d13e801d7d"><div class="ttname"><a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a18f53030cbed4fd5e9ea05d13e801d7d">ALGOR::ArrayProcessing::minimum</a></div><div class="ttdeci">static type_array minimum(const type_array *Array, const asize_t &amp;array_size)</div><div class="ttdoc">Шукає мінімальний елемент у масиві методом перебору</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00031">ALGOR_ARRAY.cpp:31</a></div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a3">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00031">31</a></p>
+<div class="fragment"><div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    type_array point_min = <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[0];</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 1; i &lt; array_size; i++)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">if</span> (point_min &gt; <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i])</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            point_min = <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i];</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> point_min;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html_a53125d45a174125d83620e1822713060"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">ALGOR::asize_t</a></div><div class="ttdeci">ubit32_t asize_t</div><div class="ttdoc">Псевдонім для визначення типу &quot;розмір массиву&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00082">ALGOR.hpp:82</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array</a></div><div class="ttdoc">Структура, що імітує масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00097">ALGOR.hpp:98</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Вживається в <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00362">ALGOR::ARRAYDATA&lt; type_array &gt;::getMin()</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф викликів для цієї функції:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/d60/class_a_l_g_o_r_1_1_array_processing_a18f53030cbed4fd5e9ea05d13e801d7d_icgraph.png" border="0" usemap="#ad5/d60/class_a_l_g_o_r_1_1_array_processing_a18f53030cbed4fd5e9ea05d13e801d7d_icgraph" alt=""/></div>
+<map name="ad5/d60/class_a_l_g_o_r_1_1_array_processing_a18f53030cbed4fd5e9ea05d13e801d7d_icgraph" id="ad5/d60/class_a_l_g_o_r_1_1_array_processing_a18f53030cbed4fd5e9ea05d13e801d7d_icgraph">
+<area shape="rect" title="Шукає мінімальний елемент у масиві методом перебору" alt="" coords="289,5,491,52"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a60f0716a13a430dc20da87a1f3fa7fef" title="Оптимізований метод пошуку мінімального елемента" alt="" coords="5,14,241,43"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2555da08fcfc245a818ec7e60062a577" name="a2555da08fcfc245a818ec7e60062a577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2555da08fcfc245a818ec7e60062a577">&#9670;&nbsp;</a></span>maximum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ALGOR::ArrayProcessing</a>&lt; type_array &gt;::maximum </td>
+          <td>(</td>
+          <td class="paramtype">const type_array *&#160;</td>
+          <td class="paramname"><em>Array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>array_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Шукає максимальний елемент у масиві методом перебору </p>
+<p >Методом перебору по всьому масиву функція шукає та повертає найбільше значення у масиві. </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html" title="Структура, що імітує масив">Array</a></td><td>Масив, у якому потрібно знайти максимальний елемент </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_size</td><td>Розмір цього масиву </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.0.0.1 </dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a18a923efbebb8a05c1dd38b152699dec" title="Шукає найбільше значення з двух наданих">ALGOR::maximum(type_value, type_value)</a> </dd>
+<dd>
+<a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a18f53030cbed4fd5e9ea05d13e801d7d" title="Шукає мінімальний елемент у масиві методом перебору">ALGOR::ArrayProcessing::minimum(const type_array *, const asize_t &amp;)</a> </dd>
+<dd>
+<a class="el" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a0b3ee17a7d58df09619bbbf802ae0987" title="Оптимізований метод пошуку максимального елемента">ALGOR::ARRAYDATA::getMax()</a> </dd></dl>
+<dl class="section warning"><dt>Застереження</dt><dd>Ця функція не робить перевірку, чи є масив відсортованим, а тому не є ефективною. Краще перед виконанням цієї функції перевірити, чи є масив відсортованим за допомогою функції <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af59a2d517621dca8adb44749d797132d" title="Функція, що перевіряє, чи впорядковано масив">ALGOR::ArrayProcessing::isOrderliness</a>. </dd></dl>
+<dl class="section return"><dt>Повертає</dt><dd>значення найбільшого елемента масиву </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000048">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Maximum is &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a2555da08fcfc245a818ec7e60062a577">ALGOR::ArrayProcessing&lt;long&gt;::maximum</a>(arr, size) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// With array: 37; 23; 13; 48; 20</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Maximum is 48</span></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_processing_html_a2555da08fcfc245a818ec7e60062a577"><div class="ttname"><a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a2555da08fcfc245a818ec7e60062a577">ALGOR::ArrayProcessing::maximum</a></div><div class="ttdeci">static type_array maximum(const type_array *Array, const asize_t &amp;array_size)</div><div class="ttdoc">Шукає максимальний елемент у масиві методом перебору</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00046">ALGOR_ARRAY.cpp:46</a></div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a4">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00046">46</a></p>
+<div class="fragment"><div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    type_array point_max = <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[0];</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 1; i &lt; array_size; i++)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (point_max &lt; <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i])</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            point_max = <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i];</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> point_max;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Вживається в <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00370">ALGOR::ARRAYDATA&lt; type_array &gt;::getMax()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф викликів для цієї функції:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/d60/class_a_l_g_o_r_1_1_array_processing_a2555da08fcfc245a818ec7e60062a577_icgraph.png" border="0" usemap="#ad5/d60/class_a_l_g_o_r_1_1_array_processing_a2555da08fcfc245a818ec7e60062a577_icgraph" alt=""/></div>
+<map name="ad5/d60/class_a_l_g_o_r_1_1_array_processing_a2555da08fcfc245a818ec7e60062a577_icgraph" id="ad5/d60/class_a_l_g_o_r_1_1_array_processing_a2555da08fcfc245a818ec7e60062a577_icgraph">
+<area shape="rect" title="Шукає максимальний елемент у масиві методом перебору" alt="" coords="293,5,495,52"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a0b3ee17a7d58df09619bbbf802ae0987" title="Оптимізований метод пошуку максимального елемента" alt="" coords="5,14,245,43"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af59a2d517621dca8adb44749d797132d" name="af59a2d517621dca8adb44749d797132d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af59a2d517621dca8adb44749d797132d">&#9670;&nbsp;</a></span>isOrderliness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ALGOR::ArrayProcessing</a>&lt; type_array &gt;::isOrderliness </td>
+          <td>(</td>
+          <td class="paramtype">const type_array *&#160;</td>
+          <td class="paramname"><em>Array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>array_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Функція, що перевіряє, чи впорядковано масив </p>
+<p >Функція перевіряє, чи є масив впорядкованим у порядку збільшення. Якщо у якийсь момент функція фіксує, що поточний елемент ітерації більше наступного, вона відразу повертає значення <em>false</em>, інакше - всі елементи йдуть у порядку збільшення і функція повертає <em>true</em>. </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html" title="Структура, що імітує масив">Array</a></td><td>Масив, що перевіряється на відсортованість </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_size</td><td>Розмір цього масиву </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.2.0 commit 2fa93b </dd></dl>
+<dl class="section warning"><dt>Застереження</dt><dd>Ця функція перевіряє впорядкованість тільки у напрямку збільшення. Якщо необхдіно перевірити впорядкованість у порядку зменшення: на вхід функції треба передати обернений масив, а цим функціоналом володіє тільки <a class="el" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a9abf8c486031f064ed7d0f99c5f0929b" title="Перевертає масив">ALGOR::ARRAYDATA::reverse</a>. </dd></dl>
+<dl class="section return"><dt>Повертає</dt><dd>логічне значення, чи є масив впорядкованим (так чи ні) </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000049">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Array is orderliness? &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af59a2d517621dca8adb44749d797132d">ALGOR::ArrayProcessing&lt;long&gt;::isOrderliness</a>(arr, size) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html">ALGOR::Comparative_Sorts&lt;long&gt;::LibrarySort</a> sort1(arr, size); <span class="comment">//or any sorting</span></div>
+<div class="line">    sort1.library_sort();</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; size; i++)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; arr[i] &lt;&lt; <span class="stringliteral">&quot;; &quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Array is orderliness? &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af59a2d517621dca8adb44749d797132d">ALGOR::ArrayProcessing&lt;long&gt;::isOrderliness</a>(arr, size) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// With array: 37; 23; 13; 48; 20</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// &gt;print:&gt;</span></div>
+<div class="line">    <span class="comment">//   Array is orderliness? 0</span></div>
+<div class="line">    <span class="comment">//   13; 20; 23; 37; 48;</span></div>
+<div class="line">    <span class="comment">//   Array is orderliness? 1</span></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_processing_html_af59a2d517621dca8adb44749d797132d"><div class="ttname"><a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af59a2d517621dca8adb44749d797132d">ALGOR::ArrayProcessing::isOrderliness</a></div><div class="ttdeci">static bool isOrderliness(const type_array *Array, const asize_t &amp;array_size)</div><div class="ttdoc">Функція, що перевіряє, чи впорядковано масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00061">ALGOR_ARRAY.cpp:61</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort_html"><div class="ttname"><a href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html">ALGOR::Comparative_Sorts::LibrarySort</a></div><div class="ttdoc">Алгоритм сортування Library Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00554">ALGOR.hpp:555</a></div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a5">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00061">61</a></p>
+<div class="fragment"><div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; array_size - 1; i++)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i] &gt; <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i + 1])</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Вживається в <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00370">ALGOR::ARRAYDATA&lt; type_array &gt;::getMax()</a> і <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00362">ALGOR::ARRAYDATA&lt; type_array &gt;::getMin()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф викликів для цієї функції:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/d60/class_a_l_g_o_r_1_1_array_processing_af59a2d517621dca8adb44749d797132d_icgraph.png" border="0" usemap="#ad5/d60/class_a_l_g_o_r_1_1_array_processing_af59a2d517621dca8adb44749d797132d_icgraph" alt=""/></div>
+<map name="ad5/d60/class_a_l_g_o_r_1_1_array_processing_af59a2d517621dca8adb44749d797132d_icgraph" id="ad5/d60/class_a_l_g_o_r_1_1_array_processing_af59a2d517621dca8adb44749d797132d_icgraph">
+<area shape="rect" title="Функція, що перевіряє, чи впорядковано масив" alt="" coords="293,23,495,70"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a0b3ee17a7d58df09619bbbf802ae0987" title="Оптимізований метод пошуку максимального елемента" alt="" coords="5,5,245,35"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a60f0716a13a430dc20da87a1f3fa7fef" title="Оптимізований метод пошуку мінімального елемента" alt="" coords="7,59,243,88"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9603ed38a453dc802f931d5ff008aa1b" name="a9603ed38a453dc802f931d5ff008aa1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9603ed38a453dc802f931d5ff008aa1b">&#9670;&nbsp;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ALGOR::ArrayProcessing</a>&lt; type_array &gt;::distance </td>
+          <td>(</td>
+          <td class="paramtype">type_array *&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type_array *&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Повертає відстань між вказівниками на два елементи масиву </p>
+<p >Розраховує різницю між двома вказівниками, яка (різниця) являє собою відстань між цими самими двома вказівниками. </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>Вказівник на перший вказаний елемент масиву </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>Вказівник на другий (наступний, останній) вказаний елемент масиву </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.2.1 commit ffc19f </dd></dl>
+<dl class="section return"><dt>Повертає</dt><dd>різницю між адресами вказівників </dd></dl>
+<dl class="section user"><dt>Ресурси</dt><dd>Source: <a href="http://www.cplusplus.com/reference/iterator/distance/?kw=distance">http://www.cplusplus.com/reference/iterator/distance/?kw=distance</a><br  />
+</dd></dl>
+<dl class="section note"><dt>Нотатки</dt><dd>Перевагами над стандартною функцією є те, що вона не працює з об'єктами класу ітератор (як можна побачити з прикладу на офіційній сторінці документації) - данна функція працює просто із вказівниками, що є легше та надійніше. </dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6f952cfff058aacf17d27d130f0c4693" title="Знаходить перше входження у заданому діапаоні заданого елемента">ALGOR::ArrayProcessing::lower_bound(type_array *, type_array *, const type_array &amp;)</a> </dd>
+<dd>
+<a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6997444d5c64e78421b6061b1b67b80d" title="Знаходить перше входження у заданому діапазоні елемента, що є наступним після заданого">ALGOR::ArrayProcessing::upper_bound(type_array *, type_array *, const type_array &amp;)</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000050">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Distance is &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b">ALGOR::ArrayProcessing&lt;long&gt;::distance</a>(&amp;arr[2], &amp;arr[4]) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Distance is 2</span></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_processing_html_a9603ed38a453dc802f931d5ff008aa1b"><div class="ttname"><a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b">ALGOR::ArrayProcessing::distance</a></div><div class="ttdeci">static asize_t distance(type_array *first, type_array *last)</div><div class="ttdoc">Повертає відстань між вказівниками на два елементи масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00075">ALGOR_ARRAY.cpp:75</a></div></div>
+</div><!-- fragment --> <dl class="section remark"><dt>Прим.</dt><dd>Дану функцію можна використовувати для знаходження розміру масива. Якщо ви колись зберегли вказівник на останній елемент масиву, а сам розмір було загублено <del>(я не знаю, як ви могли це зробити)</del>, тоді ви можете використати цей алгоритм, передавши вказівник на перший елемент масиву і збережений вказівник на останній елемент масиву. Так як алгоритм повертає різницю між адресами, то адреса цього самого останнього елемента не буде порахована у розмір масиву, а тому розмір масиву становитиме на одиницю більше повернутого значення: <div class="fragment"><div class="line"><span class="keywordtype">int</span> size = 10; <span class="comment">//The size that will be lost...</span></div>
+<div class="line"><span class="keywordtype">long</span> <span class="keywordtype">long</span> arr[size];</div>
+<div class="line"><span class="keywordtype">long</span> <span class="keywordtype">long</span> *last_element = &amp;arr[9];</div>
+<div class="line"><span class="comment">//...</span></div>
+<div class="line"><span class="comment">//Lots and lots of code... You forgot where the size of the array is stored...</span></div>
+<div class="line"><span class="comment">//...</span></div>
+<div class="line"><span class="comment">//Use distance:</span></div>
+<div class="line">cout &lt;&lt; <span class="stringliteral">&quot;Size array is &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b">ArrayProcessing&lt;long long&gt;::distance</a>(&amp;arr[0], last_element) + 1 &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="comment">//or</span></div>
+<div class="line">cout &lt;&lt; <span class="stringliteral">&quot;Size array is &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b">ArrayProcessing&lt;long long&gt;::distance</a>(&amp;arr[0], last_element + 1) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+</div><!-- fragment --> Тут не важливо, чи збільшите ви підсумковий результат на одиницю, чи посунете вказівник на одиницю. У другому випадку вказівник буде виходити за межі масиву, але як вже було сказано, у результат нічого не потрапляє ззовні зазначених адрес, а тому таким чином ви додасте іще один останній елемент, який раніше не рахувався, і не більше того. </dd>
+<dd>
+Коли я тільки додав ці функції, я хотів перевести усі функції із сигнатур {вказівник на масив; розмір масиву} на {перший елемент; останній елемент} (як у <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b" title="Повертає відстань між вказівниками на два елементи масиву">ALGOR::ArrayProcessing::distance</a>), але не задалося, так як передавати перший варіант легше. Самі розсудіть: <div class="fragment"><div class="line">Array&lt;long long&gt; *arr = create_struct&lt;long long&gt;(10);</div>
+<div class="line"><a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a18f53030cbed4fd5e9ea05d13e801d7d">ArrayProcessing&lt;long long&gt;::minimum</a>(arr-&gt;array, arr-&gt;array_size); <span class="comment">//old variant {array pointer; array size}</span></div>
+</div><!-- fragment --> проти <div class="fragment"><div class="line">Array&lt;long long&gt; *arr = create_struct&lt;long long&gt;(10);</div>
+<div class="line"><a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a18f53030cbed4fd5e9ea05d13e801d7d">ArrayProcessing&lt;long long&gt;::minimum</a>(&amp;arr-&gt;array[0], &amp;arr-&gt;array[arr-&gt;array_size - 1]); <span class="comment">//new variant {first element; last element}</span></div>
+</div><!-- fragment --> Я б обрав {вказівник на масив; розмір масиву}. </dd></dl>
+<dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a8">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00075">75</a></p>
+<div class="fragment"><div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>{</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">return</span> last - first;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Вживається в <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00321">ALGOR::ARRAYDATA&lt; type_array &gt;::binary_getPosition()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф викликів для цієї функції:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/d60/class_a_l_g_o_r_1_1_array_processing_a9603ed38a453dc802f931d5ff008aa1b_icgraph.png" border="0" usemap="#ad5/d60/class_a_l_g_o_r_1_1_array_processing_a9603ed38a453dc802f931d5ff008aa1b_icgraph" alt=""/></div>
+<map name="ad5/d60/class_a_l_g_o_r_1_1_array_processing_a9603ed38a453dc802f931d5ff008aa1b_icgraph" id="ad5/d60/class_a_l_g_o_r_1_1_array_processing_a9603ed38a453dc802f931d5ff008aa1b_icgraph">
+<area shape="rect" title="Повертає відстань між вказівниками на два елементи масиву" alt="" coords="284,5,485,52"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a85b4438e73dbcb3ab6d835caa038d865" title="Бінарний метод пошуку елемента" alt="" coords="5,5,236,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6f952cfff058aacf17d27d130f0c4693" name="a6f952cfff058aacf17d27d130f0c4693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f952cfff058aacf17d27d130f0c4693">&#9670;&nbsp;</a></span>lower_bound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ALGOR::ArrayProcessing</a>&lt; type_array &gt;::lower_bound </td>
+          <td>(</td>
+          <td class="paramtype">type_array *&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type_array *&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const type_array &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Знаходить перше входження у заданому діапаоні заданого елемента </p>
+<p >Функція не є рекурсивною. Але вона використовує вказівники, як ітератори, розраховуючи їх аналогічно рекурсивному методу. Таким чином функція є оптимізованою, завдяки переходу з рекурсії на ітерацію, а великим плюсом є можливість задати певний діапазон, що можливо тільки з двома функціями <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6f952cfff058aacf17d27d130f0c4693" title="Знаходить перше входження у заданому діапаоні заданого елемента">ALGOR::ArrayProcessing::lower_bound</a> та <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6997444d5c64e78421b6061b1b67b80d" title="Знаходить перше входження у заданому діапазоні елемента, що є наступним після заданого">ALGOR::ArrayProcessing::upper_bound</a>. </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>Вказівник на перший вказаний елемент масиву, що задає початок діапазону масиву, де треба знайти заданий елемент </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>Вказівник на другий (наступний, останній) вказаний елемент масиву, що задає кінець діапазону масиву, де треба знайти заданий елемент </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Заданий елемент, який потрібно знайти </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.2.1 commit ffc19f </dd></dl>
+<dl class="section return"><dt>Повертає</dt><dd>вказівник на перше входження заданого елемента у заданому діапазоні </dd></dl>
+<dl class="section warning"><dt>Застереження</dt><dd>Функція повертає лише вказівник на елемент, а не його значення. </dd></dl>
+<dl class="section user"><dt>Ресурси</dt><dd>Source: <a href="http://www.cplusplus.com/reference/algorithm/lower_bound/">http://www.cplusplus.com/reference/algorithm/lower_bound/</a><br  />
+</dd></dl>
+<dl class="section note"><dt>Нотатки</dt><dd>Перевагами над стандартною функцією є те, що вона не працює з об'єктами класу ітератор (як можна побачити з прикладу на офіційній сторінці документації) - данна функція працює просто із вказівниками, що є легше та надійніше. </dd></dl>
+<dl class="section warning"><dt>Застереження</dt><dd>Функція працює ітераційно аж до останнього елементу і повертає вказівник саме на нього, не перевіряючи чи є це той самий потрібний елемент. Але таке відбувається тільки з тими масивами, у яких взагалі нема заданого елемента. Тому ви власноруч маєте перевіряти, чи є там потрібний елемент. </dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b" title="Повертає відстань між вказівниками на два елементи масиву">ALGOR::ArrayProcessing::distance(type_array *, type_array *)</a> </dd>
+<dd>
+<a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6997444d5c64e78421b6061b1b67b80d" title="Знаходить перше входження у заданому діапазоні елемента, що є наступним після заданого">ALGOR::ArrayProcessing::upper_bound(type_array *, type_array *, const type_array &amp;)</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000051">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;First address in array &quot;</span> &lt;&lt; &amp;arr[0] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Lower bound 6 is &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6f952cfff058aacf17d27d130f0c4693">ALGOR::ArrayProcessing&lt;long&gt;::lower_bound</a>(&amp;arr[0], &amp;arr[9], 6) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// With array: 5; 5; 6; 6; 7; 8; 8; 9; 10; 10</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// &gt;print:&gt;</span></div>
+<div class="line">    <span class="comment">//   First address in array 0x29347f0</span></div>
+<div class="line">    <span class="comment">//   Lower bound 6 is 0x29347f8</span></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_processing_html_a6f952cfff058aacf17d27d130f0c4693"><div class="ttname"><a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6f952cfff058aacf17d27d130f0c4693">ALGOR::ArrayProcessing::lower_bound</a></div><div class="ttdeci">static type_array * lower_bound(type_array *first, type_array *last, const type_array &amp;value)</div><div class="ttdoc">Знаходить перше входження у заданому діапаоні заданого елемента</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00082">ALGOR_ARRAY.cpp:82</a></div></div>
+</div><!-- fragment --> <dl class="section remark"><dt>Прим.</dt><dd>Дану функцію разом із <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b" title="Повертає відстань між вказівниками на два елементи масиву">ALGOR::ArrayProcessing::distance</a> можна використати для реалізації бінарного пошуку: <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6f952cfff058aacf17d27d130f0c4693" title="Знаходить перше входження у заданому діапаоні заданого елемента">ALGOR::ArrayProcessing::lower_bound</a> повертає вказівник на знайдений елемент, а <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b" title="Повертає відстань між вказівниками на два елементи масиву">ALGOR::ArrayProcessing::distance</a> розраховує відстань від початку масиву, що і буде відображати положення у масиві (його номер). Саме такий метод використиовується у <a class="el" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a85b4438e73dbcb3ab6d835caa038d865" title="Бінарний метод пошуку елемента">ALGOR::ARRAYDATA::binary_getPosition</a>. </dd></dl>
+<dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a9">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00082">82</a></p>
+<div class="fragment"><div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> count = <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b">distance</a>(first, last), step = 0, iterator = 0;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">while</span> (count &gt; 0)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        step = count / 2;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        iterator = step;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">if</span> (first[iterator] &lt; value)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            first = &amp;first[++iterator];</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            count -= (step + 1);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            count = step;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">return</span> first;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6997444d5c64e78421b6061b1b67b80d" name="a6997444d5c64e78421b6061b1b67b80d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6997444d5c64e78421b6061b1b67b80d">&#9670;&nbsp;</a></span>upper_bound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ALGOR::ArrayProcessing</a>&lt; type_array &gt;::upper_bound </td>
+          <td>(</td>
+          <td class="paramtype">type_array *&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type_array *&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const type_array &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Знаходить перше входження у заданому діапазоні елемента, що є наступним після заданого </p>
+<p >Аналогічно <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6f952cfff058aacf17d27d130f0c4693" title="Знаходить перше входження у заданому діапаоні заданого елемента">ALGOR::ArrayProcessing::lower_bound</a>, данна функція повертає вказівник на перше входження наступного елемента, після заданого. </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>Вказівник на перший вказаний елемент масиву, що задає початок діапазону масиву, де треба знайти заданий елемент </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>Вказівник на другий (наступний, останній) вказаний елемент масиву, що задає кінець діапазону масиву, де треба знайти заданий елемент </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Заданий елемент, після якого потрібно повернути вказівник </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.2.1 commit d94012 </dd></dl>
+<dl class="section return"><dt>Повертає</dt><dd>вказівник на перше входження наступного елемента після заданого у заданому діапазоні </dd></dl>
+<dl class="section note"><dt>Нотатки</dt><dd>У цілому, використання функції подібне до <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6f952cfff058aacf17d27d130f0c4693" title="Знаходить перше входження у заданому діапаоні заданого елемента">ALGOR::ArrayProcessing::lower_bound</a>. </dd></dl>
+<dl class="section user"><dt>Ресурси</dt><dd>Source: <a href="http://www.cplusplus.com/reference/algorithm/upper_bound/">http://www.cplusplus.com/reference/algorithm/upper_bound/</a><br  />
+</dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b" title="Повертає відстань між вказівниками на два елементи масиву">ALGOR::ArrayProcessing::distance(type_array *, type_array *)</a> </dd>
+<dd>
+<a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6f952cfff058aacf17d27d130f0c4693" title="Знаходить перше входження у заданому діапаоні заданого елемента">ALGOR::ArrayProcessing::lower_bound(type_array *, type_array *, const type_array &amp;)</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000052">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;First address in array &quot;</span> &lt;&lt; &amp;arr[0];</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Upper bound 6 is &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6997444d5c64e78421b6061b1b67b80d">ALGOR::ArrayProcessing&lt;long&gt;::upper_bound</a>(&amp;arr[0], &amp;arr[9], 6) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// With array: 5; 5; 6; 6; 7; 8; 8; 9; 10; 10</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// &gt;print:&gt;</span></div>
+<div class="line">    <span class="comment">//   First address in array 0x29347f0</span></div>
+<div class="line">    <span class="comment">//   Upper bound 6 is 0x2934800</span></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_processing_html_a6997444d5c64e78421b6061b1b67b80d"><div class="ttname"><a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a6997444d5c64e78421b6061b1b67b80d">ALGOR::ArrayProcessing::upper_bound</a></div><div class="ttdeci">static type_array * upper_bound(type_array *first, type_array *last, const type_array &amp;value)</div><div class="ttdoc">Знаходить перше входження у заданому діапазоні елемента, що є наступним після заданого</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00105">ALGOR_ARRAY.cpp:105</a></div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a10">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00105">105</a></p>
+<div class="fragment"><div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> count = <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a9603ed38a453dc802f931d5ff008aa1b">distance</a>(first, last), step = 0, iterator = 0;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">while</span> (count &gt; 0)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        step = count / 2;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        iterator = step;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">if</span> (!(value &lt; first[iterator]))</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            first = &amp;first[++iterator];</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            count -= (step + 1);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            count = step;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">return</span> first;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a64ced996de301e9efa82256b2e9c34d5" name="a64ced996de301e9efa82256b2e9c34d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ced996de301e9efa82256b2e9c34d5">&#9670;&nbsp;</a></span>addElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ALGOR::ArrayProcessing</a>&lt; type_array &gt;::addElement </td>
+          <td>(</td>
+          <td class="paramtype">type_array *&amp;&#160;</td>
+          <td class="paramname"><em>Array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>array_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const type_array &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a>&#160;</td>
+          <td class="paramname"><em>position</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Додає певне значення до масиву у вказаній позиції </p>
+<p >Функція додає задане значеннян у заданий масив із заданим розміром на задану позицію. Функція працює на місці. </p><dl class="exception"><dt>Обробка виняткових ситуацій</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="../../de/dbe/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1memory__overflow.html" title="Клас-виняток &quot;memory_overflow&quot;">ALGOR::EXCEPTION_SET::memory_overflow</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Прим.</dt><dd>Якщо задати і в якості розміру, і в якості позиції розмір масиву, то елемент буде додано у кінець масиву, так як функція збільшує розмір масиву перед тим, як почати додавати елемент, а тому на цей момент старий розмір масиву буде лише вказувати на позицію нового останнього елемента. Саме тому цю функцію легше всього використовувати замість push_back(). </dd></dl>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html" title="Структура, що імітує масив">Array</a></td><td>Масив, до якого додається елемент </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_size</td><td>Розмір цього масиву </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Елемент, який потрібно додати до масиву </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>Позиція, у якій буде додано елемент </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.0.1.0 commit e37003 </dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af93fc67f0aa847bcf9c772e89f35adab" title="Видаляє елемент по вказаній позиції у масиві">ALGOR::ArrayProcessing::subtractElement(type_array *&amp;, asize_t &amp;, const asize_t)</a> </dd>
+<dd>
+<a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af77185864a8af71edb567c90810748d7" title="Видаляє зазначений елемент з усіх позицій у масиві">ALGOR::ArrayProcessing::subtractValue(type_array *&amp;, asize_t &amp;, const type_array &amp;)</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000053">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="comment">// Adding an element to the top of the array</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a64ced996de301e9efa82256b2e9c34d5">ALGOR::ArrayProcessing&lt;long&gt;::addElement</a>(arr, size, 100, 0);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Outputting an array on the screen</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; size; i++)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; arr[i] &lt;&lt; <span class="stringliteral">&quot;; &quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Adding an element to the middle of the array</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a64ced996de301e9efa82256b2e9c34d5">ALGOR::ArrayProcessing&lt;long&gt;::addElement</a>(arr, size, 100, 5);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Outputting an array on the screen</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; size; i++)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; arr[i] &lt;&lt; <span class="stringliteral">&quot;; &quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Adding an element to the end of the array</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a64ced996de301e9efa82256b2e9c34d5">ALGOR::ArrayProcessing&lt;long&gt;::addElement</a>(arr, size, 100, size);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Outputting an array on the screen</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; size; i++)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; arr[i] &lt;&lt; <span class="stringliteral">&quot;; &quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// With array: 10; 6; 8; 7; 6; 7; 8; 7; 9; 7</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// &gt;print:&gt;</span></div>
+<div class="line">    <span class="comment">//   100; 10; 6; 8; 7; 6; 7; 8; 7; 9; 7</span></div>
+<div class="line">    <span class="comment">//   100; 10; 6; 8; 7; 100; 6; 7; 8; 7; 9; 7</span></div>
+<div class="line">    <span class="comment">//   100; 10; 6; 8; 7; 100; 6; 7; 8; 7; 9; 7; 100</span></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_processing_html_a64ced996de301e9efa82256b2e9c34d5"><div class="ttname"><a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a64ced996de301e9efa82256b2e9c34d5">ALGOR::ArrayProcessing::addElement</a></div><div class="ttdeci">static void addElement(type_array *&amp;Array, asize_t &amp;array_size, const type_array &amp;value, const asize_t position=0)</div><div class="ttdoc">Додає певне значення до масиву у вказаній позиції</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00128">ALGOR_ARRAY.cpp:128</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a></div><div class="ttdoc">Клас-каркас для роботи з винятками</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00132">ALGOR.hpp:133</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_abe940c181a29cfd0949f54e1ea1ddb90"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">ALGOR::EXCEPTION_SET::Exception::what</a></div><div class="ttdeci">const byte1_t * what()</div><div class="ttdoc">Метод, що повідомляє деталі винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00063">ALGOR_EXCEPTION.cpp:63</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_acfda563de6599777f5f49f72b6144973"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">ALGOR::EXCEPTION_SET::Exception::code</a></div><div class="ttdeci">ubit16_t code()</div><div class="ttdoc">Метод, що повідомляє номер винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00058">ALGOR_EXCEPTION.cpp:58</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_af1817b0938683b5a20f67300af0ed845"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">ALGOR::EXCEPTION_SET::Exception::why</a></div><div class="ttdeci">const byte1_t * why()</div><div class="ttdoc">Метод, що дає пояснення винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00068">ALGOR_EXCEPTION.cpp:68</a></div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a11">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00128">128</a></p>
+<div class="fragment"><div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">if</span> (array_size == 0xffffffff)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../de/dbe/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1memory__overflow.html">EXCEPTION_SET::memory_overflow</a>();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    array_size++;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordflow">if</span> (array_size == 1)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a> = <span class="keyword">new</span> type_array[array_size]{value};</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    type_array *temp_Array = <span class="keyword">new</span> type_array[array_size];</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; array_size; i++)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        position &gt; i ? temp_Array[i] = <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i] : (position == i ? temp_Array[i] = value : temp_Array[i] = <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i - 1]);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">delete</span>[] <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a> = temp_Array;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1memory__overflow_html"><div class="ttname"><a href="../../de/dbe/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1memory__overflow.html">ALGOR::EXCEPTION_SET::memory_overflow</a></div><div class="ttdoc">Клас-виняток &quot;memory_overflow&quot;</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00157">ALGOR.hpp:158</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Вживається в <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00339">ALGOR::ARRAYDATA&lt; type_array &gt;::lenear_getPosition()</a>, <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00500">ALGOR::ARRAYDATA&lt; type_array &gt;::moda()</a>, <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00650">ALGOR::ARRAYDATA&lt; type_array &gt;::operator&amp;=()</a> і <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00436">ALGOR::ARRAYDATA&lt; type_array &gt;::searcherOccurrencesOfSubstring()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф викликів для цієї функції:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/d60/class_a_l_g_o_r_1_1_array_processing_a64ced996de301e9efa82256b2e9c34d5_icgraph.png" border="0" usemap="#ad5/d60/class_a_l_g_o_r_1_1_array_processing_a64ced996de301e9efa82256b2e9c34d5_icgraph" alt=""/></div>
+<map name="ad5/d60/class_a_l_g_o_r_1_1_array_processing_a64ced996de301e9efa82256b2e9c34d5_icgraph" id="ad5/d60/class_a_l_g_o_r_1_1_array_processing_a64ced996de301e9efa82256b2e9c34d5_icgraph">
+<area shape="rect" title="Додає певне значення до масиву у вказаній позиції" alt="" coords="321,95,523,141"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a8fdf44b6f6914e57b73e0f4ded991ccd" title="Лінійний метод пошуку елемента" alt="" coords="23,5,255,52"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ad05544a532b99d8b29586d16f1aaa985" title="Метод, який повертає всі елементи моди масиву" alt="" coords="25,77,254,106"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a132e23de1d0c59e810f68966ca3bcfde" title="Оператор додавання елемента в кінець масиву" alt="" coords="5,130,273,159"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a44b73c87b5526524cc5b250c3b287a42" title="Метод пошуку послідовності, який повертає всі її входження" alt="" coords="14,184,265,231"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af93fc67f0aa847bcf9c772e89f35adab" name="af93fc67f0aa847bcf9c772e89f35adab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af93fc67f0aa847bcf9c772e89f35adab">&#9670;&nbsp;</a></span>subtractElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ALGOR::ArrayProcessing</a>&lt; type_array &gt;::subtractElement </td>
+          <td>(</td>
+          <td class="paramtype">type_array *&amp;&#160;</td>
+          <td class="paramname"><em>Array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>array_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a>&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Видаляє елемент по вказаній позиції у масиві </p>
+<p >Видаляє елемент по вказаній позиції у масиві. Схожий на <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a64ced996de301e9efa82256b2e9c34d5" title="Додає певне значення до масиву у вказаній позиції">ALGOR::ArrayProcessing::addElement</a>. </p><dl class="exception"><dt>Обробка виняткових ситуацій</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html" title="Клас-виняток &quot;void_data&quot;">ALGOR::EXCEPTION_SET::void_data</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="../../d6/dc3/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1position__failure.html" title="Клас-виняток &quot;position_failure&quot;">ALGOR::EXCEPTION_SET::position_failure</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html" title="Структура, що імітує масив">Array</a></td><td>Масив, у якому буде видалено елемент по позиції </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_size</td><td>Розмір цього масиву </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>Позиція, з якої буде видалено елемент </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.0.0 commit 37cab7 </dd></dl>
+<dl class="section warning"><dt>Застереження</dt><dd>Не забувайте, що нумерація починається з 0! </dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a64ced996de301e9efa82256b2e9c34d5" title="Додає певне значення до масиву у вказаній позиції">ALGOR::ArrayProcessing::addElement(type_array *&amp;, asize_t &amp;, const type_array &amp;, const asize_t)</a> </dd>
+<dd>
+<a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af77185864a8af71edb567c90810748d7" title="Видаляє зазначений елемент з усіх позицій у масиві">ALGOR::ArrayProcessing::subtractValue(type_array *&amp;, asize_t &amp;, const type_array &amp;)</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000054">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af93fc67f0aa847bcf9c772e89f35adab">ALGOR::ArrayProcessing&lt;long&gt;::subtractElement</a>(arr, size, 7);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Outputting an array on the screen</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; size; i++)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; arr[i] &lt;&lt; <span class="stringliteral">&quot;; &quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// With array: 100; 10; 6; 8; 7; 100; 6; 7; 8; 7; 9; 7; 100</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// &gt;print:&gt; 100; 10; 6; 8; 7; 100; 6; 8; 7; 9; 7; 100</span></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_processing_html_af93fc67f0aa847bcf9c772e89f35adab"><div class="ttname"><a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af93fc67f0aa847bcf9c772e89f35adab">ALGOR::ArrayProcessing::subtractElement</a></div><div class="ttdeci">static void subtractElement(type_array *&amp;Array, asize_t &amp;array_size, const asize_t position)</div><div class="ttdoc">Видаляє елемент по вказаній позиції у масиві</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00153">ALGOR_ARRAY.cpp:153</a></div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a16">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00153">153</a></p>
+<div class="fragment"><div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>{</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">if</span> (array_size == 0)</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html">EXCEPTION_SET::void_data</a>();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">if</span> (position &gt;= array_size)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/dc3/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1position__failure.html">EXCEPTION_SET::position_failure</a>();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    array_size--;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">if</span> (array_size == 0)</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keyword">delete</span>[] <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    type_array *temp_Array = <span class="keyword">new</span> type_array[array_size];</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; array_size; i++)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        position &gt; i ? temp_Array[i] = <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i] : temp_Array[i] = <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i + 1];</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keyword">delete</span>[] <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a> = temp_Array;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1position__failure_html"><div class="ttname"><a href="../../d6/dc3/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1position__failure.html">ALGOR::EXCEPTION_SET::position_failure</a></div><div class="ttdoc">Клас-виняток &quot;position_failure&quot;</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00171">ALGOR.hpp:172</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data_html"><div class="ttname"><a href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html">ALGOR::EXCEPTION_SET::void_data</a></div><div class="ttdoc">Клас-виняток &quot;void_data&quot;</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00192">ALGOR.hpp:193</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Вживається в <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00664">ALGOR::ARRAYDATA&lt; type_array &gt;::operator!()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф викликів для цієї функції:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/d60/class_a_l_g_o_r_1_1_array_processing_af93fc67f0aa847bcf9c772e89f35adab_icgraph.png" border="0" usemap="#ad5/d60/class_a_l_g_o_r_1_1_array_processing_af93fc67f0aa847bcf9c772e89f35adab_icgraph" alt=""/></div>
+<map name="ad5/d60/class_a_l_g_o_r_1_1_array_processing_af93fc67f0aa847bcf9c772e89f35adab_icgraph" id="ad5/d60/class_a_l_g_o_r_1_1_array_processing_af93fc67f0aa847bcf9c772e89f35adab_icgraph">
+<area shape="rect" title="Видаляє елемент по вказаній позиції у масиві" alt="" coords="307,5,508,52"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a719f21f1d3d1165dcdb39036aab26817" title="Оператор, який видаляє елемент із кінця масиву" alt="" coords="5,14,259,43"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af77185864a8af71edb567c90810748d7" name="af77185864a8af71edb567c90810748d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77185864a8af71edb567c90810748d7">&#9670;&nbsp;</a></span>subtractValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ALGOR::ArrayProcessing</a>&lt; type_array &gt;::subtractValue </td>
+          <td>(</td>
+          <td class="paramtype">type_array *&amp;&#160;</td>
+          <td class="paramname"><em>Array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>array_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const type_array &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Видаляє зазначений елемент з усіх позицій у масиві </p>
+<p >На відміну від <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af93fc67f0aa847bcf9c772e89f35adab" title="Видаляє елемент по вказаній позиції у масиві">ALGOR::ArrayProcessing::subtractElement</a>, що видаляє лише один елемент у вказаній позиції, ця функція приймає не позицію, а саме значення, що дозволяє його видалити з усіх позицій у всьому масиві. </p><dl class="exception"><dt>Обробка виняткових ситуацій</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html" title="Клас-виняток &quot;void_data&quot;">ALGOR::EXCEPTION_SET::void_data</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="../../dc/da1/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1value__failure.html" title="Клас-виняток &quot;value_failure&quot;">ALGOR::EXCEPTION_SET::value_failure</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html" title="Структура, що імітує масив">Array</a></td><td>Масив, у якому буде видалено всі елементи, що відповідають заданому значенню </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_size</td><td>Розмір цього масиву </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Значення, яке потрібно видалити з усього масиву </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.0.0 commit 37cab7 </dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a64ced996de301e9efa82256b2e9c34d5" title="Додає певне значення до масиву у вказаній позиції">ALGOR::ArrayProcessing::addElement(type_array *&amp;, asize_t &amp;, const type_array &amp;, const asize_t)</a> </dd>
+<dd>
+<a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af93fc67f0aa847bcf9c772e89f35adab" title="Видаляє елемент по вказаній позиції у масиві">ALGOR::ArrayProcessing::subtractElement(type_array *&amp;, asize_t &amp;, const asize_t)</a> </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000055">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af77185864a8af71edb567c90810748d7">ALGOR::ArrayProcessing&lt;long&gt;::subtractValue</a>(arr, size, 7);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Outputting an array on the screen</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; size; i++)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; arr[i] &lt;&lt; <span class="stringliteral">&quot;; &quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// With array: 100; 10; 6; 8; 7; 100; 6; 8; 7; 9; 7; 100</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// &gt;print:&gt; 100; 10; 6; 8; 100; 6; 8; 9; 100</span></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_processing_html_af77185864a8af71edb567c90810748d7"><div class="ttname"><a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af77185864a8af71edb567c90810748d7">ALGOR::ArrayProcessing::subtractValue</a></div><div class="ttdeci">static void subtractValue(type_array *&amp;Array, asize_t &amp;array_size, const type_array &amp;value)</div><div class="ttdoc">Видаляє зазначений елемент з усіх позицій у масиві</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00181">ALGOR_ARRAY.cpp:181</a></div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a17">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00181">181</a></p>
+<div class="fragment"><div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>{</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">if</span> (array_size == 0)</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html">EXCEPTION_SET::void_data</a>();</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a04f86d244d3404f7b1103aa460d2f0e9">ubit32_t</a> deletions_count = 0;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    type_array *temp_Array = <span class="keyword">new</span> type_array[array_size];</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; array_size; i++)</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i] != value ? temp_Array[i - deletions_count] = <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>[i] : deletions_count++;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">if</span> (deletions_count == 0)</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keyword">delete</span>[] temp_Array;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../dc/da1/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1value__failure.html">EXCEPTION_SET::value_failure</a>();</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">delete</span>[] <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    array_size -= deletions_count;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a> = <span class="keyword">new</span> type_array[array_size];</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a06a79dd3c36c5166b200f83cb4b0d15a">copy</a>(<a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>, temp_Array, array_size);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">delete</span>[] temp_Array;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_processing_html_a06a79dd3c36c5166b200f83cb4b0d15a"><div class="ttname"><a href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a06a79dd3c36c5166b200f83cb4b0d15a">ALGOR::ArrayProcessing::copy</a></div><div class="ttdeci">static void copy(type_array *new_array, const type_array *old_array, const asize_t &amp;size_of_copied, asize_t position_in_new_array=0, asize_t position_in_old_array=0)</div><div class="ttdoc">Копіює масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00208">ALGOR_ARRAY.cpp:208</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1value__failure_html"><div class="ttname"><a href="../../dc/da1/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1value__failure.html">ALGOR::EXCEPTION_SET::value_failure</a></div><div class="ttdoc">Клас-виняток &quot;value_failure&quot;</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00178">ALGOR.hpp:179</a></div></div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html_a04f86d244d3404f7b1103aa460d2f0e9"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html#a04f86d244d3404f7b1103aa460d2f0e9">ALGOR::ubit32_t</a></div><div class="ttdeci">unsigned long ubit32_t</div><div class="ttdoc">Аліас для unsigned long (4 байти).</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00075">ALGOR.hpp:75</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Вживається в <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00657">ALGOR::ARRAYDATA&lt; type_array &gt;::operator|=()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф викликів для цієї функції:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/d60/class_a_l_g_o_r_1_1_array_processing_af77185864a8af71edb567c90810748d7_icgraph.png" border="0" usemap="#ad5/d60/class_a_l_g_o_r_1_1_array_processing_af77185864a8af71edb567c90810748d7_icgraph" alt=""/></div>
+<map name="ad5/d60/class_a_l_g_o_r_1_1_array_processing_af77185864a8af71edb567c90810748d7_icgraph" id="ad5/d60/class_a_l_g_o_r_1_1_array_processing_af77185864a8af71edb567c90810748d7_icgraph">
+<area shape="rect" title="Видаляє зазначений елемент з усіх позицій у масиві" alt="" coords="313,5,515,52"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#aa27f2fb0eb0bd7d496c96692c2857ec1" title="Оператор, який видаляє всі елементи з указаним значенням" alt="" coords="5,14,265,43"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a06a79dd3c36c5166b200f83cb4b0d15a" name="a06a79dd3c36c5166b200f83cb4b0d15a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a79dd3c36c5166b200f83cb4b0d15a">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ALGOR::ArrayProcessing</a>&lt; type_array &gt;::copy </td>
+          <td>(</td>
+          <td class="paramtype">type_array *&#160;</td>
+          <td class="paramname"><em>new_array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const type_array *&#160;</td>
+          <td class="paramname"><em>old_array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>size_of_copied</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a>&#160;</td>
+          <td class="paramname"><em>position_in_new_array</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a>&#160;</td>
+          <td class="paramname"><em>position_in_old_array</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Копіює масив </p>
+<p >Функція копіювання масиву. Але це не проста функція, а багатофункціональна. Окрім того, що треба задати масив, з якого копіюються данні, масив, до якого копіюються данні та обсяг данних, які потрібно скопіювати, можна ще задати позиції у цих масивах, а саме: з якої позиції почати копіювати данні та з якої позиції почати записувати данні до масива.</p>
+<p >Для прикладу, Ви можете задати функції, щоб вона скопіювала з 5 по 10 елемент зі старого масиву (усього п'ять з п'ятої позиції) до нового масиву, при чому почати зберігатися елементи повинні у новому масиві з п'ятої позиції (див. приклад). </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">new_array</td><td>Масив, у який копіюються дані </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">old_array</td><td>Масив, з якого потрібно скопіювати дані </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size_of_copied</td><td>Параметр, який вказує, скільки елементів потірбно скопіювати </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">position_in_new_array</td><td>Позиція, з якої починається запис в масив, до якого копіюються дані </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">position_in_old_array</td><td>Позиція, з якої починається читання у масиві, з якого копіюються дані </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.0.0.3 commit 1a11a0 </dd></dl>
+<dl class="section warning"><dt>Застереження</dt><dd>До функції не передаються розміри масивів, через що функція не може перевірити, чи задаєте ви їй правильні данні. Через це програміст має бути дуже обережним з цією функцією! </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000056">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <a class="code hl_function" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a06a79dd3c36c5166b200f83cb4b0d15a">ALGOR::ArrayProcessing&lt;long&gt;::copy</a>(arr1, arr2, 5, 5, 5);</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; size1; i++)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; arr1[i] &lt;&lt; <span class="stringliteral">&quot;; &quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// With array1: 7;  7;  6;  5;  6; 10; 10;  7; 10;  9</span></div>
+<div class="line">    <span class="comment">// and array2: 17; 16; 15; 16; 17; 19; 15; 19; 19; 20; 20; 18; 18; 16; 20</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// &gt;print:&gt; 7;  7;  6;  5;  6; 19; 15; 19; 19; 20</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a18">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00208">208</a></p>
+<div class="fragment"><div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>{</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; size_of_copied; i++)</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        new_array[i + position_in_new_array] = old_array[i + position_in_old_array];</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Вживається в <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00291">ALGOR::ARRAYDATA&lt; type_array &gt;::cloneData()</a>, <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00282">ALGOR::ARRAYDATA&lt; type_array &gt;::cloneNewData()</a>, <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00685">ALGOR::ARRAYDATA&lt; type_array &gt;::operator&gt;&gt;=()</a> і <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00386">ALGOR::ARRAYDATA&lt; type_array &gt;::resize()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф викликів для цієї функції:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/d60/class_a_l_g_o_r_1_1_array_processing_a06a79dd3c36c5166b200f83cb4b0d15a_icgraph.png" border="0" usemap="#ad5/d60/class_a_l_g_o_r_1_1_array_processing_a06a79dd3c36c5166b200f83cb4b0d15a_icgraph" alt=""/></div>
+<map name="ad5/d60/class_a_l_g_o_r_1_1_array_processing_a06a79dd3c36c5166b200f83cb4b0d15a_icgraph" id="ad5/d60/class_a_l_g_o_r_1_1_array_processing_a06a79dd3c36c5166b200f83cb4b0d15a_icgraph">
+<area shape="rect" title="Копіює масив" alt="" coords="667,77,868,123"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ab35a9b3d676a6956acd2c914bd7aa7bc" title="Метод, який замінює старий масив шляхом копіювання існуючого без видалення старих денних" alt="" coords="343,5,603,35"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a345c29d6d46ddacf65f995381e2d6014" title="Метод, який замінює старий масив шляхом копіювання існуючого з видаленням старих данних" alt="" coords="328,59,619,88"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac9925de86b301fab50dab99b50d2e1fe" title="Оператор об&#39;єднання двох масивів у наданому об&#39;єкті" alt="" coords="5,137,280,167"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#abe9b6dc9f6887b4f70c77d7ecbea0f24" title="Метод, який змінює розмір масиву" alt="" coords="358,163,589,192"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>Документація цих класів була створена з файлів:<ul>
+<li>N:/ALGOR/include/<a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a></li>
+<li>N:/ALGOR/src/<a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a></li>
+<li>DOCUMENTATION.dox</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></li><li class="navelem"><a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html">ArrayProcessing</a></li>
+    <li class="footer">Документація до ALGOR створена Четвер, 25 серпня 2022 21:38:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

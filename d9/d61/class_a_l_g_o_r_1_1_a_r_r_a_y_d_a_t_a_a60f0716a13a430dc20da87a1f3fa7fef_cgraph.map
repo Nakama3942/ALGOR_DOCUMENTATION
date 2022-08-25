@@ -1,0 +1,5 @@
+<map id="ALGOR::ARRAYDATA::getMin" name="ALGOR::ARRAYDATA::getMin">
+<area shape="rect" id="node1" title="Оптимізований метод пошуку мінімального елемента" alt="" coords="5,50,241,79"/>
+<area shape="rect" id="node2" href="$d5/d60/class_a_l_g_o_r_1_1_array_processing.html#af59a2d517621dca8adb44749d797132d" title="Функція, що перевіряє, чи впорядковано масив" alt="" coords="289,5,491,52"/>
+<area shape="rect" id="node3" href="$d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a18f53030cbed4fd5e9ea05d13e801d7d" title="Шукає мінімальний елемент у масиві методом перебору" alt="" coords="289,76,491,123"/>
+</map>

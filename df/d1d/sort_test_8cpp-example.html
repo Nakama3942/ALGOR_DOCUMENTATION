@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: sort_test.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('df/d1d/sort_test_8cpp-example.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">sort_test.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="keyword">using</span> std::cout;</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;N:/ALGOR/src/ALGOR.hpp&quot;</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a>;</div>
+<div class="line"><span class="keyword">using namespace </span>ALGOR::SORTING;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> type_array&gt;</div>
+<div class="line"><span class="keyword">class </span>printer : <span class="keyword">public</span> Printer&lt;type_array&gt;</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">virtual</span> ~printer(){};</div>
+<div class="line">    <span class="keywordtype">void</span> setData(Array&lt;type_array&gt; **ARRAY)</div>
+<div class="line">    {</div>
+<div class="line">        Array = ARRAY;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordtype">void</span> print()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="comment">// cout.precision(25);</span></div>
+<div class="line">        <span class="keywordflow">for</span> (<a id="a0" name="a0"></a><a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; (*Array)-&gt;array_size; i++)</div>
+<div class="line">        {</div>
+<div class="line">            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (*Array)-&gt;array[i];</div>
+<div class="line">        }</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    Array&lt;type_array&gt; **Array;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    Array&lt;byte8_t&gt; *D;</div>
+<div class="line">    printer&lt;byte8_t&gt; *pr = <span class="keyword">new</span> printer&lt;byte8_t&gt;;</div>
+<div class="line">    pr-&gt;setData(&amp;D);</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;A:\n&quot;</span>;</div>
+<div class="line">    ARRAYDATA&lt;byte8_t&gt; *A = <span class="keyword">new</span> ARRAYDATA&lt;byte8_t&gt;(35);</div>
+<div class="line">    A-&gt;generatedData(10, 1000);</div>
+<div class="line">    D = A-&gt;getData();</div>
+<div class="line">    pr-&gt;print();</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;B:\n&quot;</span>;</div>
+<div class="line">    ARRAYDATA&lt;byte8_t&gt; *B = <span class="keyword">new</span> ARRAYDATA&lt;byte8_t&gt;(15);</div>
+<div class="line">    B-&gt;generatedData(10, 1000);</div>
+<div class="line">    D = B-&gt;getData();</div>
+<div class="line">    pr-&gt;print();</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;NEW A:\n&quot;</span>;</div>
+<div class="line">    *A &lt;&lt;= B;</div>
+<div class="line">    D = A-&gt;getData();</div>
+<div class="line">    pr-&gt;print();</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;NEW B:\n&quot;</span>;</div>
+<div class="line">    *B -= 2;</div>
+<div class="line">    D = B-&gt;getData();</div>
+<div class="line">    pr-&gt;print();</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;C:\n&quot;</span>;</div>
+<div class="line">    ARRAYDATA&lt;byte8_t&gt; *C = <span class="keyword">new</span> ARRAYDATA&lt;byte8_t&gt;(7);</div>
+<div class="line">    C-&gt;generatedData(10, 1000);</div>
+<div class="line">    D = C-&gt;getData();</div>
+<div class="line">    pr-&gt;print();</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;NEW C:\n&quot;</span>;</div>
+<div class="line">    D = *A /= 3;</div>
+<div class="line">    *C = D;</div>
+<div class="line">    pr-&gt;print();</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;NEW SIZE B:\n&quot;</span>;</div>
+<div class="line">    *B ^= 4;</div>
+<div class="line">    D = B-&gt;getData();</div>
+<div class="line">    pr-&gt;print();</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; (*C == D) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    D = A-&gt;getData();</div>
+<div class="line">    cout &lt;&lt; (*C == D) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    Array&lt;asize_t&gt; *X = A-&gt;getPosition(A-&gt;getValue(18));</div>
+<div class="line">    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; X-&gt;array_size; i++)</div>
+<div class="line">    {</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; X-&gt;array[i];</div>
+<div class="line">    }</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="../../d1/d80/namespace_a_l_g_o_r.html#a9f500b4d8f8e566b4fa957f325289ce2">remove_struct</a>(X);</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; RANDOM::tester&lt;RANDOM::LCM&gt;(0, 999999) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; RANDOM::tester&lt;RANDOM::MersenneTwister&gt;(0, 999999) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;W:\n&quot;</span>;</div>
+<div class="line">    Array&lt;byte8_t&gt; *Y;</div>
+<div class="line">    printer&lt;byte8_t&gt; *pry = <span class="keyword">new</span> printer&lt;byte8_t&gt;;</div>
+<div class="line">    pry-&gt;setData(&amp;Y);</div>
+<div class="line">    ARRAYDATA&lt;byte8_t&gt; *W = <span class="keyword">new</span> ARRAYDATA&lt;byte8_t&gt;(16);</div>
+<div class="line">    Y = W-&gt;getData();</div>
+<div class="line">    W-&gt;generatedData(14, 500);</div>
+<div class="line">    pry-&gt;print();</div>
+<div class="line">    Comparative_Sorts&lt;byte8_t&gt; *comp_int_sort = <span class="keyword">new</span> Comparative_Sorts&lt;byte8_t&gt;(Y);</div>
+<div class="line">    comp_int_sort-&gt;Batcher_OddEven_MergeSort();</div>
+<div class="line">    pry-&gt;print();</div>
+<div class="line">    ArrayProcessing&lt;byte8_t&gt;::isOrderliness(Y-&gt;array, Y-&gt;array_size) ? cout &lt;&lt; <span class="stringliteral">&quot;Масив отсортовано\n&quot;</span> : cout &lt;&lt; <span class="stringliteral">&quot;Масив НЕ отсортовано\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    W-&gt;generatedData(-140, 500);</div>
+<div class="line">    Y = W-&gt;getData();</div>
+<div class="line">    pry-&gt;print();</div>
+<div class="line">    comp_int_sort-&gt;Batcher_OddEven_MergeSort();</div>
+<div class="line">    pry-&gt;print();</div>
+<div class="line">    ArrayProcessing&lt;byte8_t&gt;::isOrderliness(Y-&gt;array, Y-&gt;array_size) ? cout &lt;&lt; <span class="stringliteral">&quot;Масив отсортовано\n&quot;</span> : cout &lt;&lt; <span class="stringliteral">&quot;Масив НЕ отсортовано\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    W-&gt;generatedData(-140, -50);</div>
+<div class="line">    pry-&gt;print();</div>
+<div class="line">    comp_int_sort-&gt;Batcher_OddEven_MergeSort();</div>
+<div class="line">    pry-&gt;print();</div>
+<div class="line">    ArrayProcessing&lt;byte8_t&gt;::isOrderliness(Y-&gt;array, Y-&gt;array_size) ? cout &lt;&lt; <span class="stringliteral">&quot;Масив отсортовано\n&quot;</span> : cout &lt;&lt; <span class="stringliteral">&quot;Масив НЕ отсортовано\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="keyword">delete</span> (comp_int_sort);</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;K:\n&quot;</span>;</div>
+<div class="line">    Array&lt;fbit64_t&gt; *M;</div>
+<div class="line">    printer&lt;fbit64_t&gt; *prf = <span class="keyword">new</span> printer&lt;fbit64_t&gt;;</div>
+<div class="line">    prf-&gt;setData(&amp;M);</div>
+<div class="line">    ARRAYDATA&lt;fbit64_t&gt; *K = <span class="keyword">new</span> ARRAYDATA&lt;fbit64_t&gt;(16);</div>
+<div class="line">    M = K-&gt;getData();</div>
+<div class="line">    K-&gt;generatedData(14, 500, 100);</div>
+<div class="line">    prf-&gt;print();</div>
+<div class="line">    Comparative_Sorts&lt;fbit64_t&gt; *comp_float_sort = <span class="keyword">new</span> Comparative_Sorts&lt;fbit64_t&gt;(M);</div>
+<div class="line">    comp_float_sort-&gt;Batcher_OddEven_MergeSort();</div>
+<div class="line">    prf-&gt;print();</div>
+<div class="line">    ArrayProcessing&lt;fbit64_t&gt;::isOrderliness(M-&gt;array, M-&gt;array_size) ? cout &lt;&lt; <span class="stringliteral">&quot;Масив отсортовано\n&quot;</span> : cout &lt;&lt; <span class="stringliteral">&quot;Масив НЕ отсортовано\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    K-&gt;generatedData(-140, 500, 100);</div>
+<div class="line">    prf-&gt;print();</div>
+<div class="line">    comp_float_sort-&gt;Batcher_OddEven_MergeSort();</div>
+<div class="line">    prf-&gt;print();</div>
+<div class="line">    ArrayProcessing&lt;fbit64_t&gt;::isOrderliness(M-&gt;array, M-&gt;array_size) ? cout &lt;&lt; <span class="stringliteral">&quot;Масив отсортовано\n&quot;</span> : cout &lt;&lt; <span class="stringliteral">&quot;Масив НЕ отсортовано\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    K-&gt;generatedData(-140, -50, 100);</div>
+<div class="line">    prf-&gt;print();</div>
+<div class="line">    comp_float_sort-&gt;Batcher_OddEven_MergeSort();</div>
+<div class="line">    prf-&gt;print();</div>
+<div class="line">    ArrayProcessing&lt;fbit64_t&gt;::isOrderliness(M-&gt;array, M-&gt;array_size) ? cout &lt;&lt; <span class="stringliteral">&quot;Масив отсортовано\n&quot;</span> : cout &lt;&lt; <span class="stringliteral">&quot;Масив НЕ отсортовано\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="keyword">delete</span> (comp_float_sort);</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;SORTED P:\n&quot;</span>;</div>
+<div class="line">    Array&lt;byte8_t&gt; *R;</div>
+<div class="line">    printer&lt;byte8_t&gt; *prb = <span class="keyword">new</span> printer&lt;byte8_t&gt;;</div>
+<div class="line">    prb-&gt;setData(&amp;R);</div>
+<div class="line">    ARRAYDATA&lt;byte8_t&gt; *P = <span class="keyword">new</span> ARRAYDATA&lt;byte8_t&gt;(8);</div>
+<div class="line">    R = P-&gt;getData();</div>
+<div class="line">    P-&gt;generatedData(11, 120);</div>
+<div class="line">    prb-&gt;print();</div>
+<div class="line">    Distribution_Sorts *dist_sort = <span class="keyword">new</span> Distribution_Sorts(R);</div>
+<div class="line">    dist_sort-&gt;Pigeonhole_Sort();</div>
+<div class="line">    prb-&gt;print();</div>
+<div class="line">    ArrayProcessing&lt;byte8_t&gt;::isOrderliness(R-&gt;array, R-&gt;array_size) ? cout &lt;&lt; <span class="stringliteral">&quot;Масив отсортовано\n&quot;</span> : cout &lt;&lt; <span class="stringliteral">&quot;Масив НЕ отсортовано\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    P-&gt;generatedData(-110, 120);</div>
+<div class="line">    prb-&gt;print();</div>
+<div class="line">    dist_sort-&gt;Pigeonhole_Sort();</div>
+<div class="line">    prb-&gt;print();</div>
+<div class="line">    ArrayProcessing&lt;byte8_t&gt;::isOrderliness(R-&gt;array, R-&gt;array_size) ? cout &lt;&lt; <span class="stringliteral">&quot;Масив отсортовано\n&quot;</span> : cout &lt;&lt; <span class="stringliteral">&quot;Масив НЕ отсортовано\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    P-&gt;generatedData(-110, -12);</div>
+<div class="line">    prb-&gt;print();</div>
+<div class="line">    dist_sort-&gt;Pigeonhole_Sort();</div>
+<div class="line">    prb-&gt;print();</div>
+<div class="line">    ArrayProcessing&lt;byte8_t&gt;::isOrderliness(R-&gt;array, R-&gt;array_size) ? cout &lt;&lt; <span class="stringliteral">&quot;Масив отсортовано\n&quot;</span> : cout &lt;&lt; <span class="stringliteral">&quot;Масив НЕ отсортовано\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="keyword">delete</span> (dist_sort);</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">delete</span> (prb);</div>
+<div class="line">    <span class="keyword">delete</span> (prf);</div>
+<div class="line">    <span class="keyword">delete</span> (pry);</div>
+<div class="line">    <span class="keyword">delete</span> (pr);</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></div><div class="ttdoc">Глобальний простір імен усього проекту</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00051">ALGOR.hpp:52</a></div></div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html_a53125d45a174125d83620e1822713060"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">ALGOR::asize_t</a></div><div class="ttdeci">ubit32_t asize_t</div><div class="ttdoc">Псевдонім для визначення типу &quot;розмір массиву&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00082">ALGOR.hpp:82</a></div></div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html_a9f500b4d8f8e566b4fa957f325289ce2"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html#a9f500b4d8f8e566b4fa957f325289ce2">ALGOR::remove_struct</a></div><div class="ttdeci">void remove_struct(Array&lt; type_array &gt; *&amp;Array)</div><div class="ttdoc">remove_struct</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de8/_a_l_g_o_r___c_o_r_e_8cpp_source.html#l00109">ALGOR_CORE.cpp:109</a></div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Документація до ALGOR створена Четвер, 25 серпня 2022 21:38:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

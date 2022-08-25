@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Історія Базового класу масиву (class ArrayBase) чи Сірий кардинал у ALGOR</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d6/dd6/md__array_base_history.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Історія Базового класу масиву (class ArrayBase) чи Сірий кардинал у <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html" title="Глобальний простір імен усього проекту">ALGOR</a> </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p >На відміну від інших класів, у класу <a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами">ALGOR::ArrayBase</a> найрізноманітніша та цікава історія. Його еволюція відбувалась 4 комміти поспіль і від першої реалізації він ніс трохи інший сенс свого існування...</p>
+<h1><a class="anchor" id="autotoc_md72"></a>
+Передісторія</h1>
+<p >Як відомо, з початком "Титанічного розбиття" (<em>комміт 85698d</em>) створювалось багато класів, а весь реалізований матеріал розділявся на розділи і переносився до того чи іншого файлу, що відповідав за потрібний розділ. А потім ці розділи почати ділитися на оголошення та реалізації. Але така схема була не дуже зручною і всі файли з оголошеннями почали об'єднуватись в один, а файли з реалізаціями в другий файл. Це призвело до того, що я зміг перекваліфікувати бібліотеку зі статичної до динамічної (що я планував с початку) і трохи краще реалізував структуру проекту. Комміт <em>6efeb8</em> став останнім об'єднуючим коммітом, після якого залишаться лише два файли сирців: оголошень та реалізацій.</p>
+<h1><a class="anchor" id="autotoc_md73"></a>
+Перший комміт 6efeb8 v0.1.0.0 ("Покращення класів сортувань")</h1>
+<p >Я вже планував реалізувати усі алгоритми сортування і підготував їх категоризацію. Тоді я підмітив, що усі алгоритми працюють з масивами (капітан очевидність), так чому у кожному класі прописувати приватне поле структури масиву, якщо можна реалізувати базовий клас з цим полем і просто успадковуватись від нього. Це ж займе менше місця... Так і з'явився цей базовий клас. Називався він SortingBase, мав один конструктор і поле для зберігання вказівника на структуру масиву. Це була і вся його задача...</p>
+<h1><a class="anchor" id="autotoc_md74"></a>
+Другий коміт 46b2fa v0.1.0.0 ("Класифікація")</h1>
+<p >Насправді, було пропущено один коміт між першим та другим, але у ньому замінювався лише приклад... А тепер до суті. На момент попереднього коміту <em>6efeb8</em> ArrayProcessing вже було поділено: від нього відокремився ArrayCharacteristic. На момент поточного коміту відокремився ArrayGetter. Я тоді ще не планував їх об'єднувати назад в один єдиний клас, як було раніше. І саме головне: я перейменував базовий клас із SortingBase на ArrayData. І ні, він ніяк не пов'язаний із сучасним ARRAYDATA... Історія буде поцікавіше...</p>
+<h1><a class="anchor" id="autotoc_md75"></a>
+Третій комміт 48aa64 v0.1.0.0 ("Класифікація - продовження")</h1>
+<p >Тоді я вигадав наступну схему: </p><blockquote class="doxtable">
+<p >А що, якщо я ці класи назад об'єднаю до єдиного класу, але тепер методи будуть не статичними і використовуватись, як функції з простору імен, а будуть повноцінними методами, для використання яких потрібно створювати об'єкт класа? Треба поекспериментувати! Але як бути з тими функціями, що використовуються алгоритмами сортування? Я винесу їх з розділу Масиву до розділу Ядра! </p>
+</blockquote>
+<p>Так я виокремив:</p><ul>
+<li>swap (котрий зараз <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a4bd9644c2846c308e54c70b1ba787f4b" title="Міняє місцями два елементи">ALGOR::swap</a>)</li>
+<li>minimum (котрий зараз <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a18f53030cbed4fd5e9ea05d13e801d7d" title="Шукає мінімальний елемент у масиві методом перебору">ALGOR::ArrayProcessing::minimum</a>)</li>
+<li>maximum (котрий зараз <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a2555da08fcfc245a818ec7e60062a577" title="Шукає максимальний елемент у масиві методом перебору">ALGOR::ArrayProcessing::maximum</a>)</li>
+<li>addElement (котрий зараз <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a64ced996de301e9efa82256b2e9c34d5" title="Додає певне значення до масиву у вказаній позиції">ALGOR::ArrayProcessing::addElement</a>)</li>
+<li>copy (котрий зараз <a class="el" href="../../d5/d60/class_a_l_g_o_r_1_1_array_processing.html#a06a79dd3c36c5166b200f83cb4b0d15a" title="Копіює масив">ALGOR::ArrayProcessing::copy</a>)</li>
+</ul>
+<p >Чому тоді було винесено дві останніх функції, я вже не пам'ятаю, але зараз це логічно, що тоді це було гарне рішення.</p>
+<p >Все інше я об'єднав назад в один єдиний клас. І тоді стало зрозуміло, що я можу вчинити так само, як і з алгоритмами сортування: успадкуватись від базового класу масивів і використовувати готовий конструктор та поле зберігання вказівника на структуру масиву. Короче, я зрозумів, що створити базовий клас масиву було дуже гарною та універсальною ідеєю! Саме тому базовий клас і було перейменовано у минулому комміті, а новий клас все по старому називається ArrayProcessing. Все логічно: базовий клас зберігає вказівник на структуру масиву, тому він Data, а великий клас з методами обробки є Processing...</p>
+<h1><a class="anchor" id="autotoc_md76"></a>
+Четвертий комміт 1d50a2 v0.1.0.0 ("Фінальна типізація")</h1>
+<p >Остання глава з кульмінацією та поворотом сюжету. І так, базовий клас у нас є; є клас для роботи з масивами, успадкований від нашого класу; і є класи алгоритмів сортувань, що теж успадковані від нашого класу... Що ж може таке статися? А вся річ у тім, що після попереднього комміту я порівняв назви класів для алгоритмів сортувань і подумав наступне: </p><blockquote class="doxtable">
+<p >А чи дійсно підходить ця назва базовому класу? Було б більш логічним успадковуватись від базового класу у прямому сенсі, а не від класу, який може мати додатковий функціонал. Адже якщо клас буде називатись ArrayData, то це може означати, що там не тільки данні зберігаються, а можуть бути якісь методи їх обробки... </p>
+</blockquote>
+<p>Цей самий сумнів я відчув, коли цю картину наклав на клас обробки масивів: </p><blockquote class="doxtable">
+<p >Клас ArrayData може мати якийсь функціонал, а ArrayProcessing може його поширювати... </p>
+</blockquote>
+<p>Я міг так вчинити і залишити ті методи, що я переніс до ядра, у базовому класі, але як тоді дати доступ до функції swap? Нелогічно.</p>
+<p >І тут я вирішив удруге перейменувати класи: базовий клас став називатися так - який сенс він, власне, і несе - ArrayBase, а ArrayProcessing став називатися ARRAYDATA. Да! Саме так! Сучасні назви не несуть нічого спільного зі старими! І все стало на свої місця... Все логічно... ArrayBase зберагіє лише готові конструктори та поле для вказівника на структуру масиву, ARRAYDATA успадковується від базового класу та поширює його методами обробки масивів, а класи алгоритмів сортувань успадковуються від базового класу, щоб могти сортувати ці масиви.</p>
+<h1><a class="anchor" id="autotoc_md77"></a>
+Наші часи (v1.0.0.0)</h1>
+<p >Після цього відбулось іще багато змін... Почну з менш цікаво. З розширенням кількості реалізованих алгоритмів сортувань я зрозумів, що так не зручно працювати з цими алгоритмами, як вони реалізовані зараз. Я об'єднав класи у кожній категорії в один клас, що зберігає внутрішні класи. Потім і ці класи категорій будуть об'єднані до одного класу і залишаться лише клас з алгоритмами, що працюють з будь-якими данними, та клас алгоритмів, що працює лише з int. А ті класи, які успадковувались та стали внутрішніми, тепер не успадковуються від базового класу, а зберігають сам масив та його розмір окремо від кожного, і якщо потрібно, програміст може створити об'єкт самого алгоритму і передати йому безпосередньо сам масив та розмір, а може створити об'єкт категорії та передати вказівник на структуру. Тепер успадковуються самі категорії...</p>
+<p >Повертаємось до функцій. Як я сказав, було виокремлено 5 функцій, 4 з яких працюють тільки з масивами... Так навіщо ж їх було виокремлювати. З часом з'явились перевантаження функцій minimum (а саме <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#aad26e9101370c16d3f0615bab4f9f296" title="Шукає найменше значення з двух наданих">ALGOR::minimum</a>) та maximum (а саме <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a18a923efbebb8a05c1dd38b152699dec" title="Шукає найбільше значення з двух наданих">ALGOR::maximum</a>), з'явилась getMemoryCell (зараз <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#aa0da330580c34e9b5141336eeb5e6092" title="Повертає випадкове число; аналог time(NULL)">ALGOR::getMemoryCell</a>). Окрім цих, всі інші функції були пов'язані з масивами... Тоді я і їх роздів, де частина (swap, minimum, maximum та getMemoryCell) залишились ядром, а всі інші відродили самий перший ArrayProcessing у розділі масивів.</p>
+<h1><a class="anchor" id="autotoc_md78"></a>
+Результат</h1>
+<p >Отже, ми маємо, що сучасний ArrayProcessing немає нічого спільного з тим початковим ArrayProcessing, з яким було створено бібліотеку. Але він (початковий ArrayProcessing) не канув у Лету... Він еволюціонував у багатофункціональний ARRAYDATA. А призвів до цих змін саме базовий клас ArrayBase, який спочатку мав стати лише скороченням коду для алгоритмів сортувань. І як ми бачимо, сучасні внутрішні класи кожен власноруч зберігає масив і його размір без використаня написаного для них ArrayBase. Змінилося все. <del>Санта Барбара нервово курить у сторонці...</del></p>
+<h1><a class="anchor" id="autotoc_md79"></a>
+Граф</h1>
+<p ><img src="../../ArrayProcessingFamilyTree.png" alt="" width="950px;" class="inline"/> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Документація до ALGOR створена Четвер, 25 серпня 2022 21:38:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

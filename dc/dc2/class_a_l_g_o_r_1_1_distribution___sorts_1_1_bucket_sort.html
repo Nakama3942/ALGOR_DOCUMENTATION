@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Клас ALGOR::Distribution_Sorts::BucketSort</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dc/dc2/class_a_l_g_o_r_1_1_distribution___sorts_1_1_bucket_sort.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="../../d2/dcc/class_a_l_g_o_r_1_1_distribution___sorts_1_1_bucket_sort-members.html">Список всіх елементів</a>  </div>
+  <div class="headertitle"><div class="title">Клас ALGOR::Distribution_Sorts::BucketSort</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Алгоритм сортування Bucket Sort.  
+ <a href="../../dc/dc2/class_a_l_g_o_r_1_1_distribution___sorts_1_1_bucket_sort.html#details">Детальніше...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><p >Алгоритм сортування Bucket Sort. </p>
+<p ><b>Сортування комірками</b> або <b>коміркове сортування</b> (англ. Bucket sort) - стабільний алгоритм впорядкування, що доцільно використовувати, якщо вхідні дані розподілені рівномірно. В основі алгоритму лежить розподілення всіх елементів по скінченній кількості комірок. Кожна комірка впорядковується окремо іншим алгоритмом впорядкування або ж рекурсивно алгоритмом <a class="el" href="../../dc/dc2/class_a_l_g_o_r_1_1_distribution___sorts_1_1_bucket_sort.html" title="Алгоритм сортування Bucket Sort.">BucketSort</a>. <a class="el" href="../../dc/dc2/class_a_l_g_o_r_1_1_distribution___sorts_1_1_bucket_sort.html" title="Алгоритм сортування Bucket Sort.">BucketSort</a> є узагальненням <a class="el" href="../../d1/d79/class_a_l_g_o_r_1_1_distribution___sorts_1_1_counting_sort.html" title="Алгоритм сортування Counting Sort.">CountingSort</a>. </p><dl class="section user"><dt>Пояснення реалізації</dt><dd>У мене постало питання: як реалізувати зберігання розмірів підмасивів двовимірного масиву. Я вирішив зберігати їх розміри у перших (нульових) комірках масивів. Так як під власне зберігання виділяється окрема комірка у масиві, тому розмір масиву завжди буде більше на 1 від реального розміру. І ці два аспекти потрібно завжди пам'ятати: <ul>
+<li>
+Масив починається з другого елементу! </li>
+<li>
+Реальний розмір масиву на 1 менше від зазначеного! </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Алгоритм</dt><dd><ol>
+<li>
+Налаштовується масив початково порожніх «відер»; </li>
+<li>
+Переглядається вихідний масив, поміщаючи кожен об'єкт у своє відро; <div class="image">
+<img src="../../BucketSort_example-step1.png" alt=""/>
+</div>
+ </li>
+<li>
+Кожне непорожнє відро сортується; </li>
+<li>
+Переглядаються відра по порядку і елементи розміщаються назад у вихідний масив. <div class="image">
+<img src="../../BucketSort_example-step2.png" alt=""/>
+</div>
+ </li>
+</ol>
+</dd></dl>
+<dl class="section user"><dt>Категорія</dt><dd><b>Distribution Sorts</b> </dd></dl>
+<dl class="section user"><dt>Ресурси</dt><dd><em>Source: <a href="https://en.wikipedia.org/wiki/Bucket_sort">https://en.wikipedia.org/wiki/Bucket_sort</a></em><br  />
+<em>Code: <a href="https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/sorting/bucket_sort.cpp">https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/sorting/bucket_sort.cpp</a></em> </dd></dl>
+<dl class="section user"><dt>Сертифікат тестування</dt><dd><em>Certificate "цілі+ цілі- цілі+-"</em> </dd></dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.4 commit b19f70 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000149">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    Distribution_Sorts::BucketSort *buck_sort;</div>
+<div class="line">    buck_sort = <span class="keyword">new</span> Distribution_Sorts::BucketSort(clas_arr-&gt;getData()-&gt;array, clas_arr-&gt;getSize());</div>
+<div class="line">    buck_sort-&gt;bucket_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (buck_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> 
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00780">780</a></p>
+</div><hr/>Документація цих класів була створена з файлів:<ul>
+<li>N:/ALGOR/include/<a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a></li>
+<li>N:/ALGOR/src/<a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></li><li class="navelem"><a class="el" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html">Distribution_Sorts</a></li><li class="navelem"><a class="el" href="../../dc/dc2/class_a_l_g_o_r_1_1_distribution___sorts_1_1_bucket_sort.html">BucketSort</a></li>
+    <li class="footer">Документація до ALGOR створена Четвер, 25 серпня 2022 21:38:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

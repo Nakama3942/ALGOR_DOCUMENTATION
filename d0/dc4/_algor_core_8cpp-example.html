@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Algor_core.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d0/dc4/_algor_core_8cpp-example.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Algor_core.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;../include/ALGOR.hpp&quot;</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">long</span> value1 = 5, value2 = 10;</div>
+<div class="line"> </div>
+<div class="line">    ALGOR::swap&lt;long&gt;(value1, value2);</div>
+<div class="line">    std::cout &lt;&lt; value2 &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; 5</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    std::cout &lt;&lt; ALGOR::minimum&lt;long&gt;(value1, value2) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; 5</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    std::cout &lt;&lt; ALGOR::maximum&lt;long&gt;(value1, value2) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; 10</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    std::cout &lt;&lt; <a id="a0" name="a0"></a><a class="code hl_function" href="../../d1/d80/namespace_a_l_g_o_r.html#aa0da330580c34e9b5141336eeb5e6092">ALGOR::getMemoryCell</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; 185214324139604</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <a id="_a1" name="_a1"></a><a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array&lt;long&gt;</a> *arr;</div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        arr = ALGOR::create_struct&lt;long&gt;(10);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a id="_a2" name="_a2"></a><a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a id="a3" name="a3"></a><a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a id="a4" name="a4"></a><a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a id="a5" name="a5"></a><a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// arr = @0x1a1700</span></div>
+<div class="line"><span class="comment"></span>    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        ALGOR::generate_struct&lt;long&gt;(arr, 1, 12);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {9 9 7 7 4 7 2 7 2 9}</span></div>
+<div class="line"><span class="comment"></span>    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        ALGOR::remove_struct&lt;long&gt;(arr);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// arr = 0x0</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    std::cin.get();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a></div><div class="ttdoc">Клас-каркас для роботи з винятками</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00132">ALGOR.hpp:133</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_abe940c181a29cfd0949f54e1ea1ddb90"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">ALGOR::EXCEPTION_SET::Exception::what</a></div><div class="ttdeci">const byte1_t * what()</div><div class="ttdoc">Метод, що повідомляє деталі винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00063">ALGOR_EXCEPTION.cpp:63</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_acfda563de6599777f5f49f72b6144973"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">ALGOR::EXCEPTION_SET::Exception::code</a></div><div class="ttdeci">ubit16_t code()</div><div class="ttdoc">Метод, що повідомляє номер винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00058">ALGOR_EXCEPTION.cpp:58</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_af1817b0938683b5a20f67300af0ed845"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">ALGOR::EXCEPTION_SET::Exception::why</a></div><div class="ttdeci">const byte1_t * why()</div><div class="ttdoc">Метод, що дає пояснення винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00068">ALGOR_EXCEPTION.cpp:68</a></div></div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></div><div class="ttdoc">Глобальний простір імен усього проекту</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00051">ALGOR.hpp:52</a></div></div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html_aa0da330580c34e9b5141336eeb5e6092"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html#aa0da330580c34e9b5141336eeb5e6092">ALGOR::getMemoryCell</a></div><div class="ttdeci">memcell_t getMemoryCell(memcell_t right_adjust=0, memcell_t left_adjust=0)</div><div class="ttdoc">Повертає випадкове число; аналог time(NULL)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de8/_a_l_g_o_r___c_o_r_e_8cpp_source.html#l00050">ALGOR_CORE.cpp:50</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array</a></div><div class="ttdoc">Структура, що імітує масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00097">ALGOR.hpp:98</a></div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Документація до ALGOR створена Четвер, 25 серпня 2022 21:38:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

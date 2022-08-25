@@ -1,0 +1,10 @@
+<map id="ALGOR::EXCEPTION_SET::Exception" name="ALGOR::EXCEPTION_SET::Exception">
+<area shape="rect" id="node1" title="Клас&#45;каркас для роботи з винятками" alt="" coords="5,217,221,264"/>
+<area shape="rect" id="node2" href="$d4/d93/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1division__by__zero.html" title="Клас&#45;виняток &quot;division_by_zero&quot;" alt="" coords="269,5,485,52"/>
+<area shape="rect" id="node3" href="$de/dbe/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1memory__overflow.html" title="Клас&#45;виняток &quot;memory_overflow&quot;" alt="" coords="269,76,485,123"/>
+<area shape="rect" id="node4" href="$d2/d10/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1not__found.html" title="Клас&#45;виняток &quot;not_found&quot;" alt="" coords="269,147,485,193"/>
+<area shape="rect" id="node5" href="$d6/dc3/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1position__failure.html" title="Клас&#45;виняток &quot;position_failure&quot;" alt="" coords="269,217,485,264"/>
+<area shape="rect" id="node6" href="$d2/d01/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1size__failure.html" title="Клас&#45;виняток &quot;size_failure&quot;" alt="" coords="269,288,485,335"/>
+<area shape="rect" id="node7" href="$dc/da1/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1value__failure.html" title="Клас&#45;виняток &quot;value_failure&quot;" alt="" coords="269,359,485,405"/>
+<area shape="rect" id="node8" href="$d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html" title="Клас&#45;виняток &quot;void_data&quot;" alt="" coords="269,429,485,476"/>
+</map>

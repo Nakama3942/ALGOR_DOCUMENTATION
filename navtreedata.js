@@ -26,238 +26,306 @@ var NAVTREE =
 [
   [ "ALGOR", "index.html", [
     [ "ALGOR", "index.html#autotoc_md0", [
-      [ "Огляд", "index.html#autotoc_md1", null ],
-      [ "ЛІЦЕНЗІЯ", "index.html#autotoc_md2", null ],
-      [ "Функціонал", "index.html#autotoc_md3", null ],
-      [ "Документація", "index.html#autotoc_md4", null ],
-      [ "Використання", "index.html#autotoc_md5", null ],
-      [ "Збірка проекту", "index.html#autotoc_md6", [
-        [ "Через IDE (Windows)", "index.html#autotoc_md7", null ],
-        [ "Через IDE (LINUX)", "index.html#autotoc_md8", null ],
-        [ "Через консоль (Windows)", "index.html#autotoc_md9", null ],
-        [ "Через консоль (LINUX)", "index.html#autotoc_md10", null ],
-        [ "Тест консольної збірки", "index.html#autotoc_md11", null ]
+      [ "Зміст", "index.html#autotoc_md1", null ],
+      [ "Огляд", "index.html#autotoc_md2", null ],
+      [ "ЛІЦЕНЗІЯ", "index.html#autotoc_md3", null ],
+      [ "Функціонал", "index.html#autotoc_md4", null ],
+      [ "Документація", "index.html#autotoc_md5", null ],
+      [ "Використання", "index.html#autotoc_md6", null ],
+      [ "Збірка проекту", "index.html#autotoc_md7", [
+        [ "Через IDE (Windows)", "index.html#autotoc_md8", null ],
+        [ "Через IDE (LINUX)", "index.html#autotoc_md9", null ],
+        [ "Через консоль (Windows)", "index.html#autotoc_md10", null ],
+        [ "Через консоль (LINUX)", "index.html#autotoc_md11", null ],
+        [ "Тест консольної збірки", "index.html#autotoc_md12", null ]
       ] ],
-      [ "Вирішення проблем", "index.html#autotoc_md12", null ],
-      [ "Автори", "index.html#autotoc_md13", null ]
+      [ "Вирішення проблем", "index.html#autotoc_md13", null ],
+      [ "Автори", "index.html#autotoc_md14", null ],
+      [ "Гіфки", "index.html#autotoc_md15", [
+        [ "Компіляція та лінковка на Windows у IDE", "index.html#autotoc_md16", null ],
+        [ "Компіляція та лінковка на Windows у консолі", "index.html#autotoc_md17", null ],
+        [ "Компіляція та лінковка на Linux у консолі", "index.html#autotoc_md18", null ],
+        [ "Збірка бібліотеки через консоль у Windows", "index.html#autotoc_md19", null ],
+        [ "Збірка бібліотеки через консоль у Linux", "index.html#autotoc_md20", null ],
+        [ "Тест зібраної бібліотеки через консоль", "index.html#autotoc_md21", null ]
+      ] ]
     ] ],
-    [ "CHANGELOG", "md__c_h_a_n_g_e_l_o_g.html", null ],
-    [ "Історія Базового класу масиву (class ArrayBase) чи Сірий кардинал у ALGOR", "md__array_base_history.html", null ],
-    [ "Історія додавання нового функціоналу по коммітам", "md__commit_history.html", [
-      [ "v1.0.0.0", "md__commit_history.html#autotoc_md77", [
-        [ "Важливість", "md__commit_history.html#autotoc_md76", null ],
-        [ "commit a2f550", "md__commit_history.html#autotoc_md78", [
-          [ "functions", "md__commit_history.html#autotoc_md79", null ]
-        ] ]
+    [ "CHANGELOG", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html", [
+      [ "v1.0.0.0 (29.08.2022)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md23", [
+        [ "Documenting:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md24", null ],
+        [ "Enhancements:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md25", null ]
       ] ],
-      [ "v0.1.3.0", "md__commit_history.html#autotoc_md80", [
-        [ "commit d66e53", "md__commit_history.html#autotoc_md81", [
-          [ "namespaces", "md__commit_history.html#autotoc_md82", null ],
-          [ "variables", "md__commit_history.html#autotoc_md83", null ]
-        ] ],
-        [ "commit 2cdff0", "md__commit_history.html#autotoc_md84", [
-          [ "namespaces", "md__commit_history.html#autotoc_md85", null ]
-        ] ],
-        [ "commit 98b663", "md__commit_history.html#autotoc_md86", [
-          [ "functions", "md__commit_history.html#autotoc_md87", null ],
-          [ "classes", "md__commit_history.html#autotoc_md88", null ]
-        ] ],
-        [ "commit b50b4a", "md__commit_history.html#autotoc_md89", [
-          [ "typedefs", "md__commit_history.html#autotoc_md90", null ]
-        ] ],
-        [ "commit ca0704", "md__commit_history.html#autotoc_md91", [
-          [ "functions", "md__commit_history.html#autotoc_md92", null ],
-          [ "classes", "md__commit_history.html#autotoc_md93", null ],
-          [ "variables", "md__commit_history.html#autotoc_md94", null ]
-        ] ],
-        [ "commit 5a7ff3", "md__commit_history.html#autotoc_md95", [
-          [ "functions", "md__commit_history.html#autotoc_md96", null ]
-        ] ],
-        [ "commit 045729", "md__commit_history.html#autotoc_md97", [
-          [ "operators", "md__commit_history.html#autotoc_md98", null ]
-        ] ],
-        [ "commit 828901", "md__commit_history.html#autotoc_md99", [
-          [ "functions", "md__commit_history.html#autotoc_md100", null ]
-        ] ],
-        [ "commit 391fff", "md__commit_history.html#autotoc_md101", [
-          [ "structures", "md__commit_history.html#autotoc_md102", null ],
-          [ "variables", "md__commit_history.html#autotoc_md103", null ]
-        ] ],
-        [ "commit 2c6408", "md__commit_history.html#autotoc_md104", [
-          [ "functions", "md__commit_history.html#autotoc_md105", null ],
-          [ "classes", "md__commit_history.html#autotoc_md106", null ],
-          [ "variables", "md__commit_history.html#autotoc_md107", null ]
-        ] ],
-        [ "commit b6349a", "md__commit_history.html#autotoc_md108", [
-          [ "typedefs", "md__commit_history.html#autotoc_md109", null ]
-        ] ]
+      [ "v0.1.3.0 (24.06.2022)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md27", [
+        [ "Виправлення непрацездатного функціоналу:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md28", null ],
+        [ "Документування:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md29", null ],
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md30", null ]
       ] ],
-      [ "v0.1.2.1", "md__commit_history.html#autotoc_md110", [
-        [ "commit d94012", "md__commit_history.html#autotoc_md111", [
-          [ "functions", "md__commit_history.html#autotoc_md112", null ]
-        ] ],
-        [ "commit ffc19f", "md__commit_history.html#autotoc_md113", [
-          [ "functions", "md__commit_history.html#autotoc_md114", null ]
-        ] ]
+      [ "v0.1.2.1 (03.06.2022)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md32", [
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md33", null ]
       ] ],
-      [ "v0.1.2.0", "md__commit_history.html#autotoc_md115", [
-        [ "commit 52d263", "md__commit_history.html#autotoc_md116", [
-          [ "functions", "md__commit_history.html#autotoc_md117", null ],
-          [ "classes", "md__commit_history.html#autotoc_md118", null ]
-        ] ],
-        [ "commit 1981d6", "md__commit_history.html#autotoc_md119", [
-          [ "typedefs", "md__commit_history.html#autotoc_md120", null ],
-          [ "classes", "md__commit_history.html#autotoc_md121", null ]
-        ] ],
-        [ "commit 2fa93b", "md__commit_history.html#autotoc_md122", [
-          [ "namespaces", "md__commit_history.html#autotoc_md123", null ],
-          [ "functions", "md__commit_history.html#autotoc_md124", null ],
-          [ "interfaces", "md__commit_history.html#autotoc_md125", null ]
-        ] ],
-        [ "commit 197603", "md__commit_history.html#autotoc_md126", [
-          [ "functions", "md__commit_history.html#autotoc_md127", null ],
-          [ "classes", "md__commit_history.html#autotoc_md128", null ]
-        ] ],
-        [ "commit d74cc1", "md__commit_history.html#autotoc_md129", [
-          [ "functions", "md__commit_history.html#autotoc_md130", null ],
-          [ "classes", "md__commit_history.html#autotoc_md131", null ]
-        ] ],
-        [ "commit d3274a", "md__commit_history.html#autotoc_md132", [
-          [ "classes", "md__commit_history.html#autotoc_md133", null ]
-        ] ],
-        [ "commit f6f6fe", "md__commit_history.html#autotoc_md134", [
-          [ "classes", "md__commit_history.html#autotoc_md135", null ]
-        ] ]
+      [ "v0.1.2.0 (15.04.2022)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md35", [
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md36", null ]
       ] ],
-      [ "v0.1.1.4", "md__commit_history.html#autotoc_md136", [
-        [ "commit b19f70", "md__commit_history.html#autotoc_md137", [
-          [ "functions", "md__commit_history.html#autotoc_md138", null ],
-          [ "classes", "md__commit_history.html#autotoc_md139", null ]
-        ] ],
-        [ "commit 090b06", "md__commit_history.html#autotoc_md140", [
-          [ "functions", "md__commit_history.html#autotoc_md141", null ],
-          [ "classes", "md__commit_history.html#autotoc_md142", null ]
-        ] ]
+      [ "v0.1.1.4 (04.04.2022)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md38", [
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md39", null ]
       ] ],
-      [ "v0.1.1.3", "md__commit_history.html#autotoc_md143", [
-        [ "commit f81852", "md__commit_history.html#autotoc_md144", [
-          [ "functions", "md__commit_history.html#autotoc_md145", null ]
-        ] ],
-        [ "commit b4cdc9", "md__commit_history.html#autotoc_md146", [
-          [ "typedefs", "md__commit_history.html#autotoc_md147", null ],
-          [ "functions", "md__commit_history.html#autotoc_md148", null ],
-          [ "classes", "md__commit_history.html#autotoc_md149", null ]
-        ] ]
+      [ "v0.1.1.3 (01.04.2022)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md41", [
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md42", null ]
       ] ],
-      [ "v0.1.1.2", "md__commit_history.html#autotoc_md150", [
-        [ "commit 28f51f", "md__commit_history.html#autotoc_md151", [
-          [ "functions", "md__commit_history.html#autotoc_md152", null ]
-        ] ],
-        [ "commit 343e40", "md__commit_history.html#autotoc_md153", [
-          [ "structures", "md__commit_history.html#autotoc_md154", null ],
-          [ "classes", "md__commit_history.html#autotoc_md155", null ]
-        ] ],
-        [ "commit 46c223", "md__commit_history.html#autotoc_md156", [
-          [ "functions", "md__commit_history.html#autotoc_md157", null ]
-        ] ],
-        [ "commit 303e5b", "md__commit_history.html#autotoc_md158", [
-          [ "classes", "md__commit_history.html#autotoc_md159", null ]
-        ] ],
-        [ "commit 49dffe", "md__commit_history.html#autotoc_md160", [
-          [ "classes", "md__commit_history.html#autotoc_md161", null ]
-        ] ]
+      [ "v0.1.1.2 (30.03.2022)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md44", [
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md45", null ]
       ] ],
-      [ "v0.1.1.1", "md__commit_history.html#autotoc_md162", [
-        [ "commit 800c0d", "md__commit_history.html#autotoc_md163", [
-          [ "classes", "md__commit_history.html#autotoc_md164", null ]
-        ] ],
-        [ "commit f338fc", "md__commit_history.html#autotoc_md165", [
-          [ "classes", "md__commit_history.html#autotoc_md166", null ]
-        ] ]
+      [ "v0.1.1.1 (26.03.2022)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md47", [
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md48", null ]
       ] ],
-      [ "v0.1.1.0", "md__commit_history.html#autotoc_md167", [
-        [ "commit bce6b6", "md__commit_history.html#autotoc_md168", [
-          [ "functions", "md__commit_history.html#autotoc_md169", null ],
-          [ "classes", "md__commit_history.html#autotoc_md170", null ]
-        ] ],
-        [ "commit 8bbf75", "md__commit_history.html#autotoc_md171", [
-          [ "functions", "md__commit_history.html#autotoc_md172", null ],
-          [ "classes", "md__commit_history.html#autotoc_md173", null ]
-        ] ],
-        [ "commit c62e85", "md__commit_history.html#autotoc_md174", [
-          [ "functions", "md__commit_history.html#autotoc_md175", null ],
-          [ "classes", "md__commit_history.html#autotoc_md176", null ],
-          [ "variables", "md__commit_history.html#autotoc_md177", null ]
-        ] ]
+      [ "v0.1.1.0 (11.01.2022)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md50", [
+        [ "Виправлення помилок:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md51", null ],
+        [ "Документування:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md52", null ],
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md53", null ]
       ] ],
-      [ "v0.1.0.0", "md__commit_history.html#autotoc_md178", [
-        [ "commit 89658e", "md__commit_history.html#autotoc_md179", [
-          [ "typedefs", "md__commit_history.html#autotoc_md180", null ]
-        ] ],
-        [ "commit 0d3195", "md__commit_history.html#autotoc_md181", [
-          [ "typedefs", "md__commit_history.html#autotoc_md182", null ]
-        ] ],
-        [ "commit 88415c", "md__commit_history.html#autotoc_md183", [
-          [ "functions", "md__commit_history.html#autotoc_md184", null ],
-          [ "classes", "md__commit_history.html#autotoc_md185", null ],
-          [ "variables", "md__commit_history.html#autotoc_md186", null ]
-        ] ],
-        [ "commit dd5d42", "md__commit_history.html#autotoc_md187", [
-          [ "functions", "md__commit_history.html#autotoc_md188", null ],
-          [ "operators", "md__commit_history.html#autotoc_md189", null ]
-        ] ],
-        [ "commit 37cab7", "md__commit_history.html#autotoc_md190", [
-          [ "functions", "md__commit_history.html#autotoc_md191", null ]
-        ] ],
-        [ "commit 1f2a4f", "md__commit_history.html#autotoc_md192", [
-          [ "functions", "md__commit_history.html#autotoc_md193", null ]
-        ] ],
-        [ "commit 1d50a2", "md__commit_history.html#autotoc_md194", [
-          [ "functions", "md__commit_history.html#autotoc_md195", null ]
-        ] ],
-        [ "commit 48aa64", "md__commit_history.html#autotoc_md196", [
-          [ "functions", "md__commit_history.html#autotoc_md197", null ]
-        ] ],
-        [ "commit 46b2fa", "md__commit_history.html#autotoc_md198", [
-          [ "functions", "md__commit_history.html#autotoc_md199", null ]
-        ] ],
-        [ "commit 6efeb8", "md__commit_history.html#autotoc_md200", [
-          [ "functions", "md__commit_history.html#autotoc_md201", null ],
-          [ "classes", "md__commit_history.html#autotoc_md202", null ],
-          [ "variables", "md__commit_history.html#autotoc_md203", null ]
-        ] ],
-        [ "commit 85698d", "md__commit_history.html#autotoc_md204", [
-          [ "functions", "md__commit_history.html#autotoc_md205", null ],
-          [ "enumerations", "md__commit_history.html#autotoc_md206", null ],
-          [ "variables", "md__commit_history.html#autotoc_md207", null ]
-        ] ]
+      [ "v0.1.0.0 (23.12.2021)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md55", [
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md56", null ]
       ] ],
-      [ "v0.0.1.0", "md__commit_history.html#autotoc_md208", [
-        [ "commit 979bf4", "md__commit_history.html#autotoc_md209", [
-          [ "structures", "md__commit_history.html#autotoc_md210", null ],
-          [ "variables", "md__commit_history.html#autotoc_md211", null ]
-        ] ],
-        [ "commit e37003", "md__commit_history.html#autotoc_md212", [
-          [ "functions", "md__commit_history.html#autotoc_md213", null ]
-        ] ],
-        [ "commit 0c1496", "md__commit_history.html#autotoc_md214", [
-          [ "functions", "md__commit_history.html#autotoc_md215", null ]
-        ] ]
+      [ "v0.0.1.0 (05.11.2021)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md58", [
+        [ "Виправлення помилок:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md59", null ],
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md60", null ]
       ] ],
-      [ "v0.0.0.3", "md__commit_history.html#autotoc_md216", [
-        [ "commit 1a11a0", "md__commit_history.html#autotoc_md217", [
-          [ "functions", "md__commit_history.html#autotoc_md218", null ]
-        ] ],
-        [ "commit 05d8b0", "md__commit_history.html#autotoc_md219", [
-          [ "functions", "md__commit_history.html#autotoc_md220", null ]
-        ] ]
+      [ "v0.0.0.3 (16.10.2021)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md62", [
+        [ "Виправлення помилок:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md63", null ],
+        [ "Покращення:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md64", null ]
       ] ],
-      [ "v0.0.0.1", "md__commit_history.html#autotoc_md221", null ]
+      [ "v0.0.0.2 (01.10.2021)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md66", [
+        [ "Виправлення помилок:", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md67", null ]
+      ] ],
+      [ "v0.0.0.1 (29.09.2021)", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md69", [
+        [ "Реліз", "d1/d5b/md__c_h_a_n_g_e_l_o_g.html#autotoc_md70", null ]
+      ] ]
     ] ],
-    [ "Список завдань", "todo.html", null ],
-    [ "Список тестів", "test.html", null ],
-    [ "Застарілі елементи", "deprecated.html", null ],
-    [ "Список дефектів", "bug.html", null ],
+    [ "Історія Базового класу масиву (class ArrayBase) чи Сірий кардинал у ALGOR", "d6/dd6/md__array_base_history.html", [
+      [ "Передісторія", "d6/dd6/md__array_base_history.html#autotoc_md72", null ],
+      [ "Перший комміт 6efeb8 v0.1.0.0 (\"Покращення класів сортувань\")", "d6/dd6/md__array_base_history.html#autotoc_md73", null ],
+      [ "Другий коміт 46b2fa v0.1.0.0 (\"Класифікація\")", "d6/dd6/md__array_base_history.html#autotoc_md74", null ],
+      [ "Третій комміт 48aa64 v0.1.0.0 (\"Класифікація - продовження\")", "d6/dd6/md__array_base_history.html#autotoc_md75", null ],
+      [ "Четвертий комміт 1d50a2 v0.1.0.0 (\"Фінальна типізація\")", "d6/dd6/md__array_base_history.html#autotoc_md76", null ],
+      [ "Наші часи (v1.0.0.0)", "d6/dd6/md__array_base_history.html#autotoc_md77", null ],
+      [ "Результат", "d6/dd6/md__array_base_history.html#autotoc_md78", null ],
+      [ "Граф", "d6/dd6/md__array_base_history.html#autotoc_md79", null ]
+    ] ],
+    [ "Історія додавання нового функціоналу по коммітам", "d1/dab/md__commit_history.html", [
+      [ "v1.0.0.0", "d1/dab/md__commit_history.html#autotoc_md82", [
+        [ "Важливість", "d1/dab/md__commit_history.html#autotoc_md81", null ],
+        [ "commit a2f550", "d1/dab/md__commit_history.html#autotoc_md83", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md84", null ]
+        ] ]
+      ] ],
+      [ "v0.1.3.0", "d1/dab/md__commit_history.html#autotoc_md85", [
+        [ "commit d66e53", "d1/dab/md__commit_history.html#autotoc_md86", [
+          [ "namespaces", "d1/dab/md__commit_history.html#autotoc_md87", null ],
+          [ "variables", "d1/dab/md__commit_history.html#autotoc_md88", null ]
+        ] ],
+        [ "commit 2cdff0", "d1/dab/md__commit_history.html#autotoc_md89", [
+          [ "namespaces", "d1/dab/md__commit_history.html#autotoc_md90", null ]
+        ] ],
+        [ "commit 98b663", "d1/dab/md__commit_history.html#autotoc_md91", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md92", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md93", null ]
+        ] ],
+        [ "commit b50b4a", "d1/dab/md__commit_history.html#autotoc_md94", [
+          [ "typedefs", "d1/dab/md__commit_history.html#autotoc_md95", null ]
+        ] ],
+        [ "commit ca0704", "d1/dab/md__commit_history.html#autotoc_md96", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md97", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md98", null ],
+          [ "variables", "d1/dab/md__commit_history.html#autotoc_md99", null ]
+        ] ],
+        [ "commit 5a7ff3", "d1/dab/md__commit_history.html#autotoc_md100", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md101", null ]
+        ] ],
+        [ "commit 045729", "d1/dab/md__commit_history.html#autotoc_md102", [
+          [ "operators", "d1/dab/md__commit_history.html#autotoc_md103", null ]
+        ] ],
+        [ "commit 828901", "d1/dab/md__commit_history.html#autotoc_md104", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md105", null ]
+        ] ],
+        [ "commit 391fff", "d1/dab/md__commit_history.html#autotoc_md106", [
+          [ "structures", "d1/dab/md__commit_history.html#autotoc_md107", null ],
+          [ "variables", "d1/dab/md__commit_history.html#autotoc_md108", null ]
+        ] ],
+        [ "commit 2c6408", "d1/dab/md__commit_history.html#autotoc_md109", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md110", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md111", null ],
+          [ "variables", "d1/dab/md__commit_history.html#autotoc_md112", null ]
+        ] ],
+        [ "commit b6349a", "d1/dab/md__commit_history.html#autotoc_md113", [
+          [ "typedefs", "d1/dab/md__commit_history.html#autotoc_md114", null ]
+        ] ]
+      ] ],
+      [ "v0.1.2.1", "d1/dab/md__commit_history.html#autotoc_md115", [
+        [ "commit d94012", "d1/dab/md__commit_history.html#autotoc_md116", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md117", null ]
+        ] ],
+        [ "commit ffc19f", "d1/dab/md__commit_history.html#autotoc_md118", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md119", null ]
+        ] ]
+      ] ],
+      [ "v0.1.2.0", "d1/dab/md__commit_history.html#autotoc_md120", [
+        [ "commit 52d263", "d1/dab/md__commit_history.html#autotoc_md121", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md122", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md123", null ]
+        ] ],
+        [ "commit 1981d6", "d1/dab/md__commit_history.html#autotoc_md124", [
+          [ "typedefs", "d1/dab/md__commit_history.html#autotoc_md125", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md126", null ]
+        ] ],
+        [ "commit 2fa93b", "d1/dab/md__commit_history.html#autotoc_md127", [
+          [ "namespaces", "d1/dab/md__commit_history.html#autotoc_md128", null ],
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md129", null ],
+          [ "interfaces", "d1/dab/md__commit_history.html#autotoc_md130", null ]
+        ] ],
+        [ "commit 197603", "d1/dab/md__commit_history.html#autotoc_md131", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md132", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md133", null ]
+        ] ],
+        [ "commit d74cc1", "d1/dab/md__commit_history.html#autotoc_md134", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md135", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md136", null ]
+        ] ],
+        [ "commit d3274a", "d1/dab/md__commit_history.html#autotoc_md137", [
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md138", null ]
+        ] ],
+        [ "commit f6f6fe", "d1/dab/md__commit_history.html#autotoc_md139", [
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md140", null ]
+        ] ]
+      ] ],
+      [ "v0.1.1.4", "d1/dab/md__commit_history.html#autotoc_md141", [
+        [ "commit b19f70", "d1/dab/md__commit_history.html#autotoc_md142", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md143", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md144", null ]
+        ] ],
+        [ "commit 090b06", "d1/dab/md__commit_history.html#autotoc_md145", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md146", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md147", null ]
+        ] ]
+      ] ],
+      [ "v0.1.1.3", "d1/dab/md__commit_history.html#autotoc_md148", [
+        [ "commit f81852", "d1/dab/md__commit_history.html#autotoc_md149", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md150", null ]
+        ] ],
+        [ "commit b4cdc9", "d1/dab/md__commit_history.html#autotoc_md151", [
+          [ "typedefs", "d1/dab/md__commit_history.html#autotoc_md152", null ],
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md153", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md154", null ]
+        ] ]
+      ] ],
+      [ "v0.1.1.2", "d1/dab/md__commit_history.html#autotoc_md155", [
+        [ "commit 28f51f", "d1/dab/md__commit_history.html#autotoc_md156", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md157", null ]
+        ] ],
+        [ "commit 343e40", "d1/dab/md__commit_history.html#autotoc_md158", [
+          [ "structures", "d1/dab/md__commit_history.html#autotoc_md159", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md160", null ]
+        ] ],
+        [ "commit 46c223", "d1/dab/md__commit_history.html#autotoc_md161", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md162", null ]
+        ] ],
+        [ "commit 303e5b", "d1/dab/md__commit_history.html#autotoc_md163", [
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md164", null ]
+        ] ],
+        [ "commit 49dffe", "d1/dab/md__commit_history.html#autotoc_md165", [
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md166", null ]
+        ] ]
+      ] ],
+      [ "v0.1.1.1", "d1/dab/md__commit_history.html#autotoc_md167", [
+        [ "commit 800c0d", "d1/dab/md__commit_history.html#autotoc_md168", [
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md169", null ]
+        ] ],
+        [ "commit f338fc", "d1/dab/md__commit_history.html#autotoc_md170", [
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md171", null ]
+        ] ]
+      ] ],
+      [ "v0.1.1.0", "d1/dab/md__commit_history.html#autotoc_md172", [
+        [ "commit bce6b6", "d1/dab/md__commit_history.html#autotoc_md173", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md174", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md175", null ]
+        ] ],
+        [ "commit 8bbf75", "d1/dab/md__commit_history.html#autotoc_md176", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md177", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md178", null ]
+        ] ],
+        [ "commit c62e85", "d1/dab/md__commit_history.html#autotoc_md179", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md180", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md181", null ],
+          [ "variables", "d1/dab/md__commit_history.html#autotoc_md182", null ]
+        ] ]
+      ] ],
+      [ "v0.1.0.0", "d1/dab/md__commit_history.html#autotoc_md183", [
+        [ "commit 89658e", "d1/dab/md__commit_history.html#autotoc_md184", [
+          [ "typedefs", "d1/dab/md__commit_history.html#autotoc_md185", null ]
+        ] ],
+        [ "commit 0d3195", "d1/dab/md__commit_history.html#autotoc_md186", [
+          [ "typedefs", "d1/dab/md__commit_history.html#autotoc_md187", null ]
+        ] ],
+        [ "commit 88415c", "d1/dab/md__commit_history.html#autotoc_md188", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md189", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md190", null ],
+          [ "variables", "d1/dab/md__commit_history.html#autotoc_md191", null ]
+        ] ],
+        [ "commit dd5d42", "d1/dab/md__commit_history.html#autotoc_md192", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md193", null ],
+          [ "operators", "d1/dab/md__commit_history.html#autotoc_md194", null ]
+        ] ],
+        [ "commit 37cab7", "d1/dab/md__commit_history.html#autotoc_md195", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md196", null ]
+        ] ],
+        [ "commit 1f2a4f", "d1/dab/md__commit_history.html#autotoc_md197", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md198", null ]
+        ] ],
+        [ "commit 1d50a2", "d1/dab/md__commit_history.html#autotoc_md199", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md200", null ]
+        ] ],
+        [ "commit 48aa64", "d1/dab/md__commit_history.html#autotoc_md201", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md202", null ]
+        ] ],
+        [ "commit 46b2fa", "d1/dab/md__commit_history.html#autotoc_md203", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md204", null ]
+        ] ],
+        [ "commit 6efeb8", "d1/dab/md__commit_history.html#autotoc_md205", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md206", null ],
+          [ "classes", "d1/dab/md__commit_history.html#autotoc_md207", null ],
+          [ "variables", "d1/dab/md__commit_history.html#autotoc_md208", null ]
+        ] ],
+        [ "commit 85698d", "d1/dab/md__commit_history.html#autotoc_md209", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md210", null ],
+          [ "enumerations", "d1/dab/md__commit_history.html#autotoc_md211", null ],
+          [ "variables", "d1/dab/md__commit_history.html#autotoc_md212", null ]
+        ] ]
+      ] ],
+      [ "v0.0.1.0", "d1/dab/md__commit_history.html#autotoc_md213", [
+        [ "commit 979bf4", "d1/dab/md__commit_history.html#autotoc_md214", [
+          [ "structures", "d1/dab/md__commit_history.html#autotoc_md215", null ],
+          [ "variables", "d1/dab/md__commit_history.html#autotoc_md216", null ]
+        ] ],
+        [ "commit e37003", "d1/dab/md__commit_history.html#autotoc_md217", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md218", null ]
+        ] ],
+        [ "commit 0c1496", "d1/dab/md__commit_history.html#autotoc_md219", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md220", null ]
+        ] ]
+      ] ],
+      [ "v0.0.0.3", "d1/dab/md__commit_history.html#autotoc_md221", [
+        [ "commit 1a11a0", "d1/dab/md__commit_history.html#autotoc_md222", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md223", null ]
+        ] ],
+        [ "commit 05d8b0", "d1/dab/md__commit_history.html#autotoc_md224", [
+          [ "functions", "d1/dab/md__commit_history.html#autotoc_md225", null ]
+        ] ]
+      ] ],
+      [ "v0.0.0.1", "d1/dab/md__commit_history.html#autotoc_md226", null ]
+    ] ],
+    [ "Список завдань", "dd/da0/todo.html", null ],
+    [ "Список тестів", "d4/df6/test.html", null ],
+    [ "Застарілі елементи", "da/d58/deprecated.html", null ],
+    [ "Список дефектів", "de/da5/bug.html", null ],
     [ "Простори імен", "namespaces.html", [
       [ "Простір імен", "namespaces.html", "namespaces_dup" ],
       [ "Елементи простору імен", "namespacemembers.html", [
@@ -287,9 +355,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_a_l_g_o_r_8hpp.html",
-"class_a_l_g_o_r_1_1_distribution___sorts.html#a2e3a52ddeb025a134293730eb94449b5",
-"md__commit_history.html#autotoc_md180"
+"annotated.html",
+"d2/d10/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1not__found.html#abe940c181a29cfd0949f54e1ea1ddb90",
+"d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a1ca0fea48f8befd6cb0999e06f64f75c",
+"functions_func.html"
 ];
 
 var SYNCONMSG = 'клацніть мишкою, щоб заборонити синхронізацію панелі';

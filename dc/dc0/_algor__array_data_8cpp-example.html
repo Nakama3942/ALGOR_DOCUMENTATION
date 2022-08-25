@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Algor_ArrayData.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dc/dc0/_algor__array_data_8cpp-example.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Algor_ArrayData.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;../include/ALGOR.hpp&quot;</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    [[maybe_unused]]<a id="_a0" name="_a0"></a><a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array&lt;long&gt;</a> *arr_str = ALGOR::create_struct&lt;long&gt;(12);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// arr_str = @0x1b4870</span></div>
+<div class="line"> </div>
+<div class="line">    <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a> *array_by_struct = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a>(arr_str);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_struct = @0x1b4eb0</span></div>
+<div class="line">    <span class="comment">// array_by_struct-&gt;[ALGOR::ArrayBase]-&gt;ARRAY = @0x1b4870</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a> *array_by_size = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a>(12);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size = @0x1b4ef0</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY = @0x1b4f30</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        array_by_size-&gt;<a id="a2" name="a2"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a id="_a3" name="_a3"></a><a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a id="a4" name="a4"></a><a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a id="a5" name="a5"></a><a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a id="a6" name="a6"></a><a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// ALGOR::Array&lt;long&gt; *arr_siz is required to test of memory removal by the next methods</span></div>
+<div class="line">    [[maybe_unused]]<a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array&lt;long&gt;</a> *arr_siz;</div>
+<div class="line"> </div>
+<div class="line">    arr_siz = array_by_size-&gt;<a id="a7" name="a7"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// arr_siz-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89}</span></div>
+<div class="line">    <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a> *second_array = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a>(15);</div>
+<div class="line">    second_array-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(100, 10000);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// second_array-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {6752 7511 9038 8345 928 4627 1938 8125 8076 5135 1918 6821 5672 5819 1298}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        array_by_size-&gt;<a id="a8" name="a8"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a714ae5a3a482f22d6acb7d6c67f79ce2">setNewData</a>(second_array-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>());</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {6752 7511 9038 8345 928 4627 1938 8125 8076 5135 1918 6821 5672 5819 1298}</span></div>
+<div class="line">    <span class="comment">// arr_siz-&gt;array = {Data is lost...}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    arr_siz = array_by_size-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// arr_siz-&gt;array = {6752 7511 9038 8345 928 4627 1938 8125 8076 5135 1918 6821 5672 5819 1298}</span></div>
+<div class="line">    <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a> *third_array = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a>(20);</div>
+<div class="line">    third_array-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(10, 1000);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// third_array-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {722 491 38 335 838 577 858 115 66 95 838 791 632 779 218 879 882 517 612 267}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        array_by_size-&gt;<a id="a9" name="a9"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#adf33d27a45d6e03029a2b5bfb3068bcb">setData</a>(third_array-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>());</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {722 491 38 335 838 577 858 115 66 95 838 791 632 779 218 879 882 517 612 267}</span></div>
+<div class="line">    <span class="comment">// arr_siz-&gt;array = {6752 7511 9038 8345 928 4627 1938 8125 8076 5135 1918 6821 5672 5819 1298}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    arr_siz = array_by_size-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// arr_siz-&gt;array = {722 491 38 335 838 577 858 115 66 95 838 791 632 779 218 879 882 517 612 267}</span></div>
+<div class="line">    <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a> *fourth_array = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a>(10);</div>
+<div class="line">    fourth_array-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1000, 100000);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// fourth_array-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {37352 57911 49538 19145 81028 74827 22638 18925 48576 95135}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        array_by_size-&gt;<a id="a10" name="a10"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a345c29d6d46ddacf65f995381e2d6014">cloneNewData</a>(fourth_array-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>());</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {37352 57911 49538 19145 81028 74827 22638 18925 48576 95135}</span></div>
+<div class="line">    <span class="comment">// arr_siz-&gt;array = {Data is lost...} ? BUG</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    arr_siz = array_by_size-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// arr_siz-&gt;array = {37352 57911 49538 19145 81028 74827 22638 18925 48576 95135}</span></div>
+<div class="line">    <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a> *fifth_array = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long&gt;</a>(6);</div>
+<div class="line">    fifth_array-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(6, 16);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// third_array-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {8 7 14 11 14 13}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        array_by_size-&gt;<a id="a11" name="a11"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ab35a9b3d676a6956acd2c914bd7aa7bc">cloneData</a>(fifth_array-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>());</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {8 7 14 11 14 13}</span></div>
+<div class="line">    <span class="comment">// arr_siz-&gt;array = {37352 57911 49538 19145 81028 74827 22638 18925 48576 95135}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// arr_str = @0x1b4870</span></div>
+<div class="line">    arr_str = array_by_size-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// arr_str = @0x30c16f0</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Array size is &quot;</span> &lt;&lt; array_by_size-&gt;<a id="a12" name="a12"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Array size is 6</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Position is 4; value is &quot;</span> &lt;&lt; array_by_size-&gt;<a id="a13" name="a13"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a0255fd73488fcb40bc198b2d5fc06441">getValue</a>(4) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Position is 4; value is 8</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// Remind you that binary search works only with sorted data</span></div>
+<div class="line">    <a id="_a14" name="_a14"></a><a class="code hl_class" href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html">ALGOR::Comparative_Sorts&lt;long&gt;::LibrarySort</a> sort1(array_by_size-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()-&gt;array, array_by_size-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>()); <span class="comment">//or any sorting</span></div>
+<div class="line">    sort1.<a id="a15" name="a15"></a>library_sort();</div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Element \&quot;8\&quot; first encountered at location &quot;</span> &lt;&lt; array_by_size-&gt;<a id="a16" name="a16"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a85b4438e73dbcb3ab6d835caa038d865">binary_getPosition</a>(8)&lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Element &quot;8&quot; first encountered at location 0</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// Remind you that the ALGOR::ARRAYDATA::lenear_getPosition method returns an array of positions</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        Array&lt;asize_t&gt; *NumberPoints = array_by_size-&gt;<a id="a17" name="a17"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a8fdf44b6f6914e57b73e0f4ded991ccd">lenear_getPosition</a>(15);</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Element \&quot;15\&quot; first encountered at locations: &quot;</span>;</div>
+<div class="line">        <span class="keywordflow">for</span> (<a id="a18" name="a18"></a><a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; NumberPoints-&gt;array_size; i++)</div>
+<div class="line">        {</div>
+<div class="line">            std::cout &lt;&lt; NumberPoints-&gt;array[i] + 1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">        }</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">        remove_struct&lt;asize_t&gt;(NumberPoints);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Element &quot;15&quot; first encountered at locations: 5 6</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Minimal element is &quot;</span> &lt;&lt; array_by_size-&gt;<a id="a19" name="a19"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a60f0716a13a430dc20da87a1f3fa7fef">getMin</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Minimal element is 8</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Maximal element is &quot;</span> &lt;&lt; array_by_size-&gt;<a id="a20" name="a20"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a0b3ee17a7d58df09619bbbf802ae0987">getMax</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Maximal element is 15</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        array_by_size-&gt;<a id="a21" name="a21"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#af2e4a786e32a48a7e0b6098521038abc">reset</a>();</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {Data is lost...}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// Remind you that array_by_struct was empty until now (with empty data)</span></div>
+<div class="line">    array_by_struct-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(10, 20);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {12 11 18 15 18 17 18 15 16 15 18 11}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        array_by_struct-&gt;<a id="a22" name="a22"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#abe9b6dc9f6887b4f70c77d7ecbea0f24">resize</a>(7, 1);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {12 11 18 15 18 17 18}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {12 11 18 15 18 17 18}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        array_by_struct-&gt;<a id="a23" name="a23"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ab0f5608b78ed0ecb3a62d7f62f150d44">replace</a>(5, 100);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {12 11 18 15 18 100 18}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {12 11 18 15 18 100 18}</span></div>
+<div class="line">    array_by_struct-&gt;<a id="a24" name="a24"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a9abf8c486031f064ed7d0f99c5f0929b">reverse</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {18 100 18 15 18 11 12}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {18 100 18 15 18 11 12}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        array_by_struct-&gt;<a id="a25" name="a25"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a1e4a85b6109c2db70c6814281796a459">respawn</a>();</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {71 25 42 11 32 26 86}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// Checking what data we have</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; array_by_struct-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>(); i++)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; array_by_struct-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()-&gt;array[i] &lt;&lt; <span class="stringliteral">&quot;; &quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Сreating a subarray that will be searched in the array</span></div>
+<div class="line">    Array&lt;long&gt; *Sequence = <span class="keyword">new</span> Array&lt;long&gt;;</div>
+<div class="line">    ArrayProcessing&lt;long&gt;::addElement(Sequence-&gt;array, Sequence-&gt;array_size, 79, 0);</div>
+<div class="line">    ArrayProcessing&lt;long&gt;::addElement(Sequence-&gt;array, Sequence-&gt;array_size, 72, 1);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Performing a search and display the result</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array&lt;asize_t&gt;</a> *Occurrence = array_by_struct-&gt;<a id="a26" name="a26"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a44b73c87b5526524cc5b250c3b287a42">searcherOccurrencesOfSubstring</a>(Sequence, ARRAYDATA&lt;long&gt;::ArrayType::NUMBER);</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Sequence \&quot;79, 72\&quot; first encountered at locations: &quot;</span>;</div>
+<div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; Occurrence-&gt;<a id="a27" name="a27"></a><a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>; i++)</div>
+<div class="line">        {</div>
+<div class="line">            std::cout &lt;&lt; Occurrence-&gt;<a id="a28" name="a28"></a><a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">        }</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">        remove_struct&lt;asize_t&gt;(Occurrence);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    remove_struct&lt;long&gt;(Sequence);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Sequence &quot;79, 72&quot; first encountered at locations: 3</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Array&#39;s average: &quot;</span> &lt;&lt; array_by_struct-&gt;<a id="a29" name="a29"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ae528a50f9940ff553072592e1a2ab5b0">average</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Array&#39;s average: 56</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Array&#39;s mediana: &quot;</span> &lt;&lt; array_by_struct-&gt;<a id="a30" name="a30"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a04834a9f12ff66744208b6c7493f024c">mediana</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; Array&#39;s mediana: 79</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <a id="_a31" name="_a31"></a><a class="code hl_struct" href="../../de/d42/struct_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_1_1mode.html">ALGOR::ARRAYDATA&lt;long&gt;::mode</a> *moda = array_by_struct-&gt;<a id="a32" name="a32"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ad05544a532b99d8b29586d16f1aaa985">moda</a>();</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Most frequent items: &quot;</span>;</div>
+<div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; moda-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>; i++)</div>
+<div class="line">        {</div>
+<div class="line">            std::cout &lt;&lt; moda-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">        }</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;, namely &quot;</span> &lt;&lt; moda-&gt;<a id="a33" name="a33"></a><a class="code hl_variable" href="../../de/d42/struct_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_1_1mode.html#ab01b5670e6b4aa0ee074cd3308ac121d">highest_frequency</a> &lt;&lt; <span class="stringliteral">&quot; times.\n&quot;</span>;</div>
+<div class="line">        <span class="keyword">delete</span>[] moda-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>;</div>
+<div class="line">        <span class="keyword">delete</span> (moda);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span>(<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;There is no mode - all values are unique!\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; There is no mode - all values are unique!</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; (*array_by_size = array_by_struct-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; 1</span></div>
+<div class="line">    <span class="comment">// That is, the operation is completed</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    std::cout &lt;&lt; (*array_by_size == array_by_struct-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">// &gt;print:&gt; 1</span></div>
+<div class="line">    <span class="comment">// That is, the values are equal</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {10 53 86 79 72 43 52}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        *array_by_size ^= 13;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {10 53 86 79 72 43 52 1 1 1 1 1 1}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {10 53 86 79 72 43 52 1 1 1 1 1 1}</span></div>
+<div class="line">    *array_by_size += 15;</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {25 68 101 94 87 58 67 16 16 16 16 16 16}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {25 68 101 94 87 58 67 16 16 16 16 16 16}</span></div>
+<div class="line">    *array_by_size -= 17;</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {8 51 84 77 70 41 50 -1 -1 -1 -1 -1 -1}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {8 51 84 77 70 41 50 -1 -1 -1 -1 -1 -1}</span></div>
+<div class="line">    *array_by_size *= 19;</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {152 969 1596 1463 1330 779 950 -19 -19 -19 -19 -19 -19}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {152 969 1596 1463 1330 779 950 -19 -19 -19 -19 -19 -19}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        *array_by_size /= 21;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 45 0 0 0 0 0 0}</span></div>
+<div class="line">    <span class="comment">// Since we have an array of integers, the remainder of the division is discarded</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 45 0 0 0 0 0 0}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        *array_by_size &amp;= 23;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 45 0 0 0 0 0 0 23}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 45 0 0 0 0 0 0 23}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        *array_by_size |= 45;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 0 0 0 0 0 0 23}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 0 0 0 0 0 0 23}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        !*array_by_size;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 0 0 0 0 0 0}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_struct-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {10 53 86 79 72 43 52}</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 0 0 0 0 0 0}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        *array_by_size &lt;&lt;= array_by_struct;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_struct-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {10 53 86 79 72 43 52}</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 0 0 0 0 0 0 10 53 86 79 72 43 52}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_struct-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {10 53 86 79 72 43 52}</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 0 0 0 0 0 0 10 53 86 79 72 43 52}</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        *array_by_size &gt;&gt;= array_by_struct;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// array_by_struct-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {10 53 86 79 72 43 52 7 46 76 69 63 37 0 0 0 0 0 0 10 53 86 79 72 43 52}</span></div>
+<div class="line">    <span class="comment">// array_by_size-&gt;[ALGOR::ArrayBase]-&gt;ARRAY-&gt;array = {7 46 76 69 63 37 0 0 0 0 0 0 10 53 86 79 72 43 52}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    std::cin.get();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA</a></div><div class="ttdoc">Клас з потужним функціоналом обробки масивів</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00325">ALGOR.hpp:326</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a0255fd73488fcb40bc198b2d5fc06441"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a0255fd73488fcb40bc198b2d5fc06441">ALGOR::ARRAYDATA::getValue</a></div><div class="ttdeci">type_array getValue(const asize_t &amp;position)</div><div class="ttdoc">Повертає значення із заданої позиції</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00311">ALGOR_ARRAY.cpp:311</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a04834a9f12ff66744208b6c7493f024c"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a04834a9f12ff66744208b6c7493f024c">ALGOR::ARRAYDATA::mediana</a></div><div class="ttdeci">type_array mediana()</div><div class="ttdoc">Метод, який повертає медіану масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00490">ALGOR_ARRAY.cpp:490</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a0b3ee17a7d58df09619bbbf802ae0987"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a0b3ee17a7d58df09619bbbf802ae0987">ALGOR::ARRAYDATA::getMax</a></div><div class="ttdeci">type_array getMax()</div><div class="ttdoc">Оптимізований метод пошуку максимального елемента</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00370">ALGOR_ARRAY.cpp:370</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a1e4a85b6109c2db70c6814281796a459"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a1e4a85b6109c2db70c6814281796a459">ALGOR::ARRAYDATA::respawn</a></div><div class="ttdeci">void respawn()</div><div class="ttdoc">Метод збросу та перегенерації данних</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00428">ALGOR_ARRAY.cpp:428</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a345c29d6d46ddacf65f995381e2d6014"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a345c29d6d46ddacf65f995381e2d6014">ALGOR::ARRAYDATA::cloneNewData</a></div><div class="ttdeci">void cloneNewData(Array&lt; type_array &gt; *&amp;CloningArray)</div><div class="ttdoc">Метод, який замінює старий масив шляхом копіювання існуючого з видаленням старих данних</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00282">ALGOR_ARRAY.cpp:282</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a44b73c87b5526524cc5b250c3b287a42"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a44b73c87b5526524cc5b250c3b287a42">ALGOR::ARRAYDATA::searcherOccurrencesOfSubstring</a></div><div class="ttdeci">Array&lt; asize_t &gt; * searcherOccurrencesOfSubstring(Array&lt; type_array &gt; *&amp;SUBARRAY, ArrayType ArrType=ArrayType::NUMBER)</div><div class="ttdoc">Метод пошуку послідовності, який повертає всі її входження</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00436">ALGOR_ARRAY.cpp:436</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a4fcd91751fd4764be8b013d6a394c13a"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">ALGOR::ARRAYDATA::getData</a></div><div class="ttdeci">Array&lt; type_array &gt; *&amp; getData()</div><div class="ttdoc">Повертає вказівник на структуру масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00299">ALGOR_ARRAY.cpp:299</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a5a6fe6826157c351c4bdfacb1761fb5b"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">ALGOR::ARRAYDATA::generatedData</a></div><div class="ttdeci">void generatedData(const sbit64_t &amp;min_limit, const sbit64_t &amp;max_limit, const ubit64_t seed=getMemoryCell(32), const ubit32_t denominator=1)</div><div class="ttdoc">Метод, який заповнює весь масив випадковими значеннями</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00258">ALGOR_ARRAY.cpp:258</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a60f0716a13a430dc20da87a1f3fa7fef"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a60f0716a13a430dc20da87a1f3fa7fef">ALGOR::ARRAYDATA::getMin</a></div><div class="ttdeci">type_array getMin()</div><div class="ttdoc">Оптимізований метод пошуку мінімального елемента</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00362">ALGOR_ARRAY.cpp:362</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a714ae5a3a482f22d6acb7d6c67f79ce2"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a714ae5a3a482f22d6acb7d6c67f79ce2">ALGOR::ARRAYDATA::setNewData</a></div><div class="ttdeci">void setNewData(Array&lt; type_array &gt; *&amp;Array)</div><div class="ttdoc">Метод, який замінює попередній масив на новий, звільняючи пам'ять від попереднього</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00267">ALGOR_ARRAY.cpp:267</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a85b4438e73dbcb3ab6d835caa038d865"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a85b4438e73dbcb3ab6d835caa038d865">ALGOR::ARRAYDATA::binary_getPosition</a></div><div class="ttdeci">asize_t binary_getPosition(const type_array &amp;required_element)</div><div class="ttdoc">Бінарний метод пошуку елемента</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00321">ALGOR_ARRAY.cpp:321</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a8fdf44b6f6914e57b73e0f4ded991ccd"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a8fdf44b6f6914e57b73e0f4ded991ccd">ALGOR::ARRAYDATA::lenear_getPosition</a></div><div class="ttdeci">Array&lt; asize_t &gt; * lenear_getPosition(const type_array &amp;required_element)</div><div class="ttdoc">Лінійний метод пошуку елемента</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00339">ALGOR_ARRAY.cpp:339</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a9abf8c486031f064ed7d0f99c5f0929b"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a9abf8c486031f064ed7d0f99c5f0929b">ALGOR::ARRAYDATA::reverse</a></div><div class="ttdeci">void reverse()</div><div class="ttdoc">Перевертає масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00416">ALGOR_ARRAY.cpp:416</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_ab0f5608b78ed0ecb3a62d7f62f150d44"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ab0f5608b78ed0ecb3a62d7f62f150d44">ALGOR::ARRAYDATA::replace</a></div><div class="ttdeci">void replace(const asize_t &amp;position, const type_array &amp;value)</div><div class="ttdoc">Змінює значення по вказаній позиції</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00405">ALGOR_ARRAY.cpp:405</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_ab35a9b3d676a6956acd2c914bd7aa7bc"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ab35a9b3d676a6956acd2c914bd7aa7bc">ALGOR::ARRAYDATA::cloneData</a></div><div class="ttdeci">void cloneData(Array&lt; type_array &gt; *&amp;CloningArray)</div><div class="ttdoc">Метод, який замінює старий масив шляхом копіювання існуючого без видалення старих денних</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00291">ALGOR_ARRAY.cpp:291</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_abe9b6dc9f6887b4f70c77d7ecbea0f24"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#abe9b6dc9f6887b4f70c77d7ecbea0f24">ALGOR::ARRAYDATA::resize</a></div><div class="ttdeci">void resize(const asize_t &amp;NEW_SIZE, const type_array &amp;setElement)</div><div class="ttdoc">Метод, який змінює розмір масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00386">ALGOR_ARRAY.cpp:386</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_ac8ca152d30494367adc872c26bc35acc"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">ALGOR::ARRAYDATA::getSize</a></div><div class="ttdeci">asize_t getSize()</div><div class="ttdoc">Повертає розмір структури масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00305">ALGOR_ARRAY.cpp:305</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_ad05544a532b99d8b29586d16f1aaa985"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ad05544a532b99d8b29586d16f1aaa985">ALGOR::ARRAYDATA::moda</a></div><div class="ttdeci">mode * moda()</div><div class="ttdoc">Метод, який повертає всі елементи моди масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00500">ALGOR_ARRAY.cpp:500</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_adf33d27a45d6e03029a2b5bfb3068bcb"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#adf33d27a45d6e03029a2b5bfb3068bcb">ALGOR::ARRAYDATA::setData</a></div><div class="ttdeci">void setData(Array&lt; type_array &gt; *&amp;Array)</div><div class="ttdoc">Метод, який замінює попередній масив на новий без звільнення пам'яті від попереднього</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00275">ALGOR_ARRAY.cpp:275</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_ae528a50f9940ff553072592e1a2ab5b0"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ae528a50f9940ff553072592e1a2ab5b0">ALGOR::ARRAYDATA::average</a></div><div class="ttdeci">type_array average()</div><div class="ttdoc">Метод, який повертає середнє арифметичне значення масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00470">ALGOR_ARRAY.cpp:470</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_af2e4a786e32a48a7e0b6098521038abc"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#af2e4a786e32a48a7e0b6098521038abc">ALGOR::ARRAYDATA::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Метод збросу данних</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00378">ALGOR_ARRAY.cpp:378</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort_html"><div class="ttname"><a href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html">ALGOR::Comparative_Sorts::LibrarySort</a></div><div class="ttdoc">Алгоритм сортування Library Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00554">ALGOR.hpp:555</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a></div><div class="ttdoc">Клас-каркас для роботи з винятками</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00132">ALGOR.hpp:133</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_abe940c181a29cfd0949f54e1ea1ddb90"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">ALGOR::EXCEPTION_SET::Exception::what</a></div><div class="ttdeci">const byte1_t * what()</div><div class="ttdoc">Метод, що повідомляє деталі винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00063">ALGOR_EXCEPTION.cpp:63</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_acfda563de6599777f5f49f72b6144973"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">ALGOR::EXCEPTION_SET::Exception::code</a></div><div class="ttdeci">ubit16_t code()</div><div class="ttdoc">Метод, що повідомляє номер винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00058">ALGOR_EXCEPTION.cpp:58</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_af1817b0938683b5a20f67300af0ed845"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">ALGOR::EXCEPTION_SET::Exception::why</a></div><div class="ttdeci">const byte1_t * why()</div><div class="ttdoc">Метод, що дає пояснення винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00068">ALGOR_EXCEPTION.cpp:68</a></div></div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></div><div class="ttdoc">Глобальний простір імен усього проекту</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00051">ALGOR.hpp:52</a></div></div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html_a53125d45a174125d83620e1822713060"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">ALGOR::asize_t</a></div><div class="ttdeci">ubit32_t asize_t</div><div class="ttdoc">Псевдонім для визначення типу &quot;розмір массиву&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00082">ALGOR.hpp:82</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_1_1mode_html"><div class="ttname"><a href="../../de/d42/struct_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_1_1mode.html">ALGOR::ARRAYDATA::mode</a></div><div class="ttdoc">Структура моди масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00338">ALGOR.hpp:339</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_1_1mode_html_ab01b5670e6b4aa0ee074cd3308ac121d"><div class="ttname"><a href="../../de/d42/struct_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_1_1mode.html#ab01b5670e6b4aa0ee074cd3308ac121d">ALGOR::ARRAYDATA::mode::highest_frequency</a></div><div class="ttdeci">ubit32_t highest_frequency</div><div class="ttdoc">Частота моди</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00340">ALGOR.hpp:340</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array</a></div><div class="ttdoc">Структура, що імітує масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00097">ALGOR.hpp:98</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html_a6f942d8b05206c2d0cd478f837fab989"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">ALGOR::Array::array_size</a></div><div class="ttdeci">asize_t array_size</div><div class="ttdoc">Розмір масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00100">ALGOR.hpp:100</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html_a7e4abada02b2defc3116832ea8853b81"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">ALGOR::Array::array</a></div><div class="ttdeci">type_array * array</div><div class="ttdoc">Вказівник на масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00099">ALGOR.hpp:99</a></div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Документація до ALGOR створена Четвер, 25 серпня 2022 21:38:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

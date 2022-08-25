@@ -41,6 +41,7 @@ window.MathJax = {
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LOGOmini.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
@@ -103,49 +104,98 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title"><a class="el" href="namespace_a_l_g_o_r.html" title="Глобальний простір імен усього проекту">ALGOR</a> </div></div>
+  <div class="headertitle"><div class="title"><a class="el" href="d1/d80/namespace_a_l_g_o_r.html" title="Глобальний простір імен усього проекту">ALGOR</a> </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p ><a class="anchor" id="md_README"></a> <a href="https://github.com/Nakama3942/template_rep"><img src="https://img.shields.io/badge/Repository-template-darkred" alt="template" class="inline"/></a> <a href="https://github.com/Nakama3942/ALGOR/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Nakama3942/ALGOR?color=gold&amp;style=flat-square" alt="GitHub license" class="inline"/></a></p>
 <p ><a href="https://github.com/Nakama3942/ALGOR/blob/main/CHANGELOG.md"><img src="https://img.shields.io/badge/here-CHANGELOG-yellow" alt="CHANGELOG" class="inline"/></a> <a href="https://github.com/Nakama3942/ALGOR/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/here-CONTRIBUTING-indigo" alt="CONTRIBUTING" class="inline"/></a> <a href="https://github.com/Nakama3942/ALGOR/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/here-CODE_OF_CONDUCT-darkgreen" alt="CODE_OF_CONDUCT" class="inline"/></a> <a href="https://github.com/Nakama3942/ALGOR/blob/main/.github/PULL_REQUEST_TEMPLATE.md"><img src="https://img.shields.io/badge/here-PULL_REQUEST_TEMPLATE-orange" alt="PULL_REQUEST_TEMPLATE" class="inline"/></a></p>
+<p ><img src="LOGO.png" alt="" width="940" class="inline"/></p>
 <h1><a class="anchor" id="autotoc_md0"></a>
 ALGOR</h1>
 <h2><a class="anchor" id="autotoc_md1"></a>
+Зміст</h2>
+<ul>
+<li><a href="#algor">ALGOR</a><ul>
+<li><a href="#зміст">Зміст</a></li>
+<li><a href="#огляд">Огляд</a></li>
+<li><a href="#ліцензія">ЛІЦЕНЗІЯ</a></li>
+<li><a href="#функціонал">Функціонал</a></li>
+<li><a href="#документація">Документація</a></li>
+<li><a href="#використання">Використання</a></li>
+<li><a href="#збірка-проекту">Збірка проекту</a><ul>
+<li><a href="#через-ide-windows">Через IDE (Windows)</a></li>
+<li><a href="#через-ide-linux">Через IDE (LINUX)</a></li>
+<li><a href="#через-консоль-windows">Через консоль (Windows)</a></li>
+<li><a href="#через-консоль-linux">Через консоль (LINUX)</a></li>
+<li><a href="#тест-консольної-збірки">Тест консольної збірки</a></li>
+</ul>
+</li>
+<li><a href="#вирішення-проблем">Вирішення проблем</a></li>
+<li><a href="#автори">Автори</a></li>
+<li><a href="#гіфки">Гіфки</a><ul>
+<li><a href="#компіляція-та-лінковка-на-windows-у-ide">Компіляція та лінковка на Windows у IDE</a></li>
+<li><a href="#компіляція-та-лінковка-на-windows-у-консолі">Компіляція та лінковка на Windows у консолі</a></li>
+<li><a href="#компіляція-та-лінковка-на-linux-у-консолі">Компіляція та лінковка на Linux у консолі</a></li>
+<li><a href="#збірка-бібліотеки-через-консоль-у-windows">Збірка бібліотеки через консоль у Windows</a></li>
+<li><a href="#збірка-бібліотеки-через-консоль-у-linux">Збірка бібліотеки через консоль у Linux</a></li>
+<li><a href="#тест-зібраної-бібліотеки-через-консоль">Тест зібраної бібліотеки через консоль</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md2"></a>
 Огляд</h2>
 <p >Бібліотека для обробки та сортування структур даних.</p>
 <p >У пошуках алгоритмів сортувань та пояснень у вигляді коду я часто зустрічав великі коди з купою непотрібних речей, не пов'язаних з алгоритмом сортування (наприклад, тестування) і, в принципі, код містив змінні не зі звичайними іменами, а з назвами типу A, B, C - стиль коду порушений (а іноді навіть жахливий), іноді можна виявити збиту табуляцію та є купа інших факторів, які роблять код нечитабельним і недоступним для розуміння. Я витратив багато часу, щоб зрозуміти ці алгоритми і написав цю бібліотеку, по-перше, щоб не писати щоразу одне і те ж, а просто підключити бібліотеку і використовувати готовий код, а по-друге для інших людей, які тільки навчаються алгоритмам, щоб можна було легко розібратися: код містить лише необхідні методи, вони розташовані по порядку, код я намагаюся оптимізувати, стиль не порушений, і головне - завдяки нормальним іменам код зрозуміліший, читабельніший і підходить для навчання алгоритмам.</p>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md3"></a>
 ЛІЦЕНЗІЯ</h2>
+<p >Повний текст ліцензії знаходиться за наступним <a href="https://github.com/Nakama3942/ALGOR/blob/main/LICENSE">посиланням</a>.</p>
+<blockquote class="doxtable">
 <p >Copyright © 2021-2022 Kalynovsky Valentin. All rights reserved.</p>
 <p >Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at </p><pre class="fragment">http://www.apache.org/licenses/LICENSE-2.0
-</pre><p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
+</pre><p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md4"></a>
 Функціонал</h2>
 <p >Бібліотека реалізує наступний функціонал:</p><ul>
-<li><em>ALGOR_CORE</em><ul>
+<li>[x] <em>ALGOR_CORE</em><ul>
 <li>Розділ реалізації головних базових функцій, класів і визначень</li>
 </ul>
 </li>
-<li><em>ALGOR_EXCEPTION</em><ul>
+<li>[x] <em>ALGOR_EXCEPTION</em><ul>
 <li>Розділ реалізації винятків</li>
 </ul>
 </li>
-<li><em>ALGOR_RANDOM</em><ul>
+<li>[x] <em>ALGOR_RANDOM</em><ul>
 <li>Розділ реалізації рандомайзерів</li>
 </ul>
 </li>
-<li><em>ALGOR_ARRAY</em><ul>
+<li>[x] <em>ALGOR_ARRAY</em><ul>
 <li>Розділ реалізації класів та функцій роботи з масивами</li>
 </ul>
 </li>
-<li><em>ALGOR_SORTING</em><ul>
+<li>[x] <em>ALGOR_SORTING</em><ul>
 <li>Розділ реалізації алгоритмів сортування</li>
 </ul>
 </li>
+<li>[ ] <em>ALGOR_MATRIX</em> <s>(не реалізовано)</s><ul>
+<li>Розділ реалізації класів та функцій роботи з матрицями</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Документація</h2>
+</li>
+<li>[ ] <em>ALGOR_HEAP</em> <s>(не реалізовано)</s><ul>
+<li>Розділ реалізації класів та функцій роботи з купами</li>
+</ul>
+</li>
+<li>[ ] <em>ALGOR_LIST</em> <s>(не реалізовано)</s><ul>
+<li>Розділ реалізації класів та функцій роботи зі списками</li>
+</ul>
+</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md5"></a>
+Документація</h2>
+<p >За документацією резпозиторію звертатись за наступним <a href="https://nakama3942.github.io/ALGOR_DOCUMENTATION/">посиланням</a>.</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
 Використання</h2>
 <p >Бібліотека призначена для компіляції та динамічного лінкування. У релізі доступна зібрана Windows-версія бібліотеки. Можна завантажити та розпакувати архів і:</p><ul>
 <li>У IDE (перевірялося на Qt) необхідно додати шлях до статичної бібліотеки <em>.a</em>, щоб IDE побачила бібліотеку;</li>
@@ -155,7 +205,7 @@ ALGOR</h1>
 <p >Оголошення хідеру відбувається наступним чином: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;/usr/include/ALGOR.hpp&quot;</span>               <span class="comment">// on Linux</span></div>
 <div class="line"><span class="preprocessor">#include &quot;specify/correct/path/to/ALGOR.hpp&quot;</span>    <span class="comment">// on Windows</span></div>
 </div><!-- fragment --><p >Сніппет: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;/usr/include/ALGOR.hpp&quot;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_a_l_g_o_r.html">ALGOR</a>;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="d1/d80/namespace_a_l_g_o_r.html">ALGOR</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"> </div>
@@ -180,25 +230,26 @@ ALGOR</h1>
 <div class="line"><span class="comment">// &gt;print:&gt;</span></div>
 <div class="line"><span class="comment">//   13 80</span></div>
 <div class="line"><span class="comment">//   76 73 22 13 34 21 78 53 80 49</span></div>
-<div class="ttc" id="anamespace_a_l_g_o_r_html"><div class="ttname"><a href="namespace_a_l_g_o_r.html">ALGOR</a></div><div class="ttdoc">Глобальний простір імен усього проекту</div><div class="ttdef"><b>Definition:</b> <a href="_a_l_g_o_r_8hpp_source.html#l00061">ALGOR.hpp:62</a></div></div>
-</div><!-- fragment --><p >Можна бібліотеку зібрати власноруч. Як її зібрати та використовувати описано далі.</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<div class="ttc" id="anamespace_a_l_g_o_r_html"><div class="ttname"><a href="d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></div><div class="ttdoc">Глобальний простір імен усього проекту</div><div class="ttdef"><b>Definition:</b> <a href="d8/d00/_a_l_g_o_r_8hpp_source.html#l00051">ALGOR.hpp:52</a></div></div>
+</div><!-- fragment --><p >Компіляція програми з використанням та лінковкою бібліотеки <a href="#компіляція-та-лінковка-на-windows-у-ide">на Windows у IDE</a>, <a href="#компіляція-та-лінковка-на-windows-у-консолі">на Windows у консолі</a> та <a href="#компіляція-та-лінковка-на-linux-у-консолі">на Linux у консолі</a>.</p>
+<p >Можна бібліотеку зібрати власноруч. Як її зібрати та використовувати описано <a href="#збірка-проекту">далі</a>.</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Збірка проекту</h2>
-<h3><a class="anchor" id="autotoc_md7"></a>
+<h3><a class="anchor" id="autotoc_md8"></a>
 Через IDE (Windows)</h3>
 <p >Бібліотека була написана на чистому С++ у IDE Qt, тому достатньо відкрити .pro-файл у IDE, підключити Kit і зібрати бібліотеку. Тоді створюється окрема директорія з потрібними файлами ALGOR1.dll та libALGOR1.a.</p>
-<h3><a class="anchor" id="autotoc_md8"></a>
+<h3><a class="anchor" id="autotoc_md9"></a>
 Через IDE (LINUX)</h3>
 <p >Компіляція через IDE Qt на Linux не здійснювалась, а тому автор не може дати порад, як зібрати бібліотеку...</p>
-<h3><a class="anchor" id="autotoc_md9"></a>
+<h3><a class="anchor" id="autotoc_md10"></a>
 Через консоль (Windows)</h3>
 <p >Збирати бібліотеку бажано у консолі GitBush (потрібно встановити), так як інструкції даються саме для неї. З директорії бібліотеки потрібно перейти до build/win/ і там запустити файл командою </p><div class="fragment"><div class="line">./makefile</div>
 </div><!-- fragment --><p> Надалі при зборках програм потрібно просто додавати ці (зібрані) файли бібліотеки до програм, що їх використовують:</p><ul>
 <li>Якщо програма компілюється <b>власноруч</b>, то необхідно оголосити хідер бібліотеки у програмі та злінкувати .dll командою до програми і розмістити його поряд з виконуючим файлом і файл .a у цьому випадку не використовується. Як скомпілювати програму з лінкуванням бібліотеки показано у файлі test.sh у цій же директорії.</li>
 <li>Інакше ж якщо програма збирається через <b>IDE</b> (перевірялося тільки на Qt), то тоді будуть використовуватись усі файли а саме: щоб IDE побачила бібліотеку, у меню додання бібліотеки необхідно зазначити шлях до .a файла, потім потрібно оголосити хідер бібліотеки у програмі і після компіляції необхідно .dll файл розмістити поряд з виконуючим файлом.</li>
 </ul>
-<p ><img src="MakingWinLibrary_Animation.gif" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md10"></a>
+<p >Анімоване зображення <a href="#збірка-бібліотеки-через-консоль-у-windows">збірки бібліотеки</a>.</p>
+<h3><a class="anchor" id="autotoc_md11"></a>
 Через консоль (LINUX)</h3>
 <p >З директорії бібліотеки потрібно перейти до build/linux/ і запустити програму make </p><div class="fragment"><div class="line">make install</div>
 <div class="line">make clean</div>
@@ -207,16 +258,16 @@ ALGOR</h1>
 <li>Якщо програма компілюється <b>власноруч</b>, то необхідно оголосити хідер бібліотеки у програмі та злінкувати .so командою до програми і файл .a у цьому випадку не використовується. Як скомпілювати програму з лінкуванням бібліотеки показано у файлі test.sh у цій же директорії.</li>
 <li>Варіант з <b>IDE</b> не здійснювався, а тому автор не може дати порад, як зібрати збірку...</li>
 </ul>
-<p ><img src="MakingLinuxLibrary_Animation.gif" alt="" width="950" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md11"></a>
+<p >Анімоване зображення <a href="#збірка-бібліотеки-через-консоль-у-linux">збірки бібліотеки</a>.</p>
+<h3><a class="anchor" id="autotoc_md12"></a>
 Тест консольної збірки</h3>
 <p >У відповідній директорії (build/win/ чи build/linux/) у консолі (на Windows це все той же GitBush) запускаємо файл test.sh </p><div class="fragment"><div class="line">sh test.sh</div>
 </div><!-- fragment --><p> Також у цьому файлі показано команду компіляції з лінковкою бібліотеки.</p>
-<p ><img src="Testing_Animation.gif" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<p >Анімоване зображення <a href="#тест-зібраної-бібліотеки-через-консоль">збірки бібліотеки</a>.</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Вирішення проблем</h2>
 <p >Всі алгоритми перевірені мною, але якщо у вас виникли проблеми з використанням бібліотеки, код не працює, є пропозиції щодо оптимізації або поради щодо покращення стилю коду та імен - запрошую <a href="https://github.com/Nakama3942/ALGOR/blob/main/CONTRIBUTING.md">сюди</a> та <a href="https://github.com/Nakama3942/ALGOR/blob/main/CODE_OF_CONDUCT.md">сюди</a>.</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 Автори</h2>
 <table align="center" style="border-width: 10; border-style: ridge">
 <tr>
@@ -227,13 +278,33 @@ ALGOR</h1>
 <p class="endtd"></p>
 </td></tr>
 </table>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Гіфки</h2>
+<h3><a class="anchor" id="autotoc_md16"></a>
+Компіляція та лінковка на Windows у IDE</h3>
+<p ><img src="UsingLibraryWinIDE_Animation.gif" alt="" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md17"></a>
+Компіляція та лінковка на Windows у консолі</h3>
+<p ><img src="UsingLibraryWinConsole_Animation.gif" alt="" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md18"></a>
+Компіляція та лінковка на Linux у консолі</h3>
+<p ><img src="UsingLibraryLinuxConsole_Animation.gif" alt="" width="940" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md19"></a>
+Збірка бібліотеки через консоль у Windows</h3>
+<p ><img src="MakingWinLibrary_Animation.gif" alt="" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md20"></a>
+Збірка бібліотеки через консоль у Linux</h3>
+<p ><img src="MakingLinuxLibrary_Animation.gif" alt="" width="940" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md21"></a>
+Тест зібраної бібліотеки через консоль</h3>
+<p ><img src="Testing_Animation.gif" alt="" class="inline"/> </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Документація до ALGOR створена Середа, 24 серпня 2022 21:28:25 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Документація до ALGOR створена Четвер, 25 серпня 2022 21:38:43 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

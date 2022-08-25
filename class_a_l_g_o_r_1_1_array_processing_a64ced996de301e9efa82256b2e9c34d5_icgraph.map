@@ -1,7 +1,0 @@
-<map id="ALGOR::ArrayProcessing::addElement" name="ALGOR::ArrayProcessing::addElement">
-<area shape="rect" id="node1" title="Додає певне значення до масиву у вказаній позиції" alt="" coords="280,89,451,131"/>
-<area shape="rect" id="node2" href="$class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a8fdf44b6f6914e57b73e0f4ded991ccd" title="Лінійний метод пошуку елемента" alt="" coords="20,5,217,47"/>
-<area shape="rect" id="node3" href="$class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ad05544a532b99d8b29586d16f1aaa985" title="Метод, який повертає всі елементи моди масиву" alt="" coords="21,71,216,98"/>
-<area shape="rect" id="node4" href="$class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a132e23de1d0c59e810f68966ca3bcfde" title="Оператор додавання елемента в кінець масиву" alt="" coords="5,122,232,149"/>
-<area shape="rect" id="node5" href="$class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a44b73c87b5526524cc5b250c3b287a42" title="Метод пошуку послідовності, який повертає всі її входження" alt="" coords="13,173,225,215"/>
-</map>
