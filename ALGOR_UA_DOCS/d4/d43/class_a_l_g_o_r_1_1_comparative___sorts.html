@@ -1,0 +1,1311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Шаблон класу ALGOR::Comparative_Sorts&lt; type_array &gt;</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Класи</a> &#124;
+<a href="#pub-methods">Загальнодоступні елементи</a> &#124;
+<a href="#pro-methods">Захищені елементи</a> &#124;
+<a href="#pro-attribs">Захищені дані</a> &#124;
+<a href="../../df/d98/class_a_l_g_o_r_1_1_comparative___sorts-members.html">Список всіх елементів</a>  </div>
+  <div class="headertitle"><div class="title">Шаблон класу ALGOR::Comparative_Sorts&lt; type_array &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Клас з великою кількістю алгоритмів сортувань  
+ <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#details">Детальніше...</a></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Схема успадкувань для ALGOR::Comparative_Sorts&lt; type_array &gt;</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../da/dd8/class_a_l_g_o_r_1_1_comparative___sorts__inherit__graph.png" border="0" usemap="#a_a_l_g_o_r_1_1_comparative___sorts_3_01type__array_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_l_g_o_r_1_1_comparative___sorts_3_01type__array_01_4_inherit__map" id="a_a_l_g_o_r_1_1_comparative___sorts_3_01type__array_01_4_inherit__map">
+<area shape="rect" title="Клас з великою кількістю алгоритмів сортувань" alt="" coords="19,100,193,147"/>
+<area shape="rect" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами" alt="" coords="5,5,207,52"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">див. легенду</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Діаграма зв'язків класу ALGOR::Comparative_Sorts&lt; type_array &gt;:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../dc/d30/class_a_l_g_o_r_1_1_comparative___sorts__coll__graph.png" border="0" usemap="#a_a_l_g_o_r_1_1_comparative___sorts_3_01type__array_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="a_a_l_g_o_r_1_1_comparative___sorts_3_01type__array_01_4_coll__map" id="a_a_l_g_o_r_1_1_comparative___sorts_3_01type__array_01_4_coll__map">
+<area shape="rect" title="Клас з великою кількістю алгоритмів сортувань" alt="" coords="19,100,193,147"/>
+<area shape="rect" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами" alt="" coords="5,5,207,52"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">див. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Класи</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd9/class_a_l_g_o_r_1_1_comparative___sorts_1_1_batcher_odd_even_merge_sort.html">BatcherOddEvenMergeSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Batcher Odd-Even Merge Sort.  <a href="../../d3/dd9/class_a_l_g_o_r_1_1_comparative___sorts_1_1_batcher_odd_even_merge_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df6/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bitonic_sorter.html">BitonicSorter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Bitonic Sorter.  <a href="../../d2/df6/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bitonic_sorter.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bogo_sort.html">BogoSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Bogo Sort.  <a href="../../dd/d71/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bogo_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d05/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bubble_sort.html">BubbleSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Bubble Sort.  <a href="../../da/d05/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bubble_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de4/class_a_l_g_o_r_1_1_comparative___sorts_1_1_cocktail_shaker_sort.html">CocktailShakerSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Cocktail Shaker Sort.  <a href="../../d1/de4/class_a_l_g_o_r_1_1_comparative___sorts_1_1_cocktail_shaker_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d23/class_a_l_g_o_r_1_1_comparative___sorts_1_1_comb_sort.html">CombSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Comb Sort.  <a href="../../d3/d23/class_a_l_g_o_r_1_1_comparative___sorts_1_1_comb_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d86/class_a_l_g_o_r_1_1_comparative___sorts_1_1_cycle_sort.html">CycleSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Cycle Sort.  <a href="../../d2/d86/class_a_l_g_o_r_1_1_comparative___sorts_1_1_cycle_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da1/class_a_l_g_o_r_1_1_comparative___sorts_1_1_gnome_sort.html">GnomeSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Gnome Sort.  <a href="../../db/da1/class_a_l_g_o_r_1_1_comparative___sorts_1_1_gnome_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d46/class_a_l_g_o_r_1_1_comparative___sorts_1_1_heap_sort.html">HeapSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Heap Sort.  <a href="../../dc/d46/class_a_l_g_o_r_1_1_comparative___sorts_1_1_heap_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d44/class_a_l_g_o_r_1_1_comparative___sorts_1_1_insert_sort.html">InsertSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Insert Sort.  <a href="../../d8/d44/class_a_l_g_o_r_1_1_comparative___sorts_1_1_insert_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html">LibrarySort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Library Sort.  <a href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2d/class_a_l_g_o_r_1_1_comparative___sorts_1_1_merge_sort.html">MergeSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Merge Sort.  <a href="../../d5/d2d/class_a_l_g_o_r_1_1_comparative___sorts_1_1_merge_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/class_a_l_g_o_r_1_1_comparative___sorts_1_1_odd_even_sort.html">OddEvenSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Odd-Even Sort.  <a href="../../df/d4d/class_a_l_g_o_r_1_1_comparative___sorts_1_1_odd_even_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df1/class_a_l_g_o_r_1_1_comparative___sorts_1_1_pancake_sort.html">PancakeSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Pancake Sort.  <a href="../../d3/df1/class_a_l_g_o_r_1_1_comparative___sorts_1_1_pancake_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/class_a_l_g_o_r_1_1_comparative___sorts_1_1_patience_sort.html">PatienceSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Patience Sort.  <a href="../../d5/d2b/class_a_l_g_o_r_1_1_comparative___sorts_1_1_patience_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcd/class_a_l_g_o_r_1_1_comparative___sorts_1_1_quick_sort.html">QuickSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Quick Sort.  <a href="../../d6/dcd/class_a_l_g_o_r_1_1_comparative___sorts_1_1_quick_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d9e/class_a_l_g_o_r_1_1_comparative___sorts_1_1_selection_sort.html">SelectionSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Selection Sort.  <a href="../../de/d9e/class_a_l_g_o_r_1_1_comparative___sorts_1_1_selection_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d04/class_a_l_g_o_r_1_1_comparative___sorts_1_1_shell_sort.html">ShellSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Shell Sort.  <a href="../../dd/d04/class_a_l_g_o_r_1_1_comparative___sorts_1_1_shell_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/df6/class_a_l_g_o_r_1_1_comparative___sorts_1_1_slow_sort.html">SlowSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Slow Sort.  <a href="../../db/df6/class_a_l_g_o_r_1_1_comparative___sorts_1_1_slow_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d9c/class_a_l_g_o_r_1_1_comparative___sorts_1_1_stooge_sort.html">StoogeSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Stooge Sort.  <a href="../../d2/d9c/class_a_l_g_o_r_1_1_comparative___sorts_1_1_stooge_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/ddf/class_a_l_g_o_r_1_1_comparative___sorts_1_1_tim_sort.html">TimSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування Tim Sort.  <a href="../../da/ddf/class_a_l_g_o_r_1_1_comparative___sorts_1_1_tim_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db9/class_a_l_g_o_r_1_1_comparative___sorts_1_1_tree_sort.html">TreeSort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Алгоритм сортування <a class="el" href="../../d8/d0f/struct_a_l_g_o_r_1_1_comparative___sorts_1_1_tree_sort_1_1_tree.html" title="Дерево данних, яке потрібне для сортування">Tree</a> Sort.  <a href="../../de/db9/class_a_l_g_o_r_1_1_comparative___sorts_1_1_tree_sort.html#details">Детальніше...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:a142ff3206c4ec754866c1a236a89d096"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a142ff3206c4ec754866c1a236a89d096">Comparative_Sorts</a> (<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>&lt; type_array &gt; *&amp;<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>)</td></tr>
+<tr class="memdesc:a142ff3206c4ec754866c1a236a89d096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор, що приймає СТРУКТУРУ та зберігає її до поля  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a142ff3206c4ec754866c1a236a89d096">Детальніше...</a><br /></td></tr>
+<tr class="separator:a142ff3206c4ec754866c1a236a89d096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c9b2ae4b44dd3d60accdab48e1828af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a3c9b2ae4b44dd3d60accdab48e1828af">Bubble_Sort</a> ()</td></tr>
+<tr class="memdesc:a3c9b2ae4b44dd3d60accdab48e1828af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Bubble Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a3c9b2ae4b44dd3d60accdab48e1828af">Детальніше...</a><br /></td></tr>
+<tr class="separator:a3c9b2ae4b44dd3d60accdab48e1828af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf486cddfd9c21f49165db369e15ae3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#aacf486cddfd9c21f49165db369e15ae3">Cocktail_Shaker_Sort</a> ()</td></tr>
+<tr class="memdesc:aacf486cddfd9c21f49165db369e15ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Cocktail Shaker Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#aacf486cddfd9c21f49165db369e15ae3">Детальніше...</a><br /></td></tr>
+<tr class="separator:aacf486cddfd9c21f49165db369e15ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec84e49a570b0420f1792779c702b168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#aec84e49a570b0420f1792779c702b168">Odd_Even_Sort</a> ()</td></tr>
+<tr class="memdesc:aec84e49a570b0420f1792779c702b168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Odd Even Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#aec84e49a570b0420f1792779c702b168">Детальніше...</a><br /></td></tr>
+<tr class="separator:aec84e49a570b0420f1792779c702b168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c47372872dc12ea8ba3217593a81165"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a3c47372872dc12ea8ba3217593a81165">Comb_Sort</a> ()</td></tr>
+<tr class="memdesc:a3c47372872dc12ea8ba3217593a81165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Comb Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a3c47372872dc12ea8ba3217593a81165">Детальніше...</a><br /></td></tr>
+<tr class="separator:a3c47372872dc12ea8ba3217593a81165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a496561018545409340b7f26b6d3fcbba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a496561018545409340b7f26b6d3fcbba">Gnome_Sort</a> ()</td></tr>
+<tr class="memdesc:a496561018545409340b7f26b6d3fcbba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Gnome Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a496561018545409340b7f26b6d3fcbba">Детальніше...</a><br /></td></tr>
+<tr class="separator:a496561018545409340b7f26b6d3fcbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2923c650da64a2de3ec50f93c10d4434"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a2923c650da64a2de3ec50f93c10d4434">Quick_Sort</a> ()</td></tr>
+<tr class="memdesc:a2923c650da64a2de3ec50f93c10d4434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Quick Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a2923c650da64a2de3ec50f93c10d4434">Детальніше...</a><br /></td></tr>
+<tr class="separator:a2923c650da64a2de3ec50f93c10d4434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85822f20fb85ebcc746471444e11bda9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a85822f20fb85ebcc746471444e11bda9">Slow_Sort</a> ()</td></tr>
+<tr class="memdesc:a85822f20fb85ebcc746471444e11bda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Slow Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a85822f20fb85ebcc746471444e11bda9">Детальніше...</a><br /></td></tr>
+<tr class="separator:a85822f20fb85ebcc746471444e11bda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ba6e7d3ff3327c2573c10fd21250c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a09ba6e7d3ff3327c2573c10fd21250c6">Stooge_Sort</a> ()</td></tr>
+<tr class="memdesc:a09ba6e7d3ff3327c2573c10fd21250c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Stooge Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a09ba6e7d3ff3327c2573c10fd21250c6">Детальніше...</a><br /></td></tr>
+<tr class="separator:a09ba6e7d3ff3327c2573c10fd21250c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefb032242b4a9aa343c08db5ba855b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#adefb032242b4a9aa343c08db5ba855b6">Bogo_Sort</a> ()</td></tr>
+<tr class="memdesc:adefb032242b4a9aa343c08db5ba855b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Bogo Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#adefb032242b4a9aa343c08db5ba855b6">Детальніше...</a><br /></td></tr>
+<tr class="separator:adefb032242b4a9aa343c08db5ba855b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe26d32efb9c751d340e5e5370ba0262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#afe26d32efb9c751d340e5e5370ba0262">Selection_Sort</a> ()</td></tr>
+<tr class="memdesc:afe26d32efb9c751d340e5e5370ba0262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Selection Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#afe26d32efb9c751d340e5e5370ba0262">Детальніше...</a><br /></td></tr>
+<tr class="separator:afe26d32efb9c751d340e5e5370ba0262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ee88dddcb6794851ff8abc71178fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a50ee88dddcb6794851ff8abc71178fd6">Heap_Sort</a> ()</td></tr>
+<tr class="memdesc:a50ee88dddcb6794851ff8abc71178fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Heap Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a50ee88dddcb6794851ff8abc71178fd6">Детальніше...</a><br /></td></tr>
+<tr class="separator:a50ee88dddcb6794851ff8abc71178fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad614c58ea1778f0d7a06961808c9aecd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ad614c58ea1778f0d7a06961808c9aecd">Cycle_Sort</a> ()</td></tr>
+<tr class="memdesc:ad614c58ea1778f0d7a06961808c9aecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Cycle Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ad614c58ea1778f0d7a06961808c9aecd">Детальніше...</a><br /></td></tr>
+<tr class="separator:ad614c58ea1778f0d7a06961808c9aecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75a9cf87e5968d1a90eb582491c8409e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a75a9cf87e5968d1a90eb582491c8409e">Insert_Sort</a> ()</td></tr>
+<tr class="memdesc:a75a9cf87e5968d1a90eb582491c8409e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Insert Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a75a9cf87e5968d1a90eb582491c8409e">Детальніше...</a><br /></td></tr>
+<tr class="separator:a75a9cf87e5968d1a90eb582491c8409e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0385ce0a77cae8ea1aead933126097f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ac0385ce0a77cae8ea1aead933126097f">Shell_Sort</a> ()</td></tr>
+<tr class="memdesc:ac0385ce0a77cae8ea1aead933126097f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Shell Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ac0385ce0a77cae8ea1aead933126097f">Детальніше...</a><br /></td></tr>
+<tr class="separator:ac0385ce0a77cae8ea1aead933126097f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a831bef0f221535e4f29cae66a55d92c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a831bef0f221535e4f29cae66a55d92c4">Tree_Sort</a> ()</td></tr>
+<tr class="memdesc:a831bef0f221535e4f29cae66a55d92c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Tree Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a831bef0f221535e4f29cae66a55d92c4">Детальніше...</a><br /></td></tr>
+<tr class="separator:a831bef0f221535e4f29cae66a55d92c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af440c0fbb272e2e7c49438c607d94f7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#af440c0fbb272e2e7c49438c607d94f7e">Library_Sort</a> ()</td></tr>
+<tr class="memdesc:af440c0fbb272e2e7c49438c607d94f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Library Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#af440c0fbb272e2e7c49438c607d94f7e">Детальніше...</a><br /></td></tr>
+<tr class="separator:af440c0fbb272e2e7c49438c607d94f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f1358fa9abc777a141622e38af3521"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ad8f1358fa9abc777a141622e38af3521">Patience_Sort</a> ()</td></tr>
+<tr class="memdesc:ad8f1358fa9abc777a141622e38af3521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Patience Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ad8f1358fa9abc777a141622e38af3521">Детальніше...</a><br /></td></tr>
+<tr class="separator:ad8f1358fa9abc777a141622e38af3521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b47780b5a822a685a33902ff4deecd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a4b47780b5a822a685a33902ff4deecd6">Merge_Sort</a> ()</td></tr>
+<tr class="memdesc:a4b47780b5a822a685a33902ff4deecd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Merge Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a4b47780b5a822a685a33902ff4deecd6">Детальніше...</a><br /></td></tr>
+<tr class="separator:a4b47780b5a822a685a33902ff4deecd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b75772be71caa4b4121c68cebc772e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a30b75772be71caa4b4121c68cebc772e">Bitonic_Sorter</a> ()</td></tr>
+<tr class="memdesc:a30b75772be71caa4b4121c68cebc772e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Bitonic Sorter.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a30b75772be71caa4b4121c68cebc772e">Детальніше...</a><br /></td></tr>
+<tr class="separator:a30b75772be71caa4b4121c68cebc772e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d666fedc0d5d2f64bf7d452f31ea19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ab9d666fedc0d5d2f64bf7d452f31ea19">Batcher_OddEven_MergeSort</a> ()</td></tr>
+<tr class="memdesc:ab9d666fedc0d5d2f64bf7d452f31ea19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Batcher Odd Even Merge Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ab9d666fedc0d5d2f64bf7d452f31ea19">Детальніше...</a><br /></td></tr>
+<tr class="separator:ab9d666fedc0d5d2f64bf7d452f31ea19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f2dcb7443c2044a2feb4e64d7b5db2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ae2f2dcb7443c2044a2feb4e64d7b5db2">Tim_Sort</a> ()</td></tr>
+<tr class="memdesc:ae2f2dcb7443c2044a2feb4e64d7b5db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Tim Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ae2f2dcb7443c2044a2feb4e64d7b5db2">Детальніше...</a><br /></td></tr>
+<tr class="separator:ae2f2dcb7443c2044a2feb4e64d7b5db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9f843967b015dd6013e41a371512cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#afa9f843967b015dd6013e41a371512cd">Pancake_Sort</a> ()</td></tr>
+<tr class="memdesc:afa9f843967b015dd6013e41a371512cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод виклику алгоритму сортування Pancake Sort.  <a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#afa9f843967b015dd6013e41a371512cd">Детальніше...</a><br /></td></tr>
+<tr class="separator:afa9f843967b015dd6013e41a371512cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Захищені елементи</h2></td></tr>
+<tr class="memitem:ae5fe38cf4d8316f856ba167c690f80aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#ae5fe38cf4d8316f856ba167c690f80aa">verification</a> (<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>&lt; type_array &gt; *<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>)</td></tr>
+<tr class="memdesc:ae5fe38cf4d8316f856ba167c690f80aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод перевірки масиву  <a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#ae5fe38cf4d8316f856ba167c690f80aa">Детальніше...</a><br /></td></tr>
+<tr class="separator:ae5fe38cf4d8316f856ba167c690f80aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Захищені дані</h2></td></tr>
+<tr class="memitem:a2c378981863e61795d77e2ffe23a0484"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>&lt; type_array &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a> = nullptr</td></tr>
+<tr class="memdesc:a2c378981863e61795d77e2ffe23a0484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вказівник на структуру, що зберігає масив  <a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">Детальніше...</a><br /></td></tr>
+<tr class="separator:a2c378981863e61795d77e2ffe23a0484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename type_array&gt;<br />
+class ALGOR::Comparative_Sorts&lt; type_array &gt;</div><p >Клас з великою кількістю алгоритмів сортувань </p>
+<p >Клас, що колекціонує велику кількість алгоритмів сортувань. Саме така мета ставилася на початку створення бібліотеки: реалізувати усі алгоритми сортувань! Але з часом ставились інші цілі, окрім алгоритмів сортувань, що призвело до розширення функціоналу бібліотеки... Тільки з часом я повернувся до реалізації алгоритмів сортувань. На Вікіпедії доступно 50 різних алгоритмів сортувань, які поділені на категорії. Додатково я їх поділив ще на два великі сімейства: алгоритми, що працюють з будь-якими числовими данними та алгоритми, що працюють тільки з цілими числовими данними. Цей клас реалізує перше сімейство алгоритмів. Його частка складає 40 алгоритмів із 50.</p>
+<p >Під час роботи я зрозумів, що зможу реалізувати не всі алгоритми, так як деякі просто не достанеш. При пошуках CascadeMergeSort на Вікіпедії описано усього півтори строчки про алгоритм, а при переході за посиланням на ресурс надається книга з 584 сторінки, доступно з яких не більше 10. І більше ніде ніякої інформації не має... І це лише один з прикладів...</p>
+<p >Із 40 я зміг реалізувати 22 алгоритми даного сімейства: </p><ol>
+<li>
+Batcher_OddEven_MergeSort (Категорія Concurrent_Sort) </li>
+<li>
+Bitonic_Sorter (Категорія Concurrent_Sort) </li>
+<li>
+Bogo_Sort (Категорія Exchange_Sorts) </li>
+<li>
+Bubble_Sort (Категорія Exchange_Sorts) </li>
+<li>
+Cocktail_Shaker_Sort (Категорія Exchange_Sorts) </li>
+<li>
+Comb_Sort (Категорія Exchange_Sorts) </li>
+<li>
+Cycle_Sort (Категорія Selection_Sorts) </li>
+<li>
+Gnome_Sort (Категорія Exchange_Sorts) </li>
+<li>
+Heap_Sort (Категорія Selection_Sorts) </li>
+<li>
+Insert_Sort (Категорія Insertion_Sorts) </li>
+<li>
+Library_Sort (Категорія Insertion_Sorts) </li>
+<li>
+Merge_Sort (Категорія Merge_Sorts) </li>
+<li>
+Odd_Even_Sort (Категорія Exchange_Sorts) </li>
+<li>
+Pancake_Sort (Категорія Other_Sorts) </li>
+<li>
+Patience_Sort (Категорія Insertion_Sorts) </li>
+<li>
+Quick_Sort (Категорія Exchange_Sorts) </li>
+<li>
+Selection_Sort (Категорія Selection_Sorts) </li>
+<li>
+Shell_Sort (Категорія Insertion_Sorts) </li>
+<li>
+Slow_Sort (Категорія Exchange_Sorts) </li>
+<li>
+Stooge_Sort (Категорія Exchange_Sorts) </li>
+<li>
+Tim_Sort (Категорія Hybrid_Sorts) </li>
+<li>
+Tree_Sort (Категорія Insertion_Sorts) </li>
+</ol>
+<p >Не реалізованими залишились: </p><ol>
+<li>
+ProportionExtendSort (Категорія Exchange_Sorts) </li>
+<li>
+Smooth_Sort (Категорія Selection_Sorts) </li>
+<li>
+CartesianTreeSort (Категорія Selection_Sorts) </li>
+<li>
+TournamentSort (Категорія Selection_Sorts) </li>
+<li>
+WeakHeapSort (Категорія Selection_Sorts) </li>
+<li>
+SplaySort (Категорія Insertion_Sorts) </li>
+<li>
+CascadeMergeSort (Категорія Merge_Sorts) </li>
+<li>
+OscillatingMergeSort (Категорія Merge_Sorts) </li>
+<li>
+PolyphaseMergeSort (Категорія Merge_Sorts) </li>
+<li>
+PairwiseSortingNetwork (Категорія Concurrent_Sort) </li>
+<li>
+SampleSort (Категорія Concurrent_Sort) </li>
+<li>
+BlockMergeSort (Категорія Hybrid_Sorts) </li>
+<li>
+KirkpatrickReischSort (Категорія Hybrid_Sorts) </li>
+<li>
+IntroSort (Категорія Hybrid_Sorts) </li>
+<li>
+SpreadSort (Категорія Hybrid_Sorts) </li>
+<li>
+MergeInsertionSort (Категорія Hybrid_Sorts) </li>
+<li>
+TopologicalSort (Категорія Other_Sorts) </li>
+<li>
+SpaghettiSort (Категорія Other_Sorts) </li>
+</ol>
+<dl class="section remark"><dt>Прим.</dt><dd>Нагадаю, що усі ці алгоритми працюють з будь-якими данними, тобто і з цілими, і з дробними, і з додатніми, і з від'ємними, і зі змішаними. Ця характеристика під час тестування мала визначення: "цілі+ цілі- цілі+- дрібні+ дрібні- дрібні+-". </dd></dl>
+<dl class="tparams"><dt>Параметри шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">type_array</td><td>Тип елементів, що будуть сортуватися </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.2.0 commit 52d263 </dd></dl>
+<dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#_a1">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00394">394</a></p>
+</div><h2 class="groupheader">Конструктор(и)</h2>
+<a id="a142ff3206c4ec754866c1a236a89d096" name="a142ff3206c4ec754866c1a236a89d096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a142ff3206c4ec754866c1a236a89d096">&#9670;&nbsp;</a></span>Comparative_Sorts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::<a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">Comparative_Sorts</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>&lt; type_array &gt; *&amp;&#160;</td>
+          <td class="paramname"><em>Array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор, що приймає СТРУКТУРУ та зберігає її до поля </p>
+<p >Цей клас, як сімейство, як колекціонер, збирає алгоритми сортувань, як внутрішні класи, але дозволяє до них прямий доступ. Якщо бібліотека використовується тільки як джерело алгоритмів сортувань, тоді краще створити напряму об'єкт внутрішнього класу алгоритму сортувань, передати йому стандатний С++ вказівник на масив та його розмір й викликати метод сортувань. Але якщо бібліотека <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html" title="Глобальний простір імен усього проекту">ALGOR</a> використовується у більшому спектрі, тоді набагато легше буде створити об'єкт сімейства, передати йому готову структуру й викликати потрібний алгоритми. Порівняйте: </p><div class="fragment"><div class="line"><span class="comment">//Використання алгоритму напряму</span></div>
+<div class="line">Comparative_Sorts&lt;long long&gt;::LibrarySort *sort;</div>
+<div class="line">sort = <span class="keyword">new</span> Comparative_Sorts&lt;long long&gt;::LibrarySort(ArrayStruct-&gt;array, ArrayStruct-&gt;array_size);</div>
+<div class="line">sort-&gt;library_sort();</div>
+<div class="line"><span class="comment">//Використання алгоритму через зовнішній клас</span></div>
+<div class="line">Comparative_Sorts&lt;long long&gt; *sort = <span class="keyword">new</span> Comparative_Sorts&lt;long long&gt;(ArrayStruct);</div>
+<div class="line">sort-&gt;Library_Sort();</div>
+</div><!-- fragment --> <dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html" title="Структура, що імітує масив">Array</a></td><td>Покажчик на структуру масиву </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.2.0 commit 52d263 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000093">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <a class="code hl_class" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts&lt;long&gt;</a> *comp_sort = <span class="keyword">new</span> <a class="code hl_class" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts&lt;long&gt;</a>(arr);</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a></div><div class="ttdoc">Клас з великою кількістю алгоритмів сортувань</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00394">ALGOR.hpp:395</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00026">26</a></p>
+<div class="fragment"><div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>: <a class="code hl_class" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ArrayBase&lt;type_array&gt;</a>(<a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>) {}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_base_html"><div class="ttname"><a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ALGOR::ArrayBase</a></div><div class="ttdoc">Базовий клас, від якого успадковуються інші класи, пов'язані з роботою з масивами</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00305">ALGOR.hpp:306</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array</a></div><div class="ttdoc">Структура, що імітує масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00090">ALGOR.hpp:91</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Опис методів компонент</h2>
+<a id="a3c9b2ae4b44dd3d60accdab48e1828af" name="a3c9b2ae4b44dd3d60accdab48e1828af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9b2ae4b44dd3d60accdab48e1828af">&#9670;&nbsp;</a></span>Bubble_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Bubble_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Bubble Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../da/d05/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bubble_sort.html" title="Алгоритм сортування Bubble Sort.">ALGOR::Comparative_Sorts::BubbleSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 46c223 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000094">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Bubble_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a2">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00029">29</a></p>
+<div class="fragment"><div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    BubbleSort *sort = <span class="keyword">new</span> BubbleSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    sort-&gt;bubble_sort();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_base_html_a2c378981863e61795d77e2ffe23a0484"><div class="ttname"><a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ALGOR::ArrayBase::ARRAY</a></div><div class="ttdeci">Array&lt; type_array &gt; * ARRAY</div><div class="ttdoc">Вказівник на структуру, що зберігає масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00314">ALGOR.hpp:314</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aacf486cddfd9c21f49165db369e15ae3" name="aacf486cddfd9c21f49165db369e15ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf486cddfd9c21f49165db369e15ae3">&#9670;&nbsp;</a></span>Cocktail_Shaker_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Cocktail_Shaker_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Cocktail Shaker Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d1/de4/class_a_l_g_o_r_1_1_comparative___sorts_1_1_cocktail_shaker_sort.html" title="Алгоритм сортування Cocktail Shaker Sort.">ALGOR::Comparative_Sorts::CocktailShakerSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 46c223 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000095">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Cocktail_Shaker_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a3">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00037">37</a></p>
+<div class="fragment"><div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    CocktailShakerSort *sort = <span class="keyword">new</span> CocktailShakerSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    sort-&gt;cocktail_shaker_sort();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aec84e49a570b0420f1792779c702b168" name="aec84e49a570b0420f1792779c702b168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec84e49a570b0420f1792779c702b168">&#9670;&nbsp;</a></span>Odd_Even_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Odd_Even_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Odd Even Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../df/d4d/class_a_l_g_o_r_1_1_comparative___sorts_1_1_odd_even_sort.html" title="Алгоритм сортування Odd-Even Sort.">ALGOR::Comparative_Sorts::OddEvenSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 46c223 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000096">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Odd_Even_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a4">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00045">45</a></p>
+<div class="fragment"><div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    OddEvenSort *sort = <span class="keyword">new</span> OddEvenSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    sort-&gt;odd_even_sort();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3c47372872dc12ea8ba3217593a81165" name="a3c47372872dc12ea8ba3217593a81165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c47372872dc12ea8ba3217593a81165">&#9670;&nbsp;</a></span>Comb_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Comb_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Comb Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d3/d23/class_a_l_g_o_r_1_1_comparative___sorts_1_1_comb_sort.html" title="Алгоритм сортування Comb Sort.">ALGOR::Comparative_Sorts::CombSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 46c223 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000097">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Comb_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a5">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00053">53</a></p>
+<div class="fragment"><div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    CombSort *sort = <span class="keyword">new</span> CombSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    sort-&gt;comb_sort();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a496561018545409340b7f26b6d3fcbba" name="a496561018545409340b7f26b6d3fcbba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a496561018545409340b7f26b6d3fcbba">&#9670;&nbsp;</a></span>Gnome_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Gnome_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Gnome Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../db/da1/class_a_l_g_o_r_1_1_comparative___sorts_1_1_gnome_sort.html" title="Алгоритм сортування Gnome Sort.">ALGOR::Comparative_Sorts::GnomeSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 46c223 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000098">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Gnome_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a6">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00061">61</a></p>
+<div class="fragment"><div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    GnomeSort *sort = <span class="keyword">new</span> GnomeSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    sort-&gt;gnome_sort();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2923c650da64a2de3ec50f93c10d4434" name="a2923c650da64a2de3ec50f93c10d4434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2923c650da64a2de3ec50f93c10d4434">&#9670;&nbsp;</a></span>Quick_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Quick_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Quick Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d6/dcd/class_a_l_g_o_r_1_1_comparative___sorts_1_1_quick_sort.html" title="Алгоритм сортування Quick Sort.">ALGOR::Comparative_Sorts::QuickSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 46c223 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000099">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Quick_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a7">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00069">69</a></p>
+<div class="fragment"><div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    QuickSort *sort = <span class="keyword">new</span> QuickSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    sort-&gt;quick_sort();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a85822f20fb85ebcc746471444e11bda9" name="a85822f20fb85ebcc746471444e11bda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85822f20fb85ebcc746471444e11bda9">&#9670;&nbsp;</a></span>Slow_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Slow_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Slow Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../db/df6/class_a_l_g_o_r_1_1_comparative___sorts_1_1_slow_sort.html" title="Алгоритм сортування Slow Sort.">ALGOR::Comparative_Sorts::SlowSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 46c223 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000100">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Slow_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a8">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00077">77</a></p>
+<div class="fragment"><div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    SlowSort *sort = <span class="keyword">new</span> SlowSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    sort-&gt;slow_sort();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a09ba6e7d3ff3327c2573c10fd21250c6" name="a09ba6e7d3ff3327c2573c10fd21250c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ba6e7d3ff3327c2573c10fd21250c6">&#9670;&nbsp;</a></span>Stooge_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Stooge_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Stooge Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d2/d9c/class_a_l_g_o_r_1_1_comparative___sorts_1_1_stooge_sort.html" title="Алгоритм сортування Stooge Sort.">ALGOR::Comparative_Sorts::StoogeSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 46c223 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000101">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Stooge_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a9">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00085">85</a></p>
+<div class="fragment"><div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    StoogeSort *sort = <span class="keyword">new</span> StoogeSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    sort-&gt;stooge_sort();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adefb032242b4a9aa343c08db5ba855b6" name="adefb032242b4a9aa343c08db5ba855b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adefb032242b4a9aa343c08db5ba855b6">&#9670;&nbsp;</a></span>Bogo_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Bogo_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Bogo Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../dd/d71/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bogo_sort.html" title="Алгоритм сортування Bogo Sort.">ALGOR::Comparative_Sorts::BogoSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 46c223 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000102">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="comment">//sort-&gt;Bogo_Sort(); // It is better not to use it</span></div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {34 33 21}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {21 33 34}</span></div>
+</div><!-- fragment --> 
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00093">93</a></p>
+<div class="fragment"><div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    BogoSort *sort = <span class="keyword">new</span> BogoSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    sort-&gt;bogo_sort();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afe26d32efb9c751d340e5e5370ba0262" name="afe26d32efb9c751d340e5e5370ba0262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe26d32efb9c751d340e5e5370ba0262">&#9670;&nbsp;</a></span>Selection_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Selection_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Selection Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../de/d9e/class_a_l_g_o_r_1_1_comparative___sorts_1_1_selection_sort.html" title="Алгоритм сортування Selection Sort.">ALGOR::Comparative_Sorts::SelectionSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 28f51f </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000103">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Selection_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a10">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00101">101</a></p>
+<div class="fragment"><div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>{</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    SelectionSort *sort = <span class="keyword">new</span> SelectionSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    sort-&gt;selection_sort();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a50ee88dddcb6794851ff8abc71178fd6" name="a50ee88dddcb6794851ff8abc71178fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ee88dddcb6794851ff8abc71178fd6">&#9670;&nbsp;</a></span>Heap_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Heap_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Heap Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../dc/d46/class_a_l_g_o_r_1_1_comparative___sorts_1_1_heap_sort.html" title="Алгоритм сортування Heap Sort.">ALGOR::Comparative_Sorts::HeapSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 28f51f </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000104">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Heap_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a11">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00109">109</a></p>
+<div class="fragment"><div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    HeapSort *sort = <span class="keyword">new</span> HeapSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    sort-&gt;heap_sort();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad614c58ea1778f0d7a06961808c9aecd" name="ad614c58ea1778f0d7a06961808c9aecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad614c58ea1778f0d7a06961808c9aecd">&#9670;&nbsp;</a></span>Cycle_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Cycle_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Cycle Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d2/d86/class_a_l_g_o_r_1_1_comparative___sorts_1_1_cycle_sort.html" title="Алгоритм сортування Cycle Sort.">ALGOR::Comparative_Sorts::CycleSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.2 commit 28f51f </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000105">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Cycle_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a12">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00117">117</a></p>
+<div class="fragment"><div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>{</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    CycleSort *sort = <span class="keyword">new</span> CycleSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    sort-&gt;cycle_sort();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a75a9cf87e5968d1a90eb582491c8409e" name="a75a9cf87e5968d1a90eb582491c8409e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75a9cf87e5968d1a90eb582491c8409e">&#9670;&nbsp;</a></span>Insert_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Insert_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Insert Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d8/d44/class_a_l_g_o_r_1_1_comparative___sorts_1_1_insert_sort.html" title="Алгоритм сортування Insert Sort.">ALGOR::Comparative_Sorts::InsertSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.3 commit f81852 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000106">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Insert_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a13">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00125">125</a></p>
+<div class="fragment"><div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>{</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    InsertSort *sort = <span class="keyword">new</span> InsertSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    sort-&gt;insert_sort();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac0385ce0a77cae8ea1aead933126097f" name="ac0385ce0a77cae8ea1aead933126097f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0385ce0a77cae8ea1aead933126097f">&#9670;&nbsp;</a></span>Shell_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Shell_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Shell Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../dd/d04/class_a_l_g_o_r_1_1_comparative___sorts_1_1_shell_sort.html" title="Алгоритм сортування Shell Sort.">ALGOR::Comparative_Sorts::ShellSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.3 commit f81852 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000107">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Shell_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a14">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00133">133</a></p>
+<div class="fragment"><div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>{</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    ShellSort *sort = <span class="keyword">new</span> ShellSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    sort-&gt;shell_sort();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a831bef0f221535e4f29cae66a55d92c4" name="a831bef0f221535e4f29cae66a55d92c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831bef0f221535e4f29cae66a55d92c4">&#9670;&nbsp;</a></span>Tree_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Tree_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Tree Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../de/db9/class_a_l_g_o_r_1_1_comparative___sorts_1_1_tree_sort.html" title="Алгоритм сортування Tree Sort.">ALGOR::Comparative_Sorts::TreeSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.3 commit f81852 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000108">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Tree_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a15">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00141">141</a></p>
+<div class="fragment"><div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>{</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    TreeSort *sort = <span class="keyword">new</span> TreeSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    sort-&gt;tree_sort();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af440c0fbb272e2e7c49438c607d94f7e" name="af440c0fbb272e2e7c49438c607d94f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af440c0fbb272e2e7c49438c607d94f7e">&#9670;&nbsp;</a></span>Library_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Library_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Library Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html" title="Алгоритм сортування Library Sort.">ALGOR::Comparative_Sorts::LibrarySort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.3 commit b4cdc9 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000109">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Library_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a16">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00149">149</a></p>
+<div class="fragment"><div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    LibrarySort *sort = <span class="keyword">new</span> LibrarySort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    sort-&gt;library_sort();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad8f1358fa9abc777a141622e38af3521" name="ad8f1358fa9abc777a141622e38af3521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f1358fa9abc777a141622e38af3521">&#9670;&nbsp;</a></span>Patience_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Patience_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Patience Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d5/d2b/class_a_l_g_o_r_1_1_comparative___sorts_1_1_patience_sort.html" title="Алгоритм сортування Patience Sort.">ALGOR::Comparative_Sorts::PatienceSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.3 commit f81852 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000110">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Patience_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a17">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00157">157</a></p>
+<div class="fragment"><div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>{</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    PatienceSort *sort = <span class="keyword">new</span> PatienceSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    sort-&gt;patience_sort();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4b47780b5a822a685a33902ff4deecd6" name="a4b47780b5a822a685a33902ff4deecd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b47780b5a822a685a33902ff4deecd6">&#9670;&nbsp;</a></span>Merge_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Merge_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Merge Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d5/d2d/class_a_l_g_o_r_1_1_comparative___sorts_1_1_merge_sort.html" title="Алгоритм сортування Merge Sort.">ALGOR::Comparative_Sorts::MergeSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.4 commit b19f70 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000111">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Merge_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a18">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00165">165</a></p>
+<div class="fragment"><div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>{</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    MergeSort *sort = <span class="keyword">new</span> MergeSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    sort-&gt;merge_sort();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a30b75772be71caa4b4121c68cebc772e" name="a30b75772be71caa4b4121c68cebc772e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b75772be71caa4b4121c68cebc772e">&#9670;&nbsp;</a></span>Bitonic_Sorter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Bitonic_Sorter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Bitonic Sorter. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d2/df6/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bitonic_sorter.html" title="Алгоритм сортування Bitonic Sorter.">ALGOR::Comparative_Sorts::BitonicSorter</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.2.1 commit ffc19f </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000112">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Bitonic_Sorter();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a19">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00173">173</a></p>
+<div class="fragment"><div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>{</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    BitonicSorter *sort = <span class="keyword">new</span> BitonicSorter(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    sort-&gt;bitonic_sorter();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab9d666fedc0d5d2f64bf7d452f31ea19" name="ab9d666fedc0d5d2f64bf7d452f31ea19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d666fedc0d5d2f64bf7d452f31ea19">&#9670;&nbsp;</a></span>Batcher_OddEven_MergeSort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Batcher_OddEven_MergeSort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Batcher Odd Even Merge Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d3/dd9/class_a_l_g_o_r_1_1_comparative___sorts_1_1_batcher_odd_even_merge_sort.html" title="Алгоритм сортування Batcher Odd-Even Merge Sort.">ALGOR::Comparative_Sorts::BatcherOddEvenMergeSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.3.0 commit 98b663 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000113">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Batcher_OddEven_MergeSort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a20">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00181">181</a></p>
+<div class="fragment"><div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>{</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    BatcherOddEvenMergeSort *sort = <span class="keyword">new</span> BatcherOddEvenMergeSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    sort-&gt;batcher_odd_even_merge_sort();</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae2f2dcb7443c2044a2feb4e64d7b5db2" name="ae2f2dcb7443c2044a2feb4e64d7b5db2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2f2dcb7443c2044a2feb4e64d7b5db2">&#9670;&nbsp;</a></span>Tim_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Tim_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Tim Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../da/ddf/class_a_l_g_o_r_1_1_comparative___sorts_1_1_tim_sort.html" title="Алгоритм сортування Tim Sort.">ALGOR::Comparative_Sorts::TimSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.2.1 commit ffc19f </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000114">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Tim_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a21">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00189">189</a></p>
+<div class="fragment"><div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>{</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    TimSort *sort = <span class="keyword">new</span> TimSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    sort-&gt;tim_sort();</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afa9f843967b015dd6013e41a371512cd" name="afa9f843967b015dd6013e41a371512cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa9f843967b015dd6013e41a371512cd">&#9670;&nbsp;</a></span>Pancake_Sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a>&lt; type_array &gt;::Pancake_Sort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод виклику алгоритму сортування Pancake Sort. </p>
+<p >Цей метод використовується для виклику алгоритму сортування <a class="el" href="../../d3/df1/class_a_l_g_o_r_1_1_comparative___sorts_1_1_pancake_sort.html" title="Алгоритм сортування Pancake Sort.">ALGOR::Comparative_Sorts::PancakeSort</a>. Метод не потребує даних, так як вони були збережені при створенні об'єкта і власноруч передає всі потрібні данні внутрішньому алгоритму сортування, що спрощує написання коду. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.2.1 commit ffc19f </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000115">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    comp_sort-&gt;Pancake_Sort();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../d3/d7f/_algor__array_sort_8cpp-example.html#a22">Algor_ArraySort.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html">ALGOR_SORTING.cpp</a>, рядок <a class="el" href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00197">197</a></p>
+<div class="fragment"><div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>{</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    PancakeSort *sort = <span class="keyword">new</span> PancakeSort(this-&gt;<a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a>-&gt;array, this-&gt;ARRAY-&gt;array_size);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    sort-&gt;pancake_sort();</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keyword">delete</span> (sort);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae5fe38cf4d8316f856ba167c690f80aa" name="ae5fe38cf4d8316f856ba167c690f80aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5fe38cf4d8316f856ba167c690f80aa">&#9670;&nbsp;</a></span>verification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ALGOR::ArrayBase</a>&lt; type_array &gt;::verification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>&lt; type_array &gt; *&#160;</td>
+          <td class="paramname"><em>Array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод перевірки масиву </p>
+<p >Метод, що перевіряє масив на пустотність. Якщо розмір масиву дорівнює нулю, можна вважати, що масив пустий, так як вказівник на сам масив вказує на nullptr. Зазвичай метод використовується для перевірок структур перед тим, як зберегти вказівник на структуру до об'єкту класу, щоб до класу не міг потрапити пустий масив. </p><dl class="exception"><dt>Обробка виняткових ситуацій</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html" title="Клас-виняток &quot;void_data&quot;">ALGOR::EXCEPTION_SET::void_data</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html" title="Структура, що імітує масив">Array</a></td><td>Масив, що перевіряється </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.0 commit 8bbf75 </dd></dl>
+<dl class="section note"><dt>Нотатки</dt><dd>Можливо у майбутньому буде проводитись більше перевірок, якщо кількість характеристик зросте. </dd></dl>
+<dl class="section user"><dt>Історія</dt><dd>Історія цього методу не така цікава, як у класа <a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами">ArrayBase</a>, але його життя добре потріпало.<br  />
+Спочатку це мала бути прихована функція, що видна лише усередині бібліотеки. Для цього я всього лиш написав її у файлі реалізацій без її оголошення у хідері. Такою вона залишалась довгий час... Але прийшов час зайнятись безпекою бібліотеки перед релізом v1.0.0.0, так як з останньої безпекозації (коли й було додано цю функцію) багато чого змінилось. У релізі v0.1.3.0 проводилась реформа <a class="el" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html" title="Клас з потужним функціоналом обробки масивів">ARRAYDATA</a>, коли тимчасово став публічним <a class="el" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4193136573a8534d4e9a2c784c174872" title="Видаляє масив">ALGOR::ARRAYDATA::remove</a>. Спочатку цю функцію було перейменовано, а потім і взагалі тимчасово видалено. Чому тимчасово? Тому що коли я у друге прийшов до концепції, що об'єкт класу масиву не має зберігати пустий масив, я назад приховав <a class="el" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4193136573a8534d4e9a2c784c174872" title="Видаляє масив">ALGOR::ARRAYDATA::remove</a>, довів рівень безпеки до потрібного рівня і повернув цю функцію, як метод базового класу, який можуть використовувати успадковані класи при збережені до себе масивів.<br  />
+Короче, судьби <em><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами">ArrayBase</a></em> та <em>verification</em> перетнулися. Дивлячись на історію <a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами">ArrayBase</a>, розумієш, що це вийшло не випадково... </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00232">232</a></p>
+<div class="fragment"><div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>{</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">if</span> (<a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a> == <span class="keyword">nullptr</span> || <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a> == 0 || <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html">EXCEPTION_SET::void_data</a>();</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data_html"><div class="ttname"><a href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html">ALGOR::EXCEPTION_SET::void_data</a></div><div class="ttdoc">Клас-виняток &quot;void_data&quot;</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00185">ALGOR.hpp:186</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html_a6f942d8b05206c2d0cd478f837fab989"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">ALGOR::Array::array_size</a></div><div class="ttdeci">asize_t array_size</div><div class="ttdoc">Розмір масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00093">ALGOR.hpp:93</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html_a7e4abada02b2defc3116832ea8853b81"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">ALGOR::Array::array</a></div><div class="ttdeci">type_array * array</div><div class="ttdoc">Вказівник на масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00092">ALGOR.hpp:92</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Використовує <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00092">ALGOR::Array&lt; type_array &gt;::array</a> і <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00093">ALGOR::Array&lt; type_array &gt;::array_size</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Компонентні дані</h2>
+<a id="a2c378981863e61795d77e2ffe23a0484" name="a2c378981863e61795d77e2ffe23a0484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c378981863e61795d77e2ffe23a0484">&#9670;&nbsp;</a></span>ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ALGOR::ArrayBase</a>&lt; type_array &gt;::ARRAY = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вказівник на структуру, що зберігає масив </p>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.0.0 commit 6efeb8 </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00314">314</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></li><li class="navelem"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">Comparative_Sorts</a></li>
+    <li class="footer">Документація до ALGOR створена П'ятниця, 26 серпня 2022 19:26:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

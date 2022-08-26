@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Algor_ArraySort.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d3/d7f/_algor__array_sort_8cpp-example.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Algor_ArraySort.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><span class="comment">/* ******************************   ALGOR.cpp   ******************************* *</span></div>
+<div class="line"><span class="comment"> * ---------------------------------------------------------------------------- *</span></div>
+<div class="line"><span class="comment"> *                                                                              *</span></div>
+<div class="line"><span class="comment"> * Copyright © 2021-2022 Kalynovsky Valentin. All rights reserved.              *</span></div>
+<div class="line"><span class="comment"> *                                                                              *</span></div>
+<div class="line"><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);              *</span></div>
+<div class="line"><span class="comment"> * you may not use this file except in compliance with the License.             *</span></div>
+<div class="line"><span class="comment"> * You may obtain a copy of the License at                                      *</span></div>
+<div class="line"><span class="comment"> *                                                                              *</span></div>
+<div class="line"><span class="comment"> *     http://www.apache.org/licenses/LICENSE-2.0                               *</span></div>
+<div class="line"><span class="comment"> *                                                                              *</span></div>
+<div class="line"><span class="comment"> * Unless required by applicable law or agreed to in writing, software          *</span></div>
+<div class="line"><span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,            *</span></div>
+<div class="line"><span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.     *</span></div>
+<div class="line"><span class="comment"> * See the License for the specific language governing permissions and          *</span></div>
+<div class="line"><span class="comment"> * limitations under the License.                                               *</span></div>
+<div class="line"><span class="comment"> *                                                                              *</span></div>
+<div class="line"><span class="comment"> * ---------------------------------------------------------------------------- *</span></div>
+<div class="line"><span class="comment"> * **************************************************************************** */</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;../include/ALGOR.hpp&quot;</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <a id="_a0" name="_a0"></a><a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array&lt;long&gt;</a> *arr = ALGOR::create_struct&lt;long&gt;(16);</div>
+<div class="line">    <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts&lt;long&gt;</a> *comp_sort = <span class="keyword">new</span> <a class="code hl_class" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts&lt;long&gt;</a>(arr);</div>
+<div class="line"> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a2" name="a2"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a3c9b2ae4b44dd3d60accdab48e1828af">Bubble_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a3" name="a3"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#aacf486cddfd9c21f49165db369e15ae3">Cocktail_Shaker_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a4" name="a4"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#aec84e49a570b0420f1792779c702b168">Odd_Even_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a5" name="a5"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a3c47372872dc12ea8ba3217593a81165">Comb_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a6" name="a6"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a496561018545409340b7f26b6d3fcbba">Gnome_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a7" name="a7"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a2923c650da64a2de3ec50f93c10d4434">Quick_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a8" name="a8"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a85822f20fb85ebcc746471444e11bda9">Slow_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a9" name="a9"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a09ba6e7d3ff3327c2573c10fd21250c6">Stooge_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    <span class="comment">//sort-&gt;Bogo_Sort(); // It is better not to use it</span></div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {34 33 21}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {21 33 34}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a10" name="a10"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#afe26d32efb9c751d340e5e5370ba0262">Selection_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a11" name="a11"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a50ee88dddcb6794851ff8abc71178fd6">Heap_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a12" name="a12"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ad614c58ea1778f0d7a06961808c9aecd">Cycle_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a13" name="a13"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a75a9cf87e5968d1a90eb582491c8409e">Insert_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a14" name="a14"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ac0385ce0a77cae8ea1aead933126097f">Shell_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a15" name="a15"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a831bef0f221535e4f29cae66a55d92c4">Tree_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a16" name="a16"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#af440c0fbb272e2e7c49438c607d94f7e">Library_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a17" name="a17"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ad8f1358fa9abc777a141622e38af3521">Patience_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a18" name="a18"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a4b47780b5a822a685a33902ff4deecd6">Merge_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a19" name="a19"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a30b75772be71caa4b4121c68cebc772e">Bitonic_Sorter</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a20" name="a20"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ab9d666fedc0d5d2f64bf7d452f31ea19">Batcher_OddEven_MergeSort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a21" name="a21"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ae2f2dcb7443c2044a2feb4e64d7b5db2">Tim_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    comp_sort-&gt;<a id="a22" name="a22"></a><a class="code hl_function" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#afa9f843967b015dd6013e41a371512cd">Pancake_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::BatcherOddEvenMergeSort *boem_sort;</div>
+<div class="line">    boem_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::BatcherOddEvenMergeSort(arr-&gt;<a id="a23" name="a23"></a><a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a id="a24" name="a24"></a><a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    boem_sort-&gt;batcher_odd_even_merge_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (boem_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::BitonicSorter *bit_sort;</div>
+<div class="line">    bit_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::BitonicSorter(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    bit_sort-&gt;bitonic_sorter();</div>
+<div class="line">    <span class="keyword">delete</span> (bit_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::BogoSort *bogo_sort;</div>
+<div class="line">    bogo_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::BogoSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    <span class="comment">//bogo_sort-&gt;bogo_sort();  //Краще його не використовувати</span></div>
+<div class="line">    <span class="keyword">delete</span> (bogo_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {34 33 21}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {21 33 34}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::BubbleSort *bubb_sort;</div>
+<div class="line">    bubb_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::BubbleSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    bubb_sort-&gt;bubble_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (bubb_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::CocktailShakerSort *shak_sort;</div>
+<div class="line">    shak_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::CocktailShakerSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    shak_sort-&gt;cocktail_shaker_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (shak_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::CombSort *comb_sort;</div>
+<div class="line">    comb_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::CombSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    comb_sort-&gt;comb_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (comb_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::CycleSort *cycl_sort;</div>
+<div class="line">    cycl_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::CycleSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    cycl_sort-&gt;cycle_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (cycl_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::GnomeSort *gnom_sort;</div>
+<div class="line">    gnom_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::GnomeSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    gnom_sort-&gt;gnome_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (gnom_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::HeapSort *heap_sort;</div>
+<div class="line">    heap_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::HeapSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    heap_sort-&gt;heap_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (heap_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::InsertSort *ins_sort;</div>
+<div class="line">    ins_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::InsertSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    ins_sort-&gt;insert_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (ins_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::LibrarySort *libr_sort;</div>
+<div class="line">    libr_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::LibrarySort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    libr_sort-&gt;library_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (libr_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::MergeSort *merg_sort;</div>
+<div class="line">    merg_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::MergeSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    merg_sort-&gt;merge_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (merg_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::OddEvenSort *odev_sort;</div>
+<div class="line">    odev_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::OddEvenSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    odev_sort-&gt;odd_even_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (odev_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::PancakeSort *panc_sort;</div>
+<div class="line">    panc_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::PancakeSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    panc_sort-&gt;pancake_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (panc_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::PatienceSort *pat_sort;</div>
+<div class="line">    pat_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::PatienceSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    pat_sort-&gt;patience_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (pat_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::QuickSort *quic_sort;</div>
+<div class="line">    quic_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::QuickSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    quic_sort-&gt;quick_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (quic_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::SelectionSort *sel_sort;</div>
+<div class="line">    sel_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::SelectionSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    sel_sort-&gt;selection_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (sel_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::ShellSort *shel_sort;</div>
+<div class="line">    shel_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::ShellSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    shel_sort-&gt;shell_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (shel_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::SlowSort *slow_sort;</div>
+<div class="line">    slow_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::SlowSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    slow_sort-&gt;slow_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (slow_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::StoogeSort *stog_sort;</div>
+<div class="line">    stog_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::StoogeSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    stog_sort-&gt;stooge_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (stog_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::TimSort *tim_sort;</div>
+<div class="line">    tim_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::TimSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    tim_sort-&gt;tim_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (tim_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    ALGOR::generate_struct&lt;long&gt;(arr, 1, 100);</div>
+<div class="line">    Comparative_Sorts&lt;long&gt;::TreeSort *tr_sort;</div>
+<div class="line">    tr_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::TreeSort(arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a>, arr-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a>);</div>
+<div class="line">    tr_sort-&gt;tree_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (tr_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <a id="_a25" name="_a25"></a><a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long long&gt;</a> *clas_arr = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA&lt;long long&gt;</a>(16);</div>
+<div class="line">    <a id="_a26" name="_a26"></a><a class="code hl_class" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html">ALGOR::Distribution_Sorts</a> *dist_sort = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html">ALGOR::Distribution_Sorts</a>(clas_arr-&gt;<a id="a27" name="a27"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>());</div>
+<div class="line"> </div>
+<div class="line">    clas_arr-&gt;<a id="a28" name="a28"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    dist_sort-&gt;<a id="a29" name="a29"></a><a class="code hl_function" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a1ca0fea48f8befd6cb0999e06f64f75c">AmericanFlag_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    dist_sort-&gt;<a id="a30" name="a30"></a><a class="code hl_function" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a9104e49131564621bcb1e78369191e7f">Bead_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    dist_sort-&gt;<a id="a31" name="a31"></a><a class="code hl_function" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#abed95c91e1ad2c03060db38420053969">Bucket_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    dist_sort-&gt;<a id="a32" name="a32"></a><a class="code hl_function" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a0f5be25ebddc9b4403ab53e12467bb48">Counting_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    dist_sort-&gt;<a id="a33" name="a33"></a><a class="code hl_function" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a385ec2ea1b43a07a18405297e0a423ab">Flash_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    dist_sort-&gt;<a id="a34" name="a34"></a><a class="code hl_function" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a2e3a52ddeb025a134293730eb94449b5">Interpolation_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    dist_sort-&gt;<a id="a35" name="a35"></a><a class="code hl_function" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a23e804c5ade8ca5fef572869f615ad4f">Pigeonhole_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    dist_sort-&gt;<a id="a36" name="a36"></a><a class="code hl_function" href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a0a8592446956139deb16a19c1358d067">Radix_Sort</a>();</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    Distribution_Sorts::AmericanFlagSort *af_sort;</div>
+<div class="line">    af_sort = <span class="keyword">new</span> Distribution_Sorts::AmericanFlagSort(clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()-&gt;array, clas_arr-&gt;<a id="a37" name="a37"></a><a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>());</div>
+<div class="line">    af_sort-&gt;american_flag_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (af_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    Distribution_Sorts::BeadSort *bead_sort;</div>
+<div class="line">    bead_sort = <span class="keyword">new</span> Distribution_Sorts::BeadSort(clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()-&gt;array, clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>());</div>
+<div class="line">    bead_sort-&gt;bead_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (bead_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    Distribution_Sorts::BucketSort *buck_sort;</div>
+<div class="line">    buck_sort = <span class="keyword">new</span> Distribution_Sorts::BucketSort(clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()-&gt;array, clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>());</div>
+<div class="line">    buck_sort-&gt;bucket_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (buck_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    Distribution_Sorts::CountingSort *coun_sort;</div>
+<div class="line">    coun_sort = <span class="keyword">new</span> Distribution_Sorts::CountingSort(clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()-&gt;array, clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>());</div>
+<div class="line">    coun_sort-&gt;counting_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (coun_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    Distribution_Sorts::FlashSort *flas_sort;</div>
+<div class="line">    flas_sort = <span class="keyword">new</span> Distribution_Sorts::FlashSort(clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()-&gt;array, clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>());</div>
+<div class="line">    flas_sort-&gt;flash_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (flas_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    Distribution_Sorts::InterpolationSort *int_sort;</div>
+<div class="line">    int_sort = <span class="keyword">new</span> Distribution_Sorts::InterpolationSort(clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()-&gt;array, clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>());</div>
+<div class="line">    int_sort-&gt;interpolation_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (int_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    Distribution_Sorts::PigeonholeSort *pig_sort;</div>
+<div class="line">    pig_sort = <span class="keyword">new</span> Distribution_Sorts::PigeonholeSort(clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()-&gt;array, clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>());</div>
+<div class="line">    pig_sort-&gt;pigeonhole_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (pig_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">generatedData</a>(1, 100);</div>
+<div class="line">    Distribution_Sorts::RadixSort *rad_sort;</div>
+<div class="line">    rad_sort = <span class="keyword">new</span> Distribution_Sorts::RadixSort(clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">getData</a>()-&gt;array, clas_arr-&gt;<a class="code hl_function" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">getSize</a>());</div>
+<div class="line">    rad_sort-&gt;radix_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (rad_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line">    <span class="keyword">delete</span> (dist_sort);</div>
+<div class="line">    <span class="keyword">delete</span> (comp_sort);</div>
+<div class="line">    ALGOR::remove_struct&lt;long&gt;(arr);</div>
+<div class="line"> </div>
+<div class="line">    std::cin.get();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html">ALGOR::ARRAYDATA</a></div><div class="ttdoc">Клас з потужним функціоналом обробки масивів</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00318">ALGOR.hpp:319</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a4fcd91751fd4764be8b013d6a394c13a"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4fcd91751fd4764be8b013d6a394c13a">ALGOR::ARRAYDATA::getData</a></div><div class="ttdeci">Array&lt; type_array &gt; *&amp; getData()</div><div class="ttdoc">Повертає вказівник на структуру масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00294">ALGOR_ARRAY.cpp:294</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_a5a6fe6826157c351c4bdfacb1761fb5b"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a5a6fe6826157c351c4bdfacb1761fb5b">ALGOR::ARRAYDATA::generatedData</a></div><div class="ttdeci">void generatedData(const sbit64_t &amp;min_limit, const sbit64_t &amp;max_limit, const ubit64_t seed=getMemoryCell(32), const ubit32_t denominator=1)</div><div class="ttdoc">Метод, який заповнює весь масив випадковими значеннями</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00253">ALGOR_ARRAY.cpp:253</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a_html_ac8ca152d30494367adc872c26bc35acc"><div class="ttname"><a href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#ac8ca152d30494367adc872c26bc35acc">ALGOR::ARRAYDATA::getSize</a></div><div class="ttdeci">asize_t getSize()</div><div class="ttdoc">Повертає розмір структури масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00300">ALGOR_ARRAY.cpp:300</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">ALGOR::Comparative_Sorts</a></div><div class="ttdoc">Клас з великою кількістю алгоритмів сортувань</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00394">ALGOR.hpp:395</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a09ba6e7d3ff3327c2573c10fd21250c6"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a09ba6e7d3ff3327c2573c10fd21250c6">ALGOR::Comparative_Sorts::Stooge_Sort</a></div><div class="ttdeci">void Stooge_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Stooge Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00085">ALGOR_SORTING.cpp:85</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a2923c650da64a2de3ec50f93c10d4434"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a2923c650da64a2de3ec50f93c10d4434">ALGOR::Comparative_Sorts::Quick_Sort</a></div><div class="ttdeci">void Quick_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Quick Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00069">ALGOR_SORTING.cpp:69</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a30b75772be71caa4b4121c68cebc772e"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a30b75772be71caa4b4121c68cebc772e">ALGOR::Comparative_Sorts::Bitonic_Sorter</a></div><div class="ttdeci">void Bitonic_Sorter()</div><div class="ttdoc">Метод виклику алгоритму сортування Bitonic Sorter.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00173">ALGOR_SORTING.cpp:173</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a3c47372872dc12ea8ba3217593a81165"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a3c47372872dc12ea8ba3217593a81165">ALGOR::Comparative_Sorts::Comb_Sort</a></div><div class="ttdeci">void Comb_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Comb Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00053">ALGOR_SORTING.cpp:53</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a3c9b2ae4b44dd3d60accdab48e1828af"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a3c9b2ae4b44dd3d60accdab48e1828af">ALGOR::Comparative_Sorts::Bubble_Sort</a></div><div class="ttdeci">void Bubble_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Bubble Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00029">ALGOR_SORTING.cpp:29</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a496561018545409340b7f26b6d3fcbba"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a496561018545409340b7f26b6d3fcbba">ALGOR::Comparative_Sorts::Gnome_Sort</a></div><div class="ttdeci">void Gnome_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Gnome Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00061">ALGOR_SORTING.cpp:61</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a4b47780b5a822a685a33902ff4deecd6"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a4b47780b5a822a685a33902ff4deecd6">ALGOR::Comparative_Sorts::Merge_Sort</a></div><div class="ttdeci">void Merge_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Merge Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00165">ALGOR_SORTING.cpp:165</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a50ee88dddcb6794851ff8abc71178fd6"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a50ee88dddcb6794851ff8abc71178fd6">ALGOR::Comparative_Sorts::Heap_Sort</a></div><div class="ttdeci">void Heap_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Heap Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00109">ALGOR_SORTING.cpp:109</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a75a9cf87e5968d1a90eb582491c8409e"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a75a9cf87e5968d1a90eb582491c8409e">ALGOR::Comparative_Sorts::Insert_Sort</a></div><div class="ttdeci">void Insert_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Insert Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00125">ALGOR_SORTING.cpp:125</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a831bef0f221535e4f29cae66a55d92c4"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a831bef0f221535e4f29cae66a55d92c4">ALGOR::Comparative_Sorts::Tree_Sort</a></div><div class="ttdeci">void Tree_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Tree Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00141">ALGOR_SORTING.cpp:141</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_a85822f20fb85ebcc746471444e11bda9"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#a85822f20fb85ebcc746471444e11bda9">ALGOR::Comparative_Sorts::Slow_Sort</a></div><div class="ttdeci">void Slow_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Slow Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00077">ALGOR_SORTING.cpp:77</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_aacf486cddfd9c21f49165db369e15ae3"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#aacf486cddfd9c21f49165db369e15ae3">ALGOR::Comparative_Sorts::Cocktail_Shaker_Sort</a></div><div class="ttdeci">void Cocktail_Shaker_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Cocktail Shaker Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00037">ALGOR_SORTING.cpp:37</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_ab9d666fedc0d5d2f64bf7d452f31ea19"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ab9d666fedc0d5d2f64bf7d452f31ea19">ALGOR::Comparative_Sorts::Batcher_OddEven_MergeSort</a></div><div class="ttdeci">void Batcher_OddEven_MergeSort()</div><div class="ttdoc">Метод виклику алгоритму сортування Batcher Odd Even Merge Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00181">ALGOR_SORTING.cpp:181</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_ac0385ce0a77cae8ea1aead933126097f"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ac0385ce0a77cae8ea1aead933126097f">ALGOR::Comparative_Sorts::Shell_Sort</a></div><div class="ttdeci">void Shell_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Shell Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00133">ALGOR_SORTING.cpp:133</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_ad614c58ea1778f0d7a06961808c9aecd"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ad614c58ea1778f0d7a06961808c9aecd">ALGOR::Comparative_Sorts::Cycle_Sort</a></div><div class="ttdeci">void Cycle_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Cycle Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00117">ALGOR_SORTING.cpp:117</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_ad8f1358fa9abc777a141622e38af3521"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ad8f1358fa9abc777a141622e38af3521">ALGOR::Comparative_Sorts::Patience_Sort</a></div><div class="ttdeci">void Patience_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Patience Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00157">ALGOR_SORTING.cpp:157</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_ae2f2dcb7443c2044a2feb4e64d7b5db2"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#ae2f2dcb7443c2044a2feb4e64d7b5db2">ALGOR::Comparative_Sorts::Tim_Sort</a></div><div class="ttdeci">void Tim_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Tim Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00189">ALGOR_SORTING.cpp:189</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_aec84e49a570b0420f1792779c702b168"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#aec84e49a570b0420f1792779c702b168">ALGOR::Comparative_Sorts::Odd_Even_Sort</a></div><div class="ttdeci">void Odd_Even_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Odd Even Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00045">ALGOR_SORTING.cpp:45</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_af440c0fbb272e2e7c49438c607d94f7e"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#af440c0fbb272e2e7c49438c607d94f7e">ALGOR::Comparative_Sorts::Library_Sort</a></div><div class="ttdeci">void Library_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Library Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00149">ALGOR_SORTING.cpp:149</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_afa9f843967b015dd6013e41a371512cd"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#afa9f843967b015dd6013e41a371512cd">ALGOR::Comparative_Sorts::Pancake_Sort</a></div><div class="ttdeci">void Pancake_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Pancake Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00197">ALGOR_SORTING.cpp:197</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_comparative___sorts_html_afe26d32efb9c751d340e5e5370ba0262"><div class="ttname"><a href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html#afe26d32efb9c751d340e5e5370ba0262">ALGOR::Comparative_Sorts::Selection_Sort</a></div><div class="ttdeci">void Selection_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Selection Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l00101">ALGOR_SORTING.cpp:101</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_distribution___sorts_html"><div class="ttname"><a href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html">ALGOR::Distribution_Sorts</a></div><div class="ttdoc">Клас із потужними алгоритмами сортувань</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00729">ALGOR.hpp:730</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_distribution___sorts_html_a0a8592446956139deb16a19c1358d067"><div class="ttname"><a href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a0a8592446956139deb16a19c1358d067">ALGOR::Distribution_Sorts::Radix_Sort</a></div><div class="ttdeci">void Radix_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Radix Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l01130">ALGOR_SORTING.cpp:1130</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_distribution___sorts_html_a0f5be25ebddc9b4403ab53e12467bb48"><div class="ttname"><a href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a0f5be25ebddc9b4403ab53e12467bb48">ALGOR::Distribution_Sorts::Counting_Sort</a></div><div class="ttdeci">void Counting_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Counting Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l01109">ALGOR_SORTING.cpp:1109</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_distribution___sorts_html_a1ca0fea48f8befd6cb0999e06f64f75c"><div class="ttname"><a href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a1ca0fea48f8befd6cb0999e06f64f75c">ALGOR::Distribution_Sorts::AmericanFlag_Sort</a></div><div class="ttdeci">void AmericanFlag_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування American Flag Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l01088">ALGOR_SORTING.cpp:1088</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_distribution___sorts_html_a23e804c5ade8ca5fef572869f615ad4f"><div class="ttname"><a href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a23e804c5ade8ca5fef572869f615ad4f">ALGOR::Distribution_Sorts::Pigeonhole_Sort</a></div><div class="ttdeci">void Pigeonhole_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Pigeonhole Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l01123">ALGOR_SORTING.cpp:1123</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_distribution___sorts_html_a2e3a52ddeb025a134293730eb94449b5"><div class="ttname"><a href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a2e3a52ddeb025a134293730eb94449b5">ALGOR::Distribution_Sorts::Interpolation_Sort</a></div><div class="ttdeci">void Interpolation_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Interpolation Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l01116">ALGOR_SORTING.cpp:1116</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_distribution___sorts_html_a385ec2ea1b43a07a18405297e0a423ab"><div class="ttname"><a href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a385ec2ea1b43a07a18405297e0a423ab">ALGOR::Distribution_Sorts::Flash_Sort</a></div><div class="ttdeci">void Flash_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Flash Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l01137">ALGOR_SORTING.cpp:1137</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_distribution___sorts_html_a9104e49131564621bcb1e78369191e7f"><div class="ttname"><a href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#a9104e49131564621bcb1e78369191e7f">ALGOR::Distribution_Sorts::Bead_Sort</a></div><div class="ttdeci">void Bead_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Bead Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l01095">ALGOR_SORTING.cpp:1095</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_distribution___sorts_html_abed95c91e1ad2c03060db38420053969"><div class="ttname"><a href="../../d8/d25/class_a_l_g_o_r_1_1_distribution___sorts.html#abed95c91e1ad2c03060db38420053969">ALGOR::Distribution_Sorts::Bucket_Sort</a></div><div class="ttdeci">void Bucket_Sort()</div><div class="ttdoc">Метод виклику алгоритму сортування Bucket Sort.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dae/_a_l_g_o_r___s_o_r_t_i_n_g_8cpp_source.html#l01102">ALGOR_SORTING.cpp:1102</a></div></div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></div><div class="ttdoc">Глобальний простір імен усього проекту</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00044">ALGOR.hpp:45</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array</a></div><div class="ttdoc">Структура, що імітує масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00090">ALGOR.hpp:91</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html_a6f942d8b05206c2d0cd478f837fab989"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">ALGOR::Array::array_size</a></div><div class="ttdeci">asize_t array_size</div><div class="ttdoc">Розмір масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00093">ALGOR.hpp:93</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html_a7e4abada02b2defc3116832ea8853b81"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">ALGOR::Array::array</a></div><div class="ttdeci">type_array * array</div><div class="ttdoc">Вказівник на масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00092">ALGOR.hpp:92</a></div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Документація до ALGOR створена П'ятниця, 26 серпня 2022 19:26:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Клас ALGOR::Comparative_Sorts&lt; type_array &gt;::LibrarySort</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="../../d7/d22/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort-members.html">Список всіх елементів</a>  </div>
+  <div class="headertitle"><div class="title">Клас ALGOR::Comparative_Sorts&lt; type_array &gt;::LibrarySort</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Алгоритм сортування Library Sort.  
+ <a href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html#details">Детальніше...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename type_array&gt;<br />
+class ALGOR::Comparative_Sorts&lt; type_array &gt;::LibrarySort</div><p >Алгоритм сортування Library Sort. </p>
+<p ><b>Бібліотечне сортування</b> (англ. Library sort) або <b>Cортування вставки з пропусками</b> (англ. Gapped insertion sort) - алгоритм сортування, який використовує <a class="el" href="../../d8/d44/class_a_l_g_o_r_1_1_comparative___sorts_1_1_insert_sort.html" title="Алгоритм сортування Insert Sort.">InsertSort</a>, але з пропусками в масиві для прискорення наступних вставок. Назва походить від аналогії: </p><blockquote class="doxtable">
+<p >Припустимо, що бібліотекар зберігає свої книги в алфавітному порядку на довгій полиці, починаючи з «A» ліворуч і продовжуючи праворуч уздовж полиці без проміжків між книгами до кінця «Z». Якщо бібліотекар придбав нову книгу, яка належить до розділу B, коли він знайде потрібне місце в розділі B, йому доведеться перемістити кожну книгу, від середини Bs до Zs, щоб звільнити місце для нової книги. Це <a class="el" href="../../d8/d44/class_a_l_g_o_r_1_1_comparative___sorts_1_1_insert_sort.html" title="Алгоритм сортування Insert Sort.">InsertSort</a>. Однак, якби вони залишали пробіл після кожної літери, якщо після B ще залишався пробіл, їм довелося б перемістити лише кілька книг, щоб звільнити місце для нової книги. Це головний принцип бібліотечного </p>
+</blockquote>
+<p>сортування.</p>
+<p >Алгоритм був запропонований Майклом А. Бендером, Мартіном Фарах-Колтоном і Мігелем Мостейро в 2004 році та опублікований у 2006 році.</p>
+<p >Як і <a class="el" href="../../d8/d44/class_a_l_g_o_r_1_1_comparative___sorts_1_1_insert_sort.html" title="Алгоритм сортування Insert Sort.">InsertSort</a>, на якому воно засноване, <a class="el" href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html" title="Алгоритм сортування Library Sort.">LibrarySort</a> є сортуванням порівняння; однак було показано, що він має високу ймовірність виконання за \({\displaystyle O(n\cdot \log(n))}\) часу (порівняно із <a class="el" href="../../d6/dcd/class_a_l_g_o_r_1_1_comparative___sorts_1_1_quick_sort.html" title="Алгоритм сортування Quick Sort.">QuickSort</a>), а не \({\displaystyle O(n^{2})}\), як <a class="el" href="../../d8/d44/class_a_l_g_o_r_1_1_comparative___sorts_1_1_insert_sort.html" title="Алгоритм сортування Insert Sort.">InsertSort</a>.</p>
+<p >Порівняно з базовим <a class="el" href="../../d8/d44/class_a_l_g_o_r_1_1_comparative___sorts_1_1_insert_sort.html" title="Алгоритм сортування Insert Sort.">InsertSort</a>, недолік <a class="el" href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html" title="Алгоритм сортування Library Sort.">LibrarySort</a> полягає в тому, що воно вимагає додаткового місця для пропусків. Обсяг і розподіл цього простору залежатимуть від реалізації. У статті розмір необхідного масиву дорівнює \({\displaystyle (1+ε)n }\), але без додаткових рекомендацій щодо вибору \(ε\). Крім того, він не є ні адаптивним, ні стабільним. Щоб гарантувати часові межі з високою ймовірністю, потрібно випадково переставляти вхідні дані, що змінює відносний порядок рівних елементів і перемішує будь-які попередньо відсортовані вхідні дані. Крім того, алгоритм використовує бінарний пошук, щоб знайти точку вставки для кожного елемента, який не бере користі від попередньо відсортованого введення.</p>
+<p >Іншим недоліком є те, що його не можна запускати як онлайн-алгоритм, оскільки неможливо випадково перетасувати введення. Якщо використовувати без цього перетасування, це може легко виродитися в квадратичну поведінку.</p>
+<p >Одним із недоліків <a class="el" href="../../d8/d44/class_a_l_g_o_r_1_1_comparative___sorts_1_1_insert_sort.html" title="Алгоритм сортування Insert Sort.">InsertSort</a> є те, що воно може вимагати великої кількості операцій обміну та бути дорогим, якщо запис у пам'ять дорогий. <a class="el" href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html" title="Алгоритм сортування Library Sort.">LibrarySort</a> може дещо покращити це на етапі вставки, оскільки потрібно перемістити менше елементів, щоб звільнити місце, але також додає додаткові витрати на етапі відновлення балансу. Крім того, локальність посилання буде поганою порівняно з <a class="el" href="../../d5/d2d/class_a_l_g_o_r_1_1_comparative___sorts_1_1_merge_sort.html" title="Алгоритм сортування Merge Sort.">MergeSort</a>, оскільки кожна вставка з випадкового набору даних може отримати доступ до пам'яті, якої більше немає в кеші, особливо з великими наборами даних. </p><dl class="section user"><dt>Алгоритм</dt><dd>Скажімо, у нас є масив з \(n\) елементів. Ми вибираємо розрив, який маємо намір дати. Тоді ми матимемо кінцевий масив розміром \({\displaystyle (1+ε)n }\). Алгоритм працює в журналі \(n\) раундів. У кожному раунді ми вставляємо стільки елементів, скільки вже є в остаточному масиві, перед повторним балансуванням масиву. Щоб знайти позицію вставки, ми застосовуємо двійковий пошук у кінцевому масиві, а потім міняємо місцями наступні елементи, поки не потрапимо на порожнє місце. Після завершення раунду ми знову балансуємо остаточний масив, вставляючи пробіли між кожним елементом. </dd></dl>
+<dl class="section user"><dt></dt><dd>Нижче наведено три важливі кроки алгоритму: <ol>
+<li>
+<b>Двійковий пошук</b>: пошук позиції вставки шляхом застосування двійкового пошуку в уже вставлених елементах. Це можна зробити шляхом лінійного переміщення до лівої або правої сторони масиву, якщо ви потрапили на порожнє місце в середньому елементі. </li>
+<li>
+<b>Вставлення</b>: вставлення елемента в знайдену позицію та заміна наступних елементів на 1 позицію, доки не з'явиться порожнє місце. Це робиться в логарифмічному часі з високою ймовірністю. </li>
+<li>
+<b>Перебалансування</b>: вставка пробілів між кожною парою елементів у масиві. Вартість ребалансування лінійно залежить від кількості вже вставлених елементів. Оскільки ці довжини збільшуються зі степенями 2 для кожного раунду, загальна вартість перебалансування також є лінійною. </li>
+</ol>
+</dd></dl>
+<dl class="section user"><dt>Категорія</dt><dd><b>Insertion Sorts</b> </dd></dl>
+<dl class="section user"><dt>Ресурси</dt><dd><em>Source: <a href="https://en.wikipedia.org/wiki/Library_sort">https://en.wikipedia.org/wiki/Library_sort</a></em> </dd></dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.3 commit b4cdc9 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000126">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    Comparative_Sorts&lt;long&gt;::LibrarySort *libr_sort;</div>
+<div class="line">    libr_sort = <span class="keyword">new</span> Comparative_Sorts&lt;long&gt;::LibrarySort(arr-&gt;array, arr-&gt;array_size);</div>
+<div class="line">    libr_sort-&gt;library_sort();</div>
+<div class="line">    <span class="keyword">delete</span> (libr_sort);</div>
+<div class="line">    <span class="comment">// The data is not taken from the output, but from the debugger console</span></div>
+<div class="line">    <span class="comment">// Before sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {20 86 29 29 37 73 57 7 57 86 37 89 29 77 11 78}</span></div>
+<div class="line">    <span class="comment">// After sorting</span></div>
+<div class="line">    <span class="comment">// arr-&gt;array = {7 11 20 29 29 29 37 37 57 57 73 77 78 86 86 89}</span></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../dc/dc0/_algor__array_data_8cpp-example.html#_a14">Algor_ArrayData.cpp</a> і <a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#_a6">Algor_ArrayProcessing.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00547">547</a></p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></li><li class="navelem"><a class="el" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html">Comparative_Sorts</a></li><li class="navelem"><a class="el" href="../../d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html">LibrarySort</a></li>
+    <li class="footer">Документація до ALGOR створена П'ятниця, 26 серпня 2022 19:26:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

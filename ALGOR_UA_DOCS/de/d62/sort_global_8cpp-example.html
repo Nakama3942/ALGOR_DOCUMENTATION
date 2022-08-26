@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: sort_global.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('de/d62/sort_global_8cpp-example.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">sort_global.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><span class="comment">/* ******************************   ALGOR.cpp   ******************************* *</span></div>
+<div class="line"><span class="comment"> * ---------------------------------------------------------------------------- *</span></div>
+<div class="line"><span class="comment"> *                                                                              *</span></div>
+<div class="line"><span class="comment"> * Copyright © 2021-2022 Kalynovsky Valentin. All rights reserved.              *</span></div>
+<div class="line"><span class="comment"> *                                                                              *</span></div>
+<div class="line"><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);              *</span></div>
+<div class="line"><span class="comment"> * you may not use this file except in compliance with the License.             *</span></div>
+<div class="line"><span class="comment"> * You may obtain a copy of the License at                                      *</span></div>
+<div class="line"><span class="comment"> *                                                                              *</span></div>
+<div class="line"><span class="comment"> *     http://www.apache.org/licenses/LICENSE-2.0                               *</span></div>
+<div class="line"><span class="comment"> *                                                                              *</span></div>
+<div class="line"><span class="comment"> * Unless required by applicable law or agreed to in writing, software          *</span></div>
+<div class="line"><span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,            *</span></div>
+<div class="line"><span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.     *</span></div>
+<div class="line"><span class="comment"> * See the License for the specific language governing permissions and          *</span></div>
+<div class="line"><span class="comment"> * limitations under the License.                                               *</span></div>
+<div class="line"><span class="comment"> *                                                                              *</span></div>
+<div class="line"><span class="comment"> * ---------------------------------------------------------------------------- *</span></div>
+<div class="line"><span class="comment"> * **************************************************************************** */</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* ********************************************************************* *</span></div>
+<div class="line"><span class="comment"> * Тестування бібліотеки (можна самому скомпілювати бібліотеку           *</span></div>
+<div class="line"><span class="comment"> *  (перший варіант) чи використати IDE-шну версію (другий варіант)).    *</span></div>
+<div class="line"><span class="comment"> *                                                                       *</span></div>
+<div class="line"><span class="comment"> *  №1) g++ ../ALGOR.cpp -s -shared -o ALGOR2.dll                        *</span></div>
+<div class="line"><span class="comment"> *  №2) cp ../../build-ALGOR-TDM_GCC-Debug/debug/ALGOR2.dll ./ALGOR2.dll *</span></div>
+<div class="line"><span class="comment"> *                                                                       *</span></div>
+<div class="line"><span class="comment"> *  Далі просто компілюється програма тесту, запускається                *</span></div>
+<div class="line"><span class="comment"> *  та виводиться результат роботи:                                      *</span></div>
+<div class="line"><span class="comment"> *                                                                       *</span></div>
+<div class="line"><span class="comment"> *  g++ -s -o test.exe test.cpp -L. -lALGOR2                             *</span></div>
+<div class="line"><span class="comment"> *  ./test.exe                                                           *</span></div>
+<div class="line"><span class="comment"> *  cat ./test_report.txt                                                *</span></div>
+<div class="line"><span class="comment"> * ********************************************************************* */</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="keyword">using</span> std::cout;</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;N:/ALGOR/src/ALGOR.hpp&quot;</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a>;</div>
+<div class="line"><span class="keyword">using namespace </span>ALGOR::SORTING;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> type_array&gt;</div>
+<div class="line"><span class="keyword">class </span>printer : <span class="keyword">public</span> Printer&lt;type_array&gt;</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keywordtype">void</span> setData(Array&lt;type_array&gt; **ARRAY)</div>
+<div class="line">    {</div>
+<div class="line">        Array = ARRAY;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordtype">void</span> print()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> i = 0; i &lt; (*Array)-&gt;array_size; i++)</div>
+<div class="line">        {</div>
+<div class="line">            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (*Array)-&gt;array[i];</div>
+<div class="line">        }</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    Array&lt;type_array&gt; **Array;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    cout &lt;&lt; <a class="code hl_function" href="../../d1/d80/namespace_a_l_g_o_r.html#aa0da330580c34e9b5141336eeb5e6092">getMemoryCell</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Структура для вытягивания массива из объекта</span></div>
+<div class="line">    Array&lt;byte8_t&gt; *ArrayStruct = <span class="keyword">nullptr</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Об&#39;єкт для друку</span></div>
+<div class="line">    printer&lt;byte8_t&gt; pr;</div>
+<div class="line">    pr.setData(&amp;ArrayStruct);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Генерация (заполнение) массива</span></div>
+<div class="line">    ARRAYDATA&lt;byte8_t&gt; *array = <span class="keyword">new</span> ARRAYDATA&lt;byte8_t&gt;(8);</div>
+<div class="line">    array-&gt;generatedData(1, 10);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Вывод на экран неотсортированного массива</span></div>
+<div class="line">    ArrayStruct = array-&gt;getData();</div>
+<div class="line">    pr.print();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Копирование массива</span></div>
+<div class="line">    ARRAYDATA&lt;byte8_t&gt; *copy_array = <span class="keyword">new</span> ARRAYDATA&lt;byte8_t&gt;(10);</div>
+<div class="line">    copy_array-&gt;cloneData(ArrayStruct);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Сортировка массива</span></div>
+<div class="line">    ArrayStruct = copy_array-&gt;getData();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//  Comparative_Sorts&lt;int&gt;::LibrarySort *sort = new Comparative_Sorts&lt;int&gt;::LibrarySort(ArrayStruct-&gt;array, ArrayStruct-&gt;array_size);</span></div>
+<div class="line">    <span class="comment">//  sort-&gt;library_sort();</span></div>
+<div class="line">    Comparative_Sorts&lt;byte8_t&gt; *sort = <span class="keyword">new</span> Comparative_Sorts&lt;byte8_t&gt;(ArrayStruct);</div>
+<div class="line">    sort-&gt;Bitonic_Sorter();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//  Distribution_Sorts::BucketSort *sort = new Distribution_Sorts::BucketSort(ArrayStruct-&gt;array, ArrayStruct-&gt;array_size);</span></div>
+<div class="line">    <span class="comment">//  sort-&gt;bucket_sort();</span></div>
+<div class="line">    <span class="comment">//  Distribution_Sorts *sort = new Distribution_Sorts(ArrayStruct);</span></div>
+<div class="line">    <span class="comment">//  sort-&gt;Bucket_Sort();</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">delete</span> (sort);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Вывод на экран отсортированного массива</span></div>
+<div class="line">    pr.print();</div>
+<div class="line"> </div>
+<div class="line">    ArrayProcessing&lt;byte8_t&gt;::isOrderliness(ArrayStruct-&gt;array, ArrayStruct-&gt;array_size) ? cout &lt;&lt; <span class="stringliteral">&quot;Масив отсортовано\n&quot;</span> : cout &lt;&lt; <span class="stringliteral">&quot;Масив НЕ отсортовано\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Изменение размера массива</span></div>
+<div class="line">    array-&gt;resize(7, 1);</div>
+<div class="line">    ArrayStruct = array-&gt;getData();</div>
+<div class="line">    pr.print();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Нахождение максимального и минимального элемента</span></div>
+<div class="line">    <span class="comment">// cout &lt;&lt; &quot;Минимальный элемент: &quot; &lt;&lt; minimum(array-&gt;getData()-&gt;array, array-&gt;getData()-&gt;array_size) &lt;&lt; &quot;; Максимальный: &quot; &lt;&lt; maximum(copy_array-&gt;getData()-&gt;array, copy_array-&gt;getData()-&gt;array_size) &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;Минимальный элемент: &quot;</span> &lt;&lt; array-&gt;getMin() &lt;&lt; <span class="stringliteral">&quot;; Максимальный: &quot;</span> &lt;&lt; copy_array-&gt;getMax() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Нахождение определённого элемента в неотсортированном массиве</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        Array&lt;asize_t&gt; *NumberPoints = array-&gt;lenear_searcher(5);</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;Элемент \&quot;5\&quot; встречается на местах: \n&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">for</span> (asize_t i = 0; i &lt; NumberPoints-&gt;array_size; i++)</div>
+<div class="line">        {</div>
+<div class="line">            cout &lt;&lt; NumberPoints-&gt;array[i] + 1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">        }</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">        remove_struct&lt;asize_t&gt;(NumberPoints);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (EXCEPTION_SET::Exception)</div>
+<div class="line">    {</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;Элемент \&quot;5\&quot; не найден...\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Нахождение определённого элемента в отсортированном массиве</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;Элемент \&quot;7\&quot; впервые встратился на месте &quot;</span> &lt;&lt; copy_array-&gt;binary_searcher(7) + 1 &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (EXCEPTION_SET::Exception)</div>
+<div class="line">    {</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;Элемент \&quot;7\&quot; не найден...\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Нахождение последовательности</span></div>
+<div class="line">    Array&lt;byte8_t&gt; *Sequence = <span class="keyword">new</span> Array&lt;byte8_t&gt;;</div>
+<div class="line">    ArrayProcessing&lt;byte8_t&gt;::addElement(Sequence-&gt;array, Sequence-&gt;array_size, 5, 0);</div>
+<div class="line">    ArrayProcessing&lt;byte8_t&gt;::addElement(Sequence-&gt;array, Sequence-&gt;array_size, 6, 1);</div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        Array&lt;asize_t&gt; *Occurrence = copy_array-&gt;searcherOccurrencesOfSubstring(Sequence);</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;Последовательность \&quot;5, 6\&quot; встречается на местах: \n&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">for</span> (asize_t i = 0; i &lt; Occurrence-&gt;array_size; i++)</div>
+<div class="line">        {</div>
+<div class="line">            cout &lt;&lt; Occurrence-&gt;array[i] + 1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">        }</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">        remove_struct&lt;asize_t&gt;(Occurrence);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (EXCEPTION_SET::Exception ex)</div>
+<div class="line">    {</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;\n\nCode: &quot;</span> &lt;&lt; ex.code() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span></div>
+<div class="line">             &lt;&lt; ex.what() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.why() &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;Последовательность \&quot;5, 6\&quot; не найдена...\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    remove_struct&lt;byte8_t&gt;(Sequence);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Нахождение среднего арифметического</span></div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;Среднее арифметическое: &quot;</span> &lt;&lt; copy_array-&gt;average() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Нахождение медианы</span></div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;Медиана: &quot;</span> &lt;&lt; copy_array-&gt;mediana() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Нахождение моды с её частотой</span></div>
+<div class="line">    ARRAYDATA&lt;byte8_t&gt;::mode *moda = copy_array-&gt;moda();</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;Чаще всего встречаются элементы: &quot;</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (asize_t i = 0; i &lt; moda-&gt;array_size; i++)</div>
+<div class="line">    {</div>
+<div class="line">        cout &lt;&lt; moda-&gt;array[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;, а именно &quot;</span> &lt;&lt; moda-&gt;highest_frequency &lt;&lt; <span class="stringliteral">&quot; раз.\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">delete</span>[] moda-&gt;array;</div>
+<div class="line">    <span class="keyword">delete</span> (moda);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Тест операторов</span></div>
+<div class="line">    *array += 10;</div>
+<div class="line">    Array&lt;byte8_t&gt; *temp = array-&gt;getData();</div>
+<div class="line">    <span class="keywordflow">for</span> (asize_t i = 7; i &lt; temp-&gt;array_size; i++)</div>
+<div class="line">    {</div>
+<div class="line">        temp-&gt;array[i] = i;</div>
+<div class="line">    }</div>
+<div class="line">    pr.setData(&amp;temp);</div>
+<div class="line">    pr.print();</div>
+<div class="line">    *array &amp;= 13;</div>
+<div class="line">    temp = array-&gt;getData();</div>
+<div class="line">    pr.print();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Освобождение памяти</span></div>
+<div class="line">    <span class="keyword">delete</span> (copy_array);</div>
+<div class="line">    <span class="keyword">delete</span> (array);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Тестую функції distance() та подібні</span></div>
+<div class="line">    ARRAYDATA&lt;byte8_t&gt; *test = <span class="keyword">new</span> ARRAYDATA&lt;byte8_t&gt;(20);</div>
+<div class="line">    test-&gt;generatedData(1, 18);</div>
+<div class="line">    ArrayStruct = test-&gt;getData();</div>
+<div class="line">    Comparative_Sorts&lt;byte8_t&gt; *tsort = <span class="keyword">new</span> Comparative_Sorts&lt;byte8_t&gt;(ArrayStruct);</div>
+<div class="line">    tsort-&gt;Library_Sort();</div>
+<div class="line">    <span class="keyword">delete</span> (tsort);</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;Distance = &quot;</span> &lt;&lt; ArrayProcessing&lt;byte8_t&gt;::distance(&amp;ArrayStruct-&gt;array[0], &amp;ArrayStruct-&gt;array[ArrayStruct-&gt;array_size]) &lt;&lt; <span class="stringliteral">&quot; and array_size = &quot;</span> &lt;&lt; ArrayStruct-&gt;array_size &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    pr.setData(&amp;ArrayStruct);</div>
+<div class="line">    pr.print();</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;ArrayStruct address &quot;</span> &lt;&lt; &amp;ArrayStruct-&gt;array[0] &lt;&lt; <span class="stringliteral">&quot; and lower_bound = &quot;</span> &lt;&lt; ArrayProcessing&lt;byte8_t&gt;::lower_bound(&amp;ArrayStruct-&gt;array[0], &amp;ArrayStruct-&gt;array[8], 3) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;ArrayStruct address &quot;</span> &lt;&lt; &amp;ArrayStruct-&gt;array[0] &lt;&lt; <span class="stringliteral">&quot; and upper_bound = &quot;</span> &lt;&lt; ArrayProcessing&lt;byte8_t&gt;::upper_bound(&amp;ArrayStruct-&gt;array[0], &amp;ArrayStruct-&gt;array[8], 3) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="keyword">delete</span> (test);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//Выход из программы</span></div>
+<div class="line">    <span class="comment">// cin.get();</span></div>
+<div class="line">    <span class="comment">// cin.get();</span></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></div><div class="ttdoc">Глобальний простір імен усього проекту</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00044">ALGOR.hpp:45</a></div></div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html_a53125d45a174125d83620e1822713060"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">ALGOR::asize_t</a></div><div class="ttdeci">ubit32_t asize_t</div><div class="ttdoc">Псевдонім для визначення типу &quot;розмір массиву&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00075">ALGOR.hpp:75</a></div></div>
+<div class="ttc" id="anamespace_a_l_g_o_r_html_aa0da330580c34e9b5141336eeb5e6092"><div class="ttname"><a href="../../d1/d80/namespace_a_l_g_o_r.html#aa0da330580c34e9b5141336eeb5e6092">ALGOR::getMemoryCell</a></div><div class="ttdeci">memcell_t getMemoryCell(memcell_t right_adjust=0, memcell_t left_adjust=0)</div><div class="ttdoc">Повертає випадкове число; аналог time(NULL)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de8/_a_l_g_o_r___c_o_r_e_8cpp_source.html#l00045">ALGOR_CORE.cpp:45</a></div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Документація до ALGOR створена П'ятниця, 26 серпня 2022 19:26:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+var class_a_l_g_o_r_1_1_comparative___sorts =
+[
+    [ "BatcherOddEvenMergeSort", "d3/dd9/class_a_l_g_o_r_1_1_comparative___sorts_1_1_batcher_odd_even_merge_sort.html", null ],
+    [ "BitonicSorter", "d2/df6/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bitonic_sorter.html", null ],
+    [ "BogoSort", "dd/d71/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bogo_sort.html", null ],
+    [ "BubbleSort", "da/d05/class_a_l_g_o_r_1_1_comparative___sorts_1_1_bubble_sort.html", null ],
+    [ "CocktailShakerSort", "d1/de4/class_a_l_g_o_r_1_1_comparative___sorts_1_1_cocktail_shaker_sort.html", null ],
+    [ "CombSort", "d3/d23/class_a_l_g_o_r_1_1_comparative___sorts_1_1_comb_sort.html", null ],
+    [ "CycleSort", "d2/d86/class_a_l_g_o_r_1_1_comparative___sorts_1_1_cycle_sort.html", null ],
+    [ "GnomeSort", "db/da1/class_a_l_g_o_r_1_1_comparative___sorts_1_1_gnome_sort.html", null ],
+    [ "HeapSort", "dc/d46/class_a_l_g_o_r_1_1_comparative___sorts_1_1_heap_sort.html", null ],
+    [ "InsertSort", "d8/d44/class_a_l_g_o_r_1_1_comparative___sorts_1_1_insert_sort.html", null ],
+    [ "LibrarySort", "d4/d37/class_a_l_g_o_r_1_1_comparative___sorts_1_1_library_sort.html", null ],
+    [ "MergeSort", "d5/d2d/class_a_l_g_o_r_1_1_comparative___sorts_1_1_merge_sort.html", null ],
+    [ "OddEvenSort", "df/d4d/class_a_l_g_o_r_1_1_comparative___sorts_1_1_odd_even_sort.html", null ],
+    [ "PancakeSort", "d3/df1/class_a_l_g_o_r_1_1_comparative___sorts_1_1_pancake_sort.html", null ],
+    [ "PatienceSort", "d5/d2b/class_a_l_g_o_r_1_1_comparative___sorts_1_1_patience_sort.html", null ],
+    [ "QuickSort", "d6/dcd/class_a_l_g_o_r_1_1_comparative___sorts_1_1_quick_sort.html", null ],
+    [ "SelectionSort", "de/d9e/class_a_l_g_o_r_1_1_comparative___sorts_1_1_selection_sort.html", null ],
+    [ "ShellSort", "dd/d04/class_a_l_g_o_r_1_1_comparative___sorts_1_1_shell_sort.html", null ],
+    [ "SlowSort", "db/df6/class_a_l_g_o_r_1_1_comparative___sorts_1_1_slow_sort.html", null ],
+    [ "StoogeSort", "d2/d9c/class_a_l_g_o_r_1_1_comparative___sorts_1_1_stooge_sort.html", null ],
+    [ "TimSort", "da/ddf/class_a_l_g_o_r_1_1_comparative___sorts_1_1_tim_sort.html", null ],
+    [ "TreeSort", "de/db9/class_a_l_g_o_r_1_1_comparative___sorts_1_1_tree_sort.html", "de/db9/class_a_l_g_o_r_1_1_comparative___sorts_1_1_tree_sort" ]
+];

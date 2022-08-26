@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Клас ALGOR::EXCEPTION_SET::Exception</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Загальнодоступні елементи</a> &#124;
+<a href="#pro-attribs">Захищені дані</a> &#124;
+<a href="../../da/d70/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception-members.html">Список всіх елементів</a>  </div>
+  <div class="headertitle"><div class="title">Клас ALGOR::EXCEPTION_SET::Exception</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Клас-каркас для роботи з винятками  
+ <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#details">Детальніше...</a></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Схема успадкувань для ALGOR::EXCEPTION_SET::Exception</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d9/d97/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception__inherit__graph.png" border="0" usemap="#a_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_inherit__map" id="a_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_inherit__map">
+<area shape="rect" title="Клас&#45;каркас для роботи з винятками" alt="" coords="5,217,221,264"/>
+<area shape="rect" href="../../d4/d93/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1division__by__zero.html" title="Клас&#45;виняток &quot;division_by_zero&quot;" alt="" coords="269,5,485,52"/>
+<area shape="rect" href="../../de/dbe/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1memory__overflow.html" title="Клас&#45;виняток &quot;memory_overflow&quot;" alt="" coords="269,76,485,123"/>
+<area shape="rect" href="../../d2/d10/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1not__found.html" title="Клас&#45;виняток &quot;not_found&quot;" alt="" coords="269,147,485,193"/>
+<area shape="rect" href="../../d6/dc3/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1position__failure.html" title="Клас&#45;виняток &quot;position_failure&quot;" alt="" coords="269,217,485,264"/>
+<area shape="rect" href="../../d2/d01/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1size__failure.html" title="Клас&#45;виняток &quot;size_failure&quot;" alt="" coords="269,288,485,335"/>
+<area shape="rect" href="../../dc/da1/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1value__failure.html" title="Клас&#45;виняток &quot;value_failure&quot;" alt="" coords="269,359,485,405"/>
+<area shape="rect" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html" title="Клас&#45;виняток &quot;void_data&quot;" alt="" coords="269,429,485,476"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">див. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:a0cf64b2084ab0c9dfc1eee818e57b099"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a0cf64b2084ab0c9dfc1eee818e57b099">Exception</a> (<a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#af847637fc548375d543f6b5f1c17c88c">ubit16_t</a> <a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a>, const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *<a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a>, const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *<a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a8beda18fa751cab13ddaa9ab93d61b91">EXPLANATION</a>)</td></tr>
+<tr class="memdesc:a0cf64b2084ab0c9dfc1eee818e57b099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Розширений конструктор класу винятків  <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a0cf64b2084ab0c9dfc1eee818e57b099">Детальніше...</a><br /></td></tr>
+<tr class="separator:a0cf64b2084ab0c9dfc1eee818e57b099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb27e290d3f65ab298c86c8702f7d36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a6cb27e290d3f65ab298c86c8702f7d36">Exception</a> (<a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#af847637fc548375d543f6b5f1c17c88c">ubit16_t</a> <a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a>, const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *<a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a>)</td></tr>
+<tr class="memdesc:a6cb27e290d3f65ab298c86c8702f7d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Стандартний конструктор класу винятків  <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a6cb27e290d3f65ab298c86c8702f7d36">Детальніше...</a><br /></td></tr>
+<tr class="separator:a6cb27e290d3f65ab298c86c8702f7d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f8840308e6b3d65cf02c96bb84cf39e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a0f8840308e6b3d65cf02c96bb84cf39e">Exception</a> (<a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#af847637fc548375d543f6b5f1c17c88c">ubit16_t</a> <a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a>)</td></tr>
+<tr class="memdesc:a0f8840308e6b3d65cf02c96bb84cf39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Скорочений кодовий конструктор класу винятків  <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a0f8840308e6b3d65cf02c96bb84cf39e">Детальніше...</a><br /></td></tr>
+<tr class="separator:a0f8840308e6b3d65cf02c96bb84cf39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae41228d434f32cb2ced6edfc3082510b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#ae41228d434f32cb2ced6edfc3082510b">Exception</a> (const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *<a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a>)</td></tr>
+<tr class="memdesc:ae41228d434f32cb2ced6edfc3082510b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Скорочений детальний конструктор класу винятків  <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#ae41228d434f32cb2ced6edfc3082510b">Детальніше...</a><br /></td></tr>
+<tr class="separator:ae41228d434f32cb2ced6edfc3082510b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfda563de6599777f5f49f72b6144973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#af847637fc548375d543f6b5f1c17c88c">ubit16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a> ()</td></tr>
+<tr class="memdesc:acfda563de6599777f5f49f72b6144973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, що повідомляє номер винятку  <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">Детальніше...</a><br /></td></tr>
+<tr class="separator:acfda563de6599777f5f49f72b6144973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe940c181a29cfd0949f54e1ea1ddb90"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a> ()</td></tr>
+<tr class="memdesc:abe940c181a29cfd0949f54e1ea1ddb90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, що повідомляє деталі винятку  <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">Детальніше...</a><br /></td></tr>
+<tr class="separator:abe940c181a29cfd0949f54e1ea1ddb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1817b0938683b5a20f67300af0ed845"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a> ()</td></tr>
+<tr class="memdesc:af1817b0938683b5a20f67300af0ed845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, що дає пояснення винятку  <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">Детальніше...</a><br /></td></tr>
+<tr class="separator:af1817b0938683b5a20f67300af0ed845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Захищені дані</h2></td></tr>
+<tr class="memitem:aa15cd4a9e7285254d12eddeabd25128f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#af847637fc548375d543f6b5f1c17c88c">ubit16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a></td></tr>
+<tr class="memdesc:aa15cd4a9e7285254d12eddeabd25128f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер винятку  <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">Детальніше...</a><br /></td></tr>
+<tr class="separator:aa15cd4a9e7285254d12eddeabd25128f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb52a7dc0a0ef76c9a95a75cfc8510f5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a></td></tr>
+<tr class="memdesc:acb52a7dc0a0ef76c9a95a75cfc8510f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деталі винятку  <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">Детальніше...</a><br /></td></tr>
+<tr class="separator:acb52a7dc0a0ef76c9a95a75cfc8510f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8beda18fa751cab13ddaa9ab93d61b91"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a8beda18fa751cab13ddaa9ab93d61b91">EXPLANATION</a></td></tr>
+<tr class="memdesc:a8beda18fa751cab13ddaa9ab93d61b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пояснення винятку  <a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a8beda18fa751cab13ddaa9ab93d61b91">Детальніше...</a><br /></td></tr>
+<tr class="separator:a8beda18fa751cab13ddaa9ab93d61b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><p >Клас-каркас для роботи з винятками </p>
+<p >Клас, що зберігає данні про виняток (номер винятка, деталі та пояснення). Щоб створити об'єкт винятку достатньо переадти необхідні данні конструктору, а для отримання інформації про виняток треба його перехопити і використати метод, що повертає необхідні данні. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.0 commit c62e85 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000011">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a>(55, <span class="stringliteral">&quot;details&quot;</span>, <span class="stringliteral">&quot;explanation&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Code: &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;;\n&quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n-&gt; &quot;</span> &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// &gt;print:&gt;</span></div>
+<div class="line">    <span class="comment">//   Code: 55;</span></div>
+<div class="line">    <span class="comment">//   details</span></div>
+<div class="line">    <span class="comment">//   -&gt; explanation</span></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a></div><div class="ttdoc">Клас-каркас для роботи з винятками</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00125">ALGOR.hpp:126</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_abe940c181a29cfd0949f54e1ea1ddb90"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">ALGOR::EXCEPTION_SET::Exception::what</a></div><div class="ttdeci">const byte1_t * what()</div><div class="ttdoc">Метод, що повідомляє деталі винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00058">ALGOR_EXCEPTION.cpp:58</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_acfda563de6599777f5f49f72b6144973"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">ALGOR::EXCEPTION_SET::Exception::code</a></div><div class="ttdeci">ubit16_t code()</div><div class="ttdoc">Метод, що повідомляє номер винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00053">ALGOR_EXCEPTION.cpp:53</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_af1817b0938683b5a20f67300af0ed845"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">ALGOR::EXCEPTION_SET::Exception::why</a></div><div class="ttdeci">const byte1_t * why()</div><div class="ttdoc">Метод, що дає пояснення винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00063">ALGOR_EXCEPTION.cpp:63</a></div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../dc/dc0/_algor__array_data_8cpp-example.html#_a3">Algor_ArrayData.cpp</a>, <a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#_a12">Algor_ArrayProcessing.cpp</a>, <a class="el" href="../../d0/dc4/_algor_core_8cpp-example.html#_a2">Algor_core.cpp</a> і <a class="el" href="../../dd/dd2/_algor_exception_8cpp-example.html#_a0">Algor_exception.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00125">125</a></p>
+</div><h2 class="groupheader">Конструктор(и)</h2>
+<a id="a0cf64b2084ab0c9dfc1eee818e57b099" name="a0cf64b2084ab0c9dfc1eee818e57b099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf64b2084ab0c9dfc1eee818e57b099">&#9670;&nbsp;</a></span>Exception() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALGOR::EXCEPTION_SET::Exception::Exception </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#af847637fc548375d543f6b5f1c17c88c">ubit16_t</a>&#160;</td>
+          <td class="paramname"><em>CODE</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *&#160;</td>
+          <td class="paramname"><em>DETAILS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *&#160;</td>
+          <td class="paramname"><em>EXPLANATION</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Розширений конструктор класу винятків </p>
+<p >Конструктор, що приймає розширену кількість данних, а саме код винятку, деталі винятку, та пояснення до деталей, що не завжди буває необхідним. </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">CODE</td><td>Код <a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html" title="Клас-каркас для роботи з винятками">Exception</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">DETAILS</td><td>Деталі <a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html" title="Клас-каркас для роботи з винятками">Exception</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">EXPLANATION</td><td>Пояснення <a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html" title="Клас-каркас для роботи з винятками">Exception</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.3.0 commit 2c6408 </dd></dl>
+<dl class="section remark"><dt>Прим.</dt><dd>Цей конструктор є розширеним так як дозволяє успадкованим класам надати пояснення до винятку, коли це необхідно, що робить цей клас більш універсальним. </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000012">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a>(100, <span class="stringliteral">&quot;details&quot;</span>, <span class="stringliteral">&quot;explanation&quot;</span>);</div>
+</div><!-- fragment --> 
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html">ALGOR_EXCEPTION.cpp</a>, рядок <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00025">25</a></p>
+<div class="fragment"><div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a> = <a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a> = <a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a8beda18fa751cab13ddaa9ab93d61b91">EXPLANATION</a> = <a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a8beda18fa751cab13ddaa9ab93d61b91">EXPLANATION</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_a8beda18fa751cab13ddaa9ab93d61b91"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a8beda18fa751cab13ddaa9ab93d61b91">ALGOR::EXCEPTION_SET::Exception::EXPLANATION</a></div><div class="ttdeci">const byte1_t * EXPLANATION</div><div class="ttdoc">Пояснення винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00139">ALGOR.hpp:139</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_aa15cd4a9e7285254d12eddeabd25128f"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">ALGOR::EXCEPTION_SET::Exception::CODE</a></div><div class="ttdeci">ubit16_t CODE</div><div class="ttdoc">Номер винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00137">ALGOR.hpp:137</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception_html_acb52a7dc0a0ef76c9a95a75cfc8510f5"><div class="ttname"><a href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">ALGOR::EXCEPTION_SET::Exception::DETAILS</a></div><div class="ttdeci">const byte1_t * DETAILS</div><div class="ttdoc">Деталі винятку</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00138">ALGOR.hpp:138</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Використовує <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00137">CODE</a>, <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00138">DETAILS</a> і <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00139">EXPLANATION</a>.</p>
+
+</div>
+</div>
+<a id="a6cb27e290d3f65ab298c86c8702f7d36" name="a6cb27e290d3f65ab298c86c8702f7d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb27e290d3f65ab298c86c8702f7d36">&#9670;&nbsp;</a></span>Exception() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALGOR::EXCEPTION_SET::Exception::Exception </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#af847637fc548375d543f6b5f1c17c88c">ubit16_t</a>&#160;</td>
+          <td class="paramname"><em>CODE</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *&#160;</td>
+          <td class="paramname"><em>DETAILS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Стандартний конструктор класу винятків </p>
+<p >Конструктор, що приймає базову кількість данних про виняток. Зазвичай номеру та деталей помилки буває достатньо. </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">CODE</td><td>Код <a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html" title="Клас-каркас для роботи з винятками">Exception</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">DETAILS</td><td>Деталі <a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html" title="Клас-каркас для роботи з винятками">Exception</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.0 commit c62e85 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000013">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a>(100, <span class="stringliteral">&quot;details&quot;</span>);</div>
+</div><!-- fragment --> 
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html">ALGOR_EXCEPTION.cpp</a>, рядок <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00032">32</a></p>
+<div class="fragment"><div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a> = <a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a> = <a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a8beda18fa751cab13ddaa9ab93d61b91">EXPLANATION</a> = <span class="stringliteral">&quot;No information given&quot;</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0f8840308e6b3d65cf02c96bb84cf39e" name="a0f8840308e6b3d65cf02c96bb84cf39e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f8840308e6b3d65cf02c96bb84cf39e">&#9670;&nbsp;</a></span>Exception() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALGOR::EXCEPTION_SET::Exception::Exception </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#af847637fc548375d543f6b5f1c17c88c">ubit16_t</a>&#160;</td>
+          <td class="paramname"><em>CODE</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Скорочений кодовий конструктор класу винятків </p>
+<p >Конструктор, що приймає скорочену кількість данних про виняток. Єдині данні, що зберігаються у об'єкті винятку, це номер винятку. </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">CODE</td><td>Код <a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html" title="Клас-каркас для роботи з винятками">Exception</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.0 commit c62e85 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000014">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a>(100);</div>
+</div><!-- fragment --> 
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html">ALGOR_EXCEPTION.cpp</a>, рядок <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00039">39</a></p>
+<div class="fragment"><div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a> = <a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a> = <span class="stringliteral">&quot;No information given&quot;</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a8beda18fa751cab13ddaa9ab93d61b91">EXPLANATION</a> = <span class="stringliteral">&quot;No information given&quot;</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae41228d434f32cb2ced6edfc3082510b" name="ae41228d434f32cb2ced6edfc3082510b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae41228d434f32cb2ced6edfc3082510b">&#9670;&nbsp;</a></span>Exception() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALGOR::EXCEPTION_SET::Exception::Exception </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a82b0e170b823b6e4c0f3f0aa6fee2559">byte1_t</a> *&#160;</td>
+          <td class="paramname"><em>DETAILS</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Скорочений детальний конструктор класу винятків </p>
+<p >Конструктор, що приймає скорочену кількість данних про виняток. Єдині данні, що зберігаються у об'єкті винятку, це деталі винятку. </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">DETAILS</td><td>Деталі <a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html" title="Клас-каркас для роботи з винятками">Exception</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.0 commit c62e85 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000015">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a>(<span class="stringliteral">&quot;details&quot;</span>);</div>
+</div><!-- fragment --> 
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html">ALGOR_EXCEPTION.cpp</a>, рядок <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00046">46</a></p>
+<div class="fragment"><div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a> = 0xffff;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a> = <a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    this-&gt;<a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a8beda18fa751cab13ddaa9ab93d61b91">EXPLANATION</a> = <span class="stringliteral">&quot;No information given&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Опис методів компонент</h2>
+<a id="acfda563de6599777f5f49f72b6144973" name="acfda563de6599777f5f49f72b6144973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfda563de6599777f5f49f72b6144973">&#9670;&nbsp;</a></span>code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALGOR::EXCEPTION_SET::Exception::code </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод, що повідомляє номер винятку </p>
+<p >Повертає номер винятку, що зберігається в об'єкті. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.0 commit c62e85 </dd></dl>
+<dl class="retval"><dt>Значення, що повертаються</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CODE</td><td>- номер винятку </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000016">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a>(100);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acfda563de6599777f5f49f72b6144973">code</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">        <span class="comment">// &gt;print:&gt; 100</span></div>
+<div class="line">    }</div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../dc/dc0/_algor__array_data_8cpp-example.html#a4">Algor_ArrayData.cpp</a>, <a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a13">Algor_ArrayProcessing.cpp</a>, <a class="el" href="../../d0/dc4/_algor_core_8cpp-example.html#a3">Algor_core.cpp</a> і <a class="el" href="../../dd/dd2/_algor_exception_8cpp-example.html#a1">Algor_exception.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html">ALGOR_EXCEPTION.cpp</a>, рядок <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00053">53</a></p>
+<div class="fragment"><div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#aa15cd4a9e7285254d12eddeabd25128f">CODE</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abe940c181a29cfd0949f54e1ea1ddb90" name="abe940c181a29cfd0949f54e1ea1ddb90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe940c181a29cfd0949f54e1ea1ddb90">&#9670;&nbsp;</a></span>what()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALGOR::EXCEPTION_SET::Exception::what </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод, що повідомляє деталі винятку </p>
+<p >Повертає деталі винятку, що зберігаються в об'єкті. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.0 commit c62e85 </dd></dl>
+<dl class="retval"><dt>Значення, що повертаються</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DETAILS</td><td>- деталі винятку </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000017">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a>(100, <span class="stringliteral">&quot;details&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#abe940c181a29cfd0949f54e1ea1ddb90">what</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">        <span class="comment">// &gt;print:&gt; &quot;details&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../dc/dc0/_algor__array_data_8cpp-example.html#a5">Algor_ArrayData.cpp</a>, <a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a14">Algor_ArrayProcessing.cpp</a>, <a class="el" href="../../d0/dc4/_algor_core_8cpp-example.html#a4">Algor_core.cpp</a> і <a class="el" href="../../dd/dd2/_algor_exception_8cpp-example.html#a2">Algor_exception.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html">ALGOR_EXCEPTION.cpp</a>, рядок <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00058">58</a></p>
+<div class="fragment"><div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#acb52a7dc0a0ef76c9a95a75cfc8510f5">DETAILS</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af1817b0938683b5a20f67300af0ed845" name="af1817b0938683b5a20f67300af0ed845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1817b0938683b5a20f67300af0ed845">&#9670;&nbsp;</a></span>why()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALGOR::EXCEPTION_SET::Exception::why </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод, що дає пояснення винятку </p>
+<p >Повертає пояснення винятку, що зберігається в об'єкті. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.3.0 commit 2c6408 </dd></dl>
+<dl class="retval"><dt>Значення, що повертаються</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">EXPLANATION</td><td>- пояснення винятку </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="test"><dt><b><a class="el" href="../../d4/df6/test.html#_test000018">Тест:</a></b></dt><dd></dd></dl>
+<div class="fragment"><div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a>(100, <span class="stringliteral">&quot;details&quot;</span>, <span class="stringliteral">&quot;explanation&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">ALGOR::EXCEPTION_SET::Exception</a> ex)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; ex.<a class="code hl_function" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#af1817b0938683b5a20f67300af0ed845">why</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">        <span class="comment">// &gt;print:&gt; &quot;explanation&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment --> <dl class="section examples"><dt>Приклади</dt><dd><a class="el" href="../../dc/dc0/_algor__array_data_8cpp-example.html#a6">Algor_ArrayData.cpp</a>, <a class="el" href="../../d2/d0f/_algor__array_processing_8cpp-example.html#a15">Algor_ArrayProcessing.cpp</a>, <a class="el" href="../../d0/dc4/_algor_core_8cpp-example.html#a5">Algor_core.cpp</a> і <a class="el" href="../../dd/dd2/_algor_exception_8cpp-example.html#a3">Algor_exception.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html">ALGOR_EXCEPTION.cpp</a>, рядок <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00063">63</a></p>
+<div class="fragment"><div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html#a8beda18fa751cab13ddaa9ab93d61b91">EXPLANATION</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Компонентні дані</h2>
+<a id="aa15cd4a9e7285254d12eddeabd25128f" name="aa15cd4a9e7285254d12eddeabd25128f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa15cd4a9e7285254d12eddeabd25128f">&#9670;&nbsp;</a></span>CODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALGOR::EXCEPTION_SET::Exception::CODE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Номер винятку </p>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.0 commit c62e85 </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00137">137</a></p>
+
+<p class="reference">Вживається в <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00025">Exception()</a>.</p>
+
+</div>
+</div>
+<a id="acb52a7dc0a0ef76c9a95a75cfc8510f5" name="acb52a7dc0a0ef76c9a95a75cfc8510f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb52a7dc0a0ef76c9a95a75cfc8510f5">&#9670;&nbsp;</a></span>DETAILS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALGOR::EXCEPTION_SET::Exception::DETAILS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Деталі винятку </p>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.0 commit c62e85 </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00138">138</a></p>
+
+<p class="reference">Вживається в <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00025">Exception()</a>.</p>
+
+</div>
+</div>
+<a id="a8beda18fa751cab13ddaa9ab93d61b91" name="a8beda18fa751cab13ddaa9ab93d61b91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8beda18fa751cab13ddaa9ab93d61b91">&#9670;&nbsp;</a></span>EXPLANATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALGOR::EXCEPTION_SET::Exception::EXPLANATION</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Пояснення винятку </p>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.3.0 commit 2c6408 </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00139">139</a></p>
+
+<p class="reference">Вживається в <a class="el" href="../../d3/d9a/_a_l_g_o_r___e_x_c_e_p_t_i_o_n_8cpp_source.html#l00025">Exception()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></li><li class="navelem"><a class="el" href="../../d5/daf/namespace_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t.html">EXCEPTION_SET</a></li><li class="navelem"><a class="el" href="../../d3/db2/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1_exception.html">Exception</a></li>
+    <li class="footer">Документація до ALGOR створена П'ятниця, 26 серпня 2022 19:26:43 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

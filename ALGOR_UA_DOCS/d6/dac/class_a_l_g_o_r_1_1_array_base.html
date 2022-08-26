@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ALGOR: Шаблон класу ALGOR::ArrayBase&lt; type_array &gt;</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../LOGOmini.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ALGOR<span id="projectnumber">&#160;1.0.0.0</span>
+   </div>
+   <div id="projectbrief">Бібліотека для обробки та сортування структур даних</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Пошук" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Пошук','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d6/dac/class_a_l_g_o_r_1_1_array_base.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pro-methods">Захищені елементи</a> &#124;
+<a href="#pro-attribs">Захищені дані</a> &#124;
+<a href="../../d0/d5b/class_a_l_g_o_r_1_1_array_base-members.html">Список всіх елементів</a>  </div>
+  <div class="headertitle"><div class="title">Шаблон класу ALGOR::ArrayBase&lt; type_array &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Базовий клас, від якого успадковуються інші класи, пов'язані з роботою з масивами  
+ <a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#details">Детальніше...</a></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Схема успадкувань для ALGOR::ArrayBase&lt; type_array &gt;</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d4/df5/class_a_l_g_o_r_1_1_array_base__inherit__graph.png" border="0" usemap="#a_a_l_g_o_r_1_1_array_base_3_01type__array_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_l_g_o_r_1_1_array_base_3_01type__array_01_4_inherit__map" id="a_a_l_g_o_r_1_1_array_base_3_01type__array_01_4_inherit__map">
+<area shape="rect" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами" alt="" coords="127,5,328,52"/>
+<area shape="rect" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html" title="Клас з потужним функціоналом обробки масивів" alt="" coords="5,100,228,147"/>
+<area shape="rect" href="../../d4/d43/class_a_l_g_o_r_1_1_comparative___sorts.html" title="Клас з великою кількістю алгоритмів сортувань" alt="" coords="252,100,427,147"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">див. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Захищені елементи</h2></td></tr>
+<tr class="memitem:a13fb8128a90c51d91d3a38ac10a6fc3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a13fb8128a90c51d91d3a38ac10a6fc3b">ArrayBase</a> (<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>&lt; type_array &gt; *&amp;<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>)</td></tr>
+<tr class="memdesc:a13fb8128a90c51d91d3a38ac10a6fc3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор базового класу, що приймає СТРУКТУРУ та зберігає її до поля  <a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a13fb8128a90c51d91d3a38ac10a6fc3b">Детальніше...</a><br /></td></tr>
+<tr class="separator:a13fb8128a90c51d91d3a38ac10a6fc3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0def78c13a284e9bc9c513222bd238"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a6d0def78c13a284e9bc9c513222bd238">ArrayBase</a> (const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;SIZE)</td></tr>
+<tr class="memdesc:a6d0def78c13a284e9bc9c513222bd238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор базового класу, що приймає РОЗМІР та виділяє пам'ять  <a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a6d0def78c13a284e9bc9c513222bd238">Детальніше...</a><br /></td></tr>
+<tr class="separator:a6d0def78c13a284e9bc9c513222bd238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850b8441c525649923a0042534fd897c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a850b8441c525649923a0042534fd897c">ArrayBase</a> ()</td></tr>
+<tr class="memdesc:a850b8441c525649923a0042534fd897c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пустий конструктор  <a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a850b8441c525649923a0042534fd897c">Детальніше...</a><br /></td></tr>
+<tr class="separator:a850b8441c525649923a0042534fd897c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5fe38cf4d8316f856ba167c690f80aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#ae5fe38cf4d8316f856ba167c690f80aa">verification</a> (<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>&lt; type_array &gt; *<a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>)</td></tr>
+<tr class="memdesc:ae5fe38cf4d8316f856ba167c690f80aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод перевірки масиву  <a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#ae5fe38cf4d8316f856ba167c690f80aa">Детальніше...</a><br /></td></tr>
+<tr class="separator:ae5fe38cf4d8316f856ba167c690f80aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Захищені дані</h2></td></tr>
+<tr class="memitem:a2c378981863e61795d77e2ffe23a0484"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>&lt; type_array &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a> = nullptr</td></tr>
+<tr class="memdesc:a2c378981863e61795d77e2ffe23a0484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вказівник на структуру, що зберігає масив  <a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">Детальніше...</a><br /></td></tr>
+<tr class="separator:a2c378981863e61795d77e2ffe23a0484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename type_array&gt;<br />
+class ALGOR::ArrayBase&lt; type_array &gt;</div><p >Базовий клас, від якого успадковуються інші класи, пов'язані з роботою з масивами </p>
+<p >Базовий клас, призаначений для використання класами-нащадками, що використовуються при роботі з масивами. Цей клас містить готові конструктори та готове поле для зберігання вказівника на структуру масиву. Використовується, щоб не писати повторно у кожному класі одну й ту ж реалізацію конструкторів та не прописувати заново поле вказівника. А отже буде менше коду. </p><dl class="tparams"><dt>Параметри шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">type_array</td><td>Тип елементів, що зберігаються у структурі об'єкту масиву </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.0.0 commit 6efeb8 </dd></dl>
+<dl class="section user"><dt>Історія</dt><dd>На відміну від інших класів, у класу <a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами">ALGOR::ArrayBase</a> найрізноманітніша та цікава історія. Його еволюція відбувалась 4 комміти поспіль і від першої реалізації він ніс трохи інший сенс свого існування...<br  />
+Більш детально читайте на сторінці <a class="el" href="../../d6/dd6/md__array_base_history.html">Історія Базового класу масиву (class ArrayBase) чи Сірий кардинал у ALGOR</a> </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00305">305</a></p>
+</div><h2 class="groupheader">Конструктор(и)</h2>
+<a id="a13fb8128a90c51d91d3a38ac10a6fc3b" name="a13fb8128a90c51d91d3a38ac10a6fc3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13fb8128a90c51d91d3a38ac10a6fc3b">&#9670;&nbsp;</a></span>ArrayBase() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ALGOR::ArrayBase</a>&lt; type_array &gt;::<a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ArrayBase</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>&lt; type_array &gt; *&amp;&#160;</td>
+          <td class="paramname"><em>Array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор базового класу, що приймає СТРУКТУРУ та зберігає її до поля </p>
+<p >Конструктор, що приймає структуру для збереження вказівника на неї. Спочатку конструктор перевіряє, чи не є масив пустим. Якщо масив пустий - кидається виключення. Інакше - зберігається вказівник. </p><dl class="exception"><dt>Обробка виняткових ситуацій</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html" title="Клас-виняток &quot;void_data&quot;">ALGOR::EXCEPTION_SET::void_data</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Застереження</dt><dd>При такому створенні об'єкта класу обидві сутності будуть зберігати вказівники на одну й ту саму структуру, а тому зміна масиву через одну із сутностей буде впливати на обидві сутності!!! </dd></dl>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html" title="Структура, що імітує масив">Array</a></td><td>Покажчик на структуру масиву </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.0.0 commit 6efeb8 </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00216">216</a></p>
+<div class="fragment"><div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>{</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <a class="code hl_function" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#ae5fe38cf4d8316f856ba167c690f80aa">verification</a>(<a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a> = <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_base_html_a2c378981863e61795d77e2ffe23a0484"><div class="ttname"><a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ALGOR::ArrayBase::ARRAY</a></div><div class="ttdeci">Array&lt; type_array &gt; * ARRAY</div><div class="ttdoc">Вказівник на структуру, що зберігає масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00314">ALGOR.hpp:314</a></div></div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_array_base_html_ae5fe38cf4d8316f856ba167c690f80aa"><div class="ttname"><a href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#ae5fe38cf4d8316f856ba167c690f80aa">ALGOR::ArrayBase::verification</a></div><div class="ttdeci">void verification(Array&lt; type_array &gt; *Array)</div><div class="ttdoc">Метод перевірки масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00232">ALGOR_ARRAY.cpp:232</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">ALGOR::Array</a></div><div class="ttdoc">Структура, що імітує масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00090">ALGOR.hpp:91</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6d0def78c13a284e9bc9c513222bd238" name="a6d0def78c13a284e9bc9c513222bd238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d0def78c13a284e9bc9c513222bd238">&#9670;&nbsp;</a></span>ArrayBase() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ALGOR::ArrayBase</a>&lt; type_array &gt;::<a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ArrayBase</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html#a53125d45a174125d83620e1822713060">asize_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>SIZE</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор базового класу, що приймає РОЗМІР та виділяє пам'ять </p>
+<p >Конструктор, що виділяє пам'ять під абсолютно новий чистий масив. </p><dl class="exception"><dt>Обробка виняткових ситуацій</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html" title="Клас-виняток &quot;void_data&quot;">ALGOR::EXCEPTION_SET::void_data</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Застереження</dt><dd>Передача нульового розміру сприймається за збереження пустого масиву, що заборонено правилами безпеки бібліотеки <a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html" title="Глобальний простір імен усього проекту">ALGOR</a>: <blockquote class="doxtable">
+<p >Об'єкти класів масивів не мають зберігати пусті масиви, щоб уникнути непередбачуваної поведінки та запобігти вилітам програм. </p>
+</blockquote>
+</dd></dl>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">SIZE</td><td>Розмір створюваного масиву </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.0.0 commit 1d50a2 </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00223">223</a></p>
+<div class="fragment"><div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>{</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <a class="code hl_variable" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html#a2c378981863e61795d77e2ffe23a0484">ARRAY</a> = create_struct&lt;type_array&gt;(SIZE);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a850b8441c525649923a0042534fd897c" name="a850b8441c525649923a0042534fd897c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850b8441c525649923a0042534fd897c">&#9670;&nbsp;</a></span>ArrayBase() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ALGOR::ArrayBase</a>&lt; type_array &gt;::<a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ArrayBase</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Пустий конструктор </p>
+<p >Просто пустий конструктор, який нічого не виконує. </p><dl class="section since"><dt>Починаючи з</dt><dd>v0.1.0.0 commit 48aa64, dd5d42+ </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000004">Не рекомендовано:</a></b></dt><dd>Раніше він використовувася у тих випадках, коли виділяти пам'ять під структуру не потрібно (так як вказівнику не було присвоєно nullptr і це робив даний конструктор), але з часом вказівнику було присвоєно nullptr і надібність у цьому відпала... А цей метод залишено на випадок, якщо колись з'явиться необхідність написати якусь реалізацію у конструкторі базового класу. </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00229">229</a></p>
+<div class="fragment"><div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Опис методів компонент</h2>
+<a id="ae5fe38cf4d8316f856ba167c690f80aa" name="ae5fe38cf4d8316f856ba167c690f80aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5fe38cf4d8316f856ba167c690f80aa">&#9670;&nbsp;</a></span>verification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ALGOR::ArrayBase</a>&lt; type_array &gt;::verification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>&lt; type_array &gt; *&#160;</td>
+          <td class="paramname"><em>Array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод перевірки масиву </p>
+<p >Метод, що перевіряє масив на пустотність. Якщо розмір масиву дорівнює нулю, можна вважати, що масив пустий, так як вказівник на сам масив вказує на nullptr. Зазвичай метод використовується для перевірок структур перед тим, як зберегти вказівник на структуру до об'єкту класу, щоб до класу не міг потрапити пустий масив. </p><dl class="exception"><dt>Обробка виняткових ситуацій</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html" title="Клас-виняток &quot;void_data&quot;">ALGOR::EXCEPTION_SET::void_data</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html" title="Структура, що імітує масив">Array</a></td><td>Масив, що перевіряється </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.1.0 commit 8bbf75 </dd></dl>
+<dl class="section note"><dt>Нотатки</dt><dd>Можливо у майбутньому буде проводитись більше перевірок, якщо кількість характеристик зросте. </dd></dl>
+<dl class="section user"><dt>Історія</dt><dd>Історія цього методу не така цікава, як у класа <a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами">ArrayBase</a>, але його життя добре потріпало.<br  />
+Спочатку це мала бути прихована функція, що видна лише усередині бібліотеки. Для цього я всього лиш написав її у файлі реалізацій без її оголошення у хідері. Такою вона залишалась довгий час... Але прийшов час зайнятись безпекою бібліотеки перед релізом v1.0.0.0, так як з останньої безпекозації (коли й було додано цю функцію) багато чого змінилось. У релізі v0.1.3.0 проводилась реформа <a class="el" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html" title="Клас з потужним функціоналом обробки масивів">ARRAYDATA</a>, коли тимчасово став публічним <a class="el" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4193136573a8534d4e9a2c784c174872" title="Видаляє масив">ALGOR::ARRAYDATA::remove</a>. Спочатку цю функцію було перейменовано, а потім і взагалі тимчасово видалено. Чому тимчасово? Тому що коли я у друге прийшов до концепції, що об'єкт класу масиву не має зберігати пустий масив, я назад приховав <a class="el" href="../../d9/d61/class_a_l_g_o_r_1_1_a_r_r_a_y_d_a_t_a.html#a4193136573a8534d4e9a2c784c174872" title="Видаляє масив">ALGOR::ARRAYDATA::remove</a>, довів рівень безпеки до потрібного рівня і повернув цю функцію, як метод базового класу, який можуть використовувати успадковані класи при збережені до себе масивів.<br  />
+Короче, судьби <em><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами">ArrayBase</a></em> та <em>verification</em> перетнулися. Дивлячись на історію <a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html" title="Базовий клас, від якого успадковуються інші класи, пов&#39;язані з роботою з масивами">ArrayBase</a>, розумієш, що це вийшло не випадково... </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html">ALGOR_ARRAY.cpp</a>, рядок <a class="el" href="../../d6/ddf/_a_l_g_o_r___a_r_r_a_y_8cpp_source.html#l00232">232</a></p>
+<div class="fragment"><div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>{</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">if</span> (<a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a> == <span class="keyword">nullptr</span> || <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">array_size</a> == 0 || <a class="code hl_struct" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html">Array</a>-&gt;<a class="code hl_variable" href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">array</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html">EXCEPTION_SET::void_data</a>();</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>}</div>
+<div class="ttc" id="aclass_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data_html"><div class="ttname"><a href="../../d8/df4/class_a_l_g_o_r_1_1_e_x_c_e_p_t_i_o_n___s_e_t_1_1void__data.html">ALGOR::EXCEPTION_SET::void_data</a></div><div class="ttdoc">Клас-виняток &quot;void_data&quot;</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00185">ALGOR.hpp:186</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html_a6f942d8b05206c2d0cd478f837fab989"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a6f942d8b05206c2d0cd478f837fab989">ALGOR::Array::array_size</a></div><div class="ttdeci">asize_t array_size</div><div class="ttdoc">Розмір масиву</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00093">ALGOR.hpp:93</a></div></div>
+<div class="ttc" id="astruct_a_l_g_o_r_1_1_array_html_a7e4abada02b2defc3116832ea8853b81"><div class="ttname"><a href="../../dc/d0d/struct_a_l_g_o_r_1_1_array.html#a7e4abada02b2defc3116832ea8853b81">ALGOR::Array::array</a></div><div class="ttdeci">type_array * array</div><div class="ttdoc">Вказівник на масив</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00092">ALGOR.hpp:92</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Використовує <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00092">ALGOR::Array&lt; type_array &gt;::array</a> і <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00093">ALGOR::Array&lt; type_array &gt;::array_size</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Компонентні дані</h2>
+<a id="a2c378981863e61795d77e2ffe23a0484" name="a2c378981863e61795d77e2ffe23a0484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c378981863e61795d77e2ffe23a0484">&#9670;&nbsp;</a></span>ARRAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type_array &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ALGOR::ArrayBase</a>&lt; type_array &gt;::ARRAY = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вказівник на структуру, що зберігає масив </p>
+<dl class="section since"><dt>Починаючи з</dt><dd>v0.1.0.0 commit 6efeb8 </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html">ALGOR.hpp</a>, рядок <a class="el" href="../../d8/d00/_a_l_g_o_r_8hpp_source.html#l00314">314</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d80/namespace_a_l_g_o_r.html">ALGOR</a></li><li class="navelem"><a class="el" href="../../d6/dac/class_a_l_g_o_r_1_1_array_base.html">ArrayBase</a></li>
+    <li class="footer">Документація до ALGOR створена П'ятниця, 26 серпня 2022 19:26:42 системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>
