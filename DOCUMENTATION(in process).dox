@@ -1,0 +1,4056 @@
+/* **************************   DOCUMENTATION.dox   ************************** *
+ * --------------------------------------------------------------------------- *
+ *                                                                             *
+ * Copyright © 2021-2022 Kalynovsky Valentin. All rights reserved.             *
+ *                                                                             *
+ * Licensed under the Apache License, Version 2.0 (the "License");             *
+ * you may not use this file except in compliance with the License.            *
+ * You may obtain a copy of the License at                                     *
+ *                                                                             *
+ *     http://www.apache.org/licenses/LICENSE-2.0                              *
+ *                                                                             *
+ * Unless required by applicable law or agreed to in writing, software         *
+ * distributed under the License is distributed on an "AS IS" BASIS,           *
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.    *
+ * See the License for the specific language governing permissions and         *
+ * limitations under the License.                                              *
+ *                                                                             *
+ * --------------------------------------------------------------------------- *
+ * *************************************************************************** *
+ */
+
+/*!
+  \namespace ALGOR
+  \brief Глобальний простір імен усього проекту
+  \details Призначений для зберігання усього реалізованого функціоналу проекту.
+  \note Краще не використовувати разом з std, інакше можуть виникнути конфлікти.
+  \since v0.1.2.0 commit 2fa93b
+
+  \author Калиновський Валентин
+  \version 1.0.0.0
+  \copyright Copyright © 2021-2022 Kalynovsky Valentin. All rights reserved.
+  Licensed under the Apache License, Version 2.0 (the "License")
+
+  \todo Реалізувати розділ ALGOR_MATRIX
+  \todo Реалізувати розділ ALGOR_HEAP
+  \todo Реалізувати розділ ALGOR_LIST
+
+  \example sort_global.cpp
+  \example sort_test.cpp
+  \example Algor_core.cpp
+  \example Algor_printer.cpp
+  \example Algor_exception.cpp
+  \example Algor_random.cpp
+  \example Algor_ArrayProcessing.cpp
+  \example Algor_ArrayData.cpp
+  \example Algor_ArraySort.cpp
+ */
+
+/* *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ * --------------------------------------------------------------------------- *
+ *                                  ALGOR_CORE                                 *
+ * --------------------------------------------------------------------------- *
+ * *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ */
+
+	/*!
+	   \typedef ALGOR::byte1_t
+	   \brief Аліас для char <i>(1 байт)</i>.
+	   \details Зазвичай використовується для задання типу строк. Може зберігати
+	   число від <b>0</b> до <b>255</b>, або від <b>-128</b> до <b>+127</b>.
+	   \since v0.1.3.0 commit b50b4a
+	   \attention Якщо цей тип дійсно використовується для строк, то не забувайте
+	   вказувати "*" (вказівник) перед назвою імені строки, так як цей тип
+	   не замінює повністю char на string. Це лише звичайний аліас.
+	 */
+	 
+	/*!
+	   \typedef ALGOR::byte2_t
+	   \brief Аліас для short <i>(2 байти)</i>.
+	   \details Зазвичай використовується при зберіганні коротких чисел
+	   від <b>0</b> до <b>65'535</b>, або від <b>-32'768</b> до <b>+32'767</b>.
+	   \since v0.1.3.0 commit b50b4a
+	 */
+
+	/*!
+	   \typedef ALGOR::byte4_t
+	   \brief Аліас для long <i>(4 байти)</i>.
+	   \details Зазвичай використовується при зберіганні чисел. Може
+	   зберігати від <b>0</b> до <b>4'294'967'295</b>, або від <b>-2'147'483'648</b>
+	   до <b>+2'147'483'647</b>.
+	   \since v0.1.3.0 commit b50b4a
+	   \note Також ним можна повноцінно замінити тип int, так як він теж
+	   розрахований на 4 байти. Але якщо програму запустити на комп'ютері
+	   з процесором intel i386 чи більш ранішим, то під int буде виділятися усього
+	   2 байти і на тих процесорах int є аліасом для short. Через таке розпливчате
+	   поняття типу int він ніде у бібліотеці не використовується, а використовуються
+	   чіткі типи типу short чи long.
+	 */
+
+	/*!
+	   \typedef ALGOR::byte8_t
+	   \brief Аліас для long long <i>(8 байтів)</i>.
+	   \details Є розширенням типу long у два рази і розрахований під числа від <b>0</b>
+	   до <b>18'446'744'073'709'551'615</b>, або від <b>-9'223'372'036'854'775'808</b>
+	   до <b>+9'223'372'036'854'775'807</b>.
+	   \since v0.1.3.0 commit b50b4a
+	 */
+
+	/*!
+	   \typedef ALGOR::sbit8_t
+	   \brief Аліас для signed char <i>(1 байт)</i>.
+	   \details Аналогічно звичайному char, але може приймати значення тільки
+	   від <b>-128</b> до <b>+127</b>.
+	   \since v0.1.0.0 commit 0d3195
+	 */
+
+	/*!
+	   \typedef ALGOR::sbit16_t
+	   \brief Аліас для signed short <i>(2 байти)</i>.
+	   \details Аналогічно звичайному short, але може приймати значення тільки
+	   від <b>-32'768</b> до <b>+32'767</b>.
+	   \since v0.1.0.0 commit 0d3195
+	 */
+
+	/*!
+	   \typedef ALGOR::sbit32_t
+	   \brief Аліас для signed long <i>(4 байти)</i>.
+	   \details Аналогічно звичайному long, але може приймати значення тільки
+	   від <b>-2'147'483'648</b> до <b>+2'147'483'647</b>.
+	   \since v0.1.0.0 commit 0d3195
+	 */
+
+	/*!
+	   \typedef ALGOR::sbit64_t
+	   \brief Аліас для signed long long <i>(8 байтів)</i>.
+	   \details Аналогічно звичайному long long, але може приймати значення тільки
+	   від <b>-9'223'372'036'854'775'808</b> до <b>+9'223'372'036'854'775'807</b>.
+	   \since v0.1.0.0 commit 0d3195
+	 */
+
+	/*!
+	   \typedef ALGOR::ubit8_t
+	   \brief Аліас для unsigned char <i>(1 байт)</i>.
+	   \details Аналогічно звичайному char і на відміну від signed char може
+	   приймати значення тільки від <b>0</b> до <b>255</b>.
+	   \since v0.1.0.0 commit 0d3195
+	 */
+
+	/*!
+	   \typedef ALGOR::ubit16_t
+	   \brief Аліас для unsigned short <i>(2 байти)</i>.
+	   \details Аналогічно звичайному short і на відміну від signed short може
+	   приймати значення тільки від <b>0</b> до <b>65'535</b>.
+	   \since v0.1.0.0 commit 0d3195
+	 */
+
+	/*!
+	   \typedef ALGOR::ubit32_t
+	   \brief Аліас для unsigned long <i>(4 байти)</i>.
+	   \details Аналогічно звичайному long і на відміну від signed long може
+	   приймати значення тільки від <b>0</b> до <b>4'294'967'295</b>.
+	   \since v0.1.0.0 commit 0d3195
+	 */
+
+	/*!
+	   \typedef ALGOR::ubit64_t
+	   \brief Аліас для unsigned long long <i>(8 байтів)</i>.
+	   \details Аналогічно звичайному long long і на відміну від signed long long
+	   може приймати значення тільки від <b>0</b> до <b>18'446'744'073'709'551'615</b>.
+	   \since v0.1.0.0 commit 0d3195
+	 */
+
+	/*!
+	   \typedef ALGOR::fbit32_t
+	   \brief Аліас для float <i>(4 байти)</i>.
+	   \details На відміну від всіх попередніх типів, що можуть зберігати тільки
+	   цілі числа, тип <i>float</i> може зберігати числа з плаваючою комою. У
+	   комірку можна записати як додатні, так і від'ємні числа. Можливий діапазон
+	   зберігаємих чисел від <b>+/-3.4E-38</b> до <b>3.4E+38</b>.
+	   \since v0.1.2.0 commit 1981d6
+	 */
+
+	/*!
+	   \typedef ALGOR::fbit64_t
+	   \brief Аліас для double <i>(8 байтів)</i>.
+	   \details Розширює тип <i>float</i>, збільшуючи точність та розмір у два рази.
+	   Можливий діапазон зберігаємих чисел від <b>+/-1.7E-308</b> до <b>1.7E+308</b>.
+	   \since v0.1.2.0 commit 1981d6
+	 */
+
+	/*!
+	   \typedef ALGOR::fbit128_t
+	   \brief Аліас для long double <i>(16 байт)</i>.
+	   \details Розширює тип <i>double</i>, збільшуючи точність та розмір іще у два
+	   рази.
+	   \since v0.1.3.0 commit b6349a
+	 */
+
+	/*!
+	   \typedef ALGOR::asize_t
+	   \brief Псевдонім для визначення типу <i>"розмір массиву"</i>.
+	   \details Зазвичай цей тип використовується, коли треба вказати розмір масиву
+	   чи позицію у масиві. Так як нумерація починається з 0 і не існує від'ємних
+	   розмірів масивів чи номерів позицій, можна поточнити тип з <i>int</i> до
+	   <i>unsigned int</i>. До того ж не завжди вистачає <b>65'535</b> комірок масиву.
+	   Іноді потрібно більше, наприклад, мільйон чи мільярд. Більше мільярда нема
+	   сенсу створювати структури даних тому ідеальним вибором серед <a>short</a>,
+	   <i>long</i> та <i>long long</i> є <i>long</i>. Саме тому <i>asize_t</i> є
+	   аліасом до ALGOR::ubit32_t.
+	   \since v0.1.0.0 commit 89658e
+	 */
+
+	/*!
+	   \typedef ALGOR::memcell_t
+	   \brief Псевдонім для обчислюваної <i>комірки пам'яті</i>.
+	   \details Використовується тільки у функції ALGOR::getMemoryCell, як тип
+	   комірки, що зберігає розраховане число.
+	   \since v0.1.1.3 commit b4cdc9
+	   \attention Є службовим типом і замість нього краще
+	   використовувати ALGOR::ubit64_t.
+	 */
+
+	/*!
+	   \fn ALGOR::swap(type_value &, type_value &)
+	   \brief Міняє місцями два елементи
+	   \details Функція приймає два значення, які треба замінити місцями. Після
+	   виконання функції перша комірка пам'яті буде зберігати друге значення, а
+	   друга - перше. Для виконання алгоритму використовується додаткова
+	   комірка пам'яті.
+	   \tparam type_value Тип елементів, що міняються місцями
+	   \param[in, out] firstNumber Перший елемент для заміни
+	   \param[in, out] secondNumber Другий елемент для заміни
+	   \since v0.0.0.1
+	   \test
+	   \snippet Algor_core.cpp swap
+	 */
+
+	/*!
+	   \fn ALGOR::minimum(type_value, type_value)
+	   \brief Шукає найменше значення з двух наданих
+	   \details Функція приймає два значення і порівнює їх. Якщо перше
+	   число виявится меншим за друге - функція повертає перше число, інакше -
+	   друге.
+	   \tparam type_value Тип елементів, з яких вибирається найменше значення
+	   \param[in] firstNumber Перше значення на вибірку
+	   \param[in] secondNumber Друге значення на вибірку
+	   \since v0.1.1.4 commit 090b06
+	   \return найменше значення з двух наданих
+	   \sa ALGOR::maximum(type_value, type_value)
+	   \test
+	   \snippet Algor_core.cpp minimum
+	 */
+
+	/*!
+	   \fn ALGOR::maximum(type_value, type_value)
+	   \brief Шукає найбільше значення з двух наданих
+	   \details Функція приймає два значення і порівнює їх. Якщо перше
+	   число виявится більшим за друге - функція повертає перше число, інакше -
+	   друге.
+	   \tparam type_value Тип елементів, з яких вибирається найбільше значення
+	   \param[in] firstNumber Перше значення на вибірку
+	   \param[in] secondNumber Друге значення на вибірку
+	   \since v0.1.1.4 commit 090b06
+	   \return найбільше значення з двух наданих
+	   \sa ALGOR::minimum(type_value, type_value)
+	   \test
+	   \snippet Algor_core.cpp maximum
+	 */
+
+	/*!
+	   \fn ALGOR::getMemoryCell(memcell_t, memcell_t)
+	   \brief Повертає випадкове число; аналог time(NULL)
+	   \details Цей метод виділяє пам'ять під 10 комірок пам'яті. Куди саме система
+	   виділить пам'ять передгадати неможливо, а також неможливо передгадати, яка
+	   програма і які данні раніше сюди записувала, тому це самий реальний генератор
+	   випадкович чисел. Поки генерація масивів не була доведена до ідеалу, але як
+	   генератор великого числа замість time(NULL) цілком реально використати. Із
+	   десяти випадкових чисел функція розраховує число, яке треба повернути.
+	   \remark Функції можна задати бітовий здвиг. Якщо функція використовується
+	   замість time(NULL), а результат передається у іншу функцію, що приймає тільки
+	   чотири-байтове значення, можна задати правий здвиг на 32 біти (4 байти) і
+	   тоді функція поверне 4 старших байти.
+	   \param[in] right_adjust Правий здвиг
+	   \param[in] left_adjust Лівий здвиг
+	   \since v0.1.1.3 commit b4cdc9
+	   \retval cell - розраховане випадкове число
+	   \test
+	   \snippet Algor_core.cpp mem
+	 */
+
+	 /*!
+	   \struct ALGOR::Array
+	   \brief Структура, що імітує масив
+	   \details Призначений для зберігання вказівника на динамічний масив та його
+	   розмір
+	   \tparam type_array Тип елементів, що зберігаються в масиві
+	   \since v0.0.1.0 commit 979bf4
+	   \test
+	   \snippet Algor_core.cpp array struct
+	 */
+
+		/*!
+		   \var ALGOR::Array::array
+		   \brief Вказівник на масив
+		   \since v0.0.1.0 commit 979bf4
+		 */
+
+		/*!
+		   \var ALGOR::Array::array_size
+		   \brief Розмір масиву
+		   \since v0.0.1.0 commit 979bf4
+		 */
+
+	/*!
+	   \fn ALGOR::create_struct(const asize_t &, bool)
+	   \brief Створює структуру з покажчиком на масив
+	   \details Зберігає розмір масиву, виділяє пам'ять під цей самий масив та повертає
+	   вказівник на структуру масиву.
+	   \throw ALGOR::EXCEPTION_SET::void_data
+	   \tparam type_array Тип елементів, що будуть зберігатися у масиві
+	   \param[in] SIZE Розмір створюваного масиву
+	   \param[in] mem_allocation Логічний флаг, чи потрібно виділяти пам'ять під масив
+	   \retval Array<type_array>* - вказівник на створену структуру
+	   \since v0.1.0.0 commit 85698d
+	   \remark Якщо ви вже виділили пам'ять під масив, то структурі не потрібно повторно
+	   виділяти пам'ять. Структура лише зберігає розмір масиву та сам вказівник на цей
+	   масив. Тому у цьому випадку флагу <i>mem_allocation</i> потрібно передати
+	   <i>false</i> і після цього зберегти вказівник на масив у структурі. У інших
+	   випадках флаг <i>mem_allocation</i> краще не змінювати.
+	   \test
+	   \snippet Algor_core.cpp create_struct
+	 */
+
+	/*!
+	   \fn ALGOR::generate_struct(Array<type_array> *&, const sbit64_t &, const sbit64_t &, const ubit64_t, const ubit32_t)
+	   \brief Генерує випадкові значення у структурі масиву
+	   \details Генерує у структурі масиву значення із заданого діапазону. Якщо
+	   задати <i>denominator</i>, то можна отримати кратні, чи дрібні значення данних.
+	   \throw ALGOR::EXCEPTION_SET::division_by_zero
+	   \tparam type_array Вказує якого типу будуть генеруватися числа у структурі
+	   масиву
+	   \param[in, out] Array Структура масиву, у якій потрібно згенерувати данні
+	   \param[in] min_limit Мінімально можливе згенероване значення
+	   \param[in] max_limit Максимально можливе згенероване значення
+	   \param[in] seed Сі́м'я генератору
+	   \param[in] denominator Дільник для генерації <i>float</i> данних
+	   \since v0.0.0.1
+	   \note На випадок, якщо не працює ALGOR::getMemoryCell, можна власноруч
+	   задати сі́м'я генерації.
+	   \test
+	   \snippet Algor_core.cpp generate_struct
+	 */
+
+	/*!
+	   \fn ALGOR::remove_struct(Array<type_array> *&)
+	   \brief remove_struct
+	   \details Звільняє пам'ять від масиву, що зберігається у структурі й звільняє
+	   з пам'яті саму структуру.
+	   \throw ALGOR::EXCEPTION_SET::void_data
+	   \tparam type_array Тип елементів, що зберігаються у масиві
+	   \param[in, out] Array Масив, який потрібно видалити
+	   \result Вказівник на структуру після виклику цієї функції буде вказувати на
+	   <i>nullptr</i>.
+	   \since v0.1.0.0 commit 48aa64
+	   \test
+	   \snippet Algor_core.cpp remove_struct
+	 */
+
+	/*!
+	   \interface ALGOR::Printer
+	   \brief Printer-інтерфейс, призначений для реалізації функціоналу виводу
+	   інформації
+	   \details Це є інтерфейс, що складається лише з одного віртуального методу, який
+	   призначений для виводу інформації. Так як цей проект є унікальним у тому сенсі,
+	   що не використовується жодна інша бібліотека (навіть стандартна) і автор
+	   власноруч пише власну реалізацію алгоритмів - тому неможливо використати
+	   клас iostream, через що неможлива реалізація принтеру. Автору потрібно буде з
+	   початку написати власний клас вводу-виводу, а в умовах популярності графічних
+	   інтерфейсів це не є оптимальним та актуальним. Краще програмісту самому дати
+	   реалізувавти ввод-вивід. До того ж такий метод є універсальним: його можна
+	   використовувати й у консольних програмах, й у графічних. Якби я намагався
+	   власноруч написати реалізацію, вона була б спеціалізованою чи під консоль, чи
+	   під графіку. Саме це мене підштовхнуло написати саме інтрерфейс, а не клас.
+	   \warning Щоб не було попереджень "Potential leak of memory pointed to by
+	   'name' [clang-analyzer-cplusplus.NewDeleteLeaks]" (про потенційний
+	   витік пам'яті) - треба створювати статичний об'єкт <i>принтеру</i>!
+	   \since v0.1.2.0 commit 2fa93b
+	   \remark Раджу використовувати наступну реалізацію для консольної програми:
+	   \test
+	   \snippet Algor_printer.cpp printer
+	   Цей клас зберігає не матрицю, а вказівник на вказівник на структуру масиву.
+	   Тому достатньо один раз передати у клас вказівник на структуру і все. Далі
+	   можна просто міняти вказівники на інші структури з іншими масивами і не
+	   треба їх заново передавати у цей клас. Він сам буде відстежувати, який
+	   вказівник зберігається у вказівнику на структуру.
+	 */
+
+		/*!
+		   \fn ALGOR::Printer::print()
+		   \brief Метод для виводу інформації
+		   \since v0.1.2.0 commit 2fa93b
+		   \test
+		   \snippet Algor_printer.cpp print
+		 */
+
+/* *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ * --------------------------------------------------------------------------- *
+ *                               ALGOR_EXCEPTION                               *
+ * --------------------------------------------------------------------------- *
+ * *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ */
+
+	/*!
+	  \namespace ALGOR::EXCEPTION_SET
+	  \brief Простір імен, що реалізовує виключення
+	  \details Простір імен являє собою набір класів, які використовуються при киданні
+	  виключень, так як зберігають необхідну інформацію про випадок, що стався. Головний
+	  клас ALGOR::EXCEPTION_SET::Exception являє собою каркас винятка, який можна
+	  успадкувати для полегшення роботи з винятками. Можна дати додаткову інформацію
+	  до вже реалізованих класів-нащадків, а можна створити власні класи-нащадки.
+	  \since v0.1.3.0 commit 2cdff0
+	 */
+
+		/*!
+		   \class ALGOR::EXCEPTION_SET::Exception
+		   \brief Клас-каркас для роботи з винятками
+		   \details Клас, що зберігає данні про виняток (номер винятка, деталі та
+		   пояснення). Щоб створити об'єкт винятку достатньо переадти необхідні данні
+		   конструктору, а для отримання інформації про виняток треба його перехопити
+		   і використати метод, що повертає необхідні данні.
+		   \since v0.1.1.0 commit c62e85
+		   \test
+		   \snippet Algor_exception.cpp exception code details explanation class
+		 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::Exception::Exception(ubit16_t, const byte1_t *, const byte1_t *)
+			   \brief Розширений конструктор класу винятків
+			   \details Конструктор, що приймає розширену кількість данних, а саме код
+			   винятку, деталі винятку, та пояснення до деталей, що не завжди буває
+			   необхідним.
+			   \param[in] CODE Код Exception
+			   \param[in] DETAILS Деталі Exception
+			   \param[in] EXPLANATION Пояснення Exception
+			   \since v0.1.3.0 commit 2c6408
+			   \remark Цей конструктор є розширеним так як дозволяє успадкованим класам
+			   надати пояснення до винятку, коли це необхідно, що робить цей клас
+			   більш універсальним.
+			   \test
+			   \snippet Algor_exception.cpp exception code details explanation
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::Exception::Exception(ubit16_t, const byte1_t *)
+			   \brief Стандартний конструктор класу винятків
+			   \details Конструктор, що приймає базову кількість данних про виняток.
+			   Зазвичай номеру та деталей помилки буває достатньо.
+			   \param[in] CODE Код Exception
+			   \param[in] DETAILS Деталі Exception
+			   \since v0.1.1.0 commit c62e85
+			   \test
+			   \snippet Algor_exception.cpp exception code details
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::Exception::Exception(ubit16_t)
+			   \brief Скорочений кодовий конструктор класу винятків
+			   \details Конструктор, що приймає скорочену кількість данних про
+			   виняток. Єдині данні, що зберігаються у об'єкті винятку, це номер
+			   винятку.
+			   \param[in] CODE Код Exception
+			   \since v0.1.1.0 commit c62e85
+			   \test
+			   \snippet Algor_exception.cpp exception code
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::Exception::Exception(const byte1_t *)
+			   \brief Скорочений детальний конструктор класу винятків
+			   \details Конструктор, що приймає скорочену кількість данних про
+			   виняток. Єдині данні, що зберігаються у об'єкті винятку, це деталі
+			   винятку.
+			   \param[in] DETAILS Деталі Exception
+			   \since v0.1.1.0 commit c62e85
+			   \test
+			   \snippet Algor_exception.cpp exception details
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::Exception::code()
+			   \brief Метод, що повідомляє номер винятку
+			   \details Повертає номер винятку, що зберігається в об'єкті.
+			   \since v0.1.1.0 commit c62e85
+			   \retval CODE - номер винятку
+			   \test
+			   \snippet Algor_exception.cpp exception catch code
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::Exception::what()
+			   \brief Метод, що повідомляє деталі винятку
+			   \details Повертає деталі винятку, що зберігаються в об'єкті.
+			   \since v0.1.1.0 commit c62e85
+			   \retval DETAILS - деталі винятку
+			   \test
+			   \snippet Algor_exception.cpp exception catch details
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::Exception::why()
+			   \brief Метод, що дає пояснення винятку
+			   \details Повертає пояснення винятку, що зберігається в об'єкті.
+			   \since v0.1.3.0 commit 2c6408
+			   \retval EXPLANATION - пояснення винятку
+			   \test
+			   \snippet Algor_exception.cpp exception catch explanation
+			 */
+
+			/*!
+			   \var ALGOR::EXCEPTION_SET::Exception::CODE
+			   \brief Номер винятку
+			   \since v0.1.1.0 commit c62e85
+			 */
+
+			/*!
+			   \var ALGOR::EXCEPTION_SET::Exception::DETAILS
+			   \brief Деталі винятку
+			   \since v0.1.1.0 commit c62e85
+			 */
+
+			/*!
+			   \var ALGOR::EXCEPTION_SET::Exception::EXPLANATION
+			   \brief Пояснення винятку
+			   \since v0.1.3.0 commit 2c6408
+			 */
+
+		/*!
+		   \var ALGOR::EXCEPTION_SET::excep55
+		   \brief Повідомлення для memory_overflow
+		   \since v0.1.3.0 commit d66e53
+		   \par Текст повідомлення
+		   <i>"Комірка пам'яті, в якій зберігається розмір обсягу даних, більше
+		   не може зберігати більші данні. Ця помилка може виникнути у випадках, коли
+		   в комірку, яка може зберігати змінну 0xffffffff, потрібно записати
+		   більше значення, тобто більше 4 байт, оскільки клітинка зберігання
+		   даних займає 4 байти"</i>
+		 */
+
+		/*!
+		   \var ALGOR::EXCEPTION_SET::excep101
+		   \brief Повідомлення для division_by_zero
+		   \since v0.1.3.0 commit d66e53
+		   \par Текст повідомлення
+		   <i>"Відбулося ділення на нуль - невизначений результат виконання
+		   програми"</i>
+		 */
+
+		/*!
+		   \var ALGOR::EXCEPTION_SET::excep254
+		   \brief Повідомлення для position_failure
+		   \since v0.1.3.0 commit d66e53
+		   \par Текст повідомлення
+		   <i>"Помилка позиції - позиція відсутня в масиві"</i>
+		 */
+
+		/*!
+		   \var ALGOR::EXCEPTION_SET::excep255
+		   \brief Повідомлення для value_failure
+		   \since v0.1.3.0 commit d66e53
+		   \par Текст повідомлення
+		   <i>"Помилка значення - значення відсутнє в масиві"</i>
+		 */
+
+		/*!
+		   \var ALGOR::EXCEPTION_SET::excep256
+		   \brief Повідомлення для size_failure
+		   \since v0.1.3.0 commit d66e53
+		   \par Текст повідомлення
+		   <i>"Помилка розміру - помилка зміни розміру; наприклад, це може
+		   статися, коли розміри збігаються, коли розмір масиву змінюється, або
+		   новий розмір більше/менше за межі розмірів"</i>
+		 */
+
+		/*!
+		   \var ALGOR::EXCEPTION_SET::excep400
+		   \brief Повідомлення для void_data
+		   \since v0.1.3.0 commit d66e53
+		   \par Текст повідомлення
+		   <i>"Отримано порожню структуру даних"</i>
+		 */
+
+		/*!
+		   \var ALGOR::EXCEPTION_SET::excep404
+		   \brief Повідомлення для not_found
+		   \since v0.1.3.0 commit d66e53
+		   \par Текст повідомлення
+		   <i>"Помилка пошуку - елемент не знайдено"</i>
+		 */
+
+		/*!
+		   \class ALGOR::EXCEPTION_SET::memory_overflow
+		   \brief Клас-виняток <i>"memory_overflow"</i>
+		   \details Базовий виняток <i>memory_overflow</i> (переповнення пам'яті).
+		   Використовує повідомлення ALGOR::EXCEPTION_SET::excep55 та має
+		   номер <i>55</i>.
+		   \since v0.1.1.0 commit bce6b6
+		   \remark Де-які методи при киданні винятку \a 55 можуть давати пояснення.
+		 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::memory_overflow::memory_overflow()
+			   \brief Виняток memory_overflow
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   memory_overflow. До каркасу передаються код виключення та деталі.
+			   \since v0.1.1.0 commit bce6b6
+			   \test
+			   \snippet Algor_exception.cpp exception memory_overflow
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::memory_overflow::memory_overflow(const byte1_t *)
+			   \brief Виняток memory_overflow з поясненням
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   memory_overflow. До каркасу передаються код виключення, деталі
+			   та пояснення.
+			   \param[in] explanation Пояснення до деталей винятку
+			   \since v0.1.3.0 commit 2с6408
+			   \test
+			   \snippet Algor_exception.cpp exception memory_overflow explanation
+			 */
+
+		/*!
+		   \class ALGOR::EXCEPTION_SET::division_by_zero
+		   \brief Клас-виняток <i>"division_by_zero"</i>
+		   \details Базовий виняток <i>division_by_zero</i> (ділення на нуль).
+		   Використовує повідомлення ALGOR::EXCEPTION_SET::excep101 та має
+		   номер <i>101</i>.
+		   \since v0.1.2.0 commit d74cc1
+		 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::division_by_zero::division_by_zero()
+			   \brief Виняток division_by_zero
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   division_by_zero. До каркасу передаються код виключення та деталі.
+			   \since v0.1.2.0 commit d74cc1
+			   \test
+			   \snippet Algor_exception.cpp exception division_by_zero
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::division_by_zero::division_by_zero(const byte1_t *)
+			   \brief Виняток division_by_zero з поясненням
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   division_by_zero. До каркасу передаються код виключення, деталі
+			   та пояснення.
+			   \param[in] explanation Пояснення до деталей винятку
+			   \since v0.1.3.0 commit 2с6408
+			   \test
+			   \snippet Algor_exception.cpp exception division_by_zero explanation
+			 */
+
+		/*!
+		   \class ALGOR::EXCEPTION_SET::position_failure
+		   \brief Клас-виняток <i>"position_failure"</i>
+		   \details Базовий виняток <i>position_failure</i> (збій положення).
+		   Використовує повідомлення ALGOR::EXCEPTION_SET::excep254 та має
+		   номер <i>254</i>.
+		   \since v0.1.1.0 commit 8bbf75
+		 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::position_failure::position_failure()
+			   \brief Виняток position_failure
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   position_failure. До каркасу передаються код виключення та деталі.
+			   \since v0.1.1.0 commit 8bbf75
+			   \test
+			   \snippet Algor_exception.cpp exception position_failure
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::position_failure::position_failure(const byte1_t *)
+			   \brief Виняток position_failure з поясненням
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   position_failure. До каркасу передаються код виключення, деталі
+			   та пояснення.
+			   \param[in] explanation Пояснення до деталей винятку
+			   \since v0.1.3.0 commit 2с6408
+			   \test
+			   \snippet Algor_exception.cpp exception position_failure explanation
+			 */
+
+		/*!
+		   \class ALGOR::EXCEPTION_SET::value_failure
+		   \brief Клас-виняток <i>"value_failure"</i>
+		   \details Базовий виняток <i>value_failure</i> (збій значення).
+		   Використовує повідомлення ALGOR::EXCEPTION_SET::excep255 та має
+		   номер <i>255</i>.
+		   \since v0.1.1.0 commit 8bbf75
+		 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::value_failure::value_failure()
+			   \brief Виняток value_failure
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   value_failure. До каркасу передаються код виключення та деталі.
+			   \since v0.1.1.0 commit 8bbf75
+			   \test
+			   \snippet Algor_exception.cpp exception value_failure
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::value_failure::value_failure(const byte1_t *)
+			   \brief Виняток value_failure з поясненням
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   value_failure. До каркасу передаються код виключення, деталі
+			   та пояснення.
+			   \param[in] explanation Пояснення до деталей винятку
+			   \since v0.1.3.0 commit 2с6408
+			   \test
+			   \snippet Algor_exception.cpp exception value_failure explanation
+			 */
+
+		/*!
+		   \class ALGOR::EXCEPTION_SET::size_failure
+		   \brief Клас-виняток <i>"size_failure"</i>
+		   \details Базовий виняток <i>size_failure</i> (збій розміру).
+		   Використовує повідомлення ALGOR::EXCEPTION_SET::excep256 та має
+		   номер <i>256</i>.
+		   \since v0.1.3.0 commit 2c6408
+		 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::size_failure::size_failure()
+			   \brief Виняток size_failure
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   size_failure. До каркасу передаються код виключення та деталі.
+			   \since v0.1.3.0 commit 2c6408
+			   \test
+			   \snippet Algor_exception.cpp exception size_failure
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::size_failure::size_failure(const byte1_t *)
+			   \brief Виняток size_failure з поясненням
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   size_failure. До каркасу передаються код виключення, деталі
+			   та пояснення.
+			   \param[in] explanation Пояснення до деталей винятку
+			   \since v0.1.3.0 commit 2с6408
+			   \test
+			   \snippet Algor_exception.cpp exception size_failure explanation
+			 */
+
+		/*!
+		   \class ALGOR::EXCEPTION_SET::void_data
+		   \brief Клас-виняток <i>"void_data"</i>
+		   \details Базовий виняток <i>void_data</i> (недійсні дані).
+		   Використовує повідомлення ALGOR::EXCEPTION_SET::excep400 та має
+		   номер <i>400</i>.
+		   \since v0.1.1.0 commit c62e85
+		 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::void_data::void_data()
+			   \brief Виняток void_data
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   void_data. До каркасу передаються код виключення та деталі.
+			   \since v0.1.1.0 commit c62e85
+			   \test
+			   \snippet Algor_exception.cpp exception void_data
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::void_data::void_data(const byte1_t *)
+			   \brief Виняток void_data з поясненням
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   void_data. До каркасу передаються код виключення, деталі
+			   та пояснення.
+			   \param[in] explanation Пояснення до деталей винятку
+			   \since v0.1.3.0 commit 2с6408
+			   \test
+			   \snippet Algor_exception.cpp exception void_data explanation
+			 */
+
+		/*!
+		   \class ALGOR::EXCEPTION_SET::not_found
+		   \brief Клас-виняток <i>"not_found"</i>
+		   \details Базовий виняток <i>not_found</i> (не знайдено).
+		   Використовує повідомлення ALGOR::EXCEPTION_SET::excep404 та має
+		   номер <i>404</i>.
+		   \since v0.1.1.0 commit c62e85
+		 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::not_found::not_found()
+			   \brief Виняток not_found
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   not_found. До каркасу передаються код виключення та деталі.
+			   \since v0.1.1.0 commit c62e85
+			   \test
+			   \snippet Algor_exception.cpp exception not_found
+			 */
+
+			/*!
+			   \fn ALGOR::EXCEPTION_SET::not_found::not_found(const byte1_t *)
+			   \brief Виняток not_found з поясненням
+			   \details Конструктор об'єкту, що використовується, як виняток
+			   not_found. До каркасу передаються код виключення, деталі
+			   та пояснення.
+			   \param[in] explanation Пояснення до деталей винятку
+			   \since v0.1.3.0 commit 2с6408
+			   \test
+			   \snippet Algor_exception.cpp exception not_found explanation
+			 */
+
+/* *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ * --------------------------------------------------------------------------- *
+ *                                 ALGOR_RANDOM                                *
+ * --------------------------------------------------------------------------- *
+ * *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ */
+
+	/*!
+	  \namespace ALGOR::RANDOM
+	  \brief Простір імен, що реалізовує ГПВЧ
+	  \details Простір імен являє собою набір класів, які використовуються при
+	  Генерації ПсевдоВипадкових Чисел (ГПВЧ). Класи є реалізаціями математичних
+	  моделей. Зазвичай використовуються при генерації структур даних, таких як
+	  масиви тощо.
+	  \since v0.1.3.0 commit d66e53
+	 */
+
+		/*!
+		   \class ALGOR::RANDOM::LCM
+		   \brief ГПВЧ Лінійний Конґруентний Метод
+		   \details Один з найпростіших ГПВЧ. Працює за принципом розрахунку
+		   наступного числа. Представляється формулою
+		   \f[x_n = (a * x_{n-1} + c)mod(m)\f], де \f$a, c, m\f$ - константні
+		   коефіціенти.
+		   \since v0.1.3.0 commit ca0704
+		   \remark LCM = LinearCongruentMethod
+		   \par Ресурси
+		   Source: https://en.wikipedia.org/wiki/Linear_congruential_generator\n
+		   Paragraph: Parameters in common use\n
+		   Table row: MMIX by Donald Knuth\n
+		   \sa ALGOR::RANDOM::RC4
+		   \sa ALGOR::RANDOM::MersenneTwister
+		   \test
+		   \snippet Algor_random.cpp LCM class
+		 */
+
+			/*!
+			   \fn ALGOR::RANDOM::LCM::LCM(memcell_t)
+			   \brief Конструктор класу, що приймає сі́м'я
+			   \details Конструктор, що приймає сі́м'я ГПВЧ, що є першим числом
+			   послідовності, що генерується (\f$x_0\f$). Являє собою аналог
+			   стандартної функції <i>srand()</i>.
+			   \param[in] seed Сі́м'я генерації
+			   \since v0.1.3.0 commit ca0704
+			   \test
+			   \snippet Algor_random.cpp LCM srand
+			 */
+
+			/*!
+			   \fn ALGOR::RANDOM::LCM::rand()
+			   \brief Метод генерації псевдовипадкового числа
+			   \details Алгоритм, що генерує (<i>розраховує</i>) наступне число
+			   послідовності.
+			   \since v0.1.3.0 commit ca0704
+			   \retval seed - наступне число послідновності \f$x_n\f$
+			   \test
+			   \snippet Algor_random.cpp LCM rand
+			 */
+
+			/*!
+			   \var ALGOR::RANDOM::LCM::a
+			   \brief Перше константне число \f$a\f$
+			   \details Константа \f$a\f$ = 6'364'136'223'846'793'005.
+			   \since v0.1.3.0 commit ca0704
+			 */
+
+			/*!
+			   \var ALGOR::RANDOM::LCM::c
+			   \brief Перше константне число \f$c\f$
+			   \details Константа \f$c\f$ = 1'442'695'040'888'963'407.
+			   \since v0.1.3.0 commit ca0704
+			 */
+
+			/*!
+			   \var ALGOR::RANDOM::LCM::m
+			   \brief Перше константне число \f$m\f$
+			   \details Константа \f$m\f$ = 18'446'744'073'709'551'615.
+			   \since v0.1.3.0 commit ca0704
+			 */
+
+			/*!
+			   \var ALGOR::RANDOM::LCM::seed
+			   \brief Сі́м'я послідовності \f$x_0\f$
+			   \details Число, що задає початок послідовності, що генерується.
+			   \since v0.1.3.0 commit ca0704
+			 */
+
+		/*!
+		   \class ALGOR::RANDOM::RC4
+		   \brief Простий криптостійкий генератор
+		   \details RC4 — потоковий шифр, розроблений Роном Рівестом
+		   (анг. Ron Rivest) у 1987 році.
+		   \since v0.1.0.0 commit 88415c
+		   \note Може генерувати значення лише у діапазоні 0-255 (1 байт).
+		   \deprecated На даному етапі розробка даного ГВЧ заморожена. Алгоритм
+		   застарів. З часом можливе його повне видалення, чи повна модернізація,
+		   чому не радиться його використовувати.
+		   \par Ресурси
+		   Source: https://www.youtube.com/watch?v=PQlZI-QoM2A\n
+		   \sa ALGOR::RANDOM::LCM
+		   \sa ALGOR::RANDOM::MersenneTwister
+		   \test
+		   \snippet Algor_random.cpp RC4 class
+		*/
+
+			/*!
+			   \fn ALGOR::RANDOM::RC4::crypto_srand(const byte1_t *, byte4_t)
+			   \brief Встановлює ключ генерації
+			   \details Приймає ключ і розраховує з нього ключ генерації
+			   \param[in] key Ключ, що встановлюється
+			   \param[in] ksize Розмір ключа
+			   \since v0.1.0.0 commit 88415c
+			   \test
+			   \snippet Algor_random.cpp RC4 srand
+			 */
+
+			/*!
+			   \fn ALGOR::RANDOM::RC4::crypto_rand(byte1_t *, byte4_t)
+			   \brief Генерує значення
+			   \details Генерує масив вихідних зашифрованих значень, які можна
+			   використовувати, як згенеровані ГВЧ.
+			   \param[out] output Генерує масив вихідних елементів
+			   \param size Розмір масиву вихідних елементів
+			   \since v0.1.0.0 commit 88415c
+			   \test
+			   \snippet Algor_random.cpp RC4 rand
+			 */
+
+			/*!
+			   \var ALGOR::RANDOM::RC4::Sbox
+			   \brief Ключ генерації
+			   \since v0.1.0.0 commit 88415c
+			 */
+
+		/*!
+		   \class ALGOR::RANDOM::MersenneTwister
+		   \brief Складний ГПВЧ, що базується на властивостях простих чисел Мерсенна
+		   \details Вихор Мерсенна — ГПВЧ, розроблений у 1997 році японськими
+		   вченими Макото Мацумото та Такудзі Нісімурою. Вихор Мерсенна ґрунтується
+		   на властивостях простих чисел Мерсенна та забезпечує швидке генерування
+		   високоякісних за критерієм випадковості псевдовипадкових чисел.
+		   \since v0.1.0.0 commit 88415c
+		   \deprecated На даному етапі розробка даного ГВЧ заморожена. Нехай
+		   він і краще за Лінійні ГПВЧ, його ще не доведено до відлагодженого стану.
+		   Його ще й досі складно використовувати. У майбутньому можлива повна
+		   зміна сигнатур методів у класі. Чи його повне видалення.
+		   \par Ресурси
+		   Source: https://www.agner.org/random/\n
+		   \sa ALGOR::RANDOM::LCM
+		   \sa ALGOR::RANDOM::RC4
+		   \test
+		   \snippet Algor_random.cpp MT class
+		 */
+
+			/*!
+			   \fn ALGOR::RANDOM::MersenneTwister::MersenneTwister(byte4_t)
+			   \brief Конструктор класу ГПВЧ Вихор Марсенна (встановлює сі́м'я)
+			   \details Встановлює сі́м'я та проводить ініціалізацію послідовності,
+			   що буде генеруватися.
+			   \param[in] seed Сі́м'я генерації
+			   \since v0.1.0.0 commit 88415c
+			   \test
+			   \snippet Algor_random.cpp MT srand
+			 */
+
+			/*!
+			   \fn ALGOR::RANDOM::MersenneTwister::RandomInit(byte4_t)
+			   \brief Ініціалізація ГПВЧ
+			   \details Використовується при перевстановленні семені ГПВЧ.
+			   \param[in] seed Сі́м'я генерації
+			   \since v0.1.0.0 commit 88415c
+			   \test
+			   \snippet Algor_random.cpp MT reinit
+			 */
+
+			/*!
+			   \fn ALGOR::RANDOM::MersenneTwister::rand()
+			   \brief Метод генеації даних на усьому можливому діапазоні
+			   \details Генерує числа на увесь можливий діапазон змінної. Цей метод
+			   спеціально було створено під сумісність з функцією тестування ГПВЧ.
+			   \since v0.1.3.0 commit ca0704
+			   \warning Цей метод було написано лише для функції тестування ГПВЧ. Не
+			   використовуйте його, якщо у вас є обмеження на число, що має бути
+			   згенероване. Для цього використовуйте метод
+			   ALGOR::RANDOM::MersenneTwister::IRandom, що спеціально для цього й
+			   створювався.
+			   \warning А також, якщо Вам потрібно згенерувати число на усьому
+			   діапазоні, то краще використати ALGOR::RANDOM::MersenneTwister::BRandom,
+			   щоб уникнути додаткових розрахунків.
+			   \deprecated Буде видалено після завершення тестування ГПВЧ.
+			   \return згенероване число
+			 */
+
+			/*!
+			   \fn ALGOR::RANDOM::MersenneTwister::IRandom(byte4_t, byte4_t)
+			   \brief Метод генерація числа у заданому діапазоні
+			   \details Генерує число у заданому діапазоні.
+			   \param[in] min Мінімальне число діапазону
+			   \param[in] max Максимальне число діапазону
+			   \since v0.1.0.0 commit 88415c
+			   \return згенероване число у заданому діапазоні
+			   \test
+			   \snippet Algor_random.cpp MT rand int
+			 */
+
+			/*!
+			   \fn ALGOR::RANDOM::MersenneTwister::IRandomX(byte4_t, byte4_t)
+			   \brief Більш точніший метод генерація числа у заданому діапазоні
+			   \details Є аналогом методу ALGOR::RANDOM::MersenneTwister::IRandom,
+			   що генеруєчисло за складнішим алгоритмом, а саме число є більш
+			   точнішим.
+			   \param[in] min Мінімальне число діапазону
+			   \param[in] max Максимальне число діапазону
+			   \since v0.1.0.0 commit 88415c
+			   \return точне згенероване число у заданому діапазоні
+			   \test
+			   \snippet Algor_random.cpp MT rand int extend
+			 */
+
+			/*!
+			   \fn ALGOR::RANDOM::MersenneTwister::Random()
+			   \brief Метод генеріції числа з плаваючою комою
+			   \details Генерує числа з плаваючою комою
+			   \since v0.1.0.0 commit 88415c
+			   \warning Цей метод генерує числа від 0 до 1, тобто всі
+			   згенеровані числа будуть меншими від одиниці.
+			   \return число з плаваючою комою
+			   \test
+			   \snippet Algor_random.cpp MT rand double
+			 */
+
+			/*!
+			   \fn ALGOR::RANDOM::MersenneTwister::BRandom()
+			   \brief Метод генерації випадкових бітів
+			   \details Генерує випадкові біти у змінній з чотирьох байт, що дозволяє
+			   згенерувати 32-бітове число на всьому діапазоні.
+			   \since v0.1.0.0 commit 88415c
+			   \note Може слугувати аналогом методу ALGOR::RANDOM::MersenneTwister::rand,
+			   але той метод є надстройкою над ALGOR::RANDOM::MersenneTwister::IRandom
+			   для функції тестування ГПВЧ, що викликає додаткові розрахунки та витрати
+			   ресурсів. Якщо потрібно відразу згенерувати якесь число на усьому
+			   діапазоні, то краще обирати цей метод.
+			   \return згенероване число на всьому діапазоні
+			   \test
+			   \snippet Algor_random.cpp MT rand bits
+			 */
+
+			/*!
+			   \fn ALGOR::RANDOM::MersenneTwister::Init0(byte4_t)
+			   \brief Базова процедура ініціалізації
+			   \param[in] seed Сі́м'я генерації
+			   \since v0.1.0.0 commit 88415c
+			 */
+
+			/*!
+			   \var ALGOR::RANDOM::MersenneTwister::mersenne_twister
+			   \brief Вектор стану
+			   \since v0.1.0.0 commit 88415c
+			 */
+
+			/*!
+			   \var ALGOR::RANDOM::MersenneTwister::mersenne_twister_index
+			   \brief Індекс у векторі стану
+			   (ALGOR::RANDOM::MersenneTwister::mersenne_twister)
+			   \since v0.1.0.0 commit 88415c
+			 */
+
+			/*!
+			   \var ALGOR::RANDOM::MersenneTwister::LastInterval
+			   \brief Довжина останнього інтервалу для
+			   ALGOR::RANDOM::MersenneTwister::IRandomX
+			   \since v0.1.0.0 commit 88415c
+			 */
+
+			/*!
+			   \var ALGOR::RANDOM::MersenneTwister::RejectionLimit
+			   \brief Ліміт відхилень, який використовує
+			   ALGOR::RANDOM::MersenneTwister::IRandomX
+			   \since v0.1.0.0 commit 88415c
+			 */
+
+		/*!
+		   \fn ALGOR::RANDOM::test_random_on_Pearsons_coefficient(ubit32_t, ubit32_t)
+		   \brief Функція тестування ГПВЧ на рівномірність
+		   \details Тестує ГПВЧ на рівномірність генерації чисел, використовуючи
+		   коефіціент узгодженості Пірсона.
+		   \tparam Generator Клас алгоритму ГПВЧ, що потрібно протестувати.
+		   \param[in] left_limit Мінімальне число діапазону генерації
+		   при тестуванні
+		   \param[in] right_limit Максимальне число діапазону генерації
+		   при тестуванні
+		   \since v0.1.3.0 commit ca0704
+		   \warning ГВЧ ALGOR::RANDOM::RC4 поки не можна протестувати, так
+		   як його не підготовлено до використання данною функцією тестування, 
+		   й сама функція не компілюється під цей алгоритм.
+		   \return коефіціент узгодженості Пірсона
+		   \test
+		   \snippet Algor_random.cpp random test
+		   \remark Як можна побачити з прикладу, ALGOR::RANDOM::LCM генерує
+		   числа більш рівномірно. Однак це не значить, що він є кращим... Як вже
+		   було сказано, ГПВЧ Вихор Марсена є швидшим <del>(хоча й використовує
+		   набагато більше операцій та розрахунків)</del> та якіснішим. А отримані
+		   результати є лише випадковістю. Інколи краще генерує ALGOR::RANDOM::LCM, а
+		   інколи ALGOR::RANDOM::MersenneTwister, через що можна зробити висновок,
+		   що вони однаково якісно генерують числа <del>(чи може просто добре
+		   підібрані коефіціенти для ALGOR::RANDOM::LCM)</del>. Для функції генерації
+		   ALGOR::generate_struct структури масиву ALGOR::Array все ж таки було
+		   обрано ALGOR:RANDOM::LCM, так як він набагато легший у реалізації та
+		   розумінні, а працює так само якісно, як і ALGOR:RANDOM::MersenneTwister.
+		 */
+
+/* *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ * --------------------------------------------------------------------------- *
+ *                                 ALGOR_ARRAY                                 *
+ * --------------------------------------------------------------------------- *
+ * *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ */
+
+	/*!
+	   \class ALGOR::ArrayProcessing
+	   \brief Класс базових функцій для роботи з масивами
+	   \details Клас із базовими функціями обробки масивів. Вони призначені, як
+	   для зміни масиву, так і для визначення його певних характеристик. Функції
+	   розраховані під використання стандартних С++ масивів, без поглиблення в
+	   абстракції, типу використання структур чи класів <del>(на те вони і є
+	   базовими)</del>.
+	   \tparam type_array Тип елементів, які зберігає масив, який потрібно обробити
+	   \since v0.1.2.0 commit 1981d6
+	   \remark У вас можуть виникнути питання щодо версіонування. Тема роз'яснена
+	   на наступній сторінці \ref ArrayBaseHistory.md
+	   \note Не обов'язково створювати структуру і з неї передавати данні до функцій.
+	   Вони навмисно були розроблені, щоб вони приймали не структуру, а саме сам
+	   масив.
+	 */
+
+		/*!
+		   \fn ALGOR::ArrayProcessing::minimum(const type_array *, const asize_t &)
+		   \brief Шукає мінімальний елемент у масиві методом перебору
+		   \details Методом перебору по всьому масиву функція шукає та повертає
+		   найменше значення у масиві.
+		   \param[in] Array Масив, у якому потрібно знайти мінімальний елемент
+		   \param[in] array_size Розмір цього масиву
+		   \since v0.0.0.1
+		   \sa ALGOR::minimum(type_value, type_value)
+		   \sa ALGOR::ArrayProcessing::maximum(const type_array *, const asize_t &)
+		   \sa ALGOR::ARRAYDATA::getMin()
+		   \warning Ця функція не робить перевірку, чи є масив відсортованим, а тому
+		   не є ефективною. Краще перед виконанням цієї функції перевірити, чи є масив
+		   відсортованим за допомогою функції ALGOR::ArrayProcessing::isOrderliness.
+		   \return значення найменшого елемента масиву
+		   \test
+		   \snippet Algor_ArrayProcessing.cpp processing minimum
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayProcessing::maximum(const type_array *, const asize_t &)
+		   \brief Шукає максимальний елемент у масиві методом перебору
+		   \details Методом перебору по всьому масиву функція шукає та повертає
+		   найбільше значення у масиві.
+		   \param[in] Array Масив, у якому потрібно знайти максимальний елемент
+		   \param[in] array_size Розмір цього масиву
+		   \since v0.0.0.1
+		   \sa ALGOR::maximum(type_value, type_value)
+		   \sa ALGOR::ArrayProcessing::minimum(const type_array *, const asize_t &)
+		   \sa ALGOR::ARRAYDATA::getMax()
+		   \warning Ця функція не робить перевірку, чи є  масив відсортованим, а тому
+		   не є ефективною. Краще перед виконанням цієї функції перевірити, чи є масив
+		   відсортованим за допомогою функції ALGOR::ArrayProcessing::isOrderliness.
+		   \return значення найбільшого елемента масиву
+		   \test
+		   \snippet Algor_ArrayProcessing.cpp processing maximum
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayProcessing::isOrderliness(const type_array *, const asize_t &)
+		   \brief Функція, що перевіряє, чи впорядковано масив
+		   \details Функція перевіряє, чи є масив впорядкованим у порядку збільшення.
+		   Якщо у якийсь момент функція фіксує, що поточний елемент ітерації більше
+		   наступного, вона відразу повертає значення <i>false</i>, інакше - всі елементи
+		   йдуть у порядку збільшення і функція повертає <i>true</i>.
+		   \param[in] Array Масив, що перевіряється на відсортованість
+		   \param[in] array_size Розмір цього масиву
+		   \since v0.1.2.0 commit 2fa93b
+		   \warning Ця функція перевіряє впорядкованість тільки у напрямку збільшення.
+		   Якщо необхдіно перевірити впорядкованість у порядку зменшення: на вхід функції
+		   треба передати обернений масив, а цим функціоналом володіє тільки
+		   ALGOR::ARRAYDATA::reverse.
+		   \return логічне значення, чи є масив впорядкованим (так чи ні)
+		   \test
+		   \snippet Algor_ArrayProcessing.cpp processing isOrderliness
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayProcessing::distance(type_array *, type_array *)
+		   \brief Повертає відстань між вказівниками на два елементи масиву
+		   \details Розраховує різницю між двома вказівниками, яка (різниця) являє
+		   собою відстань між цими самими двома вказівниками.
+		   \param[in] first Вказівник на перший вказаний елемент масиву
+		   \param[in] last Вказівник на другий (наступний, останній) вказаний
+		   елемент масиву
+		   \since v0.1.2.1 commit ffc19f
+		   \return різницю між адресами вказівників
+		   \par Ресурси
+		   Source: http://www.cplusplus.com/reference/iterator/distance/?kw=distance\n
+		   \note Перевагами над стандартною функцією є те, що вона не працює з об'єктами
+		   класу ітератор (як можна побачити з прикладу на офіційній сторінці
+		   документації) - данна функція працює просто із вказівниками, що
+		   є легше та надійніше.
+		   \sa ALGOR::ArrayProcessing::lower_bound(type_array *, type_array *, const type_array &)
+		   \sa ALGOR::ArrayProcessing::upper_bound(type_array *, type_array *, const type_array &)
+		   \test
+		   \snippet Algor_ArrayProcessing.cpp processing distance
+		   \remark Дану функцію можна використовувати для знаходження розміру масива. Якщо
+		   ви колись зберегли вказівник на останній елемент масиву, а сам розмір було
+		   загублено <del>(я не знаю, як ви могли це зробити)</del>, тоді ви можете
+		   використати цей алгоритм, передавши вказівник на перший елемент масиву і
+		   збережений вказівник на останній елемент масиву. Так як алгоритм
+		   повертає різницю між адресами, то адреса цього самого останнього елемента
+		   не буде порахована у розмір масиву, а тому розмір масиву становитиме на
+		   одиницю більше повернутого значення:
+		   \code{.cpp}
+		   int size = 10; //The size that will be lost...
+		   long long arr[size];
+		   long long *last_element = &arr[9];
+		   //...
+		   //Lots and lots of code... You forgot where the size of the array is stored...
+		   //...
+		   //Use distance:
+		   cout << "Size array is " << ArrayProcessing<long long>::distance(&arr[0], last_element) + 1 << "\n";
+		   //or
+		   cout << "Size array is " << ArrayProcessing<long long>::distance(&arr[0], last_element + 1) << "\n";
+		   \endcode
+		   Тут не важливо, чи збільшите ви підсумковий результат на одиницю, чи
+		   посунете вказівник на одиницю. У другому випадку вказівник буде виходити
+		   за межі масиву, але як вже було сказано, у результат нічого не потрапляє
+		   ззовні зазначених адрес, а тому таким чином ви додасте іще один останній
+		   елемент, який раніше не рахувався, і не більше того.
+		   \remark Коли я тільки додав ці функції, я хотів перевести усі функції із
+		   сигнатур {вказівник на масив; розмір масиву} на {перший елемент; останній
+		   елемент} (як у ALGOR::ArrayProcessing::distance), але не задалося, так як
+		   передавати перший варіант легше. Самі розсудіть:
+		   \code{.cpp}
+		   Array<long long> *arr = create_struct<long long>(10);
+		   ArrayProcessing<long long>::minimum(arr->array, arr->array_size); //old variant {array pointer; array size}
+		   \endcode
+		   проти
+		   \code{.cpp}
+		   Array<long long> *arr = create_struct<long long>(10);
+		   ArrayProcessing<long long>::minimum(&arr->array[0], &arr->array[arr->array_size - 1]); //new variant {first element; last element}
+		   \endcode
+		   Я б обрав {вказівник на масив; розмір масиву}.
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayProcessing::lower_bound(type_array *, type_array *, const type_array &)
+		   \brief Знаходить перше входження у заданому діапаоні заданого елемента
+		   \details Функція не є рекурсивною. Але вона використовує вказівники, як
+		   ітератори, розраховуючи їх аналогічно рекурсивному методу. Таким чином
+		   функція є оптимізованою, завдяки переходу з рекурсії на ітерацію, а
+		   великим плюсом є можливість задати певний діапазон, що можливо тільки з
+		   двома функціями ALGOR::ArrayProcessing::lower_bound та
+		   ALGOR::ArrayProcessing::upper_bound.
+		   \param[in] first Вказівник на перший вказаний елемент масиву, що задає
+		   початок діапазону масиву, де треба знайти заданий елемент
+		   \param[in] last Вказівник на другий (наступний, останній) вказаний
+		   елемент масиву, що задає кінець діапазону масиву, де треба знайти заданий
+		   елемент
+		   \param[in] value Заданий елемент, який потрібно знайти
+		   \since v0.1.2.1 commit ffc19f
+		   \return вказівник на перше входження заданого елемента у заданому діапазоні
+		   \warning Функція повертає лише вказівник на елемент, а не його значення.
+		   \par Ресурси
+		   Source: http://www.cplusplus.com/reference/algorithm/lower_bound/\n
+		   \note Перевагами над стандартною функцією є те, що вона не працює з об'єктами
+		   класу ітератор (як можна побачити з прикладу на офіційній сторінці
+		   документації) - данна функція працює просто із вказівниками, що
+		   є легше та надійніше.
+		   \warning Функція працює ітераційно аж до останнього елементу і повертає
+		   вказівник саме на нього, не перевіряючи чи є це той самий потрібний елемент.
+		   Але таке відбувається тільки з тими масивами, у яких взагалі нема заданого
+		   елемента. Тому ви власноруч маєте перевіряти, чи є там потрібний елемент.
+		   \sa ALGOR::ArrayProcessing::distance(type_array *, type_array *)
+		   \sa ALGOR::ArrayProcessing::upper_bound(type_array *, type_array *, const type_array &)
+		   \test
+		   \snippet Algor_ArrayProcessing.cpp processing lower_bound
+		   \remark Дану функцію разом із ALGOR::ArrayProcessing::distance можна
+		   використати для реалізації бінарного пошуку:
+		   ALGOR::ArrayProcessing::lower_bound повертає вказівник на знайдений
+		   елемент, а ALGOR::ArrayProcessing::distance розраховує відстань від
+		   початку масиву, що і буде відображати положення у масиві (його номер).
+		   Саме такий метод використиовується у ALGOR::ARRAYDATA::binary_getPosition.
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayProcessing::upper_bound(type_array *, type_array *, const type_array &)
+		   \brief Знаходить перше входження у заданому діапазоні елемента, що є
+		   наступним після заданого
+		   \details Аналогічно ALGOR::ArrayProcessing::lower_bound, данна функція
+		   повертає вказівник на перше входження наступного елемента, після заданого.
+		   \param[in] first Вказівник на перший вказаний елемент масиву, що задає
+		   початок діапазону масиву, де треба знайти заданий елемент
+		   \param[in] last Вказівник на другий (наступний, останній) вказаний елемент
+		   масиву, що задає кінець діапазону масиву, де треба знайти заданий елемент
+		   \param[in] value Заданий елемент, після якого потрібно повернути вказівник
+		   \since v0.1.2.1 commit d94012
+		   \return вказівник на перше входження наступного елемента після заданого
+		   у заданому діапазоні
+		   \note У цілому, використання функції подібне до
+		   ALGOR::ArrayProcessing::lower_bound.
+		   \par Ресурси
+		   Source: http://www.cplusplus.com/reference/algorithm/upper_bound/\n
+		   \sa ALGOR::ArrayProcessing::distance(type_array *, type_array *)
+		   \sa ALGOR::ArrayProcessing::lower_bound(type_array *, type_array *, const type_array &)
+		   \test
+		   \snippet Algor_ArrayProcessing.cpp processing upper_bound
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayProcessing::addElement(type_array *&, asize_t &, const type_array &, const asize_t)
+		   \brief Додає певне значення до масиву у вказаній позиції
+		   \details Функція додає задане значеннян у заданий масив із заданим
+		   розміром на задану позицію. Функція працює на місці.
+		   \throw ALGOR::EXCEPTION_SET::memory_overflow
+		   \remark Якщо задати і в якості розміру, і в якості позиції розмір
+		   масиву, то елемент буде додано у кінець масиву, так як функція збільшує
+		   розмір масиву перед тим, як почати додавати елемент, а тому на цей момент
+		   старий розмір масиву буде лише вказувати на позицію нового останнього
+		   елемента. Саме тому цю функцію легше всього використовувати замість
+		   push_back().
+		   \param[in, out] Array Масив, до якого додається елемент
+		   \param[in] array_size Розмір цього масиву
+		   \param[in] value Елемент, який потрібно додати до масиву
+		   \param[in] position Позиція, у якій буде додано елемент
+		   \since v0.0.1.0 commit e37003
+		   \sa ALGOR::ArrayProcessing::subtractElement(type_array *&, asize_t &, const asize_t)
+		   \sa ALGOR::ArrayProcessing::subtractValue(type_array *&, asize_t &, const type_array &)
+		   \test
+		   \snippet Algor_ArrayProcessing.cpp processing addElement
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayProcessing::subtractElement(type_array *&, asize_t &, const asize_t)
+		   \brief Видаляє елемент по вказаній позиції у масиві
+		   \details Видаляє елемент по вказаній позиції у масиві. Схожий на
+		   ALGOR::ArrayProcessing::addElement.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \throw ALGOR::EXCEPTION_SET::position_failure
+		   \param[in, out] Array Масив, у якому буде видалено елемент по позиції
+		   \param[in] array_size Розмір цього масиву
+		   \param[in] position Позиція, з якої буде видалено елемент
+		   \since v0.1.0.0 commit 37cab7
+		   \warning Не забувайте, що нумерація починається з 0!
+		   \sa ALGOR::ArrayProcessing::addElement(type_array *&, asize_t &, const type_array &, const asize_t)
+		   \sa ALGOR::ArrayProcessing::subtractValue(type_array *&, asize_t &, const type_array &)
+		   \test
+		   \snippet Algor_ArrayProcessing.cpp processing subtractElement
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayProcessing::subtractValue(type_array *&, asize_t &, const type_array &)
+		   \brief Видаляє зазначений елемент з усіх позицій у масиві
+		   \details На відміну від ALGOR::ArrayProcessing::subtractElement, що
+		   видаляє лише один елемент у вказаній позиції, ця функція приймає не
+		   позицію, а саме значення, що дозволяє його видалити з усіх позицій у
+		   всьому масиві.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \throw ALGOR::EXCEPTION_SET::value_failure
+		   \param[in, out] Array Масив, у якому буде видалено всі елементи, що
+		   відповідають заданому значенню
+		   \param[in] array_size Розмір цього масиву
+		   \param[in] value Значення, яке потрібно видалити з усього масиву
+		   \since v0.1.0.0 commit 37cab7
+		   \sa ALGOR::ArrayProcessing::addElement(type_array *&, asize_t &, const type_array &, const asize_t)
+		   \sa ALGOR::ArrayProcessing::subtractElement(type_array *&, asize_t &, const asize_t)
+		   \test
+		   \snippet Algor_ArrayProcessing.cpp processing subtractValue
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayProcessing::copy(type_array *, const type_array *, const asize_t &, asize_t, asize_t)
+		   \brief Копіює масив
+		   \details Функція копіювання масиву. Але це не проста функція, а
+		   багатофункціональна. Окрім того, що треба задати масив, з якого
+		   копіюються данні, масив, до якого копіюються данні та обсяг данних,
+		   які потрібно скопіювати, можна ще задати позиції у цих масивах, а
+		   саме: з якої позиції почати копіювати данні та з якої позиції почати
+		   записувати данні до масива.
+		   \details Для прикладу, Ви можете задати функції, щоб вона скопіювала
+		   з 5 по 10 елемент зі старого масиву (усього п'ять з п'ятої позиції)
+		   до нового масиву, при чому почати зберігатися елементи повинні у
+		   новому масиві з п'ятої позиції (див. приклад).
+		   \param[in, out] new_array Масив, у який копіюються дані
+		   \param[in] old_array Масив, з якого потрібно скопіювати дані
+		   \param[in] size_of_copied Параметр, який вказує, скільки елементів
+		   потірбно скопіювати
+		   \param[in] position_in_new_array Позиція, з якої починається запис в
+		   масив, до якого копіюються дані
+		   \param[in] position_in_old_array Позиція, з якої починається читання
+		   у масиві, з якого копіюються дані
+		   \since v0.0.0.3 commit 1a11a0
+		   \warning До функції не передаються розміри масивів, через що функція не
+		   може перевірити, чи задаєте ви їй правильні данні. Через це програміст
+		   має бути дуже обережним з цією функцією!
+		   \test
+		   \snippet Algor_ArrayProcessing.cpp processing copy
+		 */
+
+	/*!
+	   \class ALGOR::ArrayBase
+	   \brief Базовий клас, від якого успадковуються інші класи, пов'язані з роботою
+	   з масивами
+	   \details Базовий клас, призаначений для використання класами-нащадками, що
+	   використовуються при роботі з масивами. Цей клас містить готові конструктори та
+	   готове поле для зберігання вказівника на структуру масиву. Використовується,
+	   щоб не писати повторно у кожному класі одну й ту ж реалізацію конструкторів
+	   та не прописувати заново поле вказівника. А отже буде менше коду.
+	   \tparam type_array Тип елементів, що зберігаються у структурі об'єкту масиву
+	   \since v0.1.0.0 commit 6efeb8
+	   \par Історія
+	   На відміну від інших класів, у класу ALGOR::ArrayBase найрізноманітніша та
+	   цікава історія. Його еволюція відбувалась 4 комміти поспіль і від першої
+	   реалізації він ніс трохи інший сенс свого існування...\n
+	   Більш детально читайте на сторінці \ref ArrayBaseHistory.md
+	 */
+
+		/*!
+		   \fn ALGOR::ArrayBase::ArrayBase(Array<type_array> *&)
+		   \brief Конструктор базового класу, що приймає СТРУКТУРУ та зберігає її
+		   до поля
+		   \details Конструктор, що приймає структуру для збереження вказівника на неї.
+		   Спочатку конструктор перевіряє, чи не є масив пустим. Якщо масив
+		   пустий - кидається виключення. Інакше - зберігається вказівник.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \warning При такому створенні об'єкта класу обидві сутності будуть
+		   зберігати вказівники на одну й ту саму структуру, а тому зміна масиву
+		   через одну із сутностей буде впливати на обидві сутності!!!
+		   \param[in] Array Покажчик на структуру масиву
+		   \since v0.1.0.0 commit 6efeb8
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayBase::ArrayBase(const asize_t &)
+		   \brief Конструктор базового класу, що приймає РОЗМІР та виділяє пам'ять
+		   \details Конструктор, що виділяє пам'ять під абсолютно новий чистий масив.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \warning Передача нульового розміру сприймається за збереження пустого
+		   масиву, що заборонено правилами безпеки бібліотеки ALGOR:
+		   > Об'єкти класів масивів не мають зберігати пусті масиви, щоб уникнути
+		   > непередбачуваної поведінки та запобігти вилітам програм.
+		   \param[in] SIZE Розмір створюваного масиву
+		   \since v0.1.0.0 commit 1d50a2
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayBase::ArrayBase()
+		   \brief Пустий конструктор
+		   \details Просто пустий конструктор, який нічого не виконує.
+		   \since v0.1.0.0 commit 48aa64, dd5d42+
+		   \deprecated Раніше він використовувася у тих випадках, коли виділяти
+		   пам'ять під структуру не потрібно (так як вказівнику не було присвоєно
+		   nullptr і це робив даний конструктор), але з часом вказівнику було
+		   присвоєно nullptr і надібність у цьому відпала... А цей метод залишено
+		   на випадок, якщо колись з'явиться необхідність написати якусь
+		   реалізацію у конструкторі базового класу.
+		 */
+
+		/*!
+		   \fn ALGOR::ArrayBase::verification(Array<type_array> *)
+		   \brief Метод перевірки масиву
+		   \details Метод, що перевіряє масив на пустотність. Якщо розмір масиву
+		   дорівнює нулю, можна вважати, що масив пустий, так як вказівник на сам
+		   масив вказує на nullptr. Зазвичай метод використовується для перевірок
+		   структур перед тим, як зберегти вказівник на структуру до об'єкту класу,
+		   щоб до класу не міг потрапити пустий масив.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \param[in] Array Масив, що перевіряється
+		   \since v0.1.1.0 commit 8bbf75
+		   \note Можливо у майбутньому буде проводитись більше перевірок, якщо
+		   кількість характеристик зросте.
+		   \par Історія
+		   Історія цього методу не така цікава, як у класа ArrayBase, але його життя
+		   добре потріпало.\n
+		   Спочатку це мала бути прихована функція, що видна лише усередині
+		   бібліотеки. Для цього я всього лиш написав її у файлі реалізацій без її
+		   оголошення у хідері. Такою вона залишалась довгий час... Але прийшов
+		   час зайнятись безпекою бібліотеки перед релізом v1.0.0.0, так як з
+		   останньої безпекозації (коли й було додано цю функцію) багато чого
+		   змінилось. У релізі v0.1.3.0 проводилась реформа ARRAYDATA, коли тимчасово
+		   став публічним ALGOR::ARRAYDATA::remove. Спочатку цю функцію було
+		   перейменовано, а потім і взагалі тимчасово видалено. Чому тимчасово? Тому
+		   що коли я у друге прийшов до концепції, що об'єкт класу масиву не має
+		   зберігати пустий масив, я назад приховав ALGOR::ARRAYDATA::remove, довів
+		   рівень безпеки до потрібного рівня і повернув цю функцію, як метод базового
+		   класу, який можуть використовувати успадковані класи при збережені до себе
+		   масивів.\n
+		   Короче, судьби <i>ArrayBase</i> та <i>verification</i> перетнулися.
+		   Дивлячись на історію ArrayBase, розумієш, що це вийшло не випадково...
+		 */
+
+		/*!
+		   \var ALGOR::ArrayBase::ARRAY
+		   \brief Вказівник на структуру, що зберігає масив
+		   \since v0.1.0.0 commit 6efeb8
+		 */
+
+	/*!
+	   \class ALGOR::ARRAYDATA
+	   \brief Клас з потужним функціоналом обробки масивів
+	   \details Це головний клас для роботи з масивами, завданнями якого є зберігання
+	   вказівника на структуру масиву та його обробка. Клас має потужний функціонал:
+	   клонування, пошук, перевизначення, характеризація тощо. А достатня кількість
+	   перевантажених операторів багатократно полегшує роботу з даними.
+	   \tparam type_array Тип елементів, що зберігаються у структурі об'єкту масиву
+	   \since v0.0.0.1
+	   \remark У вас можуть виникнути питання щодо версіонування. Тема роз'яснена
+	   на наступній сторінці \ref ArrayBaseHistory.md
+	 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::ARRAYDATA(Array<type_array> *&)
+		   \brief Конструктор, що приймає СТРУКТУРУ та зберігає її до поля
+		   \details Читай детальніше ALGOR::ArrayBase::ArrayBase(Array<type_array> *&)
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \param[in] Array Покажчик на структуру масиву
+		   \since v0.1.0.0 commit 48aa64
+		   \sa ALGOR::ArrayBase::ArrayBase(Array<type_array> *&)
+		   \sa ALGOR::ARRAYDATA::ARRAYDATA(const asize_t &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA constructor struct
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::ARRAYDATA(const asize_t &)
+		   \brief Конструктор, що приймає РОЗМІР та виділяє пам'ять
+		   \details Читай детальніше ALGOR::ArrayBase::ArrayBase(const asize_t &)
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \param[in] SIZE Розмір створюваного масиву
+		   \since v0.1.0.0 commit 1d50a2
+		   \sa ALGOR::ArrayBase::ArrayBase(const asize_t &)
+		   \sa ALGOR::ARRAYDATA::ARRAYDATA(Array<type_array> *&)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA constructor size
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::~ARRAYDATA()
+		   \brief Деструктор класу
+		   \details Звільняє пам'ять від масиву, що зберігається у об'єкті.
+		   Викликається при завершенні програми.
+		   \warning Якщо у програмі реалізовані структури, що зберігають вказівники
+		   на ті масиви, що зберігаються у об'єктах - тоді звільняти пам'ять від
+		   масивів у структурах не треба, так як це зробить деструктор класу при
+		   завершенні програми. Видаляйте тільки ті структури, які не зберігаються
+		   у об'єктах класів!
+		   \since v0.1.1.0 commit bce6b6
+		 */
+
+		/*!
+		   \enum ALGOR::ARRAYDATA::ArrayType
+		   \brief Набір типів масиву
+		   \details Перелік типів масиву. Використовується тільки методом
+		   ALGOR::ARRAYDATA::searcherOccurrencesOfSubstring для правильного
+		   виконання алгоритму.
+		   \since v0.1.0.0 commit 85698d
+		 */
+
+			/*!
+			   \var ALGOR::ARRAYDATA::ArrayType::NUMBER
+			   \brief Вказує, що масив зберігає числа
+			   \details Грубо кажучи, значення вказує алгоритму, що він працює з
+			   масивом чисел. Насправді алгоритм використовує значення типу
+			   масиву з переліку у своїх перевірках. Це потрібно для правильної
+			   роботи алгоритму, оскільки з числовими та строковими данними він
+			   працює по різному.
+			   \since v0.1.0.0 commit 85698d
+			 */
+
+			/*!
+			   \var ALGOR::ARRAYDATA::ArrayType::STRING
+			   \brief Вказує, що масив зберігає строки
+			   \details Грубо кажучи, значення вказує алгоритму, що він працює з
+			   масивом-строкою. Насправді алгоритм використовує значення типу
+			   масиву з переліку у своїх перевірках. Це потрібно для правильної
+			   роботи алгоритму, оскільки зі строковими та числовими данними він
+			   працює по різному.
+			   \since v0.1.0.0 commit 85698d
+			 */
+
+		/*!
+		   \struct ALGOR::ARRAYDATA::mode
+		   \brief Структура моди масиву
+		   \details Розширена структура масиву. По суті це теж є масив. Масив
+		   чисел, що зберігає всі числа, що найчастіше зустрічаються у
+		   головному масиві. Але як дізнатись, з якою саме частотою? Для цього
+		   і було розширено стандартну структуру ALGOR::Array полем для
+		   зберігання цієї частоти. З цієї структури можна дізнатись, які
+		   числа можна найчастіше зустріти (ALGOR::ARRAYDATA::mode::array),
+		   скільки їх (ALGOR::ARRAYDATA::mode::array_size) та з якою частотою
+		   вони зустрічаються (ALGOR::ARRAYDATA::mode::highest_frequency).
+		   \warning На відміну від структури ALGOR::Array, для структури
+		   ALGOR::ARRAYDATA::mode не реалізовано функціонал для звільнення
+		   пам'яті після використання данних, тому програмісту самому потрібно
+		   звільняти пам'ять.
+		   \since v0.1.3.0 commit 391fff
+		   \note Приклад використовується такий самий, як і для
+		   ALGOR::ARRAYDATA::moda.
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA moda
+		 */
+
+			/*!
+			   \var ALGOR::ARRAYDATA::mode::highest_frequency
+			   \brief Частота моди
+			   \since v0.1.3.0 commit 391fff
+			 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::generatedData(const sbit64_t &, const sbit64_t &, const ubit64_t, const ubit32_t)
+		   \brief Метод, який заповнює весь масив випадковими значеннями
+		   \details
+		   \throw ALGOR::EXCEPTION_SET::division_by_zero
+		   \param[in] min_limit Мінімальне значення, яке можна згенерувати
+		   \param[in] max_limit Максимальне значення, яке можна згенерувати
+		   \param[in] seed Сі́м'я генератору
+		   \param[in] denominator Дільник для генерації <i>float</i> данних
+		   \since v0.1.3.0 commit ca0704
+		   \note На випадок, якщо не працює ALGOR::getMemoryCell, можна власноруч
+		   задати сі́м'я генерації.
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA generatedData
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::setNewData(Array<type_array> *&)
+		   \brief Метод, який замінює попередній масив на новий, звільняючи пам'ять
+		   від попереднього
+		   \details Видаляє з пам'яті старий масив та зберігає вказівник на інший
+		   масив, що вже існує.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \remark Звернутися до старого масиву буде <b>НЕможливо</b>; зміни
+		   у поточному об'єкті <b>будуть</b> відображатися на оригінальному об'єкті.
+		   \param[in] Array Масив, який замінить попередній в об'єкті
+		   \since v0.1.0.0 commit 1f2a4f
+		   \warning Структура масиву, що зберігається у поточному об'єкті класу
+		   за вказівником, буде видалена, тому якщо потрібно зберегти структуру
+		   масиву, краще використати ALGOR::ARRAYDATA::setData. Якщо зміни у
+		   поточному об'єкті не мають впливати на оригінальні данні, слід
+		   використати ALGOR::ARRAYDATA::cloneNewData. Якщо і потрібно зберегти
+		   масив, і дані не мають змінюватись у оригінальному об'єкті, потрібно
+		   використати ALGOR::ARRAYDATA::cloneData.
+		   \sa ALGOR::ARRAYDATA::setData(Array<type_array> *&)
+		   \sa ALGOR::ARRAYDATA::cloneNewData(Array<type_array> *&)
+		   \sa ALGOR::ARRAYDATA::cloneData(Array<type_array> *&)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA setNewData
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::setData(Array<type_array> *&)
+		   \brief Метод, який замінює попередній масив на новий без звільнення
+		   пам'яті від попереднього
+		   \details Зберігає вказівник на інший масив, що вже існує, без видалення
+		   з пам'ятті старого масиву.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \remark Старий масив може бути збережений до іншого об'єкту чи
+		   структури, тому звернутися до нього <b>можливо</b>; зміни у поточному
+		   об'єкті <b>будуть</b> відображатися на оригінальному об'єкті.
+		   \param[in] Array Масив, який замінить попередній в об'єкті
+		   \since v0.1.0.0 commit 1f2a4f
+		   \note Якщо зберігати старий масив не потрібно, тому краще використати
+		   ALGOR::ARRAYDATA::setNewData, або потрібно, щоб зміни у поточному
+		   об'єкті не впливали на оригінальний (без того самого збереження
+		   старого масиву), то можна використати ALGOR::ARRAYDATA::cloneNewData.
+		   \warning Аналогічно ALGOR::ARRAYDATA::setNewData,
+		   ALGOR::ARRAYDATA::setData зберігає лише вказівник, тому якщо потрібно
+		   зберегти данні так, щоб зміни у одному об'єкті не впливали на інший, треба
+		   використовувати метод ALGOR::ARRAYDATA::cloneData.
+		   \sa ALGOR::ARRAYDATA::setNewData(Array<type_array> *&)
+		   \sa ALGOR::ARRAYDATA::cloneNewData(Array<type_array> *&)
+		   \sa ALGOR::ARRAYDATA::cloneData(Array<type_array> *&)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA setData
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::cloneNewData(Array<type_array> *&)
+		   \brief Метод, який замінює старий масив шляхом копіювання існуючого з
+		   видаленням старих данних
+		   \details Звільняє пам'ять від старого масиву, виділяє пам'ять під новий масив
+		   та повністю копіює данні із вказаного масиву. Таким чином зміни у одному
+		   масиві не будуть відображатися на оригінальному.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \remark Звернутися до старого масиву буде <b>НЕможливо</b>; зміни
+		   у поточному об'єкті <b>НЕ будуть</b> відображатися на оригінальному об'єкті.
+		   \bug Як було виявлено під час написання прикладів, чомусь адреса масиву
+		   після виклику ALGOR::create_struct не змінюється, через що вказівники об'єкту
+		   та структури продовжують співпадати, а тому данні у структурі не
+		   звільняються... Ця помилка буде виправлена пізніше.
+		   \param[in] CloningArray Масив, який потрібно клонувати в об'єкт
+		   \since v0.1.0.0 commit dd5d42
+		   \note Якщо допускається, що зміни можуть впливати на обидва об'єкти, краще
+		   використати ALGOR::ARRAYDATA::setNewData, а якщо ще й треба зберегти
+		   старий масив, то краще використати ALGOR::ARRAYDATA::setData.
+		   \warning Якщо потрібно зберегти старий масив, то краще використати
+		   ALGOR::ARRAYDATA::cloneData.
+		   \sa ALGOR::ARRAYDATA::setNewData(Array<type_array> *&)
+		   \sa ALGOR::ARRAYDATA::setData(Array<type_array> *&)
+		   \sa ALGOR::ARRAYDATA::cloneData(Array<type_array> *&)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA cloneNewData
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::cloneData(Array<type_array> *&)
+		   \brief Метод, який замінює старий масив шляхом копіювання існуючого без
+		   видалення старих денних
+		   \details Без звільнення пам'яті від старого масиву виділяє пам'ять під новий
+		   масив та повністю копіює данні із вказаного масиву. Таким чином зберігається
+		   і старий масив у іншому об'єкті чи структурі, і зміни на скопійованому масиві
+		   не будуть відображатися на оригінальному.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \remark Старий масив може бути збережений до іншого об'єкту чи
+		   структури, тому звернутися до нього <b>можливо</b>; зміни у поточному
+		   об'єкті <b>НЕ будуть</b> відображатися на оригінальному об'єкті.
+		   \param[in] CloningArray Масив, який потрібно клонувати в об'єкт
+		   \since v1.0.0.0 commit a2f550
+		   \note Якщо допускається, що зміни можуть впливати на обидва об'єкти, краще
+		   використати ALGOR::ARRAYDATA::setData, якщо ще потрібно видалити старий
+		   масив, тоді використовується ALGOR::ARRAYDATA::setNewData.
+		   \note Якщо ж потрібно видалити старий масив, коли зміни не мають впливати
+		   один на одного, тоді використовується ALGOR::ARRAYDATA::cloneNewData.
+		   \sa ALGOR::ARRAYDATA::setNewData(Array<type_array> *&)
+		   \sa ALGOR::ARRAYDATA::setData(Array<type_array> *&)
+		   \sa ALGOR::ARRAYDATA::cloneNewData(Array<type_array> *&)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA cloneData
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::getData()
+		   \brief Повертає вказівник на структуру масиву
+		   \details Цей метод використовується, якщо необхідно отримати данні масиву,
+		   наприклад, для їх друку.
+		   \warning Краще не обробляти масив ззовні об'єкту, інакше це може призвести
+		   до непередбачуваної поведінки!
+		   \return вказівник на структуру масиву.
+		   \since v0.1.0.0 commit 48aa64
+		   \sa ALGOR::ARRAYDATA::getSize()
+		   \sa ALGOR::ARRAYDATA::getValue(const asize_t &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA getData
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::getSize()
+		   \brief Повертає розмір структури масиву
+		   \return розмір структури масиву.
+		   \since v0.1.3.0 commit 828901
+		   \sa ALGOR::ARRAYDATA::getData()
+		   \sa ALGOR::ARRAYDATA::getValue(const asize_t &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA getSize
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::getValue(const asize_t &)
+		   \brief Повертає значення із заданої позиції
+		   \details Використовується для знаходження значення у масиві по заданій
+		   позиції. Є протилежним до методу ALGOR::ARRAYDATA::binary_getPosition
+		   або ALGOR::ARRAYDATA::lenear_getPosition.
+		   \throw ALGOR::EXCEPTION_SET::memory_overflow
+		   \param[in] position Позиція у масиві
+		   \return значення із заданої позиції
+		   \since v0.1.3.0 commit 5a7ff3
+		   \sa ALGOR::ARRAYDATA::getData()
+		   \sa ALGOR::ARRAYDATA::getSize()
+		   \sa ALGOR::ARRAYDATA::binary_getPosition(const type_array &)
+		   \sa ALGOR::ARRAYDATA::lenear_getPosition(const type_array &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA getValue
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::binary_getPosition(const type_array &)
+		   \brief Бінарний метод пошуку елемента
+		   \details Повертає перше входження заданого елемента. Є протилежним до
+		   методу ALGOR::ARRAYDATA::getValue.
+		   \throw ALGOR::EXCEPTION_SET::not_found
+		   \warning Для роботи алгоритму необхідно, щоб масив був відсортований!
+		   \note Якщо необхідно знайти всі входження заданого елемента, необхідно
+		   використати метод ALGOR::ARRAYDATA::lenear_getPosition, але він довше
+		   виконується на великих масивах.
+		   \param[in] required_element Елемент, позицію  якого потрібно знайти
+		   \return першу позицію заданого елемента
+		   \since v0.0.1.0 commit 0c1496
+		   \remark За різних версій цей метод називався по різному. Самою першою його
+		   назвою було "getElementNumber_binary".
+		   \remark З першою реалізацією алгоритм було погано реалізовано - він
+		   виконував поставлену задачу, але був досить неефективний через рекурсивну
+		   реалізацію. У v0.1.3.0 commit 11507e реалізацію було переписано під
+		   використання нових функцій ALGOR::ArrayProcessing::distance та
+		   ALGOR::ArrayProcessing::lower_bound, котра у свою чергу є ітераційною
+		   й використовуює лише вказівник, що є досить ефективно.
+		   \sa ALGOR::ARRAYDATA::getValue(const asize_t &)
+		   \sa ALGOR::ARRAYDATA::lenear_getPosition(const type_array &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA binary_getPosition
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::lenear_getPosition(const type_array &)
+		   \brief Лінійний метод пошуку елемента
+		   \details Повертає всі входження заданого елемента. Є розширенням методу
+		   ALGOR::ARRAYDATA::binary_getPosition.
+		   \throw ALGOR::EXCEPTION_SET::not_found
+		   \note Якщо масив дуже великий і метод довго виконується, краще викликати
+		   метод ALGOR::ARRAYDATA::binary_getPosition. Він менше навантажує
+		   систему і набагато швидше виконується, але повертає лише першу позицію
+		   заданого елемента, а перед його викликом масив необхідно відсортувати...
+		   \param[in] required_element Елемент, позиції якого потрібно знайти
+		   \return масив позицій заданого елемента
+		   \since v0.0.1.0 commit 0c1496
+		   \remark За різних версій цей метод називався по різному. Самою першою його
+		   назвою було "getElementNumber_lenear".
+		   \sa ALGOR::ARRAYDATA::getValue(const asize_t &)
+		   \sa ALGOR::ARRAYDATA::binary_getPosition(const type_array &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA lenear_getPosition
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::getMin()
+		   \brief Оптимізований метод пошуку мінімального елемента
+		   \details Цей метод є оптимізованим, оскільки головний алгоритм пошуку
+		   написано у методі ALGOR::ArrayProcessing::minimum і використовується
+		   тільки тоді, коли масив відсортовано. Це дозволяє оптимізувати алгоритм
+		   у деяких випадках, так як якщо масив не відсортовано, метод це зможе
+		   визначити майже відразу й приступить до звичайного перебору, але якщо
+		   буде визначено, що масив відсортовано, то для цього потрібно було пройти
+		   по усьому масиву, і у цьому випадку це пройде швидше, так як не відбувається
+		   жодних збережень данних до змінних, що є швидше, і після цієї операції за
+		   найменше буде видано перше значення, оскільки воно є найменшим у
+		   відсортованому масиві. Таким чином у деяких випадках алгоритм буде
+		   працювати стільки ж часу (якщо масив не відсортовано), і у деяких менше
+		   (якщо масив відсортовано, а проходка з порівняннями займає менше часу, ніж
+		   проходка з порівняннями та збереженнями данних), що у середньому буде
+		   трохи швидше реалізації звичайною проходкою (як у алгоритмі
+		   ALGOR::ArrayProcessing::minimum).
+		   \return найменше значення у масиві
+		   \since v0.1.0.0 commit 48aa64
+		   \sa ALGOR::ArrayProcessing::minimum(const type_array *, const asize_t &)
+		   \sa ALGOR::ARRAYDATA::getMax()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA getMin
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::getMax()
+		   \brief Оптимізований метод пошуку максимального елемента
+		   \details Цей метод є оптимізованим, оскільки головний алгоритм пошуку
+		   написано у методі ALGOR::ArrayProcessing::maximum і використовується
+		   тільки тоді, коли масив відсортовано. Щоб не повторюватись, інші деталі
+		   та пояснення описано у методі ALGOR::ARRAYDATA::getMin. Робота у цьому
+		   методі пояснюється аналогічно, тільки замість мінімального елемента
+		   виконується пошук максимального.
+		   \return найбільше значення у масиві
+		   \since v0.1.0.0 commit 48aa64
+		   \sa ALGOR::ArrayProcessing::maximum(const type_array *, const asize_t &)
+		   \sa ALGOR::ARRAYDATA::getMin()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA getMax
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::reset()
+		   \brief Метод збросу данних
+		   \details Метод видаляє масив із пам'яті й виділяє заново пам'ять під
+		   новий масив без його заповнення. У результаті масив буде спустошено
+		   до нульових данних.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \since v0.1.0.0 commit 1f2a4f
+		   \sa ALGOR::ARRAYDATA::resize(const asize_t &, const type_array &)
+		   \sa ALGOR::ARRAYDATA::replace(const asize_t &, const type_array &)
+		   \sa ALGOR::ARRAYDATA::reverse()
+		   \sa ALGOR::ARRAYDATA::respawn()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA reset
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::resize(const asize_t &, const type_array &)
+		   \brief Метод, який змінює розмір масиву
+		   \details Насправді, метод створює новий масив нового розміру і копіює
+		   у нього старий масив. Якщо масив стає більше - нові комірки заповнюються
+		   заданим значенням, інакше - останні значення відкидаються. Потім
+		   пам'ять від старого масиву звільняється, а вказівник починає вказувати
+		   на новий масив.
+		   \throw ALGOR::EXCEPTION_SET::size_failure
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \param[in] NEW_SIZE Новий розмір масиву
+		   \param[in] setElement Значення, яким заповнюються нові клітинки масиву (у
+		   випадку збільшення масиву)
+		   \warning У разі збільшення розміру масиву після копіювання нові комірки
+		   залишаються порожніми і зберігають у собі «сміття». Іноді програміст
+		   випадково може спробувати отримати дані без їх вказівки, в результаті
+		   чого в кращому випадку буде просто виданий некоректний результат, а в
+		   гіршому - програма може вийти з ладу. Для цього був створений параметр
+		   setElement, але його потрібно вказувати не тільки при збільшенні розміру,
+		   а завжди при виклику методу для профілактики. Програміст може навіть
+		   не знати поточного розміру масиву, отже, він не може знати, чи буде масив
+		   збільшено чи зменшено.
+		   \since v0.1.0.0 commit 46b2fa
+		   \sa ALGOR::ARRAYDATA::reset()
+		   \sa ALGOR::ARRAYDATA::replace(const asize_t &, const type_array &)
+		   \sa ALGOR::ARRAYDATA::reverse()
+		   \sa ALGOR::ARRAYDATA::respawn()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA resize
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::replace(const asize_t &, const type_array &)
+		   \brief Змінює значення по вказаній позиції
+		   \throw ALGOR::EXCEPTION_SET::position_failure
+		   \param[in] position Позиція, у якій змінюється значення
+		   \param[in] value Значення, яке буде розміщено в позиції
+		   \since v0.1.0.0 commit dd5d42
+		   \sa ALGOR::ARRAYDATA::reset()
+		   \sa ALGOR::ARRAYDATA::resize(const asize_t &, const type_array &)
+		   \sa ALGOR::ARRAYDATA::reverse()
+		   \sa ALGOR::ARRAYDATA::respawn()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA replace
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::reverse()
+		   \brief Перевертає масив
+		   \since v0.0.0.3 commit 05d8b0
+		   \sa ALGOR::ARRAYDATA::reset()
+		   \sa ALGOR::ARRAYDATA::resize(const asize_t &, const type_array &)
+		   \sa ALGOR::ARRAYDATA::replace(const asize_t &, const type_array &)
+		   \sa ALGOR::ARRAYDATA::respawn()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA reverse
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::respawn()
+		   \brief Метод збросу та перегенерації данних
+		   \details Метод розширює ALGOR::ARRAYDATA::reset, а саме додатково зберігає
+		   діапазон значень масиву і після збросу даних, заново їх генерує.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \throw ALGOR::EXCEPTION_SET::division_by_zero
+		   \since v0.1.0.0 commit dd5d42
+		   \sa ALGOR::ARRAYDATA::reset()
+		   \sa ALGOR::ARRAYDATA::resize(const asize_t &, const type_array &)
+		   \sa ALGOR::ARRAYDATA::replace(const asize_t &, const type_array &)
+		   \sa ALGOR::ARRAYDATA::reverse()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA respawn
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::searcherOccurrencesOfSubstring(Array<type_array> *&, ArrayType)
+		   \brief Метод пошуку послідовності, який повертає всі її входження
+		   \details Цей метод перебором визначає всі початкові позиції співпадінь
+		   підрядку в головному ряді.
+		   \throw ALGOR::EXCEPTION_SET::not_found
+		   \param[in] SUBARRAY Підрядок, який шукається в основному ряді (масиві)
+		   \param[in] ArrType Тип масиву (цифровий чи строковий)
+		   \return всі перші номери входжень заданого підрядку
+		   \since v0.0.1.0 commit e37003
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA searcherOccurrencesOfSubstring
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::average()
+		   \brief Метод, який повертає середнє арифметичне значення масиву
+		   \throw ALGOR::EXCEPTION_SET::division_by_zero
+		   \return середнє арифметичне значення
+		   \since v0.0.0.3 commit 1a11a0
+		   \sa ALGOR::ARRAYDATA::mediana()
+		   \sa ALGOR::ARRAYDATA::moda()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA average
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::mediana()
+		   \brief Метод, який повертає медіану масиву
+		   \return медіану масиву
+		   \since v0.0.0.3 commit 1a11a0
+		   \sa ALGOR::ARRAYDATA::average()
+		   \sa ALGOR::ARRAYDATA::moda()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA mediana
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::moda()
+		   \brief Метод, який повертає всі елементи моди масиву
+		   \details Спочатку метод визначає моду масиву (з її першим значенням), а
+		   потім за другим проходом (після визначеної моди) зберігає всі значення, що
+		   відповідають знайденій моді.
+		   \throw ALGOR::EXCEPTION_SET::value_failure
+		   \throw ALGOR::EXCEPTION_SET::memory_overflow
+		   \return моди масиву
+		   \since v0.0.0.3 commit 1a11a0
+		   \warning У різних версіях бібліотеки функціонал даного методу змінювався!
+		   Із зазначеної версії функція повертала лише перше значення моди. З
+		   <i>v0.0.1.0 commit 979bf4</i> з'явилась додаткова функція modas(), яка
+		   була призначена для знаходження всіх мод масиву (насправді, вона базувалась
+		   на використанні першої функції, а отриманні данні використовувала для
+		   знаходження всіх інших значень, що відповідають моді). І коли у
+		   <i>v0.1.3.0 commit 391fff</i> було написано окрему структуру для моди то
+		   тепер обидва методи почали працювати з одним типом даних - масивом мод, але
+		   перша функція повертає лище перше значення моди, тоді як друга - усі.
+		   Тоді було вирішено об'єднати ці методи в один, зберігши назву першого.
+		   \warning <u>За різних версій з цим методом потрібно працювати
+		   по різному!</u>
+		   \sa ALGOR::ARRAYDATA::average()
+		   \sa ALGOR::ARRAYDATA::mediana()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA moda
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator=(Array<type_array> *&)
+		   \brief Клонує масив, як окремий
+		   \details Більш легкий спосіб використання функції
+		   ALGOR::ARRAYDATA::cloneNewData. Якщо клонування відбулось успішно,
+		   повертається <i>true</i>, інакше - <i>false</i>.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \param[in] cloningArray Масив, який потрібно клонувати в об'єкт
+		   \return логічну відповідь, чи відбулось клонування
+		   \since v0.1.3.0 commit 045729
+		   \sa ALGOR::ARRAYDATA::cloneNewData(Array<type_array> *&)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA =
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator==(Array<type_array> *&)
+		   \brief Порівнює різні масиви на однаковість
+		   \details Перевіряє кожен елемент наданого масиву з кожним поточним і
+		   якщо всі елементи рівні - масиви однакові (можливо, вони просто
+		   клоновані...).
+		   \param[in] anotherArray Масив, який порівнюється з поточним об'єктом
+		   \return логічну відповідь, чи однакові масиви
+		   \since v0.1.3.0 commit 045729
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA ==
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator^=(const asize_t &)
+		   \brief Оператор зміни розміру масиву
+		   \details Більш легкий спосіб використання функції
+		   ALGOR::ARRAYDATA::resize.
+		   \throw ALGOR::EXCEPTION_SET::size_failure
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \param[in] NewSize Новий розмір масиву
+		   \return вказівник на нову структуру масиву
+		   \since v0.1.3.0 commit 045729
+		   \warning Цей оператор було введено на заміну старим реалізаціям
+		   операторів +, -, * та /. У <i>v0.1.3.0 commit ae17f6</i> було дуже сильно
+		   оптимізовано дані оператори, як було виявлено їх однакові закономірності,
+		   що дозволило їх об'єднати до одного оператора ^=. Самі початкові
+		   оператори були переписані під виконання інших цілей.
+		   \sa ALGOR::ARRAYDATA::resize(const asize_t &, const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator+=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator-=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator*=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator/=(const type_array &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA ^=
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator+=(const type_array &)
+		   \brief Збільшує кожен елемент масиву на певне значення
+		   \param[in] addValue Параметр, що вказує, наскільки збільшити кожен
+		   елемент масиву
+		   \return вказівник на нову структуру масиву
+		   \since v0.1.0.0 commit 1f2a4f
+		   \warning Цей оператор було реалізовано для збільшення розміру масиву.
+		   У <i>v0.1.3.0 commit ae17f6</i> було дуже сильно оптимізовано оператори
+		   +, -, *, /, і його реалізацію було винесено до окремого оператора ^=, а
+		   за цим оператором було вирішено залишити збільшення кожного елементу.
+		   \sa ALGOR::ARRAYDATA::operator^=(const asize_t &)
+		   \sa ALGOR::ARRAYDATA::operator-=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator*=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator/=(const type_array &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA +=
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator-=(const type_array &)
+		   \brief Зменшує кожен елемент масиву на певне значення
+		   \param[in] subtractValue Параметр, що вказує, наскільки зменшити кожен
+		   елемент масиву
+		   \return вказівник на нову структуру масиву
+		   \since v0.1.0.0 commit 1f2a4f
+		   \warning Цей оператор було реалізовано для зменшення розміру масиву.
+		   У <i>v0.1.3.0 commit ae17f6</i> було дуже сильно оптимізовано оператори
+		   +, -, *, /, і його реалізацію було винесено до окремого оператора ^=, а
+		   за цим оператором було вирішено залишити зменшення кожного елементу.
+		   \sa ALGOR::ARRAYDATA::operator^=(const asize_t &)
+		   \sa ALGOR::ARRAYDATA::operator+=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator*=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator/=(const type_array &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA -=
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator*=(const type_array &)
+		   \brief Збільшує кожен елемент масиву у скількісь разів
+		   \param[in] multiplyValue Параметр, що вказує, у скільки разів
+		   збільшити кожен елемент масиву
+		   \return вказівник на нову структуру масиву
+		   \since v0.1.0.0 commit dd5d42
+		   \warning Цей оператор було реалізовано для кратного збільшення розміру
+		   масиву. У <i>v0.1.3.0 commit ae17f6</i> було дуже сильно оптимізовано
+		   оператори +, -, *, /, і його реалізацію було винесено до окремого
+		   оператора ^=, а за цим оператором було вирішено залишити кратне
+		   збільшення кожного елементу.
+		   \sa ALGOR::ARRAYDATA::operator^=(const asize_t &)
+		   \sa ALGOR::ARRAYDATA::operator+=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator-=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator/=(const type_array &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA *=
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator/=(const type_array &)
+		   \brief Зменшує кожен елемент масиву у скількісь разів
+		   \throw ALGOR::EXCEPTION_SET::division_by_zero
+		   \param[in] divideValue Параметр, що вказує, у скільки разів
+		   зменшити кожен елемент масиву
+		   \return вказівник на нову структуру масиву
+		   \since v0.1.0.0 commit dd5d42
+		   \warning Цей оператор було реалізовано для кратного зменшення розміру
+		   масиву. У <i>v0.1.3.0 commit ae17f6</i> було дуже сильно оптимізовано
+		   оператори +, -, *, /, і його реалізацію було винесено до окремого
+		   оператора ^=, а за цим оператором було вирішено залишити кратне
+		   зменшення кожного елементу.
+		   \sa ALGOR::ARRAYDATA::operator^=(const asize_t &)
+		   \sa ALGOR::ARRAYDATA::operator+=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator-=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator*=(const type_array &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA /=
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator&=(const type_array &)
+		   \brief Оператор додавання елемента в кінець масиву
+		   \details Більш легкий спосіб використання функції
+		   ALGOR::ArrayProcessing::addElement.
+		   \throw ALGOR::EXCEPTION_SET::memory_overflow
+		   \note Функція ALGOR::ArrayProcessing::addElement є дуже гнучкою і
+		   дозволяє додавати елемент на любу позицію масиву, тому якщо потрібно
+		   додати елемент не у кінець масиву - прийдеться використовувати
+		   функцію власноруч...
+		   \remark Якщо бути чесним, то цей оператор було додано лише для
+		   можливості спрощеного легкого використання стандартних масивних
+		   функцій при роботі з об'єктами.
+		   \param[in] value Елемент, який потрібно додати до масиву
+		   \return вказівник на нову структуру масиву
+		   \since v0.1.0.0 commit dd5d42
+		   \sa ALGOR::ArrayProcessing::addElement(type_array *&, asize_t &, const type_array &, const asize_t)
+		   \sa ALGOR::ARRAYDATA::operator|=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator!()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA &=
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator|=(const type_array &)
+		   \brief Оператор, який видаляє всі елементи з указаним значенням
+		   \details Більш легкий спосіб використання функції
+		   ALGOR::ArrayProcessing::subtractValue.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \throw ALGOR::EXCEPTION_SET::value_failure
+		   \remark Якщо бути чесним, то цей оператор було додано лише для
+		   можливості спрощеного легкого використання стандартним масивних
+		   функцій при роботі з об'єктами.
+		   \param[in] value Значення, яке потрібно видалити з усього масиву
+		   \return вказівник на нову структуру масиву
+		   \since v0.1.0.0 commit dd5d42
+		   \sa ALGOR::ArrayProcessing::subtractValue(type_array *&, asize_t &, const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator&=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator!()
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA |=
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator!()
+		   \brief Оператор, який видаляє елемент із кінця масиву
+		   \details Більш легкий спосіб використання функції
+		   ALGOR::ArrayProcessing::subtractElement.
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \throw ALGOR::EXCEPTION_SET::position_failure
+		   \remark Якщо бути чесним, то цей оператор було додано лише для
+		   можливості спрощеного легкого використання стандартним масивних
+		   функцій при роботі з об'єктами.
+		   \return вказівник на нову структуру масиву
+		   \since v0.1.0.0 commit dd5d42
+		   \sa ALGOR::ArrayProcessing::subtractElement(type_array *&, asize_t &, const asize_t)
+		   \sa ALGOR::ARRAYDATA::operator&=(const type_array &)
+		   \sa ALGOR::ARRAYDATA::operator|=(const type_array &)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA !
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator<<=(ARRAYDATA<type_array> *&)
+		   \brief Оператор об'єднання двох масивів у поточному об'єкті
+		   \details Оператор додає данні із наданого об'єкту у кінець поточного
+		   об'єкту. Це єдиний метод, який працює не зі структурами, а із об'єктами.
+		   \throw ALGOR::EXCEPTION_SET::size_failure
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \param[in] appendingArray Масив, з якого будуть передаватись данні до
+		   поточного
+		   \return вказівник на нову структуру масиву
+		   \since v0.1.0.0 commit dd5d42
+		   \sa ALGOR::ARRAYDATA::operator>>=(ARRAYDATA<type_array> *&)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA <<=
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::operator>>=(ARRAYDATA<type_array> *&)
+		   \brief Оператор об'єднання двох масивів у наданому об'єкті
+		   \details Оператор додає данні із поточного об'єкту у кінець наданого
+		   об'єкту. Це єдиний метод, який працює не зі структурами, а із об'єктами.
+		   \throw ALGOR::EXCEPTION_SET::size_failure
+		   \throw ALGOR::EXCEPTION_SET::void_data
+		   \param[out] appendingArray Масив, у який будуть передаватись данні з
+		   поточного
+		   \return вказівник на нову структуру масиву
+		   \since v0.1.0.0 commit dd5d42
+		   \sa ALGOR::ARRAYDATA::operator<<=(ARRAYDATA<type_array> *&)
+		   \test
+		   \snippet Algor_ArrayData.cpp ARRAYDATA >>=
+		 */
+
+		/*!
+		   \fn ALGOR::ARRAYDATA::remove()
+		   \brief Видаляє масив
+		   \warning Метод є приватним, щоб уникнути випадків, коли програміст
+		   звільнив пам'ять з-під масиву і звертається до пустих данних чи намагається
+		   проводити над ними якісь зміни.
+		   \since v0.1.0.0 commit 48aa64
+		   \sa ALGOR::remove_struct(Array<type_array> *&)
+		 */
+
+/* *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ * --------------------------------------------------------------------------- *
+ *                                ALGOR_SORTING                                *
+ * --------------------------------------------------------------------------- *
+ * *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ */
+
+	/*!
+	   \class ALGOR::Comparative_Sorts
+	   \brief Клас з великою кількістю алгоритмів сортувань
+	   \details Клас, що колекціонує велику кількість алгоритмів сортувань. Саме
+	   така мета ставилася на початку створення бібліотеки: реалізувати усі
+	   алгоритми сортувань! Але з часом ставились інші цілі, окрім алгоритмів
+	   сортувань, що призвело до розширення функціоналу бібліотеки... Тільки з
+	   часом я повернувся до реалізації алгоритмів сортувань. На Вікіпедії
+	   доступно 50 різних алгоритмів сортувань, які поділені на категорії.
+	   Додатково я їх поділив ще на два великі сімейства: алгоритми, що працюють
+	   з будь-якими числовими данними та алгоритми, що працюють тільки з цілими
+	   числовими данними. Цей клас реалізує перше сімейство алгоритмів. Його частка
+	   складає 40 алгоритмів із 50.
+	   \details Під час роботи я зрозумів, що зможу реалізувати не всі алгоритми, так
+	   як деякі просто не достанеш. При пошуках CascadeMergeSort на Вікіпедії
+	   описано усього півтори строчки про алгоритм, а при переході за посиланням
+	   на ресурс надається книга з 584 сторінки, доступно з яких не більше 10. І
+	   більше ніде ніякої інформації не має... І це лише один з прикладів...
+	   \details Із 40 я зміг реалізувати 22 алгоритми даного сімейства:
+	   <ol>
+	   <li> Batcher_OddEven_MergeSort	(Категорія Concurrent_Sort)</li>
+	   <li> Bitonic_Sorter				(Категорія Concurrent_Sort)</li>
+	   <li> Bogo_Sort					(Категорія Exchange_Sorts)</li>
+	   <li> Bubble_Sort					(Категорія Exchange_Sorts)</li>
+	   <li> Cocktail_Shaker_Sort		(Категорія Exchange_Sorts)</li>
+	   <li> Comb_Sort					(Категорія Exchange_Sorts)</li>
+	   <li> Cycle_Sort					(Категорія Selection_Sorts)</li>
+	   <li> Gnome_Sort					(Категорія Exchange_Sorts)</li>
+	   <li> Heap_Sort					(Категорія Selection_Sorts)</li>
+	   <li> Insert_Sort					(Категорія Insertion_Sorts)</li>
+	   <li> Library_Sort				(Категорія Insertion_Sorts)</li>
+	   <li> Merge_Sort					(Категорія Merge_Sorts)</li>
+	   <li> Odd_Even_Sort				(Категорія Exchange_Sorts)</li>
+	   <li> Pancake_Sort				(Категорія Other_Sorts)</li>
+	   <li> Patience_Sort				(Категорія Insertion_Sorts)</li>
+	   <li> Quick_Sort					(Категорія Exchange_Sorts)</li>
+	   <li> Selection_Sort				(Категорія Selection_Sorts)</li>
+	   <li> Shell_Sort					(Категорія Insertion_Sorts)</li>
+	   <li> Slow_Sort					(Категорія Exchange_Sorts)</li>
+	   <li> Stooge_Sort					(Категорія Exchange_Sorts)</li>
+	   <li> Tim_Sort					(Категорія Hybrid_Sorts)</li>
+	   <li> Tree_Sort					(Категорія Insertion_Sorts)</li>
+	   </ol>
+	   \details Не реалізованими залишились:
+	   <ol>
+	   <li> ProportionExtendSort		(Категорія Exchange_Sorts)</li>
+	   <li> Smooth_Sort					(Категорія Selection_Sorts)</li>
+	   <li> CartesianTreeSort			(Категорія Selection_Sorts)</li>
+	   <li> TournamentSort				(Категорія Selection_Sorts)</li>
+	   <li> WeakHeapSort				(Категорія Selection_Sorts)</li>
+	   <li> SplaySort					(Категорія Insertion_Sorts)</li>
+	   <li> CascadeMergeSort			(Категорія Merge_Sorts)</li>
+	   <li> OscillatingMergeSort		(Категорія Merge_Sorts)</li>
+	   <li> PolyphaseMergeSort			(Категорія Merge_Sorts)</li>
+	   <li> PairwiseSortingNetwork		(Категорія Concurrent_Sort)</li>
+	   <li> SampleSort					(Категорія Concurrent_Sort)</li>
+	   <li> BlockMergeSort				(Категорія Hybrid_Sorts)</li>
+	   <li> KirkpatrickReischSort		(Категорія Hybrid_Sorts)</li>
+	   <li> IntroSort					(Категорія Hybrid_Sorts)</li>
+	   <li> SpreadSort					(Категорія Hybrid_Sorts)</li>
+	   <li> MergeInsertionSort			(Категорія Hybrid_Sorts)</li>
+	   <li> TopologicalSort				(Категорія Other_Sorts)</li>
+	   <li> SpaghettiSort				(Категорія Other_Sorts)</li>
+	   </ol>
+	   \remark Нагадаю, що усі ці алгоритми працюють з будь-якими данними, тобто і
+	   з цілими, і з дробними, і з додатніми, і з від'ємними, і зі змішаними. Ця
+	   характеристика під час тестування мала визначення:
+	   "цілі+ цілі- цілі+- дрібні+ дрібні- дрібні+-".
+	   \tparam type_array Тип елементів, що будуть сортуватися
+	   \since v0.1.2.0 commit 52d263
+	 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Comparative_Sorts(Array<type_array> *&)
+		   \brief Конструктор, що приймає СТРУКТУРУ та зберігає її до поля
+		   \details Цей клас, як сімейство, як колекціонер, збирає алгоритми
+		   сортувань, як внутрішні класи, але дозволяє до них прямий доступ.
+		   Якщо бібліотека використовується тільки як джерело алгоритмів сортувань,
+		   тоді краще створити напряму об'єкт внутрішнього класу алгоритму сортувань,
+		   передати йому стандатний С++ вказівник на масив та його розмір й викликати
+		   метод сортувань. Але якщо бібліотека ALGOR використовується у більшому
+		   спектрі, тоді набагато легше буде створити об'єкт сімейства, передати
+		   йому готову структуру й викликати потрібний алгоритми. Порівняйте:
+		   \code
+		   //Використання алгоритму напряму
+		   Comparative_Sorts<long long>::LibrarySort *sort;
+		   sort = new Comparative_Sorts<long long>::LibrarySort(ArrayStruct->array, ArrayStruct->array_size);
+		   sort->library_sort();
+		   //Використання алгоритму через зовнішній клас
+		   Comparative_Sorts<long long> *sort = new Comparative_Sorts<long long>(ArrayStruct);
+		   sort->Library_Sort();
+		   \endcode
+		   \param[in] Array Покажчик на структуру масиву
+		   \since v0.1.2.0 commit 52d263
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts constructor
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Bubble_Sort()
+		   \brief Метод виклику алгоритму сортування Bubble Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::BubbleSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 46c223
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Bubble_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Cocktail_Shaker_Sort()
+		   \brief Метод виклику алгоритму сортування Cocktail Shaker Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::CocktailShakerSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 46c223
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Cocktail_Shaker_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Odd_Even_Sort()
+		   \brief Метод виклику алгоритму сортування Odd Even Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::OddEvenSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 46c223
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Odd_Even_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Comb_Sort()
+		   \brief Метод виклику алгоритму сортування Comb Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::CombSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 46c223
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Comb_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Gnome_Sort()
+		   \brief Метод виклику алгоритму сортування Gnome Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::GnomeSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 46c223
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Gnome_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Quick_Sort()
+		   \brief Метод виклику алгоритму сортування Quick Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::QuickSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 46c223
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Quick_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Slow_Sort()
+		   \brief Метод виклику алгоритму сортування Slow Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::SlowSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 46c223
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Slow_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Stooge_Sort()
+		   \brief Метод виклику алгоритму сортування Stooge Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::StoogeSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 46c223
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Stooge_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Bogo_Sort()
+		   \brief Метод виклику алгоритму сортування Bogo Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::BogoSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 46c223
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Bogo_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Selection_Sort()
+		   \brief Метод виклику алгоритму сортування Selection Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::SelectionSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 28f51f
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Selection_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Heap_Sort()
+		   \brief Метод виклику алгоритму сортування Heap Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::HeapSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 28f51f
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Heap_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Cycle_Sort()
+		   \brief Метод виклику алгоритму сортування Cycle Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::CycleSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.2 commit 28f51f
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Cycle_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Insert_Sort()
+		   \brief Метод виклику алгоритму сортування Insert Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::InsertSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.3 commit f81852
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Insert_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Shell_Sort()
+		   \brief Метод виклику алгоритму сортування Shell Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::ShellSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.3 commit f81852
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Shell_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Tree_Sort()
+		   \brief Метод виклику алгоритму сортування Tree Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::TreeSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.3 commit f81852
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Tree_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Library_Sort()
+		   \brief Метод виклику алгоритму сортування Library Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::LibrarySort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.3 commit b4cdc9
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Library_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Patience_Sort()
+		   \brief Метод виклику алгоритму сортування Patience Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::PatienceSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.3 commit f81852
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Patience_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Merge_Sort()
+		   \brief Метод виклику алгоритму сортування Merge Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::MergeSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.1.4 commit b19f70
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Merge_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Bitonic_Sorter()
+		   \brief Метод виклику алгоритму сортування Bitonic Sorter
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::BitonicSorter. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.1 commit ffc19f
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Bitonic_Sorter
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Batcher_OddEven_MergeSort()
+		   \brief Метод виклику алгоритму сортування Batcher Odd Even Merge Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::BatcherOddEvenMergeSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.3.0 commit 98b663
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Batcher_OddEven_MergeSort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Tim_Sort()
+		   \brief Метод виклику алгоритму сортування Tim Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::TimSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.1 commit ffc19f
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Tim_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Comparative_Sorts::Pancake_Sort()
+		   \brief Метод виклику алгоритму сортування Pancake Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Comparative_Sorts::PancakeSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.1 commit ffc19f
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts Pancake_Sort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::BatcherOddEvenMergeSort
+		   \brief Алгоритм сортування Batcher Odd-Even Merge Sort
+		   \details <b>Парне-непарне сортування злиттям Батчера</b> (англ. Batcher's
+		   odd-even mergesort) - загальна конструкція, розроблена Кеном Батчером
+		   для мереж сортування розміром \f${\displaystyle O(n\cdot (\log(n))^{2})}\f$
+		   і глибиною \f${\displaystyle O((\log(n))^{2})}\f$, де \f$n\f$ - кількість
+		   елементів, які потрібно відсортувати. Незважаючи на те, що він не є
+		   асимптотичнооптимальним, Кнут у 1998 році зробив висновок щодо мережі AKS,
+		   що <i>«метод Батчера набагато кращий, якщо тільки n перевищує загальну
+		   ємність пам'яті всіх комп'ютерів на землі!»</i>.
+		   \details Його популяризує друга книга GPU Gems, як простий спосіб виконувати
+		   досить ефективне сортування на апаратному забезпеченні для обробки графіки.
+		   \image html BatcherOddEvenMergeSort.png
+		   \warning Алгоритм потребує масиви, розмір яких становить \f$2^{n}\f$,
+		   тобто 2, 4, 8, 16, 32, 64, 128, 256 тощо, але якщо запустити сортування
+		   з числами, які усі є цілими та додатніми, то, як показали тести, алгоритм
+		   працює з масивами будь-якого розміру.
+		   \par Алгоритм
+		   Можливі різні рекурсивні та ітераційні схеми для обчислення індексів
+		   елементів, які порівнюються та сортуються. Це одна ітераційна техніка
+		   для генерації індексів для сортування \f$n\f$ елементів: 
+		   \par Категорія
+		   <b>Concurrent Sort</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Batcher_odd%E2%80%93even_mergesort</i>
+		   \since v0.1.3.0 commit 98b663
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts BatcherOddEvenMergeSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::BitonicSorter
+		   \brief Алгоритм сортування Bitonic Sorter
+		   \details <b>Бетонозмішувач</b> (англ. Bitonic sorter) - алгоритм
+		   паралельного сортування. Він також використовується як метод для
+		   побудови сортувальної мережі. Алгоритм був розроблений Кеном Батчером.
+		   Отримані сортувальні мережі складаються з
+		   \f${\displaystyle O(n\cdot \log ^{2}(n))}\f$ компаратори і мають
+		   затримку \f${\displaystyle O(\log ^{2}(n))}\f$, де \f$n\f$ - кількість
+		   елементів, які потрібно відсортувати.
+		   \warning Алгоритм потребує масиви, розмір яких становить \f$2^{n}\f$,
+		   тобто 2, 4, 8, 16, 32, 64, 128, 256 тощо.
+		   \par Алгоритм
+		   Нижче наведено мережу "Бетонозмішувача" (BitonicSorter) із 16 входами:
+		   \image html BitonicSort_main.png
+		   16 чисел входять як входи на лівому кінці, ковзають по кожному з 16
+		   горизонтальних проводів і виходять на виходах на правому кінці. Мережа
+		   призначена для сортування елементів, з найбільшим числом внизу.
+		   \par
+		   Стрілки - компаратори. Щоразу, коли два числа досягають двох кінців
+		   стрілки, вони порівнюються, щоб переконатися, що стрілка вказує на більше
+		   число. Якщо вони вийшли з ладу, їх міняють місцями. Кольорові рамки
+		   призначені лише для ілюстрації та не впливають на алгоритм.
+		   \par
+		   Кожне червоне поле має однакову структуру: кожен вхід у верхній половині
+		   порівнюється з відповідним входом у нижній половині, при цьому всі стрілки
+		   спрямовані вниз (темно-червоні) або всі вгору (світло-червоні). Якщо
+		   вхідні дані утворюють бітонну послідовність (одна неспадна послідовність,
+		   за якою йде одна незростаюча або навпаки), тоді на виході утворюватимуться
+		   дві бітонічні послідовності. Верхня половина результату буде бітонною і
+		   нижня половина буде бітонною, причому кожен елемент верхньої половини буде
+		   меншим або рівним кожному елементу нижньої половини (для темно-червоного)
+		   або навпаки (для світло-червоного). Ця теорема неочевидна, але її можна
+		   перевірити, ретельно розглянувши всі випадки порівняння різних вхідних
+		   даних, використовуючи принцип нуль-один, де бітонічна послідовність —
+		   послідовність 0 і 1, яка містить не більше двох «10» або "01"
+		   підпослідовностей.
+		   \par
+		   Червоні поля об'єднуються, утворюючи сині та зелені поля. Кожне таке поле
+		   має однакову структуру: червоне поле застосовується до всієї послідовності
+		   введення, потім до кожної половини результату, потім до кожної половини
+		   кожного з цих результатів і так далі. Усі стрілки спрямовані вниз (сині)
+		   або всі спрямовані вгору (зелені). Ця структура відома як мережа
+		   метеликів. Якщо вхідні дані цього вікна є бітонічними, то вихідні дані
+		   будуть повністю відсортовані в порядку зростання (синій) або у порядку
+		   зменшення (зелений). Якщо число входить у синє чи зелене поле, то перше
+		   червоне поле відсортує його у правильну половину списку. Потім він пройде
+		   через меншу червону рамку, яка сортує його в правильну чверть списку в
+		   межах цієї половини. Це продовжується, доки він не буде відсортований у
+		   правильному положенні. Таким чином, вихід зеленого або синього поля буде
+		   повністю відсортовано.
+		   \par
+		   Зелені та сині поля об'єднуються, щоб утворити всю мережу сортування.
+		   Для будь-якої довільної послідовності вхідних даних він відсортує їх
+		   правильно, з найбільшим внизу. Результатом кожного зеленого або синього
+		   прямокутника буде відсортована послідовність, тому результат кожної пари
+		   суміжних списків буде бітонічним, оскільки верхній — синій, а нижній —
+		   зелений. Кожен стовпець синіх і зелених прямокутників приймає \f$N\f$
+		   відсортованих послідовностей і об'єднує їх попарно, щоб утворити \f$N/2\f$
+		   бітонних послідовностей, які потім сортуються за прямокутниками в цьому
+		   стовпці, утворюючи \f$N/2\f$ відсортованих послідовностей. Цей процес
+		   починається з того, що кожен вхід вважається відсортованим списком з
+		   одного елементу, і продовжується через усі стовпці, доки останній не
+		   об'єднає їх у єдиний відсортований список. Оскільки останній етап був
+		   синім, цей остаточний список матиме найбільший елемент внизу.
+		   \par Альтернативне представлення
+		   Кожне зелене поле на схемі вище виконує ту саму операцію, що й синє поле,
+		   але з сортуванням у протилежному напрямку. Отже, кожна зелена коробка може
+		   бути замінена синьою рамкою, за якою слідує перехрещення, де всі дроти
+		   переміщуються в протилежне положення. Це дозволить усім стрілкам вказувати
+		   в одному напрямку, але завадить горизонтальним лініям бути прямими. Однак
+		   подібний кросовер можна розмістити праворуч від нижньої половини виходів
+		   з будь-якого червоного блоку, і сортування все одно працюватиме правильно,
+		   оскільки зворотна бітонічна послідовність все ще є бітонною. Якщо червоне
+		   поле має перехрестя перед і після нього, його можна переставити всередині
+		   так, щоб два перехрестя скасувалися, тож дроти знову стали прямими. Таким
+		   чином, наступна діаграма еквівалентна наведеній вище, де кожне зелене
+		   поле стає синім плюс кросовер, а кожне померанчеве поле є червоним
+		   полем, яке поглинає два таких кросовера:
+		   \image html BitonicSort_extra.png
+		   Накінцівники стрілок не намальовані, оскільки кожен компаратор сортує в
+		   одному напрямку. Синій і червоний блоки виконують ті ж операції, що й
+		   раніше. Померанчеві блоки еквівалентні червоним блокам, де послідовність
+		   нижньої половини його входів і нижньої половини його виходів є
+		   протилежною. Це найпоширеніше представлення бітонічної мережі сортування.
+		   \par Категорія
+		   <b>Concurrent Sort</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Bitonic_sorter</i>
+		   \since v0.1.1.2 commit 303e5b
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts BitonicSorter
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::BogoSort
+		   \brief Алгоритм сортування Bogo Sort
+		   \details <b>Випадкове сортування</b> (англ. Bogosort) - неефективний на
+		   практиці гумористичний алгоритм сортування. Наочно використовується для
+		   впорядкування колоди карт таким чином: колода підкидається у повітря,
+		   карти збираються у довільному порядку і перевіряється, чи є колода
+		   впорядкованою. Якщо колода невпорядкована, то операцію повторюють.
+		   \details Алгоритм має й інші назви: сортування бозо (англ. <i>bozo sort</i>),
+		   дурне сортування (англ. <i>stupid sort</i>), мавпяче сортування
+		   (англ. <i>monkey sort</i>), випадкове сортування (англ. <i>random sort</i>),
+		   сортування п'яниці (англ. <i>drunk man sort</i>).
+		   \details Випадкове сортування не є стабільним.
+		   \details Середній час роботи алгоритму:
+		   \f${\displaystyle O\left(n\cdot \sum _{i=1}^{\infty }{\frac {i}{n!}}\cdot \left(1-{\frac {1}{n!}}\right)^{i-1}\right)=O(n\cdot n!)}\f$
+		   \details При проходженні циклу один раз на секунду сортування
+		   наступної кількості елементів у середньому може зайняти:
+		   | Кількість елементів | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+		   | ---  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+		   | Середній час | 1 с | 4 с | 18 с | 96 с | 10 хв | 1,2 год | 9,8 год | 3,7 дні | 37,8 дні | 1,15 роки | 13,9 років | 182 роки |
+		   \details При роботі 4-ядерного процесора на частоті
+		   2,4 ГГц (9,6 млрд операцій на секунду):
+		   | Кількість елементів | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
+		   | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+		   | Середній час | 0,0037 с | 0,045 с | 0,59 с | 8,4 с | 2,1 хв | 33,6 хв | 9,7 год | 7,29 днів | 139 днів | 7,6 років | 160 років |
+		   \par Категорія
+		   <b>Exchange Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Bogosort</i>
+		   \since v0.1.1.1 commit f338fc
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts BogoSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::BubbleSort
+		   \brief Алгоритм сортування Bubble Sort
+		   \details <b>Бульбашкове сортування</b> (англ. Bubble sort), яке іноді
+		   називають сортуванням із зануренням - простий алгоритм сортування, який
+		   багаторазово проходить список, порівнює сусідні елементи та міняє їх
+		   місцями, якщо вони розташовані в неправильному порядку. Перехід по списку
+		   повторюється доти, доки список не буде відсортований. Алгоритм отримав
+		   свою назву від того, що процес сортування за ним нагадує поведінку
+		   бульбашок повітря у резервуарі з водою.
+		   \image html BubbleSort_anim.gif
+		   \details Цей простий алгоритм погано працює в реальних умовах і
+		   використовується переважно як навчальний інструмент. Більш ефективні
+		   алгоритми, такі як QuickSort, TimSort або MergeSort, використовуються
+		   бібліотеками сортування, вбудованими в такі популярні мови програмування,
+		   як Python і Java.
+		   \par Категорія
+		   <b>Exchange Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Bubble_sort</i>
+		   \since v0.0.0.1
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts BubbleSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::CocktailShakerSort
+		   \brief Алгоритм сортування Cocktail Shaker Sort
+		   \details <b>Сортування змішуванням</b> (англ. Cocktail sort) - один із
+		   різновидів алгоритму сортування бульбашкою. Відрізняється від сортування
+		   бульбашкою тим, що сортування відбувається в обох напрямках, міняючи
+		   напрямок при кожному проході. Цей алгоритм лише трішки складніший за
+		   сортування бульбашкою, однак, вирішує так звану проблему «черепах».
+		   \image html CocktailShakerSort_anim.gif
+		   \par Категорія
+		   <b>Exchange Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Cocktail_shaker_sort</i>
+		   \since v0.0.0.1
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts CocktailShakerSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::CombSort
+		   \brief Алгоритм сортування Comb Sort
+		   \details <b>Сортування гребінцем</b> (англ. Comb sort) - спрощений
+		   алгоритм сортування, розроблений Влодеком Добошєвічем (Wlodek Dobosiewicz)
+		   у 1980 році, і пізніше заново досліджений та популяризований Стефаном
+		   Лакеєм (Stephen Lacey) та Річардом Боксом (Richard Box), котрі написали
+		   про нього в журналі Byte Magazine у квітні 1991 р. Сортування гребінцем
+		   є поліпшенням алгоритму BubbleSort, і конкурує у швидкодії з алгоритмом
+		   QuickSort. Основна його ідея полягає в тому, щоб усунути так званих
+		   «Черепах», або малих значень ближче до кінця списку, оскільки у BubbleSort
+		   вони сильно уповільнюють процес сортування («Кролики» та великі
+		   сортування на початку списку у BubbleSort не являють собою проблеми).
+		   \image html CombSort_anim.gif
+		   \details У BubbleSort, коли два елементи порівнюються, вони завжди мають
+		   розрив (відстань один від одного) рівну 1. Основна ідея сортування гребінцем
+		   полягає у тому, що цей розрив може бути більший одиниці. (Алгоритм ShellSort
+		   також базується на даній ідеї, однак, він є модифікацією алгоритму
+		   InsertSort, а не BubbleSort).
+		   \details Розрив починається зі значення, що рівне довжині списку, поділеного
+		   на фактор зменшення (зазвичай, 1.3), і список сортується з урахуванням цього
+		   значення (при необхідності воно заокруглюється до цілого). Потім розрив
+		   знову ділиться на фактор розриву, і список продовжує сортуватись з новим
+		   значенням, процес продовжується доти, доки розрив рівний 1. Далі список
+		   сортується з розривом рівним 1 доти, доки не буде повністю відсортований.
+		   Таким чином, фінальний етап сортування аналогічний такому ж у BubbleSort,
+		   однак, до цього «черепахи» усуваються. 
+		   \par Категорія
+		   <b>Exchange Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Comb_sort</i>
+		   \since v0.1.1.1 commit f338fc
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts CombSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::CycleSort
+		   \brief Алгоритм сортування Cycle Sort
+		   \details <b>Цикличне сортування</b> (англ. Cycle sort) на місці -
+		   нестабільний алгоритм сортування, який теоретично є оптимальним з
+		   точки зору загальної кількості записів у вихідний масив, на відміну
+		   від будь-якого іншого алгоритму сортування на місці. Він заснований на
+		   ідеї, що перестановку, яку потрібно виконати, можна розкласти на цикли,
+		   які можна окремо обертати, щоб отримати відсортований результат.
+		   \image html CycleSort.png
+		   \details На відміну від майже будь-якого іншого сортування, елементи ніколи
+		   не записуються в іншому місці масиву просто для того, щоб витіснити їх зі
+		   шляху дії. Кожне значення або записується нуль разів, якщо воно вже
+		   знаходиться в правильній позиції, або записується один раз у правильну
+		   позицію. Це відповідає мінімальній кількості перезаписів, необхідних для
+		   завершення сортування на місці.
+		   \details Зведення до мінімуму кількості записів корисно, коли записування в
+		   якийсь величезний набір даних є дуже дорогим, наприклад, з EEPROM от
+		   Flash-пам'ять, де кожен запис зменшує термін служби пам'яті. 
+		   \par Категорія
+		   <b>Selection Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Cycle_sort</i>
+		   \since v0.1.1.2 commit 49dffe
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts CycleSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::GnomeSort
+		   \brief Алгоритм сортування Gnome Sort
+		   \details <b>Сортування гнома</b> (англ. Gnome sort) - різновид
+		   InsertSort, алгоритму сортування який не використовує вкладених циклів.
+		   GnomeSort спочатку було запропоновано іранським комп'ютерним науковцем
+		   Хамідом Сарбазі-Азадом (професором комп'ютерних наук та інженерії в
+		   Технологічному університеті Шаріфа) у 2000 році. Спочатку сортування було
+		   названо глупим сортуванням (англ. Stupid sort; не плутати з BogoSort),
+		   а пізніше описаний Діком Груном і названий Gnome sort.
+		   \image html GnomeSort_anim.gif
+		   \details Сортування Gnome виконує принаймні стільки порівнянь, скільки
+		   InsertSort, і має ті самі асимптотичні характеристики часу виконання.
+		   GnomeSort працює, створюючи відсортований список по одному елементу за раз,
+		   доставляючи кожен елемент у належне місце в серії обмінів. Середній час
+		   виконання дорівнює \f${\displaystyle O(n^{2})}\f$, але має тенденцію до
+		   \f${\displaystyle O(n)}\f$, якщо спочатку список майже відсортований.
+		   \details Дік Грюн описав метод сортування такою історією:
+		   > Gnome sort базується на техніці, яку використовує стандартний
+		   > голландський садовий гном (нім. tuinkabouter). Ось як садовий гном
+		   > сортує ряд квіткових горщиків. В основному він дивиться на квітковий
+		   > горщик поруч із ним і попередній; якщо вони в правильному порядку,
+		   > він пересуває один горщик вперед, інакше він міняє їх місцями і
+		   > пересуває один горщик назад. Граничні умови: якщо немає попереднього
+		   > горщика, він робить крок вперед; якщо поруч немає горщика, він готовий.\n
+		   > — "Gnome Sort - The Simplest Sort Algorithm". <i>Dickgrune.com</i>
+		   \par Категорія
+		   <b>Exchange Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Gnome_sort</i>
+		   \since v0.1.1.1 commit f338fc
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts GnomeSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::HeapSort
+		   \brief Алгоритм сортування Heap Sort
+		   \details <b>Пірамідальне сортування</b> (англ. Heapsort,
+		   «Сортування купою») - можна вважати вдосконаленим SelectionSort:
+		   подібно SelectionSort, HeapSort ділить вхідні дані на відсортовану
+		   та невідсортовану області, і вона ітеративно зменшує невідсортовану
+		   область, вилучаючи з неї найбільший елемент і вставляючи його в відсортовану
+		   область. На відміну від SelectionSort, HeapSort не витрачає час на
+		   сканування в лінійному часі несортованої області; скоріше сортування купи
+		   підтримує невідсортовану область у купи, щоб швидше знаходити найбільший
+		   елемент на кожному кроці.
+		   \image html HeapSort_anim.gif
+		   \details Хоча на практиці на більшості машин він дещо повільніший, ніж добре
+		   реалізоване QuickSort, він має перевагу у більш сприятливому найгіршому
+		   випадку \f${\displaystyle O(n\cdot \log(n))}\f$. HeapSort - алгоритм
+		   сортування на місці, але він не стабільний.
+		   \details HeapSort був винайдений Дж. В. Дж. Вільямсом у 1964 році. Це також
+		   стало народженням купи, представленої Вільямсом як корисна структура даних
+		   сама по собі. У тому ж році Роберт В. Флойд опублікував покращену версію,
+		   яка могла сортувати масив на місці, продовжуючи свої попередні дослідження
+		   деревовидного сортування.
+		   \image html HeapSort_example.gif
+		   \par Категорія
+		   <b>Selection Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Heapsort</i>
+		   \since v0.0.0.1
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts HeapSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::InsertSort
+		   \brief Алгоритм сортування Insert Sort
+		   \details <b>Сортування вставкою</b> (англ. Insertion sort) - простий
+		   алгоритм сортування на основі порівнянь. На великих масивах є значно
+		   менш ефективним за такі алгоритми, як QuickSort, HeapSort або MergeSort.
+		   Однак, має цілу низку переваг:
+		   <ul>
+		   <li> Проста реалізація: Джон Бентлі демонструє C++ і п'ятирядкову
+		   оптимізовану версію</li>
+		   <li> Ефективний (зазвичай) на невеликих наборах даних, подібно до інших
+		   алгоритмів квадратичного сортування</li>
+		   <li> Більш ефективний на практиці, ніж більшість інших простих квадратичних
+		   (тобто \f${\displaystyle O(n^{2})}\f$) алгоритмів, таких як SelectionSort
+		   або BubbleSort</li>
+		   <li> Адаптивний, тобто ефективний для наборів даних, які вже в основному
+		   відсортовані: часова складність становить \f${\displaystyle O(kn)}\f$,
+		   коли кожен елемент у вхідних даних знаходиться не більше ніж \f$k\f$
+		   місць від своєї відсортованої позиції</li>
+		   <li> Стабільний, тобто не змінює відносний порядок елементів з однаковими
+		   ключами</li>
+		   <li> Сортує на місці, тобто вимагає лише постійного обсягу
+		   \f${\displaystyle O(1)}\f$ додаткового простору пам'яті</li>
+		   <li> Онлайн, тобто може сортувати список, коли він його отримує</li>
+		   </ul>
+		   \image html InsertSort_example.gif
+		   \details Наприклад, більшість людей при сортуванні колоди гральних карт,
+		   використовують метод, схожий на алгоритм сортування включенням.
+		   \par Категорія
+		   <b>Insertion Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Insertion_sort</i>
+		   \since v0.0.0.1
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts InsertSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::LibrarySort
+		   \brief Алгоритм сортування Library Sort
+		   \details <b>Бібліотечне сортування</b> (англ. Library sort) або
+		   <b>Cортування вставки з пропусками</b> (англ. Gapped insertion sort) -
+		   алгоритм сортування, який використовує InsertSort, але з пропусками
+		   в масиві для прискорення наступних вставок. Назва походить від аналогії:
+		   > Припустимо, що бібліотекар зберігає свої книги в алфавітному порядку
+		   > на довгій полиці, починаючи з «A» ліворуч і продовжуючи праворуч
+		   > уздовж полиці без проміжків між книгами до кінця «Z». Якщо бібліотекар
+		   > придбав нову книгу, яка належить до розділу B, коли він знайде потрібне
+		   > місце в розділі B, йому доведеться перемістити кожну книгу, від середини
+		   > Bs до Zs, щоб звільнити місце для нової книги. Це InsertSort.
+		   > Однак, якби вони залишали пробіл після кожної літери, якщо після B ще
+		   > залишався пробіл, їм довелося б перемістити лише кілька книг, щоб
+		   > звільнити місце для нової книги. Це головний принцип бібліотечного
+		   сортування.
+		   \details Алгоритм був запропонований Майклом А. Бендером, Мартіном
+		   Фарах-Колтоном і Мігелем Мостейро в 2004 році та опублікований у 2006
+		   році.
+		   \details Як і InsertSort, на якому воно засноване, LibrarySort є
+		   сортуванням порівняння; однак було показано, що він має високу ймовірність
+		   виконання за \f${\displaystyle O(n\cdot \log(n))}\f$ часу (порівняно із
+		   QuickSort), а не \f${\displaystyle O(n^{2})}\f$, як InsertSort.
+		   \details Порівняно з базовим InsertSort, недолік LibrarySort полягає в
+		   тому, що воно вимагає додаткового місця для пропусків. Обсяг і розподіл
+		   цього простору залежатимуть від реалізації. У статті розмір необхідного
+		   масиву дорівнює \f${\displaystyle (1+ε)n }\f$, але без додаткових
+		   рекомендацій щодо вибору \f$ε\f$. Крім того, він не є ні адаптивним, ні
+		   стабільним. Щоб гарантувати часові межі з високою ймовірністю, потрібно
+		   випадково переставляти вхідні дані, що змінює відносний порядок рівних
+		   елементів і перемішує будь-які попередньо відсортовані вхідні дані. Крім
+		   того, алгоритм використовує бінарний пошук, щоб знайти точку вставки для
+		   кожного елемента, який не бере користі від попередньо відсортованого
+		   введення.
+		   \details Іншим недоліком є те, що його не можна запускати як
+		   онлайн-алгоритм, оскільки неможливо випадково перетасувати введення. Якщо
+		   використовувати без цього перетасування, це може легко виродитися в
+		   квадратичну поведінку.
+		   \details Одним із недоліків InsertSort є те, що воно може вимагати великої
+		   кількості операцій обміну та бути дорогим, якщо запис у пам'ять дорогий.
+		   LibrarySort може дещо покращити це на етапі вставки, оскільки потрібно
+		   перемістити менше елементів, щоб звільнити місце, але також додає додаткові
+		   витрати на етапі відновлення балансу. Крім того, локальність посилання буде
+		   поганою порівняно з MergeSort, оскільки кожна вставка з випадкового набору
+		   даних може отримати доступ до пам'яті, якої більше немає в кеші, особливо з
+		   великими наборами даних.
+		   \par Алгоритм
+		   Скажімо, у нас є масив з \f$n\f$ елементів. Ми вибираємо розрив, який маємо
+		   намір дати. Тоді ми матимемо кінцевий масив розміром
+		   \f${\displaystyle (1+ε)n }\f$. Алгоритм працює в журналі \f$n\f$ раундів.
+		   У кожному раунді ми вставляємо стільки елементів, скільки вже є в
+		   остаточному масиві, перед повторним балансуванням масиву. Щоб знайти
+		   позицію вставки, ми застосовуємо двійковий пошук у кінцевому масиві, а
+		   потім міняємо місцями наступні елементи, поки не потрапимо на порожнє місце.
+		   Після завершення раунду ми знову балансуємо остаточний масив, вставляючи
+		   пробіли між кожним елементом.
+		   \par
+		   Нижче наведено три важливі кроки алгоритму:
+		   <ol>
+		   <li> <b>Двійковий пошук</b>: пошук позиції вставки шляхом застосування
+		   двійкового пошуку в уже вставлених елементах. Це можна зробити шляхом
+		   лінійного переміщення до лівої або правої сторони масиву, якщо ви потрапили
+		   на порожнє місце в середньому елементі.</li>
+		   <li> <b>Вставлення</b>: вставлення елемента в знайдену позицію та заміна
+		   наступних елементів на 1 позицію, доки не з'явиться порожнє місце. Це
+		   робиться в логарифмічному часі з високою ймовірністю.</li>
+		   <li> <b>Перебалансування</b>: вставка пробілів між кожною парою елементів у
+		   масиві. Вартість ребалансування лінійно залежить від кількості вже
+		   вставлених елементів. Оскільки ці довжини збільшуються зі степенями 2 для
+		   кожного раунду, загальна вартість перебалансування також є лінійною.</li>
+		   </ol>
+		   \par Категорія
+		   <b>Insertion Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Library_sort</i>
+		   \since v0.1.1.3 commit b4cdc9
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts LibrarySort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::MergeSort
+		   \brief Алгоритм сортування Merge Sort
+		   \details <b>Сортування злиттям</b> (англ. Merge sort) - алгоритм сортування,
+		   в основі якого лежить принцип «Розділяй та володарюй».
+		   \image html MergeSort_example.gif
+		   \details В основі цього способу сортування лежить злиття двох упорядкованих
+		   ділянок масиву в одну впорядковану ділянку іншого масиву. Злиття двох
+		   упорядкованих послідовностей можна порівняти з перебудовою двох колон
+		   солдатів, вишикуваних за зростом, в одну, де вони також розташовуються за
+		   зростом. Якщо цим процесом керує офіцер, то він порівнює зріст солдатів,
+		   перших у своїх колонах і вказує, якому з них треба ставати останнім у нову
+		   колону, а кому залишатися першим у своїй. Так він вчиняє, поки одна з колон
+		   не вичерпається — тоді решта іншої колони додається до нової.
+		   \details Під час сортування в дві допоміжні черги з основної поміщаються
+		   перші дві відсортовані підпослідовності, які потім зливаються в одну і
+		   результат записується в тимчасову чергу. Потім з основної черги беруться
+		   наступні дві відсортовані підпослідовності і так доти, доки основна черга не
+		   стане порожньою. Після цього послідовність з тимчасової черги переміщається
+		   в основну чергу. І знову продовжується сортування злиттям двох відсортованих
+		   підпослідовностей. Сортування триватиме доти, доки довжина відсортованої
+		   підпослідовності не стане рівною довжині самої послідовності.
+		   \par Категорія
+		   <b>Merge Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Merge_sort</i>
+		   \since v0.0.0.1
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts MergeSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::OddEvenSort
+		   \brief Алгоритм сортування Odd-Even Sort
+		   \details <b>Парне-непарне сортування</b> (англ. Odd-even sort) або
+		   <b>Парне-непарне сортування транспозиції</b> (англ. Odd-even transposition
+		   sort) - в інформатиці є відносно простим алгоритмом сортування, розробленим
+		   спочатку для використання на паралельних процесорах з локальними
+		   взаємозв'язками. Воно порівнюється з BubbleSort, з яким поділяє багато
+		   характеристик. Алгоритм діє наступним чином: порівнюються всі парні/непарні
+		   пари проіндексованих суміжних елементів в списку, і якщо пара знаходиться в
+		   неправильному порядку (перший більше, ніж другий) елементи міняються
+		   місцями. Наступним кроком повторює це для парних/непарних індексованих пар
+		   (суміжних елементів). Чергуються парні/непарні та непарні/парні кроки, поки
+		   список не буде відсортовано.
+		   \image html OddEvenSort_anim.gif
+		   \par Категорія
+		   <b>Exchange Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Odd%E2%80%93even_sort</i>
+		   \since v0.1.1.1 commit f338fc
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts OddEvenSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::PancakeSort
+		   \brief Алгоритм сортування Pancake Sort
+		   \details <b>Сортування млинців</b> (англ. Pancake sorting) - математична
+		   задача сортування невпорядкованої стопки млинців за розміром, коли лопатку
+		   можна вставити в будь-яку точку стопки та використовувати для перевертання
+		   всіх млинців над нею. Кількість млинців це мінімальна кількість
+		   перевертань, необхідна для певної кількості млинців. У такому вигляді
+		   проблему вперше обговорив американський геометр Джейкоб Е. Гудман. Варіант
+		   задачі стосується підгорілих млинців, де кожен млинець має підгорілу
+		   сторону, і всі млинці повинні, крім того, закінчуватися підгорілою стороною
+		   внизу.
+		   \image html PancakeSort_example.gif
+		   \details Усі методи сортування вимагають порівняння пар елементів. Для
+		   традиційної проблеми сортування звичайною проблемою, що вивчається, є
+		   мінімізація кількості порівнянь, необхідних для сортування списку. Кількість
+		   фактичних операцій, таких як заміна двох елементів, тоді не має значення.
+		   Для проблем сортування млинців, навпаки, мета полягає в тому, щоб
+		   мінімізувати кількість операцій, де єдиними дозволеними операціями є
+		   реверсування елементів деякого префікса послідовності. Зараз кількість
+		   порівнянь не має значення. 
+		   \par Категорія
+		   <b>Other Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Pancake_sorting</i>\n
+		   \since v0.1.1.2 commit 303e5b
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts PancakeSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::PatienceSort
+		   \brief Алгоритм сортування Patience Sort
+		   \details <b>Терпеливе сортування</b> (англ. Patience sorting) - алгоритм
+		   сортування, натхненний і названий на честь карткової гри Patience.
+		   Варіант алгоритму ефективно обчислює довжину найдовшої зростаючої
+		   підпослідовності в заданому масиві.
+		   \details Назва алгоритму походить від спрощеного варіанту карткової гри
+		   Patience. Гра починається з перетасування колоди карт. Карти роздають
+		   одну за одною в послідовність стопок на столі відповідно до наступних
+		   правил:
+		   <ol>
+		   <li> Спочатку стосів немає. Перша роздана карта утворює нову стопку, що
+		   складається з однієї карти;</li>
+		   <li> Кожна наступна карта розміщується на крайній лівій існуючій стопці,
+		   верхня карта якої має значення, що перевищує або дорівнює значенню
+		   нової карти, або праворуч від усіх існуючих стопок, утворюючи таким
+		   чином нову стопку;</li>
+		   <li> Коли більше не залишиться карт для роздачі, гра закінчується.</li>
+		   </ol>
+		   \details Ця карткова гра перетворюється на двофазний алгоритм сортування
+		   наступним чином: дано масив з \f$n\f$ елементів з деякої повністю
+		   впорядкованої області, розглянемо цей масив як набір карток і
+		   змоделюємо гру PatienceSort. Коли гра закінчиться, відновлюємо відсортовану
+		   послідовність, кілька разів знімаючи мінімальну видиму картку; іншими
+		   словами, виконати \f$k\f$-стороннє злиття \f$p\f$ стосів, кожна з яких
+		   внутрішньо відсортована.
+		   \par Аналіз
+		   Перший етап PatienceSort, симуляція карткової гри, може бути
+		   реалізований для \f${\displaystyle O(n\cdot \log(n))}\f$ порівнянь у
+		   найгіршому випадку для \f$n\f$ елементного вхідного масиву: буде щонайбільше
+		   \f$n\f$ стопок, і за схемою верхні картки стопок утворюють послідовність,
+		   що зростає зліва направо, тому потрібну стопку можна знайти за допомогою
+		   бінарного пошуку. Другий етап, злиття стосів, можна здійснити в
+		   \f${\displaystyle O(n\cdot \log(n))}\f$ час, а також за допомогою
+		   пріоритетної черги.
+		   \par
+		   Коли вхідні дані містять природні «пробіги», тобто неспадні підмасиви,
+		   продуктивність може бути значно кращою. Фактично, коли вхідний масив уже
+		   відсортований, усі значення утворюють одну купу, і обидві фази виконуються
+		   за \f${\displaystyle O(n)}\f$ часу. Середня складність все ще дорівнює
+		   \f${\displaystyle O(n\cdot \log(n))}\f$ яка рівномірно випадкова
+		   послідовність значень дасть очікувану кількість
+		   \f${\displaystyle O(\sqrt {n})}\f$ стосів, які беруть
+		   \f${\displaystyle O(n\cdot \log(\sqrt{n}))=O(n\cdot \log(n))}\f$ час
+		   для виробництва та злиття.
+		   \par
+		   Чандрамулі та Голдштейн оцінили практичну ефективність PatienceSort,
+		   показавши, що наївна версія приблизно в десять-двадцять разів повільніша,
+		   ніж сучасне QuickSort в їх контрольній задачі. Вони пояснюють це відносно
+		   невеликою кількістю досліджень, проведених у PatienceSort, і розробляють
+		   кілька оптимізацій, які наближають продуктивність у два рази до показників
+		   QuickSort.
+		   \par
+		   Якщо значення карток знаходяться в діапазоні \f$1, . . . , n\f$ , є ефективна
+		   реалізація з \f${\displaystyle O(n\cdot \log(n))}\f$ найгіршим часом роботи
+		   для складання карток у стопки, покладаючись на дерево Ван Емде Боаса.
+		   \par Категорія
+		   <b>Insertion Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Patience_sorting</i>
+		   \since v0.1.1.2 commit 343e40
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts PatienceSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::QuickSort
+		   \brief Алгоритм сортування Quick Sort
+		   \details <b>Швидке сортування</b> (англ. Quick sort) - алгоритм
+		   сортування на місці. Розроблений британським комп'ютерним науковцем
+		   Тоні Хоаром (Tony Hoare) у 1959 році та опублікований у 1961 році, він
+		   досі є широко використовуваним алгоритмом для сортування. При
+		   правильній реалізації це може бути дещо швидшим, ніж MergeSort, і
+		   приблизно в два-три рази швидше, ніж HeapSort.
+		   \image html QuickSort_anim.gif
+		   \details В основі QuickSort лежить принцип «Розділяй та володарюй». Він
+		   працює, вибираючи «опорний» елемент із масиву та розбиваючи інші
+		   елементи на два підмасиви, залежно від того, чи є вони меншими або
+		   більшими за опорний. З цієї причини його іноді називають сортуванням
+		   обміном з розділами. Потім підмасиви сортуються рекурсивно. Це можна
+		   зробити на місці, вимагаючи невеликих додаткових обсягів пам'яті для
+		   виконання сортування.
+		   \details QuickSort є сортуванням з порівняннями, тобто воно може
+		   сортувати елементи будь-якого типу, для яких визначено відношення
+		   «менше ніж» (формально, загальний порядок). Ефективні реалізації
+		   QuickSort не є стабільним сортуванням, тобто не зберігається відносний
+		   порядок однакових відсортованих елементів.
+		   \details Математичний аналіз QuickSort показує, що в середньому
+		   алгоритм займає \f${\displaystyle O(n\cdot \log(n))}\f$ порівнянь для
+		   сортування \f$n\f$ елементів. У гіршому випадку це робиться за
+		   \f${\displaystyle O(n^{2})}\f$ порівнянь. 
+		   \par Категорія
+		   <b>Exchange Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Quicksort</i>
+		   \since v0.0.0.1
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts QuickSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::SelectionSort
+		   \brief Алгоритм сортування Selection Sort
+		   \details <b>Сортування вибором</b> (англ. Selection sort) - простий
+		   алгоритм сортування лінійного масиву, на основі вставок. Він має часову
+		   складність \f${\displaystyle O(n^{2})}\f$, що робить його неефективним
+		   для великих списків і, як правило, працює гірше, ніж подібне InsertSort.
+		   SelectionSort відоме своєю простотою та має переваги в продуктивності
+		   порівняно зі складнішими алгоритмами в певних ситуаціях, особливо коли
+		   допоміжна пам'ять обмежена.
+		   \image html SelectionSort_anim.gif
+		   \details Алгоритм ділить вхідний список на дві частини: відсортований
+		   підсписок елементів, який складається зліва направо в передній (лівій)
+		   частині списку, і підсписок решти невідсортованих елементів, які займають
+		   решту списку. Спочатку відсортований підсписок порожній, а невідсортований
+		   підсписок - весь вхідний список. Алгоритм виконується шляхом знаходження
+		   найменшого (або найбільшого, залежно від порядку сортування) елемента в
+		   невідсортованому підсписку, обміну (заміни) його з крайнім лівим
+		   невідсортованим елементом (розміщення його в відсортованому порядку) і
+		   переміщення меж підсписку на один елемент праворуч.
+		   \image html SelectionSort_example.gif
+		   \details Ефективність SelectionSort за часом є квадратичною, тому існує
+		   ряд методів сортування, які мають кращу часову складність, ніж
+		   SelectionSort. Одна річ, яка відрізняє SelectionSort від інших алгоритмів
+		   сортування, це те, що він робить мінімально можливу кількість замін:
+		   \f$n − 1\f$ у найгіршому випадку. 
+		   \par Категорія
+		   <b>Selection Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Selection_sort</i>
+		   \since v0.1.1.1 commit f338fc
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts SelectionSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::ShellSort
+		   \brief Алгоритм сортування Shell Sort
+		   \details <b>Сортування Шелла</b> (англ. Shell sort) - алгоритм
+		   сортування, що є узагальненням сортування включенням. Його можна
+		   розглядати або як узагальнення сортування шляхом обміну (BubbleSort) або
+		   сортування шляхом вставки (InsertSort). Метод починається з сортування
+		   пар елементів, розташованих далеко один від одного, потім поступово
+		   зменшується розрив між елементами для порівняння. Починаючи з елементів,
+		   розташованих далеко один від одного, він може перемістити деякі елементи,
+		   що не на місці, на позицію швидше, ніж простий обмін з найближчим сусідом.
+		   Дональд Шелл опублікував першу версію такого сортування в 1959 році. Час
+		   роботи ShellSort сильно залежить від послідовності пропусків, яку він
+		   використовує. Для багатьох практичних варіантів визначення їх часової
+		   складності залишається відкритою проблемою.
+		   \image html ShellSort_anim.gif
+		   \details Алгоритм базується на двох тезах:
+		   <ul>
+		   <li> Сортування включенням ефективне для майже впорядкованих масивів.</li>
+		   <li> Сортування включенням неефективне, тому що переміщує елемент тільки
+		   на одну позицію за раз.</li>
+		   </ul>
+		   \details Тому ShellSort виконує декілька впорядкувань включенням, кожен
+		   раз порівнюючи і переставляючи елементи, що розташовані на різній відстані
+		   один від одного.
+		   \details Сортування Шелла не є стабільним.
+		   \par Категорія
+		   <b>Insertion Sorts</b>
+		   \par Ресурси
+		   <i>https://en.wikipedia.org/wiki/Shellsort</i>
+		   \since v0.1.1.1 commit 800c0d
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts ShellSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::SlowSort
+		   \brief Алгоритм сортування Slow Sort
+		   \details <b>Повільне сортування</b> (англ. Slowsort) - непрактичний
+		   і гумористичний алгоритм сортування. Алгоритм заснований на принципі
+		   <i>розмноження та здавання</i> (англ. multiply and surrender), пародії
+		   на принцип «Розділяй та володарюй». Він був опублікований у 1986 році
+		   Андрієм Бродером та Хорхе Столфі у своїй статті <i>Песимальні алгоритми та
+		   аналіз простоти</i> (англ. Pessimal Algorithms and Simplexity Analysis),
+		   пародії на «Оптимальні алгоритми та аналіз складності».
+		   \par Категорія
+		   <b>Exchange Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Slowsort</i>
+		   \since v0.1.1.1 commit 800c0d
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts SlowSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::StoogeSort
+		   \brief Алгоритм сортування Stooge Sort
+		   \details <b>Недолуге сортування</b> (англ. Stooge sort) - рекурсивний
+		   алгоритм сортування. Йому притаманна надзвичайно погана часова складність
+		   \f${\displaystyle O(n^{\log(3)/\log(1.5)})=O(n^{2.7095...})}\f$.
+		   Швидкість роботи алгоритму менша порівняно з оптимальними алгоритмами
+		   сортування, він повільниший за BubbleSort, що є канонічним прикладом
+		   досить неефективного алгоритму сортування. Однак він ефективніший, ніж
+		   SlowSort. Назва походить від комедійного тріо The Three Stooges.
+		   \image html StoogeSort_anim.gif
+		   \details Алгоритм визначається наступним чином:
+		   <ul>
+		   <li> Якщо значення на початку списку більше значення в кінці списку, то
+		   поміняти їх місцями.</li>
+		   <li> Якщо в списку є 3 або більше елементи:
+		   <ul>
+		   <li> Рекусивно застосувати алгоритм до перших 2/3 списку</li>
+		   <li> Рекусивно застосувати алгоритм до останніх 2/3 списку</li>
+		   <li> Знову рекусивно застосувати алгоритм до перших 2/3 списку</li>
+		   </ul>
+		   </li>
+		   </ul>
+		   \details При обчисленні кількості елементів при вираховуванні 2/3 списку,
+		   важливо округлювати вгору, наприклад, 2/3 від 5 має бути 4, а не 3,
+		   оскільки в іншому випадку для певних даних сортування може бути невдалим.
+		   \par Категорія
+		   <b>Exchange Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Stooge_sort</i>
+		   \since v0.1.1.1 commit f338fc
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts StoogeSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::TimSort
+		   \brief Алгоритм сортування Tim Sort
+		   \details <b>Сортування Тіма</b> (англ. Timsort) - гібридний стабільний
+		   алгоритм сортування, який поєднує в собі MergeSort та InsertSort,
+		   призначений для ефективної роботи з багатьма видами реальних даних. Він
+		   був втілений в життя Тімом Пітерсом у 2002 році для використання у мові
+		   програмування Python. Алгоритм знаходить підпослідовності даних, які вже
+		   впорядковані, і використовує їх для більш ефективного сортування
+		   залишків. Це робиться шляхом об'єднання впорядкованих частин до виконання
+		   певних критеріїв. TimSort був стандартним алгоритмом сортування Python з
+		   версії 2.3. Він також використовується для сортування масивів не
+		   примітивного типу в Java SE 7, на платформі Android, у GNU Octave, на V8,
+		   у Swift та Rust.
+		   \details Він використовує прийоми зі статті Пітера Макілроя 1993 року
+		   «Оптимістичне сортування та теоретична складність інформації».
+		   \par Категорія
+		   <b>Hybrid Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Timsort</i>
+		   \since v0.1.1.4 commit 090b06
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts TimSort
+		 */
+
+		/*!
+		   \class ALGOR::Comparative_Sorts::TreeSort
+		   \brief Алгоритм сортування Tree Sort
+		   \details <b>Сортування двійковим (бінарним) деревом</b> (сортування за
+		   допомогою двійкового дерева, англ. Tree  sort) - алгоритм сортування, що
+		   полягає в побудові двійкового дерева пошуку за ключами масиву, а далі, в
+		   створенні результуючого масиву впорядокованих елементів виконуючи обхід
+		   дерева.
+		   \details TreeSort можна використовувати як одноразове сортування, але воно
+		   еквівалентно QuickSort, оскільки обидва рекурсивно розділяють елементи на
+		   основі опорної точки, а оскільки швидке сортування є на місці та має менші
+		   витрати, TreeSort має кілька переваг перед швидким сортуванням. Він має
+		   кращу складність у найгіршому випадку, коли використовується
+		   самобалансуюче дерево, але має ще більше витрат.
+		   \details Процедура додавання об'єкта в збалансоване дерево має середню
+		   алгоритмічну складність \f${\displaystyle O(\log(n))}\f$. Відповідно, для
+		   \f$n\f$ об'єктів складність буде дорівнювати
+		   \f${\displaystyle O(n\cdot \log(n))}\f$.
+		   \details  Однак, складність додавання об'єкта в незбалансоване дерево
+		   може досягати \f${\displaystyle O(n)}\f$, що може збільшити загальну
+		   алгоритмічну складність до \f${\displaystyle O(n^{2})}\f$. 
+		   \par Алгоритм
+		   <ol>
+		   <li> Отримати елементи вхідного масиву;</li>
+		   <li> Побудувати двійкове дерево вставляючи елементи вхідного масиву в
+		   двійкове дерево пошуку;</li>
+		   <li> Виконати обхід дерева, щоб отримати результуючий масив із
+		   впорядкованими елементами.</li>
+		   </ol>
+		   \par Категорія
+		   <b>Insertion Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Tree_sort</i>
+		   \since v0.1.1.2 commit 343e40
+		   \test
+		   \snippet Algor_ArraySort.cpp Comparative_Sorts TreeSort
+		 */
+
+			/*!
+			   \struct ALGOR::Comparative_Sorts::TreeSort::Tree
+			   \brief Дерево данних, яке потрібне для сортування
+			   \since v0.1.1.2 commit 343e40
+			 */
+
+	/*!
+	   \class ALGOR::Distribution_Sorts
+	   \brief Клас із потужними алгоритмами сортувань
+	   \details Клас, що колекціонує потужні алгоритми сортувань. Цей клас є
+	   виокремленим, так як він працює не з усіма типами данних, як працюють
+	   алгоритми сімейства ALGOR::Comparative_Sorts, а тільки з цілочисельними
+	   данними.
+	   \details На Вікіпедії доступно 50 різних алгоритмів сортувань, які поділені
+	   на категорії. Додатково я їх поділив ще на два великі сімейства: алгоритми,
+	   що працюють з будь-якими числовими данними та алгоритми, що працюють тільки
+	   з цілими числовими данними. Цей клас реалізує друге сімейство алгоритмів.
+	   Його частка складає 10 алгоритмів із 50.
+	   \details Під час роботи я зрозумів, що зможу реалізувати не всі алгоритми, так
+	   як деякі просто не достанеш. При пошуках CascadeMergeSort на Вікіпедії
+	   описано усього півтори строчки про алгоритм, а при переході за посиланням
+	   на ресурс надається книга з 584 сторінки, доступно з яких не більше 10. І
+	   більше ніде ніякої інформації не має... І це лише один з прикладів...
+	   \details Із 10 я зміг реалізувати 8 алгоритмів даного сімейства:
+	   <ol>
+	   <li> AmericanFlag_Sort			(Категорія Distribution_Sorts)</li>
+	   <li> Bead_Sort					(Категорія Distribution_Sorts)</li>
+	   <li> Bucket_Sort					(Категорія Distribution_Sorts)</li>
+	   <li> Counting_Sort				(Категорія Distribution_Sorts)</li>
+	   <li> Flash_Sort					(Категорія Distribution_Sorts)</li>
+	   <li> Interpolation_Sort			(Категорія Distribution_Sorts)</li>
+	   <li> Pigeonhole_Sort				(Категорія Distribution_Sorts)</li>
+	   <li> Radix_Sort					(Категорія Distribution_Sorts)</li>
+	   </ol>
+	   \details Не реалізованими залишились:
+	   <ol>
+	   <li> BurstSort					(Категорія Distribution_Sorts)</li>
+	   <li> ProxmapSort					(Категорія Distribution_Sorts)</li>
+	   </ol>
+	   \remark Нагадаю, цо ці алгоритми працюють НЕ з будь-якими данними, а тільки
+	   з цілими числами. До того ж ALGOR::Distribution_Sorts::AmericanFlag_Sort,
+	   ALGOR::Distribution_Sorts::Bead_Sort та
+	   ALGOR::Distribution_Sorts::Radix_Sort не працюють з від'ємними цілими данними.
+	   \since v0.1.2.0 commit 197603
+	 */
+
+		/*!
+		   \fn ALGOR::Distribution_Sorts::Distribution_Sorts(Array<byte8_t> *&)
+		   \brief Конструктор, що приймає СТРУКТУРУ та зберігає її до поля
+		   \details Цей клас, як сімейство, як колекціонер, збирає алгоритми
+		   сортувань, як внутрішні класи, але дозволяє до них прямий доступ.
+		   Якщо бібліотека використовується тільки як джерело алгоритмів сортувань,
+		   тоді краще створити напряму об'єкт внутрішнього класу алгоритму сортувань,
+		   передати йому стандатний С++ вказівник на масив та його розмір й викликати
+		   метод сортувань. Але якщо бібліотека ALGOR використовується у більшому
+		   спектрі, тоді набагато легше буде створити об'єкт сімейства, передати
+		   йому готову структуру й викликати потрібний алгоритми. Порівняйте:
+		   \code
+		   //Використання алгоритму напряму
+		   Distribution_Sorts::CountingSort *sort;
+		   sort = new Distribution_Sorts::CountingSort(ArrayStruct->array, ArrayStruct->array_size);
+		   sort->counting_sort();
+		   //Використання алгоритму через зовнішній клас
+		   Distribution_Sorts *sort = new Distribution_Sorts(ArrayStruct);
+		   sort->Counting_Sort();
+		   \endcode
+		   \warning Клас працює тільки з масивами типу <b>long long</b>!!!
+		   \param[in] Array Покажчик на структуру масиву
+		   \since v0.1.2.0 commit 197603
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts constructor
+		 */
+
+		/*!
+		   \fn ALGOR::Distribution_Sorts::AmericanFlag_Sort()
+		   \brief Метод виклику алгоритму сортування American Flag Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Distribution_Sorts::AmericanFlagSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.0 commit 197603
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts AmericanFlag_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Distribution_Sorts::Bead_Sort()
+		   \brief Метод виклику алгоритму сортування Bead Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Distribution_Sorts::BeadSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.0 commit 197603
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts Bead_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Distribution_Sorts::Bucket_Sort()
+		   \brief Метод виклику алгоритму сортування Bucket Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Distribution_Sorts::BucketSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.0 commit 197603
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts Bucket_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Distribution_Sorts::Counting_Sort()
+		   \brief Метод виклику алгоритму сортування Counting Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Distribution_Sorts::CountingSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.0 commit 197603
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts Counting_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Distribution_Sorts::Interpolation_Sort()
+		   \brief Метод виклику алгоритму сортування Interpolation Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Distribution_Sorts::InterpolationSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.0 commit 197603
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts Interpolation_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Distribution_Sorts::Pigeonhole_Sort()
+		   \brief Метод виклику алгоритму сортування Pigeonhole Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Distribution_Sorts::PigeonholeSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.0 commit 197603
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts Pigeonhole_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Distribution_Sorts::Radix_Sort()
+		   \brief Метод виклику алгоритму сортування Radix Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Distribution_Sorts::RadixSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.0 commit 197603
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts Radix_Sort
+		 */
+
+		/*!
+		   \fn ALGOR::Distribution_Sorts::Flash_Sort()
+		   \brief Метод виклику алгоритму сортування Flash Sort
+		   \details Цей метод використовується для виклику алгоритму сортування
+		   ALGOR::Distribution_Sorts::FlashSort. Метод не потребує
+		   даних, так як вони були збережені при створенні об'єкта і власноруч
+		   передає всі потрібні данні внутрішньому алгоритму сортування, що
+		   спрощує написання коду.
+		   \since v0.1.2.0 commit 197603
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts Flash_Sort
+		 */
+
+		/*!
+		   \class ALGOR::Distribution_Sorts::AmericanFlagSort
+		   \brief Алгоритм сортування American Flag Sort
+		   \details <b>Сортування американським прапором</b> (англ. American flag
+		   sort) - ефективний варіант сортування на місці, який розподіляє елементи
+		   у відра. Непорівняльні алгоритми сортування, такі як RadixSort і
+		   AmericanFlagSort, зазвичай використовуються для сортування великих
+		   об'єктів, таких як рядки, для яких порівняння не є операцією за одиницю
+		   часу. AmericanFlagSort повторює біти об'єктів, розглядаючи кілька бітів
+		   кожного об'єкта одночасно. Для кожного набору бітів AmericanFlagSort
+		   виконує два проходи через масив об'єктів: перший - для підрахунку
+		   кількості об'єктів, які потраплять у кожну корзину, а другий - для
+		   розміщення кожного об'єкта в його відро. Це особливо добре працює під
+		   час сортування по байтам за раз, використовуючи 256 сегментів. З деякими
+		   оптимізаціями це вдвічі швидше, ніж QuickSort для великих наборів рядків.
+		   \details Назва AmericanFlagSort є аналогією з проблемою голландського
+		   національного прапора на останньому кроці: ефективно розділити масив на
+		   багато «смуг».
+		   \par Алгоритм
+		   Алгоритми сортування загалом сортують список об'єктів відповідно до
+		   певної схеми впорядкування. На відміну від алгоритмів сортування на основі
+		   порівнянь, таких як QuickSort, AmericanFlagSort може сортувати лише цілі
+		   числа (або об'єкти, які можна інтерпретувати як цілі). Алгоритми сортування
+		   на місці, включаючи AmericanFlagSort, працюють без виділення значного обсягу
+		   пам'яті, крім того, який використовується вихідним масивом. Це суттєва
+		   перевага як в економії пам'яті, так і в часі копіювання масиву.
+		   \par
+		   AmericanFlagSort працює шляхом послідовного поділу списку об'єктів на
+		   сегменти на основі першої цифри їх представлення за основою \f$N\f$
+		   (використана основа згадується як розряд). Коли \f$N\f$ дорівнює 3, кожен
+		   об'єкт можна перемістити в правильний сегмент за допомогою алгоритму
+		   голландського національного прапора. Коли \f$N\f$ більше, об'єкти не можна
+		   відразу поміняти місцями, оскільки невідомо, де має починатися і
+		   закінчуватися кожне відро. AmericanFlagSort обходить цю проблему, роблячи
+		   два проходи через масив. Перший прохід підраховує кількість об'єктів, які
+		   належать кожному з \f$N\f$ сегментів. Потім початок кожного відра
+		   обчислюється як сума розмірів попередніх відер. Другий прохід поміщає
+		   кожен об'єкт у правильне відро.
+		   \par
+		   AmericanFlagSort є найефективнішим із розрядами, які становляться із
+		   степені 2, оскільки піднесення для обчислення значення кожної цифри під
+		   час сортування рядків із використанням 8- або 7-бітного кодування,
+		   наприклад ASCII, типово використовується число розрядів 256 або 128, що
+		   дорівнює посимвольному сортуванню.
+		   \par Категорія
+		   <b>Distribution Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/American_flag_sort</i>\n
+		   <i>Code: https://github.com/phishman3579/java-algorithms-implementation/blob/master/src/com/jwetherell/algorithms/sorts/AmericanFlagSort.java</i>
+		   \par Сертифікат тестування
+		   <i>Certificate "цілі+ ; вилітає"</i>
+		   \since v0.1.2.0 commit f6f6fe
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts AmericanFlagSort
+		 */
+
+		/*!
+		   \class ALGOR::Distribution_Sorts::BeadSort
+		   \brief Алгоритм сортування Bead Sort
+		   \details <b>Бісерне сортування</b> (англ. Bead sort), або <b>гравітаційне
+		   сортування</b> (англ. Gravity sort) - природний алгоритм сортування,
+		   розроблений Джошуа Дж. Аруланандхамом, Крістіаном С. Калуде та Майклом
+		   Дж. Дінніном у 2002 році та опублікований у <i>Бюлетені Європейської
+		   асоціації теоретичної інформатики</i> (англ. The Bulletin of the European
+		   Association for Theoretical Computer Science). Як цифрова і аналогова
+		   апаратна реалізація BeadSort може досягти часу сортування
+		   \f${\displaystyle O(n)}\f$; однак реалізація цього алгоритму, як правило,
+		   значно повільніша в програмному забезпеченні та може використовуватися
+		   лише для сортування списків додатних цілих чисел. Крім того, здавалося б,
+		   що навіть у найкращому випадку алгоритм вимагає
+		   \f${\displaystyle O(n^{2})}\f$ простору.
+		   \par Алгоритм
+		   Операцію BeadSort можна порівняти з тим, як бісер ковзає по паралельних
+		   полюсах, наприклад, на рахівниці. Однак кожна жердина може мати певну
+		   кількість намистин. Спочатку буде корисно уявити намистини, підвішені на
+		   вертикальних стовпах. На кроці 1 таке розташування відображається за
+		   допомогою \f$n=5\f$ рядів бісеру на \f$m=4\f$ вертикальних стовпах. Цифри
+		   праворуч від кожного рядка вказують на число, яке представляє відповідний
+		   рядок; рядки 1 і 2 представляють натуральне число 3 (оскільки кожен з них
+		   містить по три намистини), тоді як верхній ряд представляє натуральне число
+		   2 (оскільки він містить лише дві намистини).
+		   \image html BeadSort_example-step1.png
+		   \par
+		   Якщо ми дозволимо намистинам впасти, рядки тепер представлятимуть однакові
+		   цілі числа в відсортованому порядку. Рядок 1 містить найбільше число в
+		   наборі, тоді як рядок \f$n\f$ містить найменше. Якщо було дотримано згаданої
+		   вище конвенції про ряди, що містять серію намистин на полюсах \f$1..k\f$
+		   і залишали полюси \f$k+1..m\f$ порожніми, це буде й надалі.
+		   \par
+		   Дія дозволу намистинам «впасти» в нашому фізичному прикладі дозволила
+		   більшим значенням із вищих рядків поширюватися до нижчих рядків. Якщо
+		   значення, представлене рядком \f$a\f$, менше, ніж значення, що міститься в
+		   рядку \f$a+1\f$, деякі намистинки з рядка \f$a+1\f$ потраплять у рядок
+		   \f$a\f$; це обов'язково станеться, оскільки рядок \f$a\f$ не містить
+		   намистин у цих позиціях, щоб зупинити \f$a+1\f$ падіння.
+		   \image html BeadSort_example-step2.png
+		   \par
+		   Механізм, що лежить в основі BeadSort, подібний до механізму CountingSort;
+		   кількість намистин на кожному полюсі відповідає кількості елементів зі
+		   значенням, рівним або більшим за індекс цього полюса. 
+		   \par Категорія
+		   <b>Distribution Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Bead_sort</i>
+		   \par Сертифікат тестування
+		   <i>Certificate "цілі+ ; обрізає"</i>
+		   \since v0.1.1.4 commit b19f70
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts BeadSort
+		 */
+
+		/*!
+		   \class ALGOR::Distribution_Sorts::BucketSort
+		   \brief Алгоритм сортування Bucket Sort
+		   \details <b>Сортування комірками</b> або <b>коміркове сортування</b>
+		   (англ. Bucket sort) - стабільний алгоритм впорядкування, що доцільно
+		   використовувати, якщо вхідні дані розподілені рівномірно. В основі
+		   алгоритму лежить розподілення всіх елементів по скінченній кількості
+		   комірок. Кожна комірка впорядковується окремо іншим алгоритмом
+		   впорядкування або ж рекурсивно алгоритмом BucketSort.
+		   BucketSort є узагальненням CountingSort.
+		   \par Пояснення реалізації
+		   У мене постало питання: як реалізувати зберігання розмірів підмасивів
+		   двовимірного масиву. Я вирішив зберігати їх розміри у перших (нульових)
+		   комірках масивів. Так як під власне зберігання виділяється окрема
+		   комірка у масиві, тому розмір масиву завжди буде більше на 1 від
+		   реального розміру. І ці два аспекти потрібно завжди пам'ятати:
+		   <ul>
+		   <li> Масив починається з другого елементу!</li>
+		   <li> Реальний розмір масиву на 1 менше від зазначеного!</li>
+		   </ul>
+		   \par Алгоритм
+		   <ol>
+		   <li> Налаштовується масив початково порожніх «відер»;</li>
+		   <li> Переглядається вихідний масив, поміщаючи кожен об'єкт у своє
+		   відро;</li>
+		   \image html BucketSort_example-step1.png
+		   <li> Кожне непорожнє відро сортується;</li>
+		   <li> Переглядаються відра по порядку і елементи розміщаються назад у
+		   вихідний масив.</li>
+		   \image html BucketSort_example-step2.png
+		   </ol>
+		   \par Категорія
+		   <b>Distribution Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Bucket_sort</i>\n
+		   <i>Code: https://github.com/TheAlgorithms/C-Plus-Plus/blob/master/sorting/bucket_sort.cpp</i>
+		   \par Сертифікат тестування
+		   <i>Certificate "цілі+ цілі- цілі+-"</i>
+		   \since v0.1.1.4 commit b19f70
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts BucketSort
+		 */
+
+		/*!
+		   \class ALGOR::Distribution_Sorts::CountingSort
+		   \brief Алгоритм сортування Counting Sort
+		   \details <b>Сортування підрахунком</b> (англ. Counting sort) — алгоритм
+		   впорядкування, що застосовується при малій кількості різних елементів
+		   (ключів) у масиві даних. Час його роботи лінійно залежить як від загальної
+		   кількості елементів у масиві так і від кількості різних елементів.
+		   \details Ідея алгоритму полягає в наступному: спочатку підрахувати
+		   скільки разів кожен елемент (ключ) зустрічається в вихідному масиві.
+		   Спираючись на ці дані можна одразу вирахувати на якому місці має стояти
+		   кожен елемент, а потім за один прохід поставити всі елементи на свої місця.
+		   \par Категорія
+		   <b>Distribution Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Counting_sort</i>
+		   \par Сертифікат тестування
+		   <i>Certificate "цілі+ цілі- цілі+-"</i>
+		   \since v0.0.0.1
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts CountingSort
+		 */
+
+		/*!
+		   \class ALGOR::Distribution_Sorts::FlashSort
+		   \brief Алгоритм сортування Flash Sort
+		   \details <b>Спалахливе сортування</b> (англ. Flashsort) - розподільний
+		   алгоритм сортування, який показує лінійну обчислювальну складність
+		   \f${\displaystyle O(n)}\f$ для рівномірно розподілених наборів даних і
+		   відносно невелику додаткову пам'ять. Оригінальна робота була опублікована
+		   в 1998 році Карлом-Дітріхом Нойбертом.
+		   \throw ALGOR::EXCEPTION_SET::division_by_zero (у випадку, коли всі елементи
+		   масиву мають одне значення, наприклад, у масиві {63 63 63})
+		   \par Концепція
+		   Flashsort - ефективна реалізація сортування на місці BucketSort, яка сама
+		   по собі є типом сегментного сортування. Він призначає кожен з \f$n\f$
+		   вхідних елементів одному з \f$m\f$ сегментів, ефективно переставляє вхідні
+		   дані, щоб розташувати сегменти в правильному порядку, а потім сортує кожен
+		   сегмент. Оригінальний алгоритм сортує вхідний масив \f$A\f$ наступним чином:
+		   <ol>
+		   <li> Використовуючи перший прохід над введенням або апріорними знаннями,
+		   шукається мінімальний і максимальний ключі сортування;</li>
+		   <li> Діапазон \f${\displaystyle [A_{min}, A_{max}]}\f$ лінійно ділиться
+		   на \f$m\f$ відер;</li>
+		   <li> Робиться один прохід над входом, підрахувавши кількість елементів
+		   \f$A_i\f$ які потрапляють у кожне відро (Нойберт називає відра «класами»,
+		   а призначення елементів їхнім відрам «класифікацією»);</li>
+		   <li> У кожному сегменті кількість елементів перетворюється на суму
+		   префікса, де \f$L_b\f$ є кількістю елементів \f$A_i\f$ у сегменті
+		   \f$b\f$ або менше (\f$L_0=0\f$ і \f$L_m=n\f$);</li>
+		   <li> Вхідні дані переставляються так, щоб усі елементи кожного сегмента
+		   \f$b\f$ зберігалися в позиціях \f$A_i\f$ , де \f$L_{b−1}<i≤L_b\f$;</li>
+		   <li> Кожне відро сортується за допомогою InsertSort.</li>
+		   </ol>
+		   \par
+		   Кроки 1-3 та 6 є загальними для будь-якого BucketSort та можуть бути
+		   вдосконалені за допомогою загальних методів для BucketSort. Зокрема,
+		   мета полягає в тому, щоб відра були приблизно однакового розміру
+		   (\f$n/m\f$ елементів кожен), з ідеальним поділом на \f$m\f$ квантилів.
+		   У той час як базовий алгоритм є лінійний InterpolationSort, якщо відомо,
+		   що розподіл вхідних даних нерівномірний, нелінійний розподіл буде більш
+		   наближеним до цього ідеалу. Подібним чином остаточне сортування може
+		   використовувати будь-яку з низки методів, включаючи рекурсивний FlashSort.
+		   \par
+		   Що відрізняє флеш-сортування, так це крок 5: ефективний
+		   \f${\displaystyle O(n)}\f$ алгоритм на місці для збирання елементів
+		   кожного відра разом у правильному відносному порядку, використовуючи
+		   лише \f$m\f$ слів додаткової пам'яті. 
+		   \par Категорія
+		   <b>Distribution Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Flashsort</i>\n
+		   <i>Code: https://javascript.algorithmexamples.com/web/Sorts/flashSort.html</i>
+		   \par Сертифікат тестування
+		   <i>Certificate "цілі+ цілі- цілі+-"</i>
+		   \since v0.1.2.0 commit d74cc1
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts FlashSort
+		 */
+
+		/*!
+		   \class ALGOR::Distribution_Sorts::InterpolationSort
+		   \brief Алгоритм сортування Interpolation Sort
+		   \details <b>Інтерполяційне сортування</b> (англ. Interpolation sort) -
+		   різновид BucketSort. Він використовує формулу інтерполяції для призначення
+		   даних сегменту. Загальна формула інтерполяції:
+		   \details \f${\displaystyle Interpolation=INT(((Array[i]-min)/(max-min))*(ArraySize-1))}\f$
+		   \par Алгоритм
+		   <b>Інтерполяційне сортування</b> (англ. Interpolation sort) або
+		   <b>Гістограмне сортування</b> (англ. Histogram sort) - алгоритм
+		   сортування, який використовує формулу інтерполяції для розподілу даних
+		   «розділяй і володарюй». InterpolationSort також є варіантом BucketSort.
+		   Метод сортування інтерполяцією використовує масив довжин сегментів записів,
+		   що відповідають початковому стовпчику номерів. Керуючи масивом довжини
+		   обслуговування, рекурсивний алгоритм може запобігти зміні складності
+		   простору на \f${\displaystyle О(n^{2})}\f$ через накопичення пам'яті.
+		   Запис сегментації масиву length може за допомогою вторинної функції
+		   динамічно оголошувати та видаляти простір пам'яті масиву. Складність
+		   простору, необхідна для керування рекурсивною програмою, становить
+		   \f${\displaystyle О(3n)}\f$. Містить двовимірний масив динамічно
+		   розподіленої пам'яті та масив довжини записів. Однак складність виконання
+		   все ще може підтримуватися як ефективний метод сортування
+		   \f${\displaystyle О(n+k)}\f$. Масив динамічно розподіленої пам'яті може
+		   бути реалізований зв'язаним списком, стеком, чергою, асоціативним масивом,
+		   структурою дерева тощо. Різниця в структурі даних пов'язана зі швидкістю
+		   доступу до даних і, отже, часом, необхідним для сортування. Коли значення
+		   в упорядкованому масиві рівномірно розподілені приблизно в арифметичній
+		   прогресії, лінійний час інтерполяційного впорядкування сортування дорівнює
+		   \f${\displaystyle О(n)}\f$.
+		   \par Алгоритм Інтерполяційного сортування
+		   <ol>
+		   <li> Встановлюється масив довжини відра для запису довжини несортованого
+		   відра. Ініціалізується вихідна довжина масиву;</li>
+		   <li> <i>[Головне сортування]</i> Якщо масив довжини сегмента очищено та
+		   сортування завершено - виконується <i>[функція поділу]</i>, якщо її не
+		   скинуто;</li>
+		   <li> <i>[Функція поділу]</i> Виконується функція «Поділити на» для
+		   витягування довжини сегмента з кінця масиву довжин сегмента. Шукається
+		   максимальне і мінімальне значення у відрі. Якщо максимальне значення
+		   дорівнює мінімальному значенню, сортування завершується, щоб припинити
+		   розділення;</li>
+		   <li> Налаштовується двовимірний масив як усі порожні відра. Числа
+		   розподіляються по відрах відповідно до числа інтерполяції;</li>
+		   <li> Після поділу на ковші вставляється довжина ковшів у масив довжин
+		   ковшів. Елементи порзміщаються назад у вихідний масив по одному з усіх
+		   відер, які не порожні;</li>
+		   <li> Повернення до <i>[Головне сортування]</i>.</li>
+		   </ol>
+		   \par Алгоритм Гістограмного сортування
+		   Визначення NIST: Ефективне 3-прохідне вдосконалення алгоритму BucketSort:
+		   <ol>
+		   <li> Під час першого проходу підраховується кількість елементів для кожного
+		   сегменту у допоміжному масиві, а потім створюється загальна сума, тому
+		   кожен допоміжний запис є кількістю попередніх елементів;</li>
+		   <li> Другий прохід поміщає кожен елемент у відповідне відро відповідно до
+		   допоміжного запису для ключа цього елемента;</li>
+		   <li> Останній прохід сортує кожне відро.</li>
+		   </ol>
+		   \par Категорія
+		   <b>Distribution Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Interpolation_sort</i>\n
+		   <i>Code: https://github.com/aniketsatarkar/Sorting-Algorithms-in-C/blob/master/InterpolationSort.h</i>
+		   \par Сертифікат тестування
+		   <i>Certificate "цілі+ цілі- цілі+-"</i>
+		   \since v0.1.2.0 commit d3274a
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts InterpolationSort
+		 */
+
+		/*!
+		   \class ALGOR::Distribution_Sorts::PigeonholeSort
+		   \brief Алгоритм сортування Pigeonhole Sort
+		   \details <b>Сортування Діріхле</b> (англ. Pigeonhole sort) - алгоритм
+		   сортування, який підходить для сортування списків елементів, де кількість
+		   елементів (\f$n\f$) і довжина діапазону можливих значень ключів (\f$N\f$)
+		   приблизно однакові. Це вимагає \f${\displaystyle O(n+N)}\f$ часу. Він
+		   подібний до CountingSort, але відрізняється тим, що він переміщує елементи
+		   двічі: один раз в масив відрахувань, а в другий раз до кінцевого масиву,
+		   оскільки CountingSort створює допоміжний масив для обчислення кінцевого
+		   місця кожного елемента і його переміщення.
+		   \details Алгоритм працює наступним чином:
+		   <ol>
+		   <li> Враховуючи масив значень, що підлягають сортуванню, створюється
+		   допоміжний масив спочатку порожніх значень, один прохід для кожного ключа
+		   через діапазон вихідного масиву;</li>
+		   <li> Переходячи до початкового масиву, кожне значення кладеться в комірку,
+		   що відповідає його ключу, таким чином, щоб кожна комірка згодом містила
+		   список всіх значень з цим ключем;</li>
+		   <li> Послідовно переставляється матриця з наведених елементів, і елементи
+		   кладуться з непустого вузла назад у вихідний масив.</li>
+		   </ol>
+		   \par Категорія
+		   <b>Distribution Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Pigeonhole_sort</i>
+		   \par Сертифікат тестування
+		   <i>Certificate "цілі+ цілі- цілі+-"</i>
+		   \since v0.1.1.4 commit 090b06
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts PigeonholeSort
+		 */
+
+		/*!
+		   \class ALGOR::Distribution_Sorts::RadixSort
+		   \brief Алгоритм сортування Radix Sort
+		   \details <b>Сортування за розрядами</b> (англ. Radix sort) - швидкий
+		   стабільний алгоритм впорядкування даних. Застосовується для впорядкування
+		   елементів, що є ланцюжками над будь-яким скінченним алфавітом (напр. рядки
+		   або цілі числа). Як допоміжний використовує будь-який інший стабільний
+		   алгоритм сортування.
+		   \details Алгоритм застосовувався для впорядкування перфокарт.
+		   \details Ідея алгоритму полягає в тому, щоб спочатку впорядкувати всі
+		   елементи за молодшим розрядом, потім стабільно впорядкувати за другим
+		   розрядом, потім за третім і так далі аж до найстаршого. Оскільки
+		   припускається, що кожен розряд приймає значення з невеликого діапазону, то
+		   кожен цикл впорядкування можна виконувати швидко і з малими затратами
+		   пам'яті. 
+		   \par Категорія
+		   <b>Distribution Sorts</b>
+		   \par Ресурси
+		   <i>Source: https://en.wikipedia.org/wiki/Radix_sort</i>
+		   \par Сертифікат тестування
+		   <i>Certificate "цілі+ ; не сортує"</i>
+		   \since v0.0.0.1
+		   \test
+		   \snippet Algor_ArraySort.cpp Distribution_Sorts RadixSort
+		 */
+
+/* *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ * --------------------------------------------------------------------------- *
+ *                                 ALGOR_MATRIX                                *
+ * --------------------------------------------------------------------------- *
+ * *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ */
+
+/*!
+  \todo Зробити розділ ALGOR_MATRIX
+ */
+
+/* *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ * --------------------------------------------------------------------------- *
+ *                                  ALGOR_HEAP                                 *
+ * --------------------------------------------------------------------------- *
+ * *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ */
+
+/*!
+  \todo Зробити розділ ALGOR_HEAP
+ */
+
+/* *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ * --------------------------------------------------------------------------- *
+ *                                  ALGOR_LIST                                 *
+ * --------------------------------------------------------------------------- *
+ * *****/---/+++++-/%/-+-+-+-/%/-+-+-+-&&&-+-+-+-/%/-+-+-+-/%/-+++++/---/***** *
+ */
+
+/*!
+  \todo Зробити розділ ALGOR_LIST
+ */
