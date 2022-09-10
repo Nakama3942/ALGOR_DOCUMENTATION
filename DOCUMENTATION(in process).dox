@@ -21,19 +21,19 @@
 
 /*!
   \namespace ALGOR
-  \brief Глобальний простір імен усього проекту
-  \details Призначений для зберігання усього реалізованого функціоналу проекту.
-  \note Краще не використовувати разом з std, інакше можуть виникнути конфлікти.
+  \brief The global namespace of the entire project
+  \details Intended for storage of all implemented functionality of the project.
+  \note Better not to use with std or conflicts may occur.
   \since v0.1.2.0 commit 2fa93b
 
-  \author Калиновський Валентин
+  \author Kalynovsky Valentin
   \version 1.0.0.0
   \copyright Copyright © 2021-2022 Kalynovsky Valentin. All rights reserved.
   Licensed under the Apache License, Version 2.0 (the "License")
 
-  \todo Реалізувати розділ ALGOR_MATRIX
-  \todo Реалізувати розділ ALGOR_HEAP
-  \todo Реалізувати розділ ALGOR_LIST
+  \todo Implement the ALGOR_MATRIX section
+  \todo Implement the ALGOR_HEAP section
+  \todo Implement the ALGOR_LIST section
 
   \example sort_global.cpp
   \example sort_test.cpp
@@ -55,171 +55,174 @@
 
 	/*!
 	   \typedef ALGOR::byte1_t
-	   \brief Аліас для char <i>(1 байт)</i>.
-	   \details Зазвичай використовується для задання типу строк. Може зберігати
-	   число від <b>0</b> до <b>255</b>, або від <b>-128</b> до <b>+127</b>.
+	   \brief Alias ​​for char <i>(1 byte)</i>
+	   \details Usually used to specify the term type. Can store a number from
+	   <b>0</b> to <b>255</b>, or from <b>-128</b> to <b>+127</b>.
 	   \since v0.1.3.0 commit b50b4a
-	   \attention Якщо цей тип дійсно використовується для строк, то не забувайте
-	   вказувати "*" (вказівник) перед назвою імені строки, так як цей тип
-	   не замінює повністю char на string. Це лише звичайний аліас.
+	   \attention If this type is indeed used for strings, then do not forget
+	   to specify "*" (pointer) in front of the name of the string name, since
+	   this type does not completely replace char with string. It's just a
+	   normal alias.
 	 */
 	 
 	/*!
 	   \typedef ALGOR::byte2_t
-	   \brief Аліас для short <i>(2 байти)</i>.
-	   \details Зазвичай використовується при зберіганні коротких чисел
-	   від <b>0</b> до <b>65'535</b>, або від <b>-32'768</b> до <b>+32'767</b>.
+	   \brief Alias ​​for short <i>(2 bytes)</i>.
+	   \details It is usually used when storing short numbers from <b>0</b>
+	   to <b>65'535</b>, or from <b>-32'768</b> to <b>+32'767</b>.
 	   \since v0.1.3.0 commit b50b4a
 	 */
 
 	/*!
 	   \typedef ALGOR::byte4_t
-	   \brief Аліас для long <i>(4 байти)</i>.
-	   \details Зазвичай використовується при зберіганні чисел. Може
-	   зберігати від <b>0</b> до <b>4'294'967'295</b>, або від <b>-2'147'483'648</b>
-	   до <b>+2'147'483'647</b>.
+	   \brief Alias ​​for long <i>(4 bytes)</i>.
+	   \details Usually used when storing numbers. Can store from <b>0</b>
+	   to <b>4'294'967'295</b>, or from <b>-2'147'483'648</b>
+	   to <b>+2'147'483'647</b>.
 	   \since v0.1.3.0 commit b50b4a
-	   \note Також ним можна повноцінно замінити тип int, так як він теж
-	   розрахований на 4 байти. Але якщо програму запустити на комп'ютері
-	   з процесором intel i386 чи більш ранішим, то під int буде виділятися усього
-	   2 байти і на тих процесорах int є аліасом для short. Через таке розпливчате
-	   поняття типу int він ніде у бібліотеці не використовується, а використовуються
-	   чіткі типи типу short чи long.
+	   \note It can also fully replace the int type, as it is also designed
+	   for 4 bytes. But if you run the program on a computer with an intel
+	   i386 processor or earlier, only 2 bytes will be allocated under int
+	   and on those processors int is an alias for short. Due to such a vague
+	   concept of the int type, it is not used anywhere in the library, but
+	   clear types such as short or long are used.
 	 */
 
 	/*!
 	   \typedef ALGOR::byte8_t
-	   \brief Аліас для long long <i>(8 байтів)</i>.
-	   \details Є розширенням типу long у два рази і розрахований під числа від <b>0</b>
-	   до <b>18'446'744'073'709'551'615</b>, або від <b>-9'223'372'036'854'775'808</b>
-	   до <b>+9'223'372'036'854'775'807</b>.
+	   \brief Alias ​​for long long <i>(8 bytes)</i>.
+	   \details Is an extension of the long type by two times and is
+	   calculated for numbers from <b>0</b>
+	   to <b>18'446'744'073'709'551'615</b>,
+	   or from <b>-9'223'372'036'854'775'808</b>
+	   to <b>+9'223'372'036'854'775'807</b>.
 	   \since v0.1.3.0 commit b50b4a
 	 */
 
 	/*!
 	   \typedef ALGOR::sbit8_t
-	   \brief Аліас для signed char <i>(1 байт)</i>.
-	   \details Аналогічно звичайному char, але може приймати значення тільки
-	   від <b>-128</b> до <b>+127</b>.
+	   \brief Alias ​​for signed char <i>(1 byte)</i>.
+	   \details Similar to ordinary char, but can take values ​​only from
+	   <b>-128</b> to <b>+127</b>.
 	   \since v0.1.0.0 commit 0d3195
 	 */
 
 	/*!
 	   \typedef ALGOR::sbit16_t
-	   \brief Аліас для signed short <i>(2 байти)</i>.
-	   \details Аналогічно звичайному short, але може приймати значення тільки
-	   від <b>-32'768</b> до <b>+32'767</b>.
+	   \brief Alias ​​for signed short <i>(2 bytes)</i>.
+	   \details Similar to the usual short, but can take values ​​only from
+	   <b>-32'768</b> to <b>+32'767</b>.
 	   \since v0.1.0.0 commit 0d3195
 	 */
 
 	/*!
 	   \typedef ALGOR::sbit32_t
-	   \brief Аліас для signed long <i>(4 байти)</i>.
-	   \details Аналогічно звичайному long, але може приймати значення тільки
-	   від <b>-2'147'483'648</b> до <b>+2'147'483'647</b>.
+	   \brief Alias ​​for signed long <i>(4 bytes)</i>.
+	   \details Similar to regular long, but can take values ​​only from
+	   <b>-2'147'483'648</b> to <b>+2'147'483'647</b>.
 	   \since v0.1.0.0 commit 0d3195
 	 */
 
 	/*!
 	   \typedef ALGOR::sbit64_t
-	   \brief Аліас для signed long long <i>(8 байтів)</i>.
-	   \details Аналогічно звичайному long long, але може приймати значення тільки
-	   від <b>-9'223'372'036'854'775'808</b> до <b>+9'223'372'036'854'775'807</b>.
+	   \brief Alias ​​for signed long long <i>(8 bytes)</i>.
+	   \details Similar to the usual long long, but can take values ​​only from
+	   <b>-9'223'372'036'854'775'808</b> to <b>+9'223'372'036'854'775'807</b>.
 	   \since v0.1.0.0 commit 0d3195
 	 */
 
 	/*!
 	   \typedef ALGOR::ubit8_t
-	   \brief Аліас для unsigned char <i>(1 байт)</i>.
-	   \details Аналогічно звичайному char і на відміну від signed char може
-	   приймати значення тільки від <b>0</b> до <b>255</b>.
+	   \brief Alias ​​for unsigned char <i>(1 byte)</i>.
+	   \details Similar to ordinary char and unlike signed char, it can take
+	   values ​​only from <b>0</b> to <b>255</b>.
 	   \since v0.1.0.0 commit 0d3195
 	 */
 
 	/*!
 	   \typedef ALGOR::ubit16_t
-	   \brief Аліас для unsigned short <i>(2 байти)</i>.
-	   \details Аналогічно звичайному short і на відміну від signed short може
-	   приймати значення тільки від <b>0</b> до <b>65'535</b>.
+	   \brief Alias ​​for unsigned short <i>(2 bytes)</i>.
+	   \details Similar to the usual short and unlike the signed short, it can
+	   take values ​​only from <b>0</b> to <b>65'535</b>.
 	   \since v0.1.0.0 commit 0d3195
 	 */
 
 	/*!
 	   \typedef ALGOR::ubit32_t
-	   \brief Аліас для unsigned long <i>(4 байти)</i>.
-	   \details Аналогічно звичайному long і на відміну від signed long може
-	   приймати значення тільки від <b>0</b> до <b>4'294'967'295</b>.
+	   \brief Alias ​​for unsigned long <i>(4 bytes)</i>.
+	   \details Similarly to the usual long and unlike the signed long, it can
+	   take values ​​only from <b>0</b> to <b>4'294'967'295</b>.
 	   \since v0.1.0.0 commit 0d3195
 	 */
 
 	/*!
 	   \typedef ALGOR::ubit64_t
-	   \brief Аліас для unsigned long long <i>(8 байтів)</i>.
-	   \details Аналогічно звичайному long long і на відміну від signed long long
-	   може приймати значення тільки від <b>0</b> до <b>18'446'744'073'709'551'615</b>.
+	   \brief Alias ​​for unsigned long long <i>(8 bytes)</i>.
+	   \details Similarly to the usual long long and unlike signed long long can
+	   take values ​​only from <b>0</b> to <b>18'446'744'073'709'551'615</b>.
 	   \since v0.1.0.0 commit 0d3195
 	 */
 
 	/*!
 	   \typedef ALGOR::fbit32_t
-	   \brief Аліас для float <i>(4 байти)</i>.
-	   \details На відміну від всіх попередніх типів, що можуть зберігати тільки
-	   цілі числа, тип <i>float</i> може зберігати числа з плаваючою комою. У
-	   комірку можна записати як додатні, так і від'ємні числа. Можливий діапазон
-	   зберігаємих чисел від <b>+/-3.4E-38</b> до <b>3.4E+38</b>.
+	   \brief Alias ​​for float <i>(4 bytes)</i>.
+	   \details Unlike all previous types that can only store integers, the
+	   <i>float</i> can store floating-point numbers. You can write both positive
+	   and negative numbers in the cell. possible range of stored numbers is
+	   from <b>+/-3.4E-38</b> to <b>3.4E+38</b>.
 	   \since v0.1.2.0 commit 1981d6
 	 */
 
 	/*!
 	   \typedef ALGOR::fbit64_t
-	   \brief Аліас для double <i>(8 байтів)</i>.
-	   \details Розширює тип <i>float</i>, збільшуючи точність та розмір у два рази.
-	   Можливий діапазон зберігаємих чисел від <b>+/-1.7E-308</b> до <b>1.7E+308</b>.
+	   \brief Alias ​​for double <i>(8 bytes)</i>.
+	   \details Extends the <i>float</i>, doubling the precision and size.
+	   Possible range of stored numbers is from <b>+/-1.7E-308</b> to
+	   <b>1.7E+308</b>.
 	   \since v0.1.2.0 commit 1981d6
 	 */
 
 	/*!
 	   \typedef ALGOR::fbit128_t
-	   \brief Аліас для long double <i>(16 байт)</i>.
-	   \details Розширює тип <i>double</i>, збільшуючи точність та розмір іще у два
-	   рази.
+	   \brief Alias ​​for long double <i>(16 bytes)</i>.
+	   \details Extends the type <i>double</i>, doubling the precision and size. 
 	   \since v0.1.3.0 commit b6349a
 	 */
 
 	/*!
 	   \typedef ALGOR::asize_t
-	   \brief Псевдонім для визначення типу <i>"розмір массиву"</i>.
-	   \details Зазвичай цей тип використовується, коли треба вказати розмір масиву
-	   чи позицію у масиві. Так як нумерація починається з 0 і не існує від'ємних
-	   розмірів масивів чи номерів позицій, можна поточнити тип з <i>int</i> до
-	   <i>unsigned int</i>. До того ж не завжди вистачає <b>65'535</b> комірок масиву.
-	   Іноді потрібно більше, наприклад, мільйон чи мільярд. Більше мільярда нема
-	   сенсу створювати структури даних тому ідеальним вибором серед <a>short</a>,
-	   <i>long</i> та <i>long long</i> є <i>long</i>. Саме тому <i>asize_t</i> є
-	   аліасом до ALGOR::ubit32_t.
+	   \brief Alias ​​for defining the <i>"array size"</i>.
+	   \details Usually, this type is used when you need to specify the size of
+	   an array or a position in an array. Since numbering starts at 0 and there
+	   are no negative array sizes or position numbers, it is possible to cast
+	   the type from <i>int</i> to <i>unsigned int</i>. In addition, <b>65'535</b>
+	   array cells are not always enough. Sometimes more is needed, for example,
+	   a million or a billion. More than a billion does not make sense to create
+	   data structures, so the ideal choice among <i>short</i>, <i>long</i> and
+	   <i>long long</i> is <i>long</i>. That's why <i>asize_t</i> is an alias to
+	   ALGOR::ubit32_t.
 	   \since v0.1.0.0 commit 89658e
 	 */
 
 	/*!
 	   \typedef ALGOR::memcell_t
-	   \brief Псевдонім для обчислюваної <i>комірки пам'яті</i>.
-	   \details Використовується тільки у функції ALGOR::getMemoryCell, як тип
-	   комірки, що зберігає розраховане число.
+	   \brief An alias for the computed <i>memory cell</i>.
+	   \details Used only in the ALGOR::getMemoryCell, as a type of cell that
+	   stores the calculated number. 
 	   \since v0.1.1.3 commit b4cdc9
-	   \attention Є службовим типом і замість нього краще
-	   використовувати ALGOR::ubit64_t.
+	   \attention It is a service type and it is better to use ALGOR::ubit64_t.
 	 */
 
 	/*!
 	   \fn ALGOR::swap(type_value &, type_value &)
-	   \brief Міняє місцями два елементи
-	   \details Функція приймає два значення, які треба замінити місцями. Після
-	   виконання функції перша комірка пам'яті буде зберігати друге значення, а
-	   друга - перше. Для виконання алгоритму використовується додаткова
-	   комірка пам'яті.
-	   \tparam type_value Тип елементів, що міняються місцями
-	   \param[in, out] firstNumber Перший елемент для заміни
-	   \param[in, out] secondNumber Другий елемент для заміни
+	   \brief Swaps two elements
+	   \details The function accepts two values, which must be replaced by
+	   places. After the function is executed, the first memory cell will store
+	   the second value, and the second - the first. An additional memory cell
+	   is used to perform the algorithm.
+	   \tparam type_value The type of elements that change places
+	   \param[in, out] firstNumber The first item to replace
+	   \param[in, out] secondNumber The second element to replace
 	   \since v0.0.0.1
 	   \test
 	   \snippet Algor_core.cpp swap
@@ -227,15 +230,15 @@
 
 	/*!
 	   \fn ALGOR::minimum(type_value, type_value)
-	   \brief Шукає найменше значення з двух наданих
-	   \details Функція приймає два значення і порівнює їх. Якщо перше
-	   число виявится меншим за друге - функція повертає перше число, інакше -
-	   друге.
-	   \tparam type_value Тип елементів, з яких вибирається найменше значення
-	   \param[in] firstNumber Перше значення на вибірку
-	   \param[in] secondNumber Друге значення на вибірку
+	   \brief Finds the smallest value of the two given values
+	   \details The function takes two values ​​and compares them. If the first
+	   number is smaller than the second, the function returns the first number,
+	   otherwise - the second.
+	   \tparam type_value The type of elements from which the smallest value is selected
+	   \param[in] firstNumber The first value per sample
+	   \param[in] secondNumber The second value per sample
 	   \since v0.1.1.4 commit 090b06
-	   \return найменше значення з двух наданих
+	   \return the smaller value of the two given
 	   \sa ALGOR::maximum(type_value, type_value)
 	   \test
 	   \snippet Algor_core.cpp minimum
@@ -243,15 +246,15 @@
 
 	/*!
 	   \fn ALGOR::maximum(type_value, type_value)
-	   \brief Шукає найбільше значення з двух наданих
-	   \details Функція приймає два значення і порівнює їх. Якщо перше
-	   число виявится більшим за друге - функція повертає перше число, інакше -
-	   друге.
-	   \tparam type_value Тип елементів, з яких вибирається найбільше значення
-	   \param[in] firstNumber Перше значення на вибірку
-	   \param[in] secondNumber Друге значення на вибірку
+	   \brief Finds the largest value of the two given values
+	   \details The function takes two values ​​and compares them. If the first
+	   number is greater than the second, the function returns the first number,
+	   otherwise - the second.
+	   \tparam type_value The type of elements from which the largest value is selected
+	   \param[in] firstNumber The first value per sample
+	   \param[in] secondNumber The second value per sample
 	   \since v0.1.1.4 commit 090b06
-	   \return найбільше значення з двух наданих
+	   \return the larger value of the two given 
 	   \sa ALGOR::minimum(type_value, type_value)
 	   \test
 	   \snippet Algor_core.cpp maximum
@@ -259,31 +262,31 @@
 
 	/*!
 	   \fn ALGOR::getMemoryCell(memcell_t, memcell_t)
-	   \brief Повертає випадкове число; аналог time(NULL)
-	   \details Цей метод виділяє пам'ять під 10 комірок пам'яті. Куди саме система
-	   виділить пам'ять передгадати неможливо, а також неможливо передгадати, яка
-	   програма і які данні раніше сюди записувала, тому це самий реальний генератор
-	   випадкович чисел. Поки генерація масивів не була доведена до ідеалу, але як
-	   генератор великого числа замість time(NULL) цілком реально використати. Із
-	   десяти випадкових чисел функція розраховує число, яке треба повернути.
-	   \remark Функції можна задати бітовий здвиг. Якщо функція використовується
-	   замість time(NULL), а результат передається у іншу функцію, що приймає тільки
-	   чотири-байтове значення, можна задати правий здвиг на 32 біти (4 байти) і
-	   тоді функція поверне 4 старших байти.
-	   \param[in] right_adjust Правий здвиг
-	   \param[in] left_adjust Лівий здвиг
+	   \brief Returns a random number; analog time(NULL)
+	   \details This method allocates memory for 10 memory cells. It is impossible
+	   to guess where exactly the system will allocate memory, and it is also
+	   impossible to guess which program and which data previously recorded here,
+	   so this is the most real generator of random numbers. So far, the
+	   generation of arrays has not been perfected, but as a generator of a large
+	   number instead of time(NULL), it is quite possible to use it. From ten
+	   random numbers, the function calculates the number to be returned.
+	   \remark The function can be set to a bit shift. If the function is used
+	   instead of time(NULL) and the result is passed to another function that
+	   only accepts a four-byte value, you can specify a right shift of 32 bits
+	   (4 bytes) and then the function will return the 4 most significant bytes.
+	   \param[in] right_adjust Right shift
+	   \param[in] left_adjust Left shift
 	   \since v0.1.1.3 commit b4cdc9
-	   \retval cell - розраховане випадкове число
+	   \retval cell - calculated random number
 	   \test
 	   \snippet Algor_core.cpp mem
 	 */
 
 	 /*!
 	   \struct ALGOR::Array
-	   \brief Структура, що імітує масив
-	   \details Призначений для зберігання вказівника на динамічний масив та його
-	   розмір
-	   \tparam type_array Тип елементів, що зберігаються в масиві
+	   \brief A structure that simulates an array
+	   \details Intended for storing a pointer to a dynamic array and its size.
+	   \tparam type_array The type of elements stored in the array
 	   \since v0.0.1.0 commit 979bf4
 	   \test
 	   \snippet Algor_core.cpp array struct
@@ -291,66 +294,68 @@
 
 		/*!
 		   \var ALGOR::Array::array
-		   \brief Вказівник на масив
+		   \brief Array pointer
 		   \since v0.0.1.0 commit 979bf4
 		 */
 
 		/*!
 		   \var ALGOR::Array::array_size
-		   \brief Розмір масиву
+		   \brief Array size
 		   \since v0.0.1.0 commit 979bf4
 		 */
 
 	/*!
 	   \fn ALGOR::create_struct(const asize_t &, bool)
-	   \brief Створює структуру з покажчиком на масив
-	   \details Зберігає розмір масиву, виділяє пам'ять під цей самий масив та повертає
-	   вказівник на структуру масиву.
+	   \brief Creates a structure with a pointer to an array
+	   \details Saves the size of the array, allocates memory for this same array
+	   and returns a pointer to the array structure.
 	   \throw ALGOR::EXCEPTION_SET::void_data
-	   \tparam type_array Тип елементів, що будуть зберігатися у масиві
-	   \param[in] SIZE Розмір створюваного масиву
-	   \param[in] mem_allocation Логічний флаг, чи потрібно виділяти пам'ять під масив
-	   \retval Array<type_array>* - вказівник на створену структуру
+	   \tparam type_array The type of elements to be stored in the array
+	   \param[in] SIZE The size of the created array
+	   \param[in] mem_allocation Logical flag, whether you need to allocate memory for the array
+	   \retval Array<type_array>* - a pointer to the created structure
 	   \since v0.1.0.0 commit 85698d
-	   \remark Якщо ви вже виділили пам'ять під масив, то структурі не потрібно повторно
-	   виділяти пам'ять. Структура лише зберігає розмір масиву та сам вказівник на цей
-	   масив. Тому у цьому випадку флагу <i>mem_allocation</i> потрібно передати
-	   <i>false</i> і після цього зберегти вказівник на масив у структурі. У інших
-	   випадках флаг <i>mem_allocation</i> краще не змінювати.
+	   \remark If you have already allocated memory for the array, then the
+	   structure does not need to re-allocate memory. The structure only stores
+	   the size of the array and the pointer to this array itself. Therefore, in
+	   this case, the <i>mem_allocation</i> to <i>false</i> and after that save
+	   the pointer to the array in the structure. In other cases,
+	   <i>mem_allocation</i> it is better not to change.
 	   \test
 	   \snippet Algor_core.cpp create_struct
 	 */
 
 	/*!
 	   \fn ALGOR::generate_struct(Array<type_array> *&, const sbit64_t &, const sbit64_t &, const ubit64_t, const ubit32_t)
-	   \brief Генерує випадкові значення у структурі масиву
-	   \details Генерує у структурі масиву значення із заданого діапазону. Якщо
-	   задати <i>denominator</i>, то можна отримати кратні, чи дрібні значення данних.
+	   \brief Generates random values ​​in an array structure
+	   \details Generates values ​​from the specified range in an array structure.
+	   If you set <i>denominator</i>, you can get multiples or small values ​​of
+	   the data.
 	   \throw ALGOR::EXCEPTION_SET::division_by_zero
-	   \tparam type_array Вказує якого типу будуть генеруватися числа у структурі
-	   масиву
-	   \param[in, out] Array Структура масиву, у якій потрібно згенерувати данні
-	   \param[in] min_limit Мінімально можливе згенероване значення
-	   \param[in] max_limit Максимально можливе згенероване значення
-	   \param[in] seed Сі́м'я генератору
-	   \param[in] denominator Дільник для генерації <i>float</i> данних
+	   \tparam type_array Specifies what type of numbers will be generated in the
+	   array structure
+	   \param[in, out] Array The array structure in which to generate the data
+	   \param[in] min_limit Minimum possible generated value 
+	   \param[in] max_limit Maximum possible generated value 
+	   \param[in] seed Generator seed
+	   \param[in] denominator Divider for generating <i>float</i> data
 	   \since v0.0.0.1
-	   \note На випадок, якщо не працює ALGOR::getMemoryCell, можна власноруч
-	   задати сі́м'я генерації.
+	   \note In case ALGOR::getMemoryCell, you can set the generation family
+	   yourself.
 	   \test
 	   \snippet Algor_core.cpp generate_struct
 	 */
 
 	/*!
 	   \fn ALGOR::remove_struct(Array<type_array> *&)
-	   \brief remove_struct
-	   \details Звільняє пам'ять від масиву, що зберігається у структурі й звільняє
-	   з пам'яті саму структуру.
+	   \brief Deletes an array and a pointer to a structure
+	   \details Frees memory from the array stored in the structure and frees the
+	   structure itself.
 	   \throw ALGOR::EXCEPTION_SET::void_data
-	   \tparam type_array Тип елементів, що зберігаються у масиві
-	   \param[in, out] Array Масив, який потрібно видалити
-	   \result Вказівник на структуру після виклику цієї функції буде вказувати на
-	   <i>nullptr</i>.
+	   \tparam type_array The type of elements stored in the array
+	   \param[in, out] Array The array to delete
+	   \result The pointer to the structure after calling this function will
+	   point to <i>nullptr</i>.
 	   \since v0.1.0.0 commit 48aa64
 	   \test
 	   \snippet Algor_core.cpp remove_struct
@@ -358,36 +363,40 @@
 
 	/*!
 	   \interface ALGOR::Printer
-	   \brief Printer-інтерфейс, призначений для реалізації функціоналу виводу
-	   інформації
-	   \details Це є інтерфейс, що складається лише з одного віртуального методу, який
-	   призначений для виводу інформації. Так як цей проект є унікальним у тому сенсі,
-	   що не використовується жодна інша бібліотека (навіть стандартна) і автор
-	   власноруч пише власну реалізацію алгоритмів - тому неможливо використати
-	   клас iostream, через що неможлива реалізація принтеру. Автору потрібно буде з
-	   початку написати власний клас вводу-виводу, а в умовах популярності графічних
-	   інтерфейсів це не є оптимальним та актуальним. Краще програмісту самому дати
-	   реалізувавти ввод-вивід. До того ж такий метод є універсальним: його можна
-	   використовувати й у консольних програмах, й у графічних. Якби я намагався
-	   власноруч написати реалізацію, вона була б спеціалізованою чи під консоль, чи
-	   під графіку. Саме це мене підштовхнуло написати саме інтрерфейс, а не клас.
-	   \warning Щоб не було попереджень "Potential leak of memory pointed to by
-	   'name' [clang-analyzer-cplusplus.NewDeleteLeaks]" (про потенційний
-	   витік пам'яті) - треба створювати статичний об'єкт <i>принтеру</i>!
+	   \brief Printer-interface designed to implement information output
+	   functionality
+	   \details It is an interface consisting of only one virtual method that is
+	   designed to output information. Since this project is unique in the sense
+	   that no other library (even a standard one) is used and the author writes
+	   his own implementation of the algorithms - therefore it is impossible to
+	   use the iostream class, which makes the implementation of the printer
+	   impossible. The author will need to write his own input-output class from
+	   the beginning, and in the conditions of the popularity of graphical
+	   interfaces, this is not optimal and relevant. It is better to let the
+	   programmer himself implement input-output. In addition, this method is
+	   universal: it can be used both in console and graphical programs. If I
+	   tried to write an implementation myself, it would be specialized either
+	   for the console or for the graphics. This is what prompted me to write the
+	   interface, not the class.
+	   \warning So that there are no warnings "Potential leak of memory pointed
+	   to by 'name' [clang-analyzer-cplusplus.NewDeleteLeaks]" (about a potential
+	   memory leak) - you need to create a static <i>printer</i>!
 	   \since v0.1.2.0 commit 2fa93b
-	   \remark Раджу використовувати наступну реалізацію для консольної програми:
+	   \remark I advise you to use the following implementation for the console
+	   program:
 	   \test
 	   \snippet Algor_printer.cpp printer
-	   Цей клас зберігає не матрицю, а вказівник на вказівник на структуру масиву.
-	   Тому достатньо один раз передати у клас вказівник на структуру і все. Далі
-	   можна просто міняти вказівники на інші структури з іншими масивами і не
-	   треба їх заново передавати у цей клас. Він сам буде відстежувати, який
-	   вказівник зберігається у вказівнику на структуру.
+	   This class does not store an array, but a pointer to a pointer to an array
+	   structure. Therefore, it is enough to pass the pointer to the structure
+	   once to the class and that's it. Further, you can simply change the
+	   pointers to other structures with other arrays and do not need to
+	   re-transfer them to this class. It will itself keep track of which pointer
+	   is stored in the structure pointer.
 	 */
 
 		/*!
 		   \fn ALGOR::Printer::print()
-		   \brief Метод для виводу інформації
+		   \brief Method for outputting information
 		   \since v0.1.2.0 commit 2fa93b
 		   \test
 		   \snippet Algor_printer.cpp print
@@ -843,11 +852,11 @@
 
 			/*!
 			   \fn ALGOR::RANDOM::LCM::LCM(memcell_t)
-			   \brief Конструктор класу, що приймає сі́м'я
-			   \details Конструктор, що приймає сі́м'я ГПВЧ, що є першим числом
+			   \brief Конструктор класу, що приймає сід
+			   \details Конструктор, що приймає сід ГПВЧ, що є першим числом
 			   послідовності, що генерується (\f$x_0\f$). Являє собою аналог
 			   стандартної функції <i>srand()</i>.
-			   \param[in] seed Сі́м'я генерації
+			   \param[in] seed Сід генерації
 			   \since v0.1.3.0 commit ca0704
 			   \test
 			   \snippet Algor_random.cpp LCM srand
@@ -887,7 +896,7 @@
 
 			/*!
 			   \var ALGOR::RANDOM::LCM::seed
-			   \brief Сі́м'я послідовності \f$x_0\f$
+			   \brief Сід послідовності \f$x_0\f$
 			   \details Число, що задає початок послідовності, що генерується.
 			   \since v0.1.3.0 commit ca0704
 			 */
@@ -927,7 +936,7 @@
 			   \details Генерує масив вихідних зашифрованих значень, які можна
 			   використовувати, як згенеровані ГВЧ.
 			   \param[out] output Генерує масив вихідних елементів
-			   \param size Розмір масиву вихідних елементів
+			   \param[in] size Розмір масиву вихідних елементів
 			   \since v0.1.0.0 commit 88415c
 			   \test
 			   \snippet Algor_random.cpp RC4 rand
@@ -961,10 +970,10 @@
 
 			/*!
 			   \fn ALGOR::RANDOM::MersenneTwister::MersenneTwister(byte4_t)
-			   \brief Конструктор класу ГПВЧ Вихор Марсенна (встановлює сі́м'я)
-			   \details Встановлює сі́м'я та проводить ініціалізацію послідовності,
+			   \brief Конструктор класу ГПВЧ Вихор Марсенна (встановлює сід)
+			   \details Встановлює сід та проводить ініціалізацію послідовності,
 			   що буде генеруватися.
-			   \param[in] seed Сі́м'я генерації
+			   \param[in] seed Сід генерації
 			   \since v0.1.0.0 commit 88415c
 			   \test
 			   \snippet Algor_random.cpp MT srand
@@ -974,7 +983,7 @@
 			   \fn ALGOR::RANDOM::MersenneTwister::RandomInit(byte4_t)
 			   \brief Ініціалізація ГПВЧ
 			   \details Використовується при перевстановленні семені ГПВЧ.
-			   \param[in] seed Сі́м'я генерації
+			   \param[in] seed Сід генерації
 			   \since v0.1.0.0 commit 88415c
 			   \test
 			   \snippet Algor_random.cpp MT reinit
@@ -1055,7 +1064,7 @@
 			/*!
 			   \fn ALGOR::RANDOM::MersenneTwister::Init0(byte4_t)
 			   \brief Базова процедура ініціалізації
-			   \param[in] seed Сі́м'я генерації
+			   \param[in] seed Сід генерації
 			   \since v0.1.0.0 commit 88415c
 			 */
 
@@ -1628,11 +1637,11 @@
 		   \throw ALGOR::EXCEPTION_SET::division_by_zero
 		   \param[in] min_limit Мінімальне значення, яке можна згенерувати
 		   \param[in] max_limit Максимальне значення, яке можна згенерувати
-		   \param[in] seed Сі́м'я генератору
+		   \param[in] seed Сід генератору
 		   \param[in] denominator Дільник для генерації <i>float</i> данних
 		   \since v0.1.3.0 commit ca0704
 		   \note На випадок, якщо не працює ALGOR::getMemoryCell, можна власноруч
-		   задати сі́м'я генерації.
+		   задати сід генерації.
 		   \test
 		   \snippet Algor_ArrayData.cpp ARRAYDATA generatedData
 		 */
